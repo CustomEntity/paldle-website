@@ -1,0 +1,728 @@
+{
+  "lang": {
+    "name": "Português"
+  },
+  "layout": {
+    "page_meta": {
+      "base_title": "Adivinhe os Elementos de Stardew Valley",
+      "base_description": "Stardewdle - O jogo diário de adivinhação de Stardew Valley! Enfrente novos desafios todos os dias e teste o seu conhecimento de Stardew Valley",
+      "site_name": "Stardewdle"
+    },
+    "header": {
+      "home_link": "Voltar à página inicial do Stardewdle",
+      "logo_alt": "Logótipo Stardewdle"
+    },
+    "footer": {
+      "accessibility": {
+        "discord": "Junte-se à nossa comunidade no Discord",
+        "information": "Informação",
+        "kofi": "Apoie-nos no Ko-fi",
+        "x": "Siga-nos no X (Twitter)",
+        "reddit": "Junte-se à nossa comunidade no Reddit"
+      },
+      "want_more": {
+        "title": "Quer mais?",
+        "description": "Confira o maior hub de todos os jogos dle."
+      },
+      "copyright": "Stardewdle - {year}",
+      "cookie_preferences": "Atualizar preferências de cookies"
+    },
+    "modals": {
+      "about": {
+        "commitment": {
+          "description": "Volte todos os dias para adivinhar novos moradores, mantenha sua sequência viva e compartilhe seus resultados com os amigos.",
+          "title": "Desafio diário"
+        },
+        "credit": {
+          "description": "Feito por um fã, para fãs de Stardew Valley. 🌱",
+          "title": "Créditos"
+        },
+        "disclaimer": "Stardewdle é um projeto de fã não oficial. Stardew Valley foi criado por ConcernedApe; todos os personagens e artes pertencem aos seus respectivos donos. Este projeto não é afiliado, patrocinado ou endossado por ConcernedApe.",
+        "discover": "Bem-vindo ao Stardewdle, o jogo diário de adivinhação de Stardew Valley! Teste seus conhecimentos em três modos — Clássico (moradores), Cultivo e Peixe — com um novo desafio todos os dias.",
+        "dle_games": {
+          "description": "Gostou do Stardewdle? Explore toda a família de jogos diários -dle no hub disponível no menu.",
+          "title": "Mais jogos -dle"
+        },
+        "game_modes": {
+          "description": "Clássico compara seis atributos do morador (gênero, região, aniversário, casável, idade). Cultivo compara cinco atributos do cultivo (crescimento, preço, rebrota, tipo, estação). Peixe compara cinco atributos do peixe (dificuldade, comportamento, estação, clima, tamanho). Um novo desafio para cada modo, todos os dias.",
+          "title": "Três modos diários"
+        },
+        "inspiration": {
+          "description": "Inspirado no Wordle e nos muitos maravilhosos jogos de adivinhação -dle.",
+          "title": "Inspiração"
+        },
+        "privacy": {
+          "description": "Mantemos simples — seu progresso e sequência são armazenados localmente no seu próprio navegador.",
+          "title": "Privacidade"
+        },
+        "signature": {
+          "regards": "Com carinho,",
+          "team": "A equipe do Stardewdle"
+        },
+        "thanks": "Obrigado por jogar, e boa colheita!",
+        "title": "Sobre"
+      }
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Teste o seu conhecimento de Stardew Valley",
+      "button": {
+        "villager": {
+          "title": "Aldeão",
+          "description": "Receba pistas a cada tentativa"
+        },
+        "crop": {
+          "description": "Adivinhe o cultivo pelas suas estatísticas",
+          "title": "Cultivo"
+        },
+        "fish": {
+          "description": "Adivinhe o peixe pelas suas estatísticas",
+          "title": "Peixe"
+        }
+      },
+      "reset_in": "Reinicia em: {time}",
+      "royaledle_banner": {
+        "title": "Jogue Royaledle",
+        "subtitle": "Adivinhe o personagem de Clash Royale do dia",
+        "cta": "Jogar",
+        "new": "NOVO"
+      }
+    },
+    "villager": {
+      "page_meta": {
+        "title": "Aldeão",
+        "description": "Adivinhe o villager de Stardew Valley de hoje!"
+      },
+      "errors": {
+        "no_daily_brawler": "Nenhum villager diário encontrado",
+        "generic_error": "Erro: {message}"
+      },
+      "result": {
+        "success": "Bom trabalho!",
+        "failure": "Tente novamente"
+      },
+      "scroll_hint": "← Desloque horizontalmente para ver mais →",
+      "yesterday": "O villager de ontem foi <name>{brawlerName}</name>",
+      "share": {
+        "text": "Encontrei o villager #Stardewdle #{id} no modo classic em {tries} tentativas ",
+        "to_copy": "Encontrei o villager #Stardewdle #{id} no modo classic em {tries} tentativas\n"
+      },
+      "victory": {
+        "stats_button": "Estatísticas",
+        "back_home": "Voltar ao início"
+      },
+      "components": {
+        "explanationBox": {
+          "title": "Adivinhe o villager de Stardew Valley de hoje",
+          "bottomHint": "Digite qualquer villager para começar.",
+          "hints": {
+            "gadget": {
+              "unavailable": "Pista de gadget em {tries} tentativas",
+              "available": "Pista de gadget"
+            },
+            "hypercharge": {
+              "unavailable": "Pista de hypercharge em {tries} tentativas",
+              "available": "Pista de hypercharge"
+            },
+            "silhouette": {
+              "unavailable": "Pista de silhueta em {tries} tentativas",
+              "available": "Pista de silhueta"
+            }
+          }
+        },
+        "toolsBar": {
+          "stats": {
+            "tooltip": "Estatísticas",
+            "alt": "Ícone de estatísticas"
+          },
+          "streak": {
+            "tooltip": "Sequência atual (Série de vitórias consecutivas)",
+            "alt": {
+              "active": "Ícone de sequência ativa",
+              "inactive": "Ícone de sequência inativa"
+            }
+          },
+          "patchNotes": {
+            "tooltip": "Notas de atualização",
+            "alt": "Ícone de notas de atualização"
+          },
+          "howToPlay": {
+            "tooltip": "Como jogar",
+            "alt": "Ícone como jogar"
+          }
+        },
+        "answerInput": {
+          "placeholder": "Digite o nome do villager.."
+        }
+      },
+      "modals": {
+        "stats": {
+          "title": "Estatísticas",
+          "metrics": {
+            "games_won": {
+              "label": "Partidas ganhas:",
+              "aria_label": "Número de partidas ganhas"
+            },
+            "average_tries": {
+              "label": "Média de tentativas:",
+              "aria_label": "Número médio de tentativas por partida"
+            },
+            "one_shots": {
+              "label": "À primeira:",
+              "aria_label": "Número de partidas ganhas numa tentativa"
+            },
+            "current_streak": {
+              "label": "Sequência atual:",
+              "aria_label": "Sequência atual de vitórias"
+            },
+            "best_streak": {
+              "label": "Melhor sequência:",
+              "aria_label": "Melhor sequência de vitórias"
+            }
+          },
+          "graph": {
+            "title": "Número de tentativas por partida",
+            "label": "Tentativas",
+            "fallback": "O seu navegador não suporta o elemento canvas."
+          }
+        },
+        "patchNotes": {
+          "title": "Notas de atualização",
+          "states": {
+            "loading": {
+              "message": "A carregar notas de atualização..."
+            },
+            "empty": {
+              "message": "Nada por aqui ainda"
+            },
+            "error": {
+              "title": "Falha ao carregar as notas de atualização",
+              "message": "{error}"
+            }
+          }
+        },
+        "how_to_play_classic": {
+          "title": "Como Jogar Stardewdle: Modo Clássico - Desafio Diário de Stardew Valley",
+          "introduction_title": "Compreender o Modo Clássico do Stardewdle",
+          "introduction_description": "No Modo Clássico, irá testar o seu conhecimento sobre os Villagers de Stardew Valley através de um jogo estratégico de adivinhação. O seu objetivo é identificar o Villager secreto analisando seis atributos chave. A cada tentativa, receberá feedback codificado por cores e setas direcionais para o guiar até à resposta correta neste desafio diário.",
+          "attributes_title": "Atributos do Villager",
+          "attributes_description": "O Modo Clássico do Stardewdle apresenta estes seis atributos chave para cada Villager:",
+          "attribute_item_1": "• <strong>Raridade</strong>: O nível de raridade do Villager (Comum, Raro, Super Raro, Épico, Mítico, Lendário, Ultra Lendário).",
+          "attribute_item_2": "• <strong>Classe</strong>: O papel do Villager em batalha (ex.: Tanque, Damage Dealer, Suporte, Assassino).",
+          "attribute_item_3": "• <strong>Movimento</strong>: A velocidade de movimento do Villager (Muito Lento, Lento, Normal, Rápido, Muito Rápido).",
+          "attribute_item_4": "• <strong>Alcance</strong>: O alcance de ataque do Villager (Muito Curto, Curto, Normal, Longo, Muito Longo).",
+          "attribute_item_5": "• <strong>Recarga</strong>: A velocidade de recarga do Villager (Muito Lenta, Lenta, Normal, Rápida, Muito Rápida).",
+          "attribute_item_6": "• <strong>Ano</strong>: O ano em que o Villager foi lançado em Stardew Valley.",
+          "feedback_title": "Compreender o Feedback de Cores",
+          "feedback_description": "Após cada tentativa, receberá um feedback codificado por cores com uma animação de viragem para cada atributo:",
+          "feedback_item_1": "• <span style=\"color: #32c21c\">Verde</span>: Correto! O Villager secreto tem exatamente este valor de atributo.",
+          "feedback_item_2": "• <span style=\"color: #d40c00\">Vermelho</span>: Incorreto. O Villager secreto não tem este valor de atributo.",
+          "feedback_arrows": "Para os atributos <strong>Movimento</strong>, <strong>Alcance</strong>, <strong>Recarga</strong> e <strong>Ano</strong>, verá setas direcionais:",
+          "feedback_arrow_up": "• <strong>Seta para Cima (↑)</strong>: O valor do Villager secreto é MAIOR do que a sua tentativa.",
+          "feedback_arrow_down": "• <strong>Seta para Baixo (↓)</strong>: O valor do Villager secreto é MENOR do que a sua tentativa.",
+          "how_to_play_title": "Jogar o Modo Clássico do Stardewdle",
+          "step_1": "Comece fazendo a sua primeira tentativa com qualquer Villager da lista de pesquisa.",
+          "step_2": "Observe cada bloco de atributo a virar em sequência, revelando o feedback colorido.",
+          "step_3": "Analise os blocos verdes e vermelhos para identificar atributos correspondentes e não correspondentes.",
+          "step_4": "Use as setas direcionais em Movimento, Alcance, Recarga e Ano para reduzir as possibilidades.",
+          "step_5": "Faça a sua próxima tentativa com base no feedback combinado recebido.",
+          "step_6": "Continue até identificar corretamente o Villager secreto!",
+          "step_7": "Volte todos os dias para um novo Villager para adivinhar no Modo Clássico.",
+          "strategy_title": "Dicas de Estratégia Vencedora",
+          "strategy_tip_1": "• Comece com Villagers que conhece bem para estabelecer uma base de padrões de atributos.",
+          "strategy_tip_2": "• Preste atenção à animação sequencial de viragem – cada bloco revela informação por ordem.",
+          "strategy_tip_3": "• Use as setas estrategicamente: ajudam-no a eliminar rapidamente grupos inteiros de Villagers.",
+          "strategy_tip_4": "• Para atributos ordinais (Movimento, Alcance, Recarga), lembre-se da escala de cinco níveis.",
+          "strategy_tip_5": "• Cruze múltiplos atributos – um Villager tem de corresponder a TODOS os feedbacks verdes.",
+          "strategy_tip_6": "• Lembre-se de que Raridade e Classe têm de corresponder exatamente (sem setas, apenas verde ou vermelho).",
+          "daily_challenge_title": "Desafios Diários de Stardew Valley",
+          "daily_challenge_description": "Volte ao Stardewdle todos os dias para um novo Villager secreto para identificar! As suas tentativas anteriores são apresentadas por ordem cronológica inversa, com cada tentativa animada à medida que é adicionada. Acompanhe a sua sequência e compare as suas competências com amigos neste teste definitivo de conhecimento de Stardew Valley."
+        }
+      },
+      "attributes": {
+        "headers": {
+          "brawler": "Villager",
+          "rarity": "Raridade",
+          "class": "Classe",
+          "movement": "Movimento",
+          "range": "Alcance",
+          "reload": "Recarga",
+          "year": "Ano",
+          "age": "Idade",
+          "birthday": "Aniversário",
+          "gender": "Gênero",
+          "marriageable": "Casável",
+          "region": "Região",
+          "season": "Estação",
+          "villager": "Morador"
+        },
+        "rarity": {
+          "common": "Comum",
+          "rare": "Raro",
+          "super_rare": "Super Raro",
+          "epic": "Épico",
+          "mythic": "Mítico",
+          "legendary": "Lendário",
+          "ultra_legendary": "Ultra Lendário"
+        },
+        "class": {
+          "artillery": "Artilharia",
+          "assassin": "Assassino",
+          "controller": "Controlador",
+          "damage_dealer": "Atirador",
+          "marksman": "Atirador Preciso",
+          "support": "Suporte",
+          "tank": "Tanque"
+        },
+        "speed": {
+          "very_slow": "Muito Lento",
+          "slow": "Lento",
+          "normal": "Normal",
+          "fast": "Rápido",
+          "very_fast": "Muito Rápido"
+        },
+        "range": {
+          "very_short": "Muito Curto",
+          "short": "Curto",
+          "normal": "Normal",
+          "long": "Longo",
+          "very_long": "Muito Longo"
+        },
+        "age": {
+          "Adult": "Adulto",
+          "Child": "Criança",
+          "Teen": "Adolescente"
+        },
+        "gender": {
+          "Female": "Feminino",
+          "Male": "Masculino",
+          "Undefined": "Outro"
+        },
+        "marriageable": {
+          "no": "Não",
+          "yes": "Sim"
+        },
+        "region": {
+          "Beach": "Praia",
+          "Desert": "Deserto",
+          "Forest": "Floresta",
+          "GingerIsland": "Ilha Gengibre",
+          "Mountain": "Montanha",
+          "Sewers": "Esgoto",
+          "Town": "Cidade"
+        },
+        "season": {
+          "Fall": "Outono",
+          "Spring": "Primavera",
+          "Summer": "Verão",
+          "Winter": "Inverno"
+        }
+      },
+      "gift_hint": "Presente favorito: {gift}",
+      "gift_hint_locked": "Dica de presente favorito em {tries} tentativas"
+    },
+    "crop": {
+      "attributes": {
+        "headers": {
+          "crop": "Cultivo",
+          "growth": "Crescimento",
+          "price": "Preço",
+          "regrow": "Rebrota",
+          "season": "Estação",
+          "type": "Tipo"
+        },
+        "regrow": {
+          "no": "Não",
+          "yes": "Sim"
+        },
+        "season": {
+          "Fall": "Outono",
+          "Spring": "Primavera",
+          "Summer": "Verão",
+          "Winter": "Inverno"
+        },
+        "type": {
+          "Flower": "Flor",
+          "Forage": "Forragem",
+          "Fruit": "Fruta",
+          "Seed": "Semente",
+          "Vegetable": "Vegetal"
+        }
+      },
+      "components": {
+        "answerInput": {
+          "placeholder": "Digite o nome de um cultivo.."
+        },
+        "explanationBox": {
+          "bottomHint": "Digite qualquer cultivo para começar.",
+          "title": "Adivinhe o cultivo de hoje de Stardew Valley"
+        },
+        "toolsBar": {
+          "howToPlay": {
+            "alt": "Ícone de como jogar",
+            "tooltip": "Como jogar"
+          },
+          "patchNotes": {
+            "alt": "Ícone de notas de atualização",
+            "tooltip": "Notas de atualização"
+          },
+          "stats": {
+            "alt": "Ícone de estatísticas",
+            "tooltip": "Estatísticas"
+          },
+          "streak": {
+            "alt": {
+              "active": "Ícone de sequência ativa",
+              "inactive": "Ícone de sequência inativa"
+            },
+            "tooltip": "Sequência atual (série de vitórias consecutivas)"
+          }
+        }
+      },
+      "errors": {
+        "generic_error": "Erro: {message}",
+        "no_daily_brawler": "Nenhum cultivo diário encontrado"
+      },
+      "modals": {
+        "how_to_play_classic": {
+          "attribute_item_1": "• <strong>Crescimento</strong>: dias para crescer completamente.",
+          "attribute_item_2": "• <strong>Preço</strong>: preço de venda base em ouro.",
+          "attribute_item_3": "• <strong>Rebrota</strong>: continua produzindo após a colheita? (Sim/Não).",
+          "attribute_item_4": "• <strong>Tipo</strong>: Vegetal, Fruta, Flor, Forragem ou Semente.",
+          "attribute_item_5": "• <strong>Estação</strong>: a(s) estação(ões) em que cresce.",
+          "attribute_item_6": "• <strong>Dica</strong>: verde é uma correspondência exata; laranja em Estação significa uma sobreposição parcial.",
+          "attributes_description": "O modo Plantação compara estes atributos:",
+          "attributes_title": "Atributos da Plantação",
+          "daily_challenge_description": "Volte todos os dias para uma nova plantação secreta. Acompanhe sua sequência e compartilhe seu resultado com amigos.",
+          "daily_challenge_title": "Desafio Diário",
+          "feedback_arrow_down": "• <strong>Seta para Baixo (↓)</strong>: o valor da plantação secreta é MENOR.",
+          "feedback_arrow_up": "• <strong>Seta para Cima (↑)</strong>: o valor da plantação secreta é MAIOR.",
+          "feedback_arrows": "As setas aparecem em Crescimento e Preço.",
+          "feedback_description": "Cada bloco tem uma cor:",
+          "feedback_item_1": "• <span style=\"color: #32c21c\">Verde</span></span>: correspondência exata com a plantação secreta.",
+          "feedback_item_2": "• <span style=\"color: #d40c00\">Vermelho</span></span>: nenhuma correspondência.",
+          "feedback_title": "Feedback",
+          "how_to_play_title": "Como Jogar",
+          "introduction_description": "Adivinhe a plantação secreta do dia de Stardew Valley comparando cinco atributos. Cada tentativa fornece feedback com cores e setas direcionais para guiar você.",
+          "introduction_title": "Modo Plantação",
+          "step_1": "Faça sua primeira tentativa com qualquer plantação da lista de busca.",
+          "step_2": "Observe cada bloco de atributo virar em sequência, revelando o feedback colorido.",
+          "step_3": "Leia os blocos verdes e vermelhos para identificar atributos correspondentes e não correspondentes.",
+          "step_4": "Use as setas em Crescimento e Preço para estreitar o intervalo.",
+          "step_5": "Faça sua próxima tentativa com base em todo o feedback recebido.",
+          "step_6": "Continue até identificar corretamente a plantação secreta!",
+          "step_7": "Volte todos os dias para uma nova plantação para adivinhar no Modo Plantação.",
+          "strategy_tip_1": "• Comece com plantações que você conhece bem para estabelecer uma referência de atributos.",
+          "strategy_tip_2": "• Tipo e Estação estreitam o grupo rapidamente — muitas plantações compartilham esses atributos.",
+          "strategy_tip_3": "• Use as setas para eliminar grupos inteiros por tempo de crescimento ou preço.",
+          "strategy_tip_4": "• Rebrota é um simples Sim/Não — ele divide o grupo ao meio.",
+          "strategy_tip_5": "• Uma plantação precisa corresponder a TODO o feedback verde ao mesmo tempo.",
+          "strategy_tip_6": "• Rebrota, Tipo e Estação correspondem exatamente (sem setas).",
+          "strategy_title": "Dicas de Estratégia",
+          "title": "Como Jogar: Modo Plantação"
+        },
+        "patchNotes": {
+          "states": {
+            "empty": {
+              "message": "Nada por aqui ainda"
+            },
+            "error": {
+              "message": "{error}",
+              "title": "Falha ao carregar notas de atualização"
+            },
+            "loading": {
+              "message": "Carregando notas de atualização..."
+            }
+          },
+          "title": "Notas de atualização"
+        },
+        "stats": {
+          "graph": {
+            "fallback": "Seu navegador não suporta o elemento canvas.",
+            "label": "Tentativas",
+            "title": "Número de tentativas por partida"
+          },
+          "metrics": {
+            "average_tries": {
+              "aria_label": "Número médio de tentativas por partida",
+              "label": "Tentativas médias:"
+            },
+            "best_streak": {
+              "aria_label": "Melhor sequência de vitórias",
+              "label": "Melhor sequência:"
+            },
+            "current_streak": {
+              "aria_label": "Sequência de vitórias atual",
+              "label": "Sequência atual:"
+            },
+            "games_won": {
+              "aria_label": "Número de partidas vencidas",
+              "label": "Partidas vencidas:"
+            },
+            "one_shots": {
+              "aria_label": "Número de partidas vencidas em uma tentativa",
+              "label": "De primeira:"
+            }
+          },
+          "title": "Estatísticas"
+        }
+      },
+      "page_meta": {
+        "description": "Adivinhe o cultivo de hoje de Stardew Valley pelas suas estatísticas!",
+        "title": "Cultivo"
+      },
+      "result": {
+        "failure": "Tente novamente",
+        "success": "Muito bem!"
+      },
+      "scroll_hint": "← Role horizontalmente para ver mais →",
+      "share": {
+        "text": "Encontrei o cultivo #Stardewdle #{id} em {tries} tentativas ",
+        "to_copy": "Encontrei o cultivo #Stardewdle #{id} em {tries} tentativas\n{url}"
+      },
+      "victory": {
+        "back_home": "Voltar ao início",
+        "next_mode": "Jogar Clássico",
+        "stats_button": "Estatísticas"
+      },
+      "yesterday": "O cultivo de ontem era <name>{brawlerName}</name>"
+    },
+    "fish": {
+      "attributes": {
+        "behavior": {
+          "Dart": "Investida",
+          "Floater": "Flutuante",
+          "Mixed": "Misto",
+          "Sinker": "Afundador",
+          "Smooth": "Suave"
+        },
+        "headers": {
+          "behavior": "Comportamento",
+          "difficulty": "Dificuldade",
+          "fish": "Peixe",
+          "season": "Estação",
+          "size": "Tamanho",
+          "weather": "Clima"
+        },
+        "season": {
+          "Fall": "Outono",
+          "Spring": "Primavera",
+          "Summer": "Verão",
+          "Winter": "Inverno"
+        },
+        "weather": {
+          "Any": "Qualquer",
+          "Rainy": "Chuvoso",
+          "Sunny": "Ensolarado"
+        }
+      },
+      "components": {
+        "answerInput": {
+          "placeholder": "Digite o nome de um peixe.."
+        },
+        "explanationBox": {
+          "bottomHint": "Digite qualquer peixe para começar.",
+          "title": "Adivinhe o peixe de hoje de Stardew Valley"
+        },
+        "toolsBar": {
+          "howToPlay": {
+            "alt": "Ícone de como jogar",
+            "tooltip": "Como jogar"
+          },
+          "patchNotes": {
+            "alt": "Ícone de notas de atualização",
+            "tooltip": "Notas de atualização"
+          },
+          "stats": {
+            "alt": "Ícone de estatísticas",
+            "tooltip": "Estatísticas"
+          },
+          "streak": {
+            "alt": {
+              "active": "Ícone de sequência ativa",
+              "inactive": "Ícone de sequência inativa"
+            },
+            "tooltip": "Sequência atual (série de vitórias consecutivas)"
+          }
+        }
+      },
+      "errors": {
+        "generic_error": "Erro: {message}",
+        "no_daily_brawler": "Nenhum peixe diário encontrado"
+      },
+      "modals": {
+        "how_to_play_classic": {
+          "attribute_item_1": "• <strong>Dificuldade</strong>: quão difícil é pescar o peixe.",
+          "attribute_item_2": "• <strong>Comportamento</strong>: como ele se move — Flutuante, Investida, Suave, Misto ou Afundador.",
+          "attribute_item_3": "• <strong>Estação</strong>: a(s) estação(ões) em que pode ser pescado.",
+          "attribute_item_4": "• <strong>Clima</strong>: Ensolarado, Chuvoso ou Qualquer.",
+          "attribute_item_5": "• <strong>Tamanho</strong>: seu tamanho máximo em polegadas.",
+          "attribute_item_6": "• <strong>Dica</strong>: verde é uma correspondência exata; laranja em Estação significa uma sobreposição parcial.",
+          "attributes_description": "O modo Peixe compara estes atributos:",
+          "attributes_title": "Atributos do Peixe",
+          "daily_challenge_description": "Volte todos os dias para um novo peixe secreto. Acompanhe sua sequência e compartilhe seu resultado com amigos.",
+          "daily_challenge_title": "Desafio Diário",
+          "feedback_arrow_down": "• <strong>Seta para Baixo (↓)</strong>: o valor do peixe secreto é MENOR.",
+          "feedback_arrow_up": "• <strong>Seta para Cima (↑)</strong>: o valor do peixe secreto é MAIOR.",
+          "feedback_arrows": "As setas aparecem em Dificuldade e Tamanho.",
+          "feedback_description": "Cada bloco tem uma cor:",
+          "feedback_item_1": "• <span style=\"color: #32c21c\">Verde</span></span>: correspondência exata com o peixe secreto.",
+          "feedback_item_2": "• <span style=\"color: #d40c00\">Vermelho</span></span>: nenhuma correspondência.",
+          "feedback_title": "Feedback",
+          "how_to_play_title": "Como Jogar",
+          "introduction_description": "Adivinhe o peixe secreto do dia de Stardew Valley comparando cinco atributos. Cada tentativa fornece feedback com cores e setas direcionais para guiar você.",
+          "introduction_title": "Modo Peixe",
+          "step_1": "Faça sua primeira tentativa com qualquer peixe da lista de busca.",
+          "step_2": "Observe cada bloco de atributo virar em sequência, revelando o feedback colorido.",
+          "step_3": "Leia os blocos verdes e vermelhos para identificar atributos correspondentes e não correspondentes.",
+          "step_4": "Use as setas em Dificuldade e Tamanho para estreitar o intervalo.",
+          "step_5": "Faça sua próxima tentativa com base em todo o feedback recebido.",
+          "step_6": "Continue até identificar corretamente o peixe secreto!",
+          "step_7": "Volte todos os dias para um novo peixe para adivinhar no Modo Peixe.",
+          "strategy_tip_1": "• Comece com peixes que você conhece bem para estabelecer uma referência de atributos.",
+          "strategy_tip_2": "• Comportamento e Clima estreitam o grupo rapidamente — muitos peixes compartilham esses atributos.",
+          "strategy_tip_3": "• Use as setas para eliminar grupos inteiros por dificuldade ou tamanho.",
+          "strategy_tip_4": "• Estação pode corresponder parcialmente (laranja) quando há sobreposição.",
+          "strategy_tip_5": "• Um peixe precisa corresponder a TODO o feedback verde ao mesmo tempo.",
+          "strategy_tip_6": "• Comportamento, Estação e Clima correspondem exatamente (sem setas).",
+          "strategy_title": "Dicas de Estratégia",
+          "title": "Como Jogar: Modo Peixe"
+        },
+        "patchNotes": {
+          "states": {
+            "empty": {
+              "message": "Nada por aqui ainda"
+            },
+            "error": {
+              "message": "{error}",
+              "title": "Falha ao carregar notas de atualização"
+            },
+            "loading": {
+              "message": "Carregando notas de atualização..."
+            }
+          },
+          "title": "Notas de atualização"
+        },
+        "stats": {
+          "graph": {
+            "fallback": "Seu navegador não suporta o elemento canvas.",
+            "label": "Tentativas",
+            "title": "Número de tentativas por partida"
+          },
+          "metrics": {
+            "average_tries": {
+              "aria_label": "Número médio de tentativas por partida",
+              "label": "Tentativas médias:"
+            },
+            "best_streak": {
+              "aria_label": "Melhor sequência de vitórias",
+              "label": "Melhor sequência:"
+            },
+            "current_streak": {
+              "aria_label": "Sequência de vitórias atual",
+              "label": "Sequência atual:"
+            },
+            "games_won": {
+              "aria_label": "Número de partidas vencidas",
+              "label": "Partidas vencidas:"
+            },
+            "one_shots": {
+              "aria_label": "Número de partidas vencidas em uma tentativa",
+              "label": "De primeira:"
+            }
+          },
+          "title": "Estatísticas"
+        }
+      },
+      "page_meta": {
+        "description": "Adivinhe o peixe de hoje de Stardew Valley pelas suas estatísticas!",
+        "title": "Peixe"
+      },
+      "result": {
+        "failure": "Tente novamente",
+        "success": "Muito bem!"
+      },
+      "scroll_hint": "← Role horizontalmente para ver mais →",
+      "share": {
+        "text": "Encontrei o peixe #Stardewdle #{id} em {tries} tentativas ",
+        "to_copy": "Encontrei o peixe #Stardewdle #{id} em {tries} tentativas\n{url}"
+      },
+      "victory": {
+        "back_home": "Voltar ao início",
+        "next_mode": "Jogar Clássico",
+        "stats_button": "Estatísticas"
+      },
+      "yesterday": "O peixe de ontem era <name>{brawlerName}</name>"
+    }
+  },
+  "common": {
+    "header": {
+      "button": {
+        "stats": {
+          "tooltip": "Estatísticas"
+        },
+        "streak": {
+          "tooltip": "Sequência atual (Vitórias consecutivas)"
+        },
+        "changelog": {
+          "tooltip": "Registo de alterações"
+        }
+      }
+    },
+    "soon": "em breve"
+  },
+  "components": {
+    "explanationBox": {
+      "errors": {
+        "no_content": "Nenhum conteúdo fornecido"
+      }
+    },
+    "answerInput": {
+      "states": {
+        "loading": "A carregar...",
+        "no_result": "Sem resultados"
+      },
+      "button": {
+        "submit": {
+          "title": "Submeter"
+        }
+      }
+    },
+    "victoryContainer": {
+      "title": "A sua partida",
+      "congratulations": "GG !!",
+      "guess": {
+        "prefix": "Adivinhou",
+        "character": "{name}"
+      },
+      "tries": {
+        "count": "Número de tentativas:",
+        "value": "{count}"
+      },
+      "next": {
+        "timer": "Próximo desafio em",
+        "mode": "Próximo modo:"
+      },
+      "image": {
+        "alt": "Imagem de vitória"
+      },
+      "you_found": "Você encontrou",
+      "number_of_tries": "Número de tentativas: {count}"
+    },
+    "shareContainer": {
+      "title": "Partilhe o seu resultado",
+      "buttons": {
+        "copy": {
+          "title": "Copiar",
+          "aria_label": "Copiar resultado para a área de transferência"
+        },
+        "tweet": {
+          "title": "Tweet",
+          "aria_label": "Partilhar no X (Twitter)"
+        }
+      },
+      "and_more": "e mais {count}..."
+    }
+  }
+}

@@ -1,0 +1,700 @@
+[
+  {
+    "key": "300",
+    "name": "Amaranth",
+    "name_fr": "Amarante",
+    "growth": 7,
+    "regrow": false,
+    "seasons": [
+      "Fall"
+    ],
+    "price": 150,
+    "type": "Vegetable",
+    "sprite": 300,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "454",
+    "name": "Ancient Fruit",
+    "name_fr": "Fruit ancien",
+    "growth": 28,
+    "regrow": true,
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Fall"
+    ],
+    "price": 550,
+    "type": "Fruit",
+    "sprite": 454,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "274",
+    "name": "Artichoke",
+    "name_fr": "Artichaut",
+    "growth": 8,
+    "regrow": false,
+    "seasons": [
+      "Fall"
+    ],
+    "price": 160,
+    "type": "Vegetable",
+    "sprite": 274,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "284",
+    "name": "Beet",
+    "name_fr": "Betterave",
+    "growth": 6,
+    "regrow": false,
+    "seasons": [
+      "Fall"
+    ],
+    "price": 100,
+    "type": "Vegetable",
+    "sprite": 284,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "597",
+    "name": "Blue Jazz",
+    "name_fr": "Zinnia bleue",
+    "growth": 7,
+    "regrow": false,
+    "seasons": [
+      "Spring"
+    ],
+    "price": 50,
+    "type": "Flower",
+    "sprite": 597,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "258",
+    "name": "Blueberry",
+    "name_fr": "Myrtille",
+    "growth": 13,
+    "regrow": true,
+    "seasons": [
+      "Summer"
+    ],
+    "price": 50,
+    "type": "Fruit",
+    "sprite": 258,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "278",
+    "name": "Bok Choy",
+    "name_fr": "Chou chinois",
+    "growth": 4,
+    "regrow": false,
+    "seasons": [
+      "Fall"
+    ],
+    "price": 80,
+    "type": "Vegetable",
+    "sprite": 278,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "Broccoli",
+    "name": "Broccoli",
+    "name_fr": "Brocoli",
+    "growth": 8,
+    "regrow": true,
+    "seasons": [
+      "Fall"
+    ],
+    "price": 70,
+    "type": "Vegetable",
+    "sprite": 82,
+    "sheet": "objects_2"
+  },
+  {
+    "key": "90",
+    "name": "Cactus Fruit",
+    "name_fr": "Fruit de cactus",
+    "growth": 12,
+    "regrow": true,
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Fall",
+      "Winter"
+    ],
+    "price": 75,
+    "type": "Fruit",
+    "sprite": 90,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "Carrot",
+    "name": "Carrot",
+    "name_fr": "Carotte",
+    "growth": 3,
+    "regrow": false,
+    "seasons": [
+      "Spring"
+    ],
+    "price": 35,
+    "type": "Vegetable",
+    "sprite": 80,
+    "sheet": "objects_2"
+  },
+  {
+    "key": "190",
+    "name": "Cauliflower",
+    "name_fr": "Chou-fleur",
+    "growth": 12,
+    "regrow": false,
+    "seasons": [
+      "Spring"
+    ],
+    "price": 175,
+    "type": "Vegetable",
+    "sprite": 190,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "433",
+    "name": "Coffee Bean",
+    "name_fr": "Grain de café",
+    "growth": 10,
+    "regrow": true,
+    "seasons": [
+      "Spring",
+      "Summer"
+    ],
+    "price": 15,
+    "type": "Seed",
+    "sprite": 433,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "404",
+    "name": "Common Mushroom",
+    "name_fr": "Champignon commun",
+    "growth": 7,
+    "regrow": false,
+    "seasons": [
+      "Fall"
+    ],
+    "price": 40,
+    "type": "Forage",
+    "sprite": 404,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "270",
+    "name": "Corn",
+    "name_fr": "Maïs",
+    "growth": 14,
+    "regrow": true,
+    "seasons": [
+      "Summer",
+      "Fall"
+    ],
+    "price": 50,
+    "type": "Vegetable",
+    "sprite": 270,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "282",
+    "name": "Cranberries",
+    "name_fr": "Canneberges",
+    "growth": 7,
+    "regrow": true,
+    "seasons": [
+      "Fall"
+    ],
+    "price": 75,
+    "type": "Fruit",
+    "sprite": 282,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "272",
+    "name": "Eggplant",
+    "name_fr": "Aubergine",
+    "growth": 5,
+    "regrow": true,
+    "seasons": [
+      "Fall"
+    ],
+    "price": 60,
+    "type": "Vegetable",
+    "sprite": 272,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "595",
+    "name": "Fairy Rose",
+    "name_fr": "Rose de fée",
+    "growth": 12,
+    "regrow": false,
+    "seasons": [
+      "Fall"
+    ],
+    "price": 290,
+    "type": "Flower",
+    "sprite": 595,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "248",
+    "name": "Garlic",
+    "name_fr": "Ail",
+    "growth": 4,
+    "regrow": false,
+    "seasons": [
+      "Spring"
+    ],
+    "price": 60,
+    "type": "Vegetable",
+    "sprite": 248,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "398",
+    "name": "Grape",
+    "name_fr": "Raisin",
+    "growth": 10,
+    "regrow": true,
+    "seasons": [
+      "Fall"
+    ],
+    "price": 80,
+    "type": "Fruit",
+    "sprite": 398,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "188",
+    "name": "Green Bean",
+    "name_fr": "Haricot vert",
+    "growth": 10,
+    "regrow": true,
+    "seasons": [
+      "Spring"
+    ],
+    "price": 40,
+    "type": "Vegetable",
+    "sprite": 188,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "304",
+    "name": "Hops",
+    "name_fr": "Houblon",
+    "growth": 11,
+    "regrow": true,
+    "seasons": [
+      "Summer"
+    ],
+    "price": 25,
+    "type": "Vegetable",
+    "sprite": 304,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "260",
+    "name": "Hot Pepper",
+    "name_fr": "Piment fort",
+    "growth": 5,
+    "regrow": true,
+    "seasons": [
+      "Summer"
+    ],
+    "price": 40,
+    "type": "Fruit",
+    "sprite": 260,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "250",
+    "name": "Kale",
+    "name_fr": "Chou frisé",
+    "growth": 6,
+    "regrow": false,
+    "seasons": [
+      "Spring"
+    ],
+    "price": 110,
+    "type": "Vegetable",
+    "sprite": 250,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "254",
+    "name": "Melon",
+    "name_fr": "Melon",
+    "growth": 12,
+    "regrow": false,
+    "seasons": [
+      "Summer"
+    ],
+    "price": 250,
+    "type": "Fruit",
+    "sprite": 254,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "24",
+    "name": "Parsnip",
+    "name_fr": "Panais",
+    "growth": 4,
+    "regrow": false,
+    "seasons": [
+      "Spring"
+    ],
+    "price": 35,
+    "type": "Vegetable",
+    "sprite": 24,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "832",
+    "name": "Pineapple",
+    "name_fr": "Ananas",
+    "growth": 14,
+    "regrow": true,
+    "seasons": [
+      "Summer"
+    ],
+    "price": 300,
+    "type": "Fruit",
+    "sprite": 832,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "376",
+    "name": "Poppy",
+    "name_fr": "Pavot",
+    "growth": 7,
+    "regrow": false,
+    "seasons": [
+      "Summer"
+    ],
+    "price": 140,
+    "type": "Flower",
+    "sprite": 376,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "192",
+    "name": "Potato",
+    "name_fr": "Pomme de terre",
+    "growth": 6,
+    "regrow": false,
+    "seasons": [
+      "Spring"
+    ],
+    "price": 80,
+    "type": "Vegetable",
+    "sprite": 192,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "Powdermelon",
+    "name": "Powdermelon",
+    "name_fr": "Poudremelon",
+    "growth": 7,
+    "regrow": false,
+    "seasons": [
+      "Winter"
+    ],
+    "price": 60,
+    "type": "Fruit",
+    "sprite": 83,
+    "sheet": "objects_2"
+  },
+  {
+    "key": "276",
+    "name": "Pumpkin",
+    "name_fr": "Citrouille",
+    "growth": 13,
+    "regrow": false,
+    "seasons": [
+      "Fall"
+    ],
+    "price": 320,
+    "type": "Vegetable",
+    "sprite": 276,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "889",
+    "name": "Qi Fruit",
+    "name_fr": "Fruit de Qi",
+    "growth": 4,
+    "regrow": false,
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Fall",
+      "Winter"
+    ],
+    "price": 1,
+    "type": "Fruit",
+    "sprite": 889,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "264",
+    "name": "Radish",
+    "name_fr": "Radis",
+    "growth": 6,
+    "regrow": false,
+    "seasons": [
+      "Summer"
+    ],
+    "price": 90,
+    "type": "Vegetable",
+    "sprite": 264,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "266",
+    "name": "Red Cabbage",
+    "name_fr": "Chou rouge",
+    "growth": 9,
+    "regrow": false,
+    "seasons": [
+      "Summer"
+    ],
+    "price": 260,
+    "type": "Vegetable",
+    "sprite": 266,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "252",
+    "name": "Rhubarb",
+    "name_fr": "Rhubarbe",
+    "growth": 13,
+    "regrow": false,
+    "seasons": [
+      "Spring"
+    ],
+    "price": 220,
+    "type": "Fruit",
+    "sprite": 252,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "396",
+    "name": "Spice Berry",
+    "name_fr": "Baie épicée",
+    "growth": 7,
+    "regrow": false,
+    "seasons": [
+      "Summer"
+    ],
+    "price": 80,
+    "type": "Fruit",
+    "sprite": 396,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "268",
+    "name": "Starfruit",
+    "name_fr": "Carambole",
+    "growth": 13,
+    "regrow": false,
+    "seasons": [
+      "Summer"
+    ],
+    "price": 750,
+    "type": "Fruit",
+    "sprite": 268,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "400",
+    "name": "Strawberry",
+    "name_fr": "Fraise",
+    "growth": 8,
+    "regrow": true,
+    "seasons": [
+      "Spring"
+    ],
+    "price": 120,
+    "type": "Fruit",
+    "sprite": 400,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "593",
+    "name": "Summer Spangle",
+    "name_fr": "Fleur tropicale d’été",
+    "growth": 8,
+    "regrow": false,
+    "seasons": [
+      "Summer"
+    ],
+    "price": 90,
+    "type": "Flower",
+    "sprite": 593,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "SummerSquash",
+    "name": "Summer Squash",
+    "name_fr": "Courge d’été",
+    "growth": 6,
+    "regrow": true,
+    "seasons": [
+      "Summer"
+    ],
+    "price": 45,
+    "type": "Vegetable",
+    "sprite": 81,
+    "sheet": "objects_2"
+  },
+  {
+    "key": "421",
+    "name": "Sunflower",
+    "name_fr": "Tournesol",
+    "growth": 8,
+    "regrow": false,
+    "seasons": [
+      "Summer",
+      "Fall"
+    ],
+    "price": 80,
+    "type": "Flower",
+    "sprite": 421,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "417",
+    "name": "Sweet Gem Berry",
+    "name_fr": "Baie de gemme sucrée",
+    "growth": 24,
+    "regrow": false,
+    "seasons": [
+      "Fall"
+    ],
+    "price": 3000,
+    "type": "Fruit",
+    "sprite": 417,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "830",
+    "name": "Taro Root",
+    "name_fr": "Racine de taro",
+    "growth": 10,
+    "regrow": false,
+    "seasons": [
+      "Summer"
+    ],
+    "price": 100,
+    "type": "Vegetable",
+    "sprite": 830,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "256",
+    "name": "Tomato",
+    "name_fr": "Tomate",
+    "growth": 11,
+    "regrow": true,
+    "seasons": [
+      "Summer"
+    ],
+    "price": 60,
+    "type": "Vegetable",
+    "sprite": 256,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "591",
+    "name": "Tulip",
+    "name_fr": "Tulipe",
+    "growth": 6,
+    "regrow": false,
+    "seasons": [
+      "Spring"
+    ],
+    "price": 30,
+    "type": "Flower",
+    "sprite": 591,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "271",
+    "name": "Unmilled Rice",
+    "name_fr": "Riz non moulu",
+    "growth": 8,
+    "regrow": false,
+    "seasons": [
+      "Spring"
+    ],
+    "price": 30,
+    "type": "Vegetable",
+    "sprite": 271,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "262",
+    "name": "Wheat",
+    "name_fr": "Blé",
+    "growth": 4,
+    "regrow": false,
+    "seasons": [
+      "Summer",
+      "Fall"
+    ],
+    "price": 25,
+    "type": "Vegetable",
+    "sprite": 262,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "16",
+    "name": "Wild Horseradish",
+    "name_fr": "Raifort sauvage",
+    "growth": 7,
+    "regrow": false,
+    "seasons": [
+      "Spring"
+    ],
+    "price": 50,
+    "type": "Forage",
+    "sprite": 16,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "412",
+    "name": "Winter Root",
+    "name_fr": "Racine d’hiver",
+    "growth": 7,
+    "regrow": false,
+    "seasons": [
+      "Winter"
+    ],
+    "price": 70,
+    "type": "Forage",
+    "sprite": 412,
+    "sheet": "springobjects"
+  },
+  {
+    "key": "280",
+    "name": "Yam",
+    "name_fr": "Igname",
+    "growth": 10,
+    "regrow": false,
+    "seasons": [
+      "Fall"
+    ],
+    "price": 160,
+    "type": "Vegetable",
+    "sprite": 280,
+    "sheet": "springobjects"
+  }
+]

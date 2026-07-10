@@ -1,0 +1,728 @@
+{
+  "lang": {
+    "name": "日本語"
+  },
+  "layout": {
+    "page_meta": {
+      "base_title": "Stardew Valleyの要素を当てよう",
+      "base_description": "Stardewdle - 毎日遊べるStardew Valley推理ゲーム！毎日新しいチャレンジに挑戦して、バトルロイヤルの知識を試そう。",
+      "site_name": "Stardewdle"
+    },
+    "header": {
+      "home_link": "Stardewdleのホームページに戻る",
+      "logo_alt": "Stardewdleのロゴ"
+    },
+    "footer": {
+      "accessibility": {
+        "discord": "Discordコミュニティに参加する",
+        "information": "お知らせ",
+        "kofi": "Ko-fiで応援する",
+        "x": "X (Twitter) でフォローする",
+        "reddit": "Redditコミュニティに参加する"
+      },
+      "want_more": {
+        "title": "もっと遊びたい？",
+        "description": "すべての-dleゲームが集まる最大のハブをチェックしましょう。"
+      },
+      "copyright": "Stardewdle - {year}",
+      "cookie_preferences": "クッキー設定を更新"
+    },
+    "modals": {
+      "about": {
+        "commitment": {
+          "description": "毎日訪れて新しい住民を当て、連勝記録を維持し、友達と結果をシェアしよう。",
+          "title": "デイリーチャレンジ"
+        },
+        "credit": {
+          "description": "Stardew Valleyのファンによる、ファンのための作品です。🌱",
+          "title": "クレジット"
+        },
+        "disclaimer": "Stardewdleは非公式のファンプロジェクトです。Stardew ValleyはConcernedApeによって制作されており、すべてのキャラクターとアートワークはそれぞれの権利者に帰属します。本プロジェクトはConcernedApeとは提携・後援・公認関係にありません。",
+        "discover": "Stardewdleへようこそ、毎日楽しめるStardew Valley当てゲームです!住民(住民)、作物、魚の3つのモードで知識を試そう。毎日新しい問題が登場します。",
+        "dle_games": {
+          "description": "Stardewdleを楽しんでいただけましたか?メニューにリンクされたハブから、毎日楽しめる-dleゲームシリーズ全体をチェックしてみてください。",
+          "title": "他の-dleゲーム"
+        },
+        "game_modes": {
+          "description": "住民では住民の6つの属性(性別、地域、誕生日、結婚可否、年齢)を比較します。作物モードでは作物の5つの属性(成長日数、価格、再収穫、種類、季節)を比較します。魚モードでは魚の5つの属性(難易度、動き、季節、天気、サイズ)を比較します。各モードで毎日新しい問題が登場します。",
+          "title": "3つのデイリーモード"
+        },
+        "inspiration": {
+          "description": "Wordleと数々の素晴らしい-dle当てゲームからインスピレーションを得ています。",
+          "title": "インスピレーション"
+        },
+        "privacy": {
+          "description": "シンプルに保っています — 進捗と連勝記録はあなたのブラウザにローカル保存されます。",
+          "title": "プライバシー"
+        },
+        "signature": {
+          "regards": "愛を込めて、",
+          "team": "Stardewdleチーム"
+        },
+        "thanks": "プレイしてくれてありがとう、楽しい農業ライフを!",
+        "title": "概要"
+      }
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "あなたのStardew Valleyの知識を試そう",
+      "button": {
+        "villager": {
+          "title": "住民",
+          "description": "毎回ヒントを獲得"
+        },
+        "crop": {
+          "description": "ステータスから作物を当てよう",
+          "title": "作物"
+        },
+        "fish": {
+          "description": "ステータスから魚を当てよう",
+          "title": "魚"
+        }
+      },
+      "reset_in": "リセットまで: {time}",
+      "royaledle_banner": {
+        "title": "Royaledleで遊ぶ",
+        "subtitle": "今日のクラロワキャラを当てよう",
+        "cta": "プレイ",
+        "new": "NEW"
+      }
+    },
+    "villager": {
+      "page_meta": {
+        "title": "住民",
+        "description": "今日のStardew Valleyブロウラーを当てよう！"
+      },
+      "errors": {
+        "no_daily_brawler": "本日のブロウラーが見つかりません",
+        "generic_error": "エラー: {message}"
+      },
+      "result": {
+        "success": "お見事！",
+        "failure": "もう一度挑戦"
+      },
+      "scroll_hint": "← 横にスクロールしてもっと表示 →",
+      "yesterday": "昨日のブロウラーは <name>{brawlerName}</name> でした",
+      "share": {
+        "text": "#Stardewdle のブロウラー #{id} を住民モードで {tries} 回で当てました ",
+        "to_copy": "#Stardewdle のブロウラー #{id} を住民モードで {tries} 回で当てました\n"
+      },
+      "victory": {
+        "stats_button": "統計",
+        "back_home": "ホームに戻る"
+      },
+      "components": {
+        "explanationBox": {
+          "title": "今日のStardew Valleyブロウラーを当てよう",
+          "bottomHint": "好きなブロウラーを入力してスタート。",
+          "hints": {
+            "gadget": {
+              "unavailable": "ガジェットのヒントまであと {tries} 回",
+              "available": "ガジェットのヒント"
+            },
+            "hypercharge": {
+              "unavailable": "ハイパーチャージのヒントまであと {tries} 回",
+              "available": "ハイパーチャージのヒント"
+            },
+            "silhouette": {
+              "unavailable": "シルエットのヒントまであと {tries} 回",
+              "available": "シルエットのヒント"
+            }
+          }
+        },
+        "toolsBar": {
+          "stats": {
+            "tooltip": "統計",
+            "alt": "統計アイコン"
+          },
+          "streak": {
+            "tooltip": "現在の連勝記録（連続勝利数）",
+            "alt": {
+              "active": "連勝中アイコン",
+              "inactive": "連勝中断アイコン"
+            }
+          },
+          "patchNotes": {
+            "tooltip": "アップデート情報",
+            "alt": "アップデート情報アイコン"
+          },
+          "howToPlay": {
+            "tooltip": "遊び方",
+            "alt": "遊び方アイコン"
+          }
+        },
+        "answerInput": {
+          "placeholder": "ブロウラー名を入力.."
+        }
+      },
+      "modals": {
+        "stats": {
+          "title": "統計",
+          "metrics": {
+            "games_won": {
+              "label": "勝利数:",
+              "aria_label": "勝利したゲーム数"
+            },
+            "average_tries": {
+              "label": "平均挑戦回数:",
+              "aria_label": "1ゲームあたりの平均挑戦回数"
+            },
+            "one_shots": {
+              "label": "一発正解:",
+              "aria_label": "1回で勝利したゲーム数"
+            },
+            "current_streak": {
+              "label": "現在の連勝:",
+              "aria_label": "現在の連勝記録"
+            },
+            "best_streak": {
+              "label": "最高連勝:",
+              "aria_label": "最高の連勝記録"
+            }
+          },
+          "graph": {
+            "title": "ゲームごとの挑戦回数",
+            "label": "挑戦",
+            "fallback": "お使いのブラウザはcanvas要素に対応していません。"
+          }
+        },
+        "patchNotes": {
+          "title": "アップデート情報",
+          "states": {
+            "loading": {
+              "message": "アップデート情報を読み込み中..."
+            },
+            "empty": {
+              "message": "まだ何もありません"
+            },
+            "error": {
+              "title": "アップデート情報の読み込みに失敗しました",
+              "message": "{error}"
+            }
+          }
+        },
+        "how_to_play_classic": {
+          "title": "Stardewdleの遊び方: 住民モード - 毎日のStardew Valleyチャレンジ",
+          "introduction_title": "Stardewdleの住民モードについて",
+          "introduction_description": "住民モードでは、戦略的な推理ゲームを通じてStardew Valleyのブロウラーに関する知識を試します。目的は、6つの主要な属性を分析してシークレットブロウラーを特定することです。各推測ごとに、色分けされたフィードバックと方向矢印が表示され、毎日のチャレンジで正解への手がかりとなります。",
+          "attributes_title": "ブロウラーの属性",
+          "attributes_description": "Stardewdleの住民モードでは、各ブロウラーに次の6つの主要な属性が用意されています:",
+          "attribute_item_1": "• <strong>レアリティ</strong>: ブロウラーのレアリティ（コモン、レア、スーパーレア、エピック、ミシック、レジェンダリー、ウルトラレジェンダリー）。",
+          "attribute_item_2": "• <strong>クラス</strong>: バトルでのブロウラーの役割（例: タンク、ダメージディーラー、サポート、アサシン）。",
+          "attribute_item_3": "• <strong>移動速度</strong>: ブロウラーの移動速度（とても遅い、遅い、普通、速い、とても速い）。",
+          "attribute_item_4": "• <strong>射程</strong>: ブロウラーの攻撃範囲（とても短い、短い、普通、長い、とても長い）。",
+          "attribute_item_5": "• <strong>リロード</strong>: ブロウラーのリロード速度（とても遅い、遅い、普通、速い、とても速い）。",
+          "attribute_item_6": "• <strong>登場年</strong>: ブロウラーがStardew Valleyに登場した年。",
+          "feedback_title": "色によるフィードバックの見方",
+          "feedback_description": "推測ごとに、各属性についてフリップアニメーション付きの色分けされたフィードバックが表示されます:",
+          "feedback_item_1": "• <span style=\"color: #32c21c\">緑</span>: 正解！シークレットブロウラーの属性値と完全に一致しています。",
+          "feedback_item_2": "• <span style=\"color: #d40c00\">赤</span>: 不正解。シークレットブロウラーの属性値とは一致していません。",
+          "feedback_arrows": "<strong>移動速度</strong>、<strong>射程</strong>、<strong>リロード</strong>、<strong>登場年</strong>の属性については、方向矢印が表示されます:",
+          "feedback_arrow_up": "• <strong>上矢印 (↑)</strong>: シークレットブロウラーの値はあなたの推測より高いです。",
+          "feedback_arrow_down": "• <strong>下矢印 (↓)</strong>: シークレットブロウラーの値はあなたの推測より低いです。",
+          "how_to_play_title": "Stardewdle住民モードの遊び方",
+          "step_1": "まず検索リストから任意のブロウラーを最初の推測として選びましょう。",
+          "step_2": "各属性タイルが順番にめくれ、色分けされたフィードバックが表示されるのを見守りましょう。",
+          "step_3": "緑と赤のタイルを分析して、一致する属性と一致しない属性を見極めましょう。",
+          "step_4": "移動速度、射程、リロード、登場年の方向矢印を使って候補を絞り込みましょう。",
+          "step_5": "得られたフィードバックを総合して、次の推測を行いましょう。",
+          "step_6": "シークレットブロウラーを正しく当てるまで続けましょう！",
+          "step_7": "住民モードの新しいブロウラーを当てるため、毎日戻ってきてください。",
+          "strategy_title": "勝利のための戦略のヒント",
+          "strategy_tip_1": "• よく知っているブロウラーから始めて、属性のパターンの基準を作りましょう。",
+          "strategy_tip_2": "• タイルが順番にめくれるアニメーションに注目しましょう。各タイルが順番に情報を明らかにします。",
+          "strategy_tip_3": "• 矢印を戦略的に使いましょう。ブロウラーのグループ全体を素早く除外できます。",
+          "strategy_tip_4": "• 順序のある属性（移動速度、射程、リロード）については、5段階のスケールを覚えておきましょう。",
+          "strategy_tip_5": "• 複数の属性を照合しましょう。ブロウラーは緑のフィードバックすべてに一致する必要があります。",
+          "strategy_tip_6": "• レアリティとクラスは完全に一致する必要があることを忘れずに（矢印はなく、緑か赤のみ）。",
+          "daily_challenge_title": "毎日のStardew Valleyチャレンジ",
+          "daily_challenge_description": "毎日Stardewdleに戻ってきて、新しいシークレットブロウラーを特定しましょう！過去の挑戦は新しい順に表示され、新しい推測はアニメーション付きで追加されます。連勝記録を伸ばし、Stardew Valleyの知識の真の腕前を友達と競い合いましょう。"
+        }
+      },
+      "attributes": {
+        "headers": {
+          "brawler": "ブローラー",
+          "rarity": "レアリティ",
+          "class": "クラス",
+          "movement": "移動",
+          "range": "射程",
+          "reload": "リロード",
+          "year": "年",
+          "age": "年齢",
+          "birthday": "誕生日",
+          "gender": "性別",
+          "marriageable": "結婚可否",
+          "region": "地域",
+          "season": "季節",
+          "villager": "住民"
+        },
+        "rarity": {
+          "common": "コモン",
+          "rare": "レア",
+          "super_rare": "スーパーレア",
+          "epic": "エピック",
+          "mythic": "ミシック",
+          "legendary": "レジェンダリー",
+          "ultra_legendary": "ウルトラレジェンダリー"
+        },
+        "class": {
+          "artillery": "砲兵",
+          "assassin": "暗殺者",
+          "controller": "コントローラー",
+          "damage_dealer": "ダメージディーラー",
+          "marksman": "射手",
+          "support": "サポート",
+          "tank": "タンク"
+        },
+        "speed": {
+          "very_slow": "とても遅い",
+          "slow": "遅い",
+          "normal": "普通",
+          "fast": "速い",
+          "very_fast": "とても速い"
+        },
+        "range": {
+          "very_short": "とても短い",
+          "short": "短い",
+          "normal": "普通",
+          "long": "長い",
+          "very_long": "とても長い"
+        },
+        "age": {
+          "Adult": "大人",
+          "Child": "子供",
+          "Teen": "10代"
+        },
+        "gender": {
+          "Female": "女性",
+          "Male": "男性",
+          "Undefined": "その他"
+        },
+        "marriageable": {
+          "no": "いいえ",
+          "yes": "はい"
+        },
+        "region": {
+          "Beach": "ビーチ",
+          "Desert": "デザート",
+          "Forest": "フォレスト",
+          "GingerIsland": "ジンジャー島",
+          "Mountain": "マウンテン",
+          "Sewers": "下水道",
+          "Town": "タウン"
+        },
+        "season": {
+          "Fall": "秋",
+          "Spring": "春",
+          "Summer": "夏",
+          "Winter": "冬"
+        }
+      },
+      "gift_hint": "大好物: {gift}",
+      "gift_hint_locked": "{tries}回の推測で大好物のヒントが出現"
+    },
+    "crop": {
+      "attributes": {
+        "headers": {
+          "crop": "作物",
+          "growth": "成長日数",
+          "price": "価格",
+          "regrow": "再収穫",
+          "season": "季節",
+          "type": "種類"
+        },
+        "regrow": {
+          "no": "いいえ",
+          "yes": "はい"
+        },
+        "season": {
+          "Fall": "秋",
+          "Spring": "春",
+          "Summer": "夏",
+          "Winter": "冬"
+        },
+        "type": {
+          "Flower": "花",
+          "Forage": "山菜",
+          "Fruit": "果物",
+          "Seed": "種",
+          "Vegetable": "野菜"
+        }
+      },
+      "components": {
+        "answerInput": {
+          "placeholder": "作物名を入力.."
+        },
+        "explanationBox": {
+          "bottomHint": "作物名を入力して開始しよう。",
+          "title": "今日のStardew Valleyの作物を当てよう"
+        },
+        "toolsBar": {
+          "howToPlay": {
+            "alt": "遊び方アイコン",
+            "tooltip": "遊び方"
+          },
+          "patchNotes": {
+            "alt": "更新情報アイコン",
+            "tooltip": "更新情報"
+          },
+          "stats": {
+            "alt": "統計アイコン",
+            "tooltip": "統計"
+          },
+          "streak": {
+            "alt": {
+              "active": "連勝中アイコン",
+              "inactive": "連勝なしアイコン"
+            },
+            "tooltip": "現在の連勝記録(連続勝利数)"
+          }
+        }
+      },
+      "errors": {
+        "generic_error": "エラー: {message}",
+        "no_daily_brawler": "本日の作物が見つかりません"
+      },
+      "modals": {
+        "how_to_play_classic": {
+          "attribute_item_1": "• <strong>成長日数</strong>：完全に育つまでの日数。",
+          "attribute_item_2": "• <strong>価格</strong>：ゴールドでの基本売却価格。",
+          "attribute_item_3": "• <strong>再収穫</strong>：収穫後も実り続けるか？（はい/いいえ）。",
+          "attribute_item_4": "• <strong>種類</strong>：野菜、果物、花、採集品、種のいずれか。",
+          "attribute_item_5": "• <strong>季節</strong>：育つ季節。",
+          "attribute_item_6": "• <strong>ヒント</strong>：緑は完全一致、季節がオレンジの場合は部分的に一致していることを示します。",
+          "attributes_description": "作物モードでは、以下の属性を比較します。",
+          "attributes_title": "作物の属性",
+          "daily_challenge_description": "毎日訪れて新しい秘密の作物に挑戦しましょう。連続記録を記録し、結果を友達と共有できます。",
+          "daily_challenge_title": "デイリーチャレンジ",
+          "feedback_arrow_down": "• <strong>下矢印（↓）</strong>：秘密の作物の値がより低いことを示します。",
+          "feedback_arrow_up": "• <strong>上矢印（↑）</strong>：秘密の作物の値がより高いことを示します。",
+          "feedback_arrows": "成長日数と価格には矢印が表示されます。",
+          "feedback_description": "各タイルは色分けされています。",
+          "feedback_item_1": "• <span style=\"color: #32c21c\">緑</span></span>：秘密の作物と完全に一致。",
+          "feedback_item_2": "• <span style=\"color: #d40c00\">赤</span></span>：不一致。",
+          "feedback_title": "フィードバック",
+          "how_to_play_title": "遊び方",
+          "introduction_description": "5つの属性を比較しながら、今日のスターデューバレーの秘密の作物を当てましょう。予想するたびに色分けされたフィードバックと方向を示す矢印がヒントになります。",
+          "introduction_title": "作物モード",
+          "step_1": "検索リストから好きな作物を選び、最初の予想をしましょう。",
+          "step_2": "各属性のタイルが順番にめくれ、色分けされたフィードバックが表示されるのを確認しましょう。",
+          "step_3": "緑と赤のタイルを見て、一致する属性と一致しない属性を確認しましょう。",
+          "step_4": "成長日数と価格の矢印を使って範囲を絞り込みましょう。",
+          "step_5": "得られたフィードバックをもとに、次の予想をしましょう。",
+          "step_6": "秘密の作物を正しく当てるまで続けましょう！",
+          "step_7": "作物モードでは毎日新しい作物が登場するので、また明日も挑戦しましょう。",
+          "strategy_tip_1": "• よく知っている作物から始めて、属性の基準を把握しましょう。",
+          "strategy_tip_2": "• 種類と季節を使うと候補を素早く絞り込めます。多くの作物がこれらを共有しているためです。",
+          "strategy_tip_3": "• 矢印を使って、成長日数や価格でグループ全体を除外しましょう。",
+          "strategy_tip_4": "• 再収穫は「はい/いいえ」のシンプルな属性で、候補を半分に絞り込めます。",
+          "strategy_tip_5": "• 作物はすべての緑のフィードバックに同時に一致する必要があります。",
+          "strategy_tip_6": "• 再収穫、種類、季節は完全一致のみです（矢印はありません）。",
+          "strategy_title": "攻略のヒント",
+          "title": "遊び方：作物モード"
+        },
+        "patchNotes": {
+          "states": {
+            "empty": {
+              "message": "まだ何もありません"
+            },
+            "error": {
+              "message": "{error}",
+              "title": "更新情報の読み込みに失敗しました"
+            },
+            "loading": {
+              "message": "更新情報を読み込み中..."
+            }
+          },
+          "title": "更新情報"
+        },
+        "stats": {
+          "graph": {
+            "fallback": "お使いのブラウザはcanvas要素に対応していません。",
+            "label": "試行回数",
+            "title": "ゲームごとの試行回数"
+          },
+          "metrics": {
+            "average_tries": {
+              "aria_label": "ゲームごとの平均試行回数",
+              "label": "平均試行回数:"
+            },
+            "best_streak": {
+              "aria_label": "最高連勝記録",
+              "label": "最高連勝記録:"
+            },
+            "current_streak": {
+              "aria_label": "現在の連勝記録",
+              "label": "現在の連勝記録:"
+            },
+            "games_won": {
+              "aria_label": "勝利したゲーム数",
+              "label": "勝利数:"
+            },
+            "one_shots": {
+              "aria_label": "1回の試行で勝利したゲーム数",
+              "label": "一発正解:"
+            }
+          },
+          "title": "統計"
+        }
+      },
+      "page_meta": {
+        "description": "ステータスから今日のStardew Valleyの作物を当てよう!",
+        "title": "作物"
+      },
+      "result": {
+        "failure": "もう一度挑戦",
+        "success": "よくできました!"
+      },
+      "scroll_hint": "← 横にスクロールしてもっと見る →",
+      "share": {
+        "text": "#Stardewdleの作物 #{id} を{tries}回の推測で当てました ",
+        "to_copy": "#Stardewdleの作物 #{id} を{tries}回の推測で当てました\n{url}"
+      },
+      "victory": {
+        "back_home": "ホームに戻る",
+        "next_mode": "住民をプレイ",
+        "stats_button": "統計"
+      },
+      "yesterday": "昨日の作物は<name>{brawlerName}</name>でした"
+    },
+    "fish": {
+      "attributes": {
+        "behavior": {
+          "Dart": "ダート",
+          "Floater": "フローター",
+          "Mixed": "ミックス",
+          "Sinker": "シンカー",
+          "Smooth": "スムーズ"
+        },
+        "headers": {
+          "behavior": "動き",
+          "difficulty": "難易度",
+          "fish": "魚",
+          "season": "季節",
+          "size": "サイズ",
+          "weather": "天気"
+        },
+        "season": {
+          "Fall": "秋",
+          "Spring": "春",
+          "Summer": "夏",
+          "Winter": "冬"
+        },
+        "weather": {
+          "Any": "いつでも",
+          "Rainy": "雨",
+          "Sunny": "晴れ"
+        }
+      },
+      "components": {
+        "answerInput": {
+          "placeholder": "魚の名前を入力.."
+        },
+        "explanationBox": {
+          "bottomHint": "魚の名前を入力して開始しよう。",
+          "title": "今日のStardew Valleyの魚を当てよう"
+        },
+        "toolsBar": {
+          "howToPlay": {
+            "alt": "遊び方アイコン",
+            "tooltip": "遊び方"
+          },
+          "patchNotes": {
+            "alt": "更新情報アイコン",
+            "tooltip": "更新情報"
+          },
+          "stats": {
+            "alt": "統計アイコン",
+            "tooltip": "統計"
+          },
+          "streak": {
+            "alt": {
+              "active": "連勝中アイコン",
+              "inactive": "連勝なしアイコン"
+            },
+            "tooltip": "現在の連勝記録(連続勝利数)"
+          }
+        }
+      },
+      "errors": {
+        "generic_error": "エラー: {message}",
+        "no_daily_brawler": "本日の魚が見つかりません"
+      },
+      "modals": {
+        "how_to_play_classic": {
+          "attribute_item_1": "• <strong>難易度</strong>：魚を釣るのがどれだけ難しいか。",
+          "attribute_item_2": "• <strong>動き</strong>：魚の動き方——フロート、ダート、スムーズ、ミックス、シンカーのいずれか。",
+          "attribute_item_3": "• <strong>季節</strong>：釣ることができる季節。",
+          "attribute_item_4": "• <strong>天気</strong>：晴れ、雨、またはすべて。",
+          "attribute_item_5": "• <strong>サイズ</strong>：インチで表した最大サイズ。",
+          "attribute_item_6": "• <strong>ヒント</strong>：緑は完全一致、季節がオレンジの場合は部分的に一致していることを示します。",
+          "attributes_description": "魚モードでは、以下の属性を比較します。",
+          "attributes_title": "魚の属性",
+          "daily_challenge_description": "毎日訪れて新しい秘密の魚に挑戦しましょう。連続記録を記録し、結果を友達と共有できます。",
+          "daily_challenge_title": "デイリーチャレンジ",
+          "feedback_arrow_down": "• <strong>下矢印（↓）</strong>：秘密の魚の値がより低いことを示します。",
+          "feedback_arrow_up": "• <strong>上矢印（↑）</strong>：秘密の魚の値がより高いことを示します。",
+          "feedback_arrows": "難易度とサイズには矢印が表示されます。",
+          "feedback_description": "各タイルは色分けされています。",
+          "feedback_item_1": "• <span style=\"color: #32c21c\">緑</span></span>：秘密の魚と完全に一致。",
+          "feedback_item_2": "• <span style=\"color: #d40c00\">赤</span></span>：不一致。",
+          "feedback_title": "フィードバック",
+          "how_to_play_title": "遊び方",
+          "introduction_description": "5つの属性を比較しながら、今日のスターデューバレーの秘密の魚を当てましょう。予想するたびに色分けされたフィードバックと方向を示す矢印がヒントになります。",
+          "introduction_title": "魚モード",
+          "step_1": "検索リストから好きな魚を選び、最初の予想をしましょう。",
+          "step_2": "各属性のタイルが順番にめくれ、色分けされたフィードバックが表示されるのを確認しましょう。",
+          "step_3": "緑と赤のタイルを見て、一致する属性と一致しない属性を確認しましょう。",
+          "step_4": "難易度とサイズの矢印を使って範囲を絞り込みましょう。",
+          "step_5": "得られたフィードバックをもとに、次の予想をしましょう。",
+          "step_6": "秘密の魚を正しく当てるまで続けましょう！",
+          "step_7": "魚モードでは毎日新しい魚が登場するので、また明日も挑戦しましょう。",
+          "strategy_tip_1": "• よく知っている魚から始めて、属性の基準を把握しましょう。",
+          "strategy_tip_2": "• 動きと天気を使うと候補を素早く絞り込めます。多くの魚がこれらを共有しているためです。",
+          "strategy_tip_3": "• 矢印を使って、難易度やサイズでグループ全体を除外しましょう。",
+          "strategy_tip_4": "• 季節は重なりがある場合、部分的に一致（オレンジ）することがあります。",
+          "strategy_tip_5": "• 魚はすべての緑のフィードバックに同時に一致する必要があります。",
+          "strategy_tip_6": "• 動き、季節、天気は完全一致のみです（矢印はありません）。",
+          "strategy_title": "攻略のヒント",
+          "title": "遊び方：魚モード"
+        },
+        "patchNotes": {
+          "states": {
+            "empty": {
+              "message": "まだ何もありません"
+            },
+            "error": {
+              "message": "{error}",
+              "title": "更新情報の読み込みに失敗しました"
+            },
+            "loading": {
+              "message": "更新情報を読み込み中..."
+            }
+          },
+          "title": "更新情報"
+        },
+        "stats": {
+          "graph": {
+            "fallback": "お使いのブラウザはcanvas要素に対応していません。",
+            "label": "試行回数",
+            "title": "ゲームごとの試行回数"
+          },
+          "metrics": {
+            "average_tries": {
+              "aria_label": "ゲームごとの平均試行回数",
+              "label": "平均試行回数:"
+            },
+            "best_streak": {
+              "aria_label": "最高連勝記録",
+              "label": "最高連勝記録:"
+            },
+            "current_streak": {
+              "aria_label": "現在の連勝記録",
+              "label": "現在の連勝記録:"
+            },
+            "games_won": {
+              "aria_label": "勝利したゲーム数",
+              "label": "勝利数:"
+            },
+            "one_shots": {
+              "aria_label": "1回の試行で勝利したゲーム数",
+              "label": "一発正解:"
+            }
+          },
+          "title": "統計"
+        }
+      },
+      "page_meta": {
+        "description": "ステータスから今日のStardew Valleyの魚を当てよう!",
+        "title": "魚"
+      },
+      "result": {
+        "failure": "もう一度挑戦",
+        "success": "よくできました!"
+      },
+      "scroll_hint": "← 横にスクロールしてもっと見る →",
+      "share": {
+        "text": "#Stardewdleの魚 #{id} を{tries}回の推測で当てました ",
+        "to_copy": "#Stardewdleの魚 #{id} を{tries}回の推測で当てました\n{url}"
+      },
+      "victory": {
+        "back_home": "ホームに戻る",
+        "next_mode": "住民をプレイ",
+        "stats_button": "統計"
+      },
+      "yesterday": "昨日の魚は<name>{brawlerName}</name>でした"
+    }
+  },
+  "common": {
+    "header": {
+      "button": {
+        "stats": {
+          "tooltip": "統計"
+        },
+        "streak": {
+          "tooltip": "現在の連勝（連続勝利数）"
+        },
+        "changelog": {
+          "tooltip": "変更履歴"
+        }
+      }
+    },
+    "soon": "近日公開"
+  },
+  "components": {
+    "explanationBox": {
+      "errors": {
+        "no_content": "コンテンツがありません"
+      }
+    },
+    "answerInput": {
+      "states": {
+        "loading": "読み込み中...",
+        "no_result": "結果なし"
+      },
+      "button": {
+        "submit": {
+          "title": "送信"
+        }
+      }
+    },
+    "victoryContainer": {
+      "title": "今日のゲーム",
+      "congratulations": "GG !!",
+      "guess": {
+        "prefix": "あなたの正解",
+        "character": "{name}"
+      },
+      "tries": {
+        "count": "挑戦回数:",
+        "value": "{count}"
+      },
+      "next": {
+        "timer": "次のパズルまで",
+        "mode": "次のモード:"
+      },
+      "image": {
+        "alt": "勝利の画像"
+      },
+      "you_found": "あなたは見つけました",
+      "number_of_tries": "試行回数: {count}"
+    },
+    "shareContainer": {
+      "title": "結果をシェアしよう",
+      "buttons": {
+        "copy": {
+          "title": "コピー",
+          "aria_label": "結果をクリップボードにコピー"
+        },
+        "tweet": {
+          "title": "ツイート",
+          "aria_label": "X (Twitter) でシェア"
+        }
+      },
+      "and_more": "あと{count}件..."
+    }
+  }
+}

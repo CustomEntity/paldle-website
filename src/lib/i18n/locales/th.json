@@ -1,0 +1,728 @@
+{
+  "lang": {
+    "name": "ไทย"
+  },
+  "layout": {
+    "page_meta": {
+      "base_title": "ทายองค์ประกอบของ Stardew Valley",
+      "base_description": "Stardewdle - เกมทาย Stardew Valley รายวัน! รับมือกับความท้าทายใหม่ทุกวันและทดสอบความรู้ Stardew Valley ของคุณ",
+      "site_name": "Stardewdle"
+    },
+    "header": {
+      "home_link": "กลับไปที่หน้าแรกของ Stardewdle",
+      "logo_alt": "โลโก้ Stardewdle"
+    },
+    "footer": {
+      "accessibility": {
+        "discord": "เข้าร่วมชุมชน Discord ของเรา",
+        "information": "ข้อมูล",
+        "kofi": "สนับสนุนเราได้ที่ Ko-fi",
+        "x": "ติดตามเราที่ X (Twitter)",
+        "reddit": "เข้าร่วมชุมชน Reddit ของเรา"
+      },
+      "want_more": {
+        "title": "ต้องการมากกว่านี้?",
+        "description": "ค้นพบศูนย์รวมที่ใหญ่ที่สุดสำหรับเกม dle ทั้งหมด"
+      },
+      "copyright": "Stardewdle - {year}",
+      "cookie_preferences": "อัปเดตการตั้งค่าคุกกี้"
+    },
+    "modals": {
+      "about": {
+        "commitment": {
+          "description": "กลับมาทุกวันเพื่อทายชาวบ้านคนใหม่ รักษาสถิติต่อเนื่องของคุณ และแชร์ผลลัพธ์ให้เพื่อนๆ",
+          "title": "ความท้าทายประจำวัน"
+        },
+        "credit": {
+          "description": "สร้างโดยแฟนคลับ เพื่อแฟนๆ Stardew Valley 🌱",
+          "title": "เครดิต"
+        },
+        "disclaimer": "Stardewdle เป็นโปรเจกต์แฟนเมดที่ไม่เป็นทางการ Stardew Valley สร้างสรรค์โดย ConcernedApe ตัวละครและภาพประกอบทั้งหมดเป็นของเจ้าของลิขสิทธิ์ที่เกี่ยวข้อง โปรเจกต์นี้ไม่มีความเกี่ยวข้อง ไม่ได้รับการสนับสนุน หรือรับรองโดย ConcernedApe",
+        "discover": "ยินดีต้อนรับสู่ Stardewdle เกมทายปริศนา Stardew Valley ประจำวัน! ทดสอบความรู้ของคุณผ่านสามโหมด — คลาสสิก (ชาวบ้าน) พืชผล และปลา — พร้อมปริศนาใหม่ทุกวัน",
+        "dle_games": {
+          "description": "ชอบ Stardewdle ไหม? สำรวจครอบครัวเกม -dle ประจำวันทั้งหมดได้ที่ฮับซึ่งลิงก์อยู่ในเมนู",
+          "title": "เกม -dle เพิ่มเติม"
+        },
+        "game_modes": {
+          "description": "คลาสสิกเปรียบเทียบคุณสมบัติของชาวบ้านหกอย่าง (เพศ, ภูมิภาค, วันเกิด, แต่งงานได้, อายุ) พืชผลเปรียบเทียบคุณสมบัติของพืชห้าอย่าง (การเติบโต, ราคา, ปลูกซ้ำ, ประเภท, ฤดูกาล) ปลาเปรียบเทียบคุณสมบัติของปลาห้าอย่าง (ความยาก, พฤติกรรม, ฤดูกาล, สภาพอากาศ, ขนาด) ปริศนาใหม่สำหรับแต่ละโหมดทุกวัน",
+          "title": "สามโหมดประจำวัน"
+        },
+        "inspiration": {
+          "description": "ได้แรงบันดาลใจจาก Wordle และเกมทายปริศนา -dle สุดยอดเยี่ยมมากมาย",
+          "title": "แรงบันดาลใจ"
+        },
+        "privacy": {
+          "description": "เราทำให้เรียบง่าย — ความคืบหน้าและสถิติต่อเนื่องของคุณถูกเก็บไว้ในเบราว์เซอร์ของคุณเอง",
+          "title": "ความเป็นส่วนตัว"
+        },
+        "signature": {
+          "regards": "ด้วยความรัก,",
+          "team": "ทีมงาน Stardewdle"
+        },
+        "thanks": "ขอบคุณที่เล่น และขอให้สนุกกับการทำฟาร์ม!",
+        "title": "เกี่ยวกับ"
+      }
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "ทดสอบความรู้ Stardew Valley ของคุณ",
+      "button": {
+        "villager": {
+          "title": "ชาวบ้าน",
+          "description": "รับเบาะแสในทุกความพยายาม"
+        },
+        "crop": {
+          "description": "ทายพืชผลจากคุณสมบัติของมัน",
+          "title": "พืชผล"
+        },
+        "fish": {
+          "description": "ทายปลาจากคุณสมบัติของมัน",
+          "title": "ปลา"
+        }
+      },
+      "reset_in": "รีเซ็ตใน: {time}",
+      "royaledle_banner": {
+        "title": "เล่น Royaledle",
+        "subtitle": "ทายตัวละคร Clash Royale ประจำวัน",
+        "cta": "เล่น",
+        "new": "ใหม่"
+      }
+    },
+    "villager": {
+      "page_meta": {
+        "title": "ชาวบ้าน",
+        "description": "ทาย villager ของ Stardew Valley วันนี้!"
+      },
+      "errors": {
+        "no_daily_brawler": "ไม่พบ villager ประจำวัน",
+        "generic_error": "ข้อผิดพลาด: {message}"
+      },
+      "result": {
+        "success": "ทำได้ดีมาก!",
+        "failure": "ลองอีกครั้ง"
+      },
+      "scroll_hint": "← เลื่อนแนวนอนเพื่อดูเพิ่มเติม →",
+      "yesterday": "Villager เมื่อวานคือ <name>{brawlerName}</name>",
+      "share": {
+        "text": "ฉันหา villager #{id} ของ #Stardewdle เจอในโหมด classic ภายใน {tries} ครั้ง ",
+        "to_copy": "ฉันหา villager #{id} ของ #Stardewdle เจอในโหมด classic ภายใน {tries} ครั้ง\n"
+      },
+      "victory": {
+        "stats_button": "สถิติ",
+        "back_home": "กลับหน้าแรก"
+      },
+      "components": {
+        "explanationBox": {
+          "title": "ทาย villager ของ Stardew Valley วันนี้",
+          "bottomHint": "พิมพ์ชื่อ villager ใดก็ได้เพื่อเริ่มต้น",
+          "hints": {
+            "gadget": {
+              "unavailable": "เบาะแส Gadget ภายใน {tries} ครั้ง",
+              "available": "เบาะแส Gadget"
+            },
+            "hypercharge": {
+              "unavailable": "เบาะแส Hypercharge ภายใน {tries} ครั้ง",
+              "available": "เบาะแส Hypercharge"
+            },
+            "silhouette": {
+              "unavailable": "เบาะแสเงา ภายใน {tries} ครั้ง",
+              "available": "เบาะแสเงา"
+            }
+          }
+        },
+        "toolsBar": {
+          "stats": {
+            "tooltip": "สถิติ",
+            "alt": "ไอคอนสถิติ"
+          },
+          "streak": {
+            "tooltip": "สตรีคปัจจุบัน (ชนะติดต่อกัน)",
+            "alt": {
+              "active": "ไอคอนสตรีคที่ใช้งานอยู่",
+              "inactive": "ไอคอนสตรีคที่ไม่ใช้งาน"
+            }
+          },
+          "patchNotes": {
+            "tooltip": "บันทึกการอัปเดต",
+            "alt": "ไอคอนบันทึกการอัปเดต"
+          },
+          "howToPlay": {
+            "tooltip": "วิธีเล่น",
+            "alt": "ไอคอนวิธีเล่น"
+          }
+        },
+        "answerInput": {
+          "placeholder": "พิมพ์ชื่อ villager.."
+        }
+      },
+      "modals": {
+        "stats": {
+          "title": "สถิติ",
+          "metrics": {
+            "games_won": {
+              "label": "เกมที่ชนะ:",
+              "aria_label": "จำนวนเกมที่ชนะ"
+            },
+            "average_tries": {
+              "label": "ความพยายามเฉลี่ย:",
+              "aria_label": "จำนวนความพยายามเฉลี่ยต่อเกม"
+            },
+            "one_shots": {
+              "label": "ทายถูกครั้งเดียว:",
+              "aria_label": "จำนวนเกมที่ชนะในการทายครั้งเดียว"
+            },
+            "current_streak": {
+              "label": "สตรีคปัจจุบัน:",
+              "aria_label": "สตรีคชนะปัจจุบัน"
+            },
+            "best_streak": {
+              "label": "สตรีคที่ดีที่สุด:",
+              "aria_label": "สตรีคชนะที่ดีที่สุด"
+            }
+          },
+          "graph": {
+            "title": "จำนวนความพยายามต่อเกม",
+            "label": "ความพยายาม",
+            "fallback": "เบราว์เซอร์ของคุณไม่รองรับองค์ประกอบ canvas"
+          }
+        },
+        "patchNotes": {
+          "title": "บันทึกการอัปเดต",
+          "states": {
+            "loading": {
+              "message": "กำลังโหลดบันทึกการอัปเดต..."
+            },
+            "empty": {
+              "message": "ยังไม่มีอะไรที่นี่"
+            },
+            "error": {
+              "title": "โหลดบันทึกการอัปเดตล้มเหลว",
+              "message": "{error}"
+            }
+          }
+        },
+        "how_to_play_classic": {
+          "title": "วิธีเล่น Stardewdle: โหมดคลาสสิก - ความท้าทาย Stardew Valley รายวัน",
+          "introduction_title": "ทำความเข้าใจโหมดคลาสสิกของ Stardewdle",
+          "introduction_description": "ในโหมดคลาสสิก คุณจะทดสอบความรู้ของคุณเกี่ยวกับ Villager ของ Stardew Valley ผ่านเกมทายเชิงกลยุทธ์ เป้าหมายของคุณคือการระบุ Villager ลับโดยการวิเคราะห์คุณสมบัติหลักหกประการ ในการทายแต่ละครั้ง คุณจะได้รับฟีดแบ็คที่เข้ารหัสด้วยสีและลูกศรบอกทิศทางเพื่อนำคุณไปสู่คำตอบที่ถูกต้องในความท้าทายรายวันนี้",
+          "attributes_title": "คุณสมบัติของ Villager",
+          "attributes_description": "โหมดคลาสสิกของ Stardewdle มีคุณสมบัติหลักหกประการต่อไปนี้สำหรับ Villager แต่ละตัว:",
+          "attribute_item_1": "• <strong>ความหายาก</strong>: ระดับความหายากของ Villager (Common, Rare, Super Rare, Epic, Mythic, Legendary, Ultra Legendary)",
+          "attribute_item_2": "• <strong>คลาส</strong>: บทบาทของ Villager ในการต่อสู้ (เช่น Tank, Damage Dealer, Support, Assassin)",
+          "attribute_item_3": "• <strong>การเคลื่อนที่</strong>: ความเร็วในการเคลื่อนที่ของ Villager (ช้ามาก, ช้า, ปกติ, เร็ว, เร็วมาก)",
+          "attribute_item_4": "• <strong>ระยะ</strong>: ระยะโจมตีของ Villager (สั้นมาก, สั้น, ปกติ, ยาว, ยาวมาก)",
+          "attribute_item_5": "• <strong>การรีโหลด</strong>: ความเร็วการรีโหลดของ Villager (ช้ามาก, ช้า, ปกติ, เร็ว, เร็วมาก)",
+          "attribute_item_6": "• <strong>ปี</strong>: ปีที่ Villager เปิดตัวใน Stardew Valley",
+          "feedback_title": "ทำความเข้าใจฟีดแบ็คสี",
+          "feedback_description": "หลังจากการทายแต่ละครั้ง คุณจะได้รับฟีดแบ็คที่เข้ารหัสด้วยสีพร้อมแอนิเมชั่นพลิกสำหรับแต่ละคุณสมบัติ:",
+          "feedback_item_1": "• <span style=\"color: #32c21c\">เขียว</span>: ถูกต้อง! Villager ลับมีค่าคุณสมบัตินี้พอดี",
+          "feedback_item_2": "• <span style=\"color: #d40c00\">แดง</span>: ไม่ถูกต้อง Villager ลับไม่มีค่าคุณสมบัตินี้",
+          "feedback_arrows": "สำหรับคุณสมบัติ <strong>การเคลื่อนที่</strong>, <strong>ระยะ</strong>, <strong>การรีโหลด</strong> และ <strong>ปี</strong> คุณจะเห็นลูกศรบอกทิศทาง:",
+          "feedback_arrow_up": "• <strong>ลูกศรขึ้น (↑)</strong>: ค่าของ Villager ลับสูงกว่าการทายของคุณ",
+          "feedback_arrow_down": "• <strong>ลูกศรลง (↓)</strong>: ค่าของ Villager ลับต่ำกว่าการทายของคุณ",
+          "how_to_play_title": "การเล่นโหมดคลาสสิกของ Stardewdle",
+          "step_1": "เริ่มต้นด้วยการทาย Villager ใดๆ จากรายการค้นหา",
+          "step_2": "สังเกตการพลิกของแต่ละช่องคุณสมบัติตามลำดับ ซึ่งจะเปิดเผยฟีดแบ็คที่เข้ารหัสด้วยสี",
+          "step_3": "วิเคราะห์ช่องสีเขียวและสีแดงเพื่อระบุคุณสมบัติที่ตรงและไม่ตรงกัน",
+          "step_4": "ใช้ลูกศรบอกทิศทางบนการเคลื่อนที่ ระยะ การรีโหลด และปีเพื่อจำกัดความเป็นไปได้",
+          "step_5": "ทายครั้งต่อไปตามฟีดแบ็คที่ได้รับรวมกัน",
+          "step_6": "ทำต่อไปจนกว่าคุณจะระบุ Villager ลับได้อย่างถูกต้อง!",
+          "step_7": "กลับมาทุกวันเพื่อทาย Villager ใหม่ในโหมดคลาสสิก",
+          "strategy_title": "เคล็ดลับกลยุทธ์การชนะ",
+          "strategy_tip_1": "• เริ่มต้นด้วย Villager ที่คุณรู้จักดีเพื่อสร้างพื้นฐานของรูปแบบคุณสมบัติ",
+          "strategy_tip_2": "• ให้ความสนใจกับแอนิเมชั่นพลิกตามลำดับ – แต่ละช่องเปิดเผยข้อมูลตามลำดับ",
+          "strategy_tip_3": "• ใช้ลูกศรอย่างมีกลยุทธ์: ช่วยให้คุณกำจัดกลุ่ม Villager ทั้งกลุ่มได้อย่างรวดเร็ว",
+          "strategy_tip_4": "• สำหรับคุณสมบัติแบบลำดับ (การเคลื่อนที่ ระยะ การรีโหลด) จดจำสเกลห้าระดับ",
+          "strategy_tip_5": "• อ้างอิงคุณสมบัติหลายอย่าง – Villager ต้องตรงกับฟีดแบ็คสีเขียวทั้งหมด",
+          "strategy_tip_6": "• จำไว้ว่าความหายากและคลาสต้องตรงกันพอดี (ไม่มีลูกศร แค่เขียวหรือแดง)",
+          "daily_challenge_title": "ความท้าทาย Stardew Valley รายวัน",
+          "daily_challenge_description": "กลับมาที่ Stardewdle ทุกวันเพื่อระบุ Villager ลับตัวใหม่! ความพยายามก่อนหน้าของคุณจะแสดงตามลำดับเวลาย้อนหลัง โดยการทายแต่ละครั้งจะมีแอนิเมชั่นเมื่อถูกเพิ่ม ติดตามสตรีคของคุณและเปรียบเทียบทักษะกับเพื่อนๆ ในการทดสอบความรู้ Stardew Valley สูงสุด"
+        }
+      },
+      "attributes": {
+        "headers": {
+          "brawler": "Villager",
+          "rarity": "ความหายาก",
+          "class": "คลาส",
+          "movement": "การเคลื่อนไหว",
+          "range": "ระยะ",
+          "reload": "โหลดซ้ำ",
+          "year": "ปี",
+          "age": "อายุ",
+          "birthday": "วันเกิด",
+          "gender": "เพศ",
+          "marriageable": "แต่งงานได้",
+          "region": "ภูมิภาค",
+          "season": "ฤดูกาล",
+          "villager": "ชาวบ้าน"
+        },
+        "rarity": {
+          "common": "ธรรมดา",
+          "rare": "หายาก",
+          "super_rare": "หายากสุด",
+          "epic": "เอปิก",
+          "mythic": "มิธิก",
+          "legendary": "เลเจนดารี",
+          "ultra_legendary": "อุลตร้าเลเจนดารี"
+        },
+        "class": {
+          "artillery": "ปืนใหญ่",
+          "assassin": "นักฆ่า",
+          "controller": "คอนโทรลเลอร์",
+          "damage_dealer": "สร้างความเสียหาย",
+          "marksman": "นักแม่น",
+          "support": "สนับสนุน",
+          "tank": "แท็งก์"
+        },
+        "speed": {
+          "very_slow": "ช้ามาก",
+          "slow": "ช้า",
+          "normal": "ปกติ",
+          "fast": "เร็ว",
+          "very_fast": "เร็วมาก"
+        },
+        "range": {
+          "very_short": "สั้นมาก",
+          "short": "สั้น",
+          "normal": "ปกติ",
+          "long": "ยาว",
+          "very_long": "ยาวมาก"
+        },
+        "age": {
+          "Adult": "ผู้ใหญ่",
+          "Child": "เด็ก",
+          "Teen": "วัยรุ่น"
+        },
+        "gender": {
+          "Female": "หญิง",
+          "Male": "ชาย",
+          "Undefined": "อื่นๆ"
+        },
+        "marriageable": {
+          "no": "ไม่",
+          "yes": "ใช่"
+        },
+        "region": {
+          "Beach": "ชายหาด",
+          "Desert": "ทะเลทราย",
+          "Forest": "ป่า",
+          "GingerIsland": "เกาะจินเจอร์",
+          "Mountain": "ภูเขา",
+          "Sewers": "ท่อระบายน้ำ",
+          "Town": "เมือง"
+        },
+        "season": {
+          "Fall": "ฤดูใบไม้ร่วง",
+          "Spring": "ฤดูใบไม้ผลิ",
+          "Summer": "ฤดูร้อน",
+          "Winter": "ฤดูหนาว"
+        }
+      },
+      "gift_hint": "ของขวัญที่ชื่นชอบ: {gift}",
+      "gift_hint_locked": "เบาะแสของขวัญที่ชื่นชอบใน {tries} ครั้งที่ทาย"
+    },
+    "crop": {
+      "attributes": {
+        "headers": {
+          "crop": "พืชผล",
+          "growth": "การเติบโต",
+          "price": "ราคา",
+          "regrow": "ปลูกซ้ำ",
+          "season": "ฤดูกาล",
+          "type": "ประเภท"
+        },
+        "regrow": {
+          "no": "ไม่",
+          "yes": "ใช่"
+        },
+        "season": {
+          "Fall": "ฤดูใบไม้ร่วง",
+          "Spring": "ฤดูใบไม้ผลิ",
+          "Summer": "ฤดูร้อน",
+          "Winter": "ฤดูหนาว"
+        },
+        "type": {
+          "Flower": "ดอกไม้",
+          "Forage": "ของป่า",
+          "Fruit": "ผลไม้",
+          "Seed": "เมล็ดพันธุ์",
+          "Vegetable": "ผัก"
+        }
+      },
+      "components": {
+        "answerInput": {
+          "placeholder": "พิมพ์ชื่อพืชผล.."
+        },
+        "explanationBox": {
+          "bottomHint": "พิมพ์ชื่อพืชผลใดก็ได้เพื่อเริ่ม",
+          "title": "ทายพืชผล Stardew Valley ของวันนี้"
+        },
+        "toolsBar": {
+          "howToPlay": {
+            "alt": "ไอคอนวิธีเล่น",
+            "tooltip": "วิธีเล่น"
+          },
+          "patchNotes": {
+            "alt": "ไอคอนบันทึกการอัปเดต",
+            "tooltip": "บันทึกการอัปเดต"
+          },
+          "stats": {
+            "alt": "ไอคอนสถิติ",
+            "tooltip": "สถิติ"
+          },
+          "streak": {
+            "alt": {
+              "active": "ไอคอนสถิติต่อเนื่องที่ยังดำเนินอยู่",
+              "inactive": "ไอคอนสถิติต่อเนื่องที่หยุดแล้ว"
+            },
+            "tooltip": "สถิติต่อเนื่องปัจจุบัน (ชุดชัยชนะติดต่อกัน)"
+          }
+        }
+      },
+      "errors": {
+        "generic_error": "ข้อผิดพลาด: {message}",
+        "no_daily_brawler": "ไม่พบพืชผลประจำวัน"
+      },
+      "modals": {
+        "how_to_play_classic": {
+          "attribute_item_1": "• <strong>ระยะเวลาเติบโต</strong>: จำนวนวันที่ใช้จนโตเต็มที่",
+          "attribute_item_2": "• <strong>ราคา</strong>: ราคาขายพื้นฐานเป็นทอง",
+          "attribute_item_3": "• <strong>ปลูกซ้ำได้</strong>: ให้ผลผลิตต่อเนื่องหลังเก็บเกี่ยวหรือไม่? (ใช่/ไม่ใช่)",
+          "attribute_item_4": "• <strong>ประเภท</strong>: ผัก ผลไม้ ดอกไม้ ของป่า หรือเมล็ดพันธุ์",
+          "attribute_item_5": "• <strong>ฤดูกาล</strong>: ฤดูกาลที่ปลูกได้",
+          "attribute_item_6": "• <strong>เคล็ดลับ</strong>: สีเขียวหมายถึงตรงกันทุกประการ ส่วนสีส้มในช่องฤดูกาลหมายถึงตรงกันบางส่วน",
+          "attributes_description": "โหมดพืชผลจะเปรียบเทียบคุณสมบัติเหล่านี้:",
+          "attributes_title": "คุณสมบัติของพืชผล",
+          "daily_challenge_description": "กลับมาทุกวันเพื่อพบพืชผลลับใหม่ ติดตามสถิติต่อเนื่องของคุณและแชร์ผลลัพธ์ให้เพื่อน ๆ",
+          "daily_challenge_title": "ความท้าทายประจำวัน",
+          "feedback_arrow_down": "• <strong>ลูกศรลง (↓)</strong>: ค่าของพืชผลลับต่ำกว่า",
+          "feedback_arrow_up": "• <strong>ลูกศรขึ้น (↑)</strong>: ค่าของพืชผลลับสูงกว่า",
+          "feedback_arrows": "ลูกศรจะปรากฏในช่องระยะเวลาเติบโตและราคา",
+          "feedback_description": "แต่ละช่องจะแสดงเป็นสีต่าง ๆ ดังนี้:",
+          "feedback_item_1": "• <span style=\"color: #32c21c\">สีเขียว</span></span>: ตรงกับพืชผลลับทุกประการ",
+          "feedback_item_2": "• <span style=\"color: #d40c00\">สีแดง</span></span>: ไม่ตรงกันเลย",
+          "feedback_title": "ผลตอบกลับ",
+          "how_to_play_title": "วิธีเล่น",
+          "introduction_description": "ทายพืชผลลับประจำวันจาก Stardew Valley โดยเปรียบเทียบคุณสมบัติ 5 อย่าง การทายแต่ละครั้งจะให้ผลตอบกลับแบบไล่สีและลูกศรบอกทิศทางเพื่อช่วยแนะนำคุณ",
+          "introduction_title": "โหมดพืชผล",
+          "step_1": "เริ่มทายพืชผลชนิดแรกจากรายการค้นหา",
+          "step_2": "สังเกตช่องคุณสมบัติแต่ละช่องพลิกเปิดทีละช่อง เผยให้เห็นผลตอบกลับแบบไล่สี",
+          "step_3": "ดูช่องสีเขียวและสีแดงเพื่อดูว่าคุณสมบัติใดตรงกันและไม่ตรงกัน",
+          "step_4": "ใช้ลูกศรในช่องระยะเวลาเติบโตและราคาเพื่อจำกัดขอบเขตให้แคบลง",
+          "step_5": "ทายครั้งต่อไปโดยอาศัยผลตอบกลับทั้งหมดที่ได้รับ",
+          "step_6": "ทายต่อไปจนกว่าคุณจะระบุพืชผลลับได้ถูกต้อง!",
+          "step_7": "กลับมาทุกวันเพื่อทายพืชผลใหม่ในโหมดพืชผล",
+          "strategy_tip_1": "• เริ่มต้นด้วยพืชผลที่คุณรู้จักดีเพื่อสร้างพื้นฐานของคุณสมบัติต่าง ๆ",
+          "strategy_tip_2": "• ประเภทและฤดูกาลช่วยลดตัวเลือกได้เร็ว เพราะพืชผลหลายชนิดมีค่าเหล่านี้ร่วมกัน",
+          "strategy_tip_3": "• ใช้ลูกศรเพื่อตัดกลุ่มพืชผลทั้งกลุ่มออกตามระยะเวลาเติบโตหรือราคา",
+          "strategy_tip_4": "• ปลูกซ้ำได้เป็นแค่ใช่/ไม่ใช่ ซึ่งจะแบ่งตัวเลือกออกเป็นครึ่งหนึ่ง",
+          "strategy_tip_5": "• พืชผลที่ถูกต้องต้องตรงกับผลตอบกลับสีเขียวทั้งหมดพร้อมกัน",
+          "strategy_tip_6": "• ปลูกซ้ำได้ ประเภท และฤดูกาล ต้องตรงกันแบบเป๊ะ ๆ (ไม่มีลูกศร)",
+          "strategy_title": "เคล็ดลับกลยุทธ์",
+          "title": "วิธีเล่น: โหมดพืชผล"
+        },
+        "patchNotes": {
+          "states": {
+            "empty": {
+              "message": "ยังไม่มีอะไรที่นี่"
+            },
+            "error": {
+              "message": "{error}",
+              "title": "โหลดบันทึกการอัปเดตไม่สำเร็จ"
+            },
+            "loading": {
+              "message": "กำลังโหลดบันทึกการอัปเดต..."
+            }
+          },
+          "title": "บันทึกการอัปเดต"
+        },
+        "stats": {
+          "graph": {
+            "fallback": "เบราว์เซอร์ของคุณไม่รองรับองค์ประกอบ canvas",
+            "label": "จำนวนครั้งที่ทาย",
+            "title": "จำนวนครั้งที่ทายต่อเกม"
+          },
+          "metrics": {
+            "average_tries": {
+              "aria_label": "จำนวนครั้งเฉลี่ยที่พยายามต่อเกม",
+              "label": "จำนวนครั้งเฉลี่ย:"
+            },
+            "best_streak": {
+              "aria_label": "สถิติชนะต่อเนื่องสูงสุด",
+              "label": "สถิติต่อเนื่องสูงสุด:"
+            },
+            "current_streak": {
+              "aria_label": "สถิติชนะต่อเนื่องปัจจุบัน",
+              "label": "สถิติต่อเนื่องปัจจุบัน:"
+            },
+            "games_won": {
+              "aria_label": "จำนวนเกมที่ชนะ",
+              "label": "เกมที่ชนะ:"
+            },
+            "one_shots": {
+              "aria_label": "จำนวนเกมที่ชนะในครั้งเดียว",
+              "label": "ชนะในครั้งเดียว:"
+            }
+          },
+          "title": "สถิติ"
+        }
+      },
+      "page_meta": {
+        "description": "ทายพืชผล Stardew Valley ของวันนี้จากคุณสมบัติของมัน!",
+        "title": "พืชผล"
+      },
+      "result": {
+        "failure": "ลองอีกครั้ง",
+        "success": "ทำได้ดีมาก!"
+      },
+      "scroll_hint": "← เลื่อนแนวนอนเพื่อดูเพิ่มเติม →",
+      "share": {
+        "text": "ฉันทายพืชผล #Stardewdle #{id} ได้ใน {tries} ครั้ง ",
+        "to_copy": "ฉันทายพืชผล #Stardewdle #{id} ได้ใน {tries} ครั้ง\n{url}"
+      },
+      "victory": {
+        "back_home": "กลับหน้าแรก",
+        "next_mode": "เล่นโหมดคลาสสิก",
+        "stats_button": "สถิติ"
+      },
+      "yesterday": "พืชผลของเมื่อวานคือ <name>{brawlerName}</name>"
+    },
+    "fish": {
+      "attributes": {
+        "behavior": {
+          "Dart": "พุ่งเร็ว",
+          "Floater": "ลอยน้ำ",
+          "Mixed": "ผสม",
+          "Sinker": "จมน้ำ",
+          "Smooth": "นุ่มนวล"
+        },
+        "headers": {
+          "behavior": "พฤติกรรม",
+          "difficulty": "ความยาก",
+          "fish": "ปลา",
+          "season": "ฤดูกาล",
+          "size": "ขนาด",
+          "weather": "สภาพอากาศ"
+        },
+        "season": {
+          "Fall": "ฤดูใบไม้ร่วง",
+          "Spring": "ฤดูใบไม้ผลิ",
+          "Summer": "ฤดูร้อน",
+          "Winter": "ฤดูหนาว"
+        },
+        "weather": {
+          "Any": "ใดก็ได้",
+          "Rainy": "ฝนตก",
+          "Sunny": "แดดออก"
+        }
+      },
+      "components": {
+        "answerInput": {
+          "placeholder": "พิมพ์ชื่อปลา.."
+        },
+        "explanationBox": {
+          "bottomHint": "พิมพ์ชื่อปลาใดก็ได้เพื่อเริ่ม",
+          "title": "ทายปลา Stardew Valley ของวันนี้"
+        },
+        "toolsBar": {
+          "howToPlay": {
+            "alt": "ไอคอนวิธีเล่น",
+            "tooltip": "วิธีเล่น"
+          },
+          "patchNotes": {
+            "alt": "ไอคอนบันทึกการอัปเดต",
+            "tooltip": "บันทึกการอัปเดต"
+          },
+          "stats": {
+            "alt": "ไอคอนสถิติ",
+            "tooltip": "สถิติ"
+          },
+          "streak": {
+            "alt": {
+              "active": "ไอคอนสถิติต่อเนื่องที่ยังดำเนินอยู่",
+              "inactive": "ไอคอนสถิติต่อเนื่องที่หยุดแล้ว"
+            },
+            "tooltip": "สถิติต่อเนื่องปัจจุบัน (ชุดชัยชนะติดต่อกัน)"
+          }
+        }
+      },
+      "errors": {
+        "generic_error": "ข้อผิดพลาด: {message}",
+        "no_daily_brawler": "ไม่พบปลาประจำวัน"
+      },
+      "modals": {
+        "how_to_play_classic": {
+          "attribute_item_1": "• <strong>ความยาก</strong>: ความยากในการจับปลาตัวนี้",
+          "attribute_item_2": "• <strong>พฤติกรรม</strong>: ลักษณะการเคลื่อนไหว ได้แก่ ลอยตัว (Floater) พุ่งฉับไว (Dart) เคลื่อนที่นุ่มนวล (Smooth) แบบผสม (Mixed) หรือจมดิ่ง (Sinker)",
+          "attribute_item_3": "• <strong>ฤดูกาล</strong>: ฤดูกาลที่จับปลาตัวนี้ได้",
+          "attribute_item_4": "• <strong>สภาพอากาศ</strong>: แดดจัด ฝนตก หรือทุกสภาพอากาศ",
+          "attribute_item_5": "• <strong>ขนาด</strong>: ขนาดสูงสุดเป็นนิ้ว",
+          "attribute_item_6": "• <strong>เคล็ดลับ</strong>: สีเขียวหมายถึงตรงกันทุกประการ ส่วนสีส้มในช่องฤดูกาลหมายถึงตรงกันบางส่วน",
+          "attributes_description": "โหมดปลาจะเปรียบเทียบคุณสมบัติเหล่านี้:",
+          "attributes_title": "คุณสมบัติของปลา",
+          "daily_challenge_description": "กลับมาทุกวันเพื่อพบปลาลับใหม่ ติดตามสถิติต่อเนื่องของคุณและแชร์ผลลัพธ์ให้เพื่อน ๆ",
+          "daily_challenge_title": "ความท้าทายประจำวัน",
+          "feedback_arrow_down": "• <strong>ลูกศรลง (↓)</strong>: ค่าของปลาลับต่ำกว่า",
+          "feedback_arrow_up": "• <strong>ลูกศรขึ้น (↑)</strong>: ค่าของปลาลับสูงกว่า",
+          "feedback_arrows": "ลูกศรจะปรากฏในช่องความยากและขนาด",
+          "feedback_description": "แต่ละช่องจะแสดงเป็นสีต่าง ๆ ดังนี้:",
+          "feedback_item_1": "• <span style=\"color: #32c21c\">สีเขียว</span></span>: ตรงกับปลาลับทุกประการ",
+          "feedback_item_2": "• <span style=\"color: #d40c00\">สีแดง</span></span>: ไม่ตรงกันเลย",
+          "feedback_title": "ผลตอบกลับ",
+          "how_to_play_title": "วิธีเล่น",
+          "introduction_description": "ทายปลาลับประจำวันจาก Stardew Valley โดยเปรียบเทียบคุณสมบัติ 5 อย่าง การทายแต่ละครั้งจะให้ผลตอบกลับแบบไล่สีและลูกศรบอกทิศทางเพื่อช่วยแนะนำคุณ",
+          "introduction_title": "โหมดปลา",
+          "step_1": "เริ่มทายปลาชนิดแรกจากรายการค้นหา",
+          "step_2": "สังเกตช่องคุณสมบัติแต่ละช่องพลิกเปิดทีละช่อง เผยให้เห็นผลตอบกลับแบบไล่สี",
+          "step_3": "ดูช่องสีเขียวและสีแดงเพื่อดูว่าคุณสมบัติใดตรงกันและไม่ตรงกัน",
+          "step_4": "ใช้ลูกศรในช่องความยากและขนาดเพื่อจำกัดขอบเขตให้แคบลง",
+          "step_5": "ทายครั้งต่อไปโดยอาศัยผลตอบกลับทั้งหมดที่ได้รับ",
+          "step_6": "ทายต่อไปจนกว่าคุณจะระบุปลาลับได้ถูกต้อง!",
+          "step_7": "กลับมาทุกวันเพื่อทายปลาใหม่ในโหมดปลา",
+          "strategy_tip_1": "• เริ่มต้นด้วยปลาที่คุณรู้จักดีเพื่อสร้างพื้นฐานของคุณสมบัติต่าง ๆ",
+          "strategy_tip_2": "• พฤติกรรมและสภาพอากาศช่วยลดตัวเลือกได้เร็ว เพราะปลาหลายชนิดมีค่าเหล่านี้ร่วมกัน",
+          "strategy_tip_3": "• ใช้ลูกศรเพื่อตัดกลุ่มปลาทั้งกลุ่มออกตามความยากหรือขนาด",
+          "strategy_tip_4": "• ฤดูกาลสามารถตรงกันบางส่วนได้ (สีส้ม) เมื่อมีความทับซ้อนกัน",
+          "strategy_tip_5": "• ปลาที่ถูกต้องต้องตรงกับผลตอบกลับสีเขียวทั้งหมดพร้อมกัน",
+          "strategy_tip_6": "• พฤติกรรม ฤดูกาล และสภาพอากาศ ต้องตรงกันแบบเป๊ะ ๆ (ไม่มีลูกศร)",
+          "strategy_title": "เคล็ดลับกลยุทธ์",
+          "title": "วิธีเล่น: โหมดปลา"
+        },
+        "patchNotes": {
+          "states": {
+            "empty": {
+              "message": "ยังไม่มีอะไรที่นี่"
+            },
+            "error": {
+              "message": "{error}",
+              "title": "โหลดบันทึกการอัปเดตไม่สำเร็จ"
+            },
+            "loading": {
+              "message": "กำลังโหลดบันทึกการอัปเดต..."
+            }
+          },
+          "title": "บันทึกการอัปเดต"
+        },
+        "stats": {
+          "graph": {
+            "fallback": "เบราว์เซอร์ของคุณไม่รองรับองค์ประกอบ canvas",
+            "label": "จำนวนครั้งที่ทาย",
+            "title": "จำนวนครั้งที่ทายต่อเกม"
+          },
+          "metrics": {
+            "average_tries": {
+              "aria_label": "จำนวนครั้งเฉลี่ยที่พยายามต่อเกม",
+              "label": "จำนวนครั้งเฉลี่ย:"
+            },
+            "best_streak": {
+              "aria_label": "สถิติชนะต่อเนื่องสูงสุด",
+              "label": "สถิติต่อเนื่องสูงสุด:"
+            },
+            "current_streak": {
+              "aria_label": "สถิติชนะต่อเนื่องปัจจุบัน",
+              "label": "สถิติต่อเนื่องปัจจุบัน:"
+            },
+            "games_won": {
+              "aria_label": "จำนวนเกมที่ชนะ",
+              "label": "เกมที่ชนะ:"
+            },
+            "one_shots": {
+              "aria_label": "จำนวนเกมที่ชนะในครั้งเดียว",
+              "label": "ชนะในครั้งเดียว:"
+            }
+          },
+          "title": "สถิติ"
+        }
+      },
+      "page_meta": {
+        "description": "ทายปลา Stardew Valley ของวันนี้จากคุณสมบัติของมัน!",
+        "title": "ปลา"
+      },
+      "result": {
+        "failure": "ลองอีกครั้ง",
+        "success": "ทำได้ดีมาก!"
+      },
+      "scroll_hint": "← เลื่อนแนวนอนเพื่อดูเพิ่มเติม →",
+      "share": {
+        "text": "ฉันทายปลา #Stardewdle #{id} ได้ใน {tries} ครั้ง ",
+        "to_copy": "ฉันทายปลา #Stardewdle #{id} ได้ใน {tries} ครั้ง\n{url}"
+      },
+      "victory": {
+        "back_home": "กลับหน้าแรก",
+        "next_mode": "เล่นโหมดคลาสสิก",
+        "stats_button": "สถิติ"
+      },
+      "yesterday": "ปลาของเมื่อวานคือ <name>{brawlerName}</name>"
+    }
+  },
+  "common": {
+    "header": {
+      "button": {
+        "stats": {
+          "tooltip": "สถิติ"
+        },
+        "streak": {
+          "tooltip": "สตรีคปัจจุบัน (ชนะติดต่อกัน)"
+        },
+        "changelog": {
+          "tooltip": "บันทึกการเปลี่ยนแปลง"
+        }
+      }
+    },
+    "soon": "เร็วๆ นี้"
+  },
+  "components": {
+    "explanationBox": {
+      "errors": {
+        "no_content": "ไม่มีเนื้อหาที่ระบุไว้"
+      }
+    },
+    "answerInput": {
+      "states": {
+        "loading": "กำลังโหลด...",
+        "no_result": "ไม่มีผลลัพธ์"
+      },
+      "button": {
+        "submit": {
+          "title": "ส่ง"
+        }
+      }
+    },
+    "victoryContainer": {
+      "title": "เกมของคุณ",
+      "congratulations": "GG !!",
+      "guess": {
+        "prefix": "คุณทาย",
+        "character": "{name}"
+      },
+      "tries": {
+        "count": "จำนวนครั้งที่ทาย:",
+        "value": "{count}"
+      },
+      "next": {
+        "timer": "ปริศนาถัดไปใน",
+        "mode": "โหมดถัดไป:"
+      },
+      "image": {
+        "alt": "ภาพชัยชนะ"
+      },
+      "you_found": "คุณพบ",
+      "number_of_tries": "จำนวนครั้งที่พยายาม: {count}"
+    },
+    "shareContainer": {
+      "title": "แชร์ผลลัพธ์ของคุณ",
+      "buttons": {
+        "copy": {
+          "title": "คัดลอก",
+          "aria_label": "คัดลอกผลลัพธ์ไปยังคลิปบอร์ด"
+        },
+        "tweet": {
+          "title": "ทวีต",
+          "aria_label": "แชร์บน X (Twitter)"
+        }
+      },
+      "and_more": "และอีก {count}..."
+    }
+  }
+}

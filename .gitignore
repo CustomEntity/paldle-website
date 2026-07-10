@@ -1,0 +1,14 @@
+node_modules
+dist
+coverage
+.env
+.idea
+.svelte-kit
+.DS_Store
+.claude/settings.local.json
+
+# regenerable 27MB raw game-asset dump (rebuild via scripts/datamine/extract-assets.mjs)
+game-assets/
+
+# AI-generated source art (keep the processed static/ output, not the raw export)
+ChatGPT Image*.png

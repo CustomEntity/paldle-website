@@ -1,0 +1,675 @@
+{
+  "lang": {
+    "name": "Français"
+  },
+  "layout": {
+    "page_meta": {
+      "base_title": "Devinez les Éléments de Stardew Valley",
+      "base_description": "Stardewdle - Le jeu quotidien de devinettes Stardew Valley ! Relevez de nouveaux défis chaque jour et testez vos connaissances de Stardew Valley",
+      "site_name": "Stardewdle"
+    },
+    "header": {
+      "home_link": "Retour à la page d'accueil de Stardewdle",
+      "logo_alt": "Logo Stardewdle"
+    },
+    "footer": {
+      "accessibility": {
+        "discord": "Rejoignez notre communauté Discord",
+        "information": "Information",
+        "kofi": "Soutenez-nous sur Ko-fi",
+        "x": "Suivez-nous sur X (Twitter)",
+        "reddit": "Rejoignez notre communauté Reddit"
+      },
+      "want_more": {
+        "title": "Envie de plus ?",
+        "description": "Découvrez le plus grand hub pour tous les jeux dle."
+      },
+      "copyright": "Stardewdle - {year}",
+      "cookie_preferences": "Modifier les préférences de cookies"
+    },
+    "modals": {
+      "about": {
+        "title": "À propos",
+        "discover": "Bienvenue sur Stardewdle, le jeu quotidien de devinettes Stardew Valley ! Teste tes connaissances à travers trois modes — Villageois (villageois), Culture et Poisson — avec une nouvelle énigme chaque jour.",
+        "disclaimer": "Stardewdle est un projet de fan non officiel. Stardew Valley est créé par ConcernedApe ; tous les personnages et illustrations appartiennent à leurs propriétaires respectifs. Ce projet n'est ni affilié, ni sponsorisé, ni approuvé par ConcernedApe.",
+        "game_modes": {
+          "title": "Trois modes quotidiens",
+          "description": "Villageois compare six attributs de villageois. Culture compare cinq attributs (croissance, prix, repousse, type, saison). Poisson compare cinq attributs (difficulté, comportement, saison, météo, taille). Une nouvelle énigme pour chaque mode, chaque jour."
+        },
+        "dle_games": {
+          "title": "Plus de jeux -dle",
+          "description": "Tu as aimé Stardewdle ? Découvre toute la famille des jeux -dle quotidiens dans le hub lié au menu."
+        },
+        "commitment": {
+          "title": "Défi quotidien",
+          "description": "Reviens chaque jour pour de nouveaux villageois à deviner, garde ta série en vie et partage tes résultats avec tes amis."
+        },
+        "inspiration": {
+          "title": "Inspiration",
+          "description": "Inspiré de Wordle et des nombreux excellents jeux -dle."
+        },
+        "credit": {
+          "title": "Crédits",
+          "description": "Fait par un fan, pour les fans de Stardew Valley. 🌱"
+        },
+        "privacy": {
+          "title": "Confidentialité",
+          "description": "On garde ça simple — ta progression et ta série sont stockées localement dans ton navigateur."
+        },
+        "thanks": "Merci de jouer, et bonne récolte !",
+        "signature": {
+          "regards": "Avec amour,",
+          "team": "L'équipe Stardewdle"
+        }
+      }
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Testez vos connaissances de Stardew Valley",
+      "button": {
+        "villager": {
+          "title": "Villageois",
+          "description": "Obtenez des indices à chaque essai"
+        },
+        "crop": {
+          "title": "Culture",
+          "description": "Devine la culture d'après ses stats"
+        },
+        "fish": {
+          "title": "Poisson",
+          "description": "Devine le poisson d'après ses stats"
+        }
+      },
+      "reset_in": "Réinit. dans : {time}",
+      "royaledle_banner": {
+        "title": "Joue à Royaledle",
+        "subtitle": "Devine le perso Clash Royale du jour",
+        "cta": "Jouer",
+        "new": "NOUVEAU"
+      }
+    },
+    "villager": {
+      "page_meta": {
+        "title": "Villageois",
+        "description": "Devine le villageois de Stardew Valley du jour en mode Villageois !"
+      },
+      "errors": {
+        "no_daily_brawler": "Aucun villageois du jour trouvé",
+        "generic_error": "Erreur : {message}"
+      },
+      "result": {
+        "success": "Bien joué !",
+        "failure": "Réessayez"
+      },
+      "scroll_hint": "← Faites défiler horizontalement pour voir plus →",
+      "yesterday": "Le villageois d'hier était <name>{brawlerName}</name>",
+      "share": {
+        "text": "J'ai trouvé le villageois #Stardewdle #{id} en mode classique en {tries} essais ",
+        "to_copy": "J'ai trouvé le villageois #Stardewdle #{id} en mode classique en {tries} essais\n{url}"
+      },
+      "victory": {
+        "stats_button": "Stats",
+        "back_home": "Retour à l'accueil"
+      },
+      "components": {
+        "explanationBox": {
+          "title": "Devine le villageois de Stardew Valley du jour",
+          "bottomHint": "Tape un villageois pour commencer."
+        },
+        "toolsBar": {
+          "stats": {
+            "tooltip": "Statistiques",
+            "alt": "Icône de statistiques"
+          },
+          "streak": {
+            "tooltip": "Série actuelle (Série de victoires consécutives)",
+            "alt": {
+              "active": "Icône de série active",
+              "inactive": "Icône de série inactive"
+            }
+          },
+          "patchNotes": {
+            "tooltip": "Notes de mise à jour",
+            "alt": "Icône des notes de mise à jour"
+          },
+          "howToPlay": {
+            "tooltip": "Comment jouer",
+            "alt": "Icône comment jouer"
+          }
+        },
+        "answerInput": {
+          "placeholder": "Tape un nom de villageois.."
+        }
+      },
+      "modals": {
+        "stats": {
+          "title": "Statistiques",
+          "metrics": {
+            "games_won": {
+              "label": "Parties gagnées :",
+              "aria_label": "Nombre de parties gagnées"
+            },
+            "average_tries": {
+              "label": "Essais moyens :",
+              "aria_label": "Nombre moyen de tentatives par partie"
+            },
+            "one_shots": {
+              "label": "Du premier coup :",
+              "aria_label": "Nombre de parties gagnées en un essai"
+            },
+            "current_streak": {
+              "label": "Série actuelle :",
+              "aria_label": "Série de victoires actuelle"
+            },
+            "best_streak": {
+              "label": "Meilleure série :",
+              "aria_label": "Meilleure série de victoires"
+            }
+          },
+          "graph": {
+            "title": "Nombre d'essais par partie",
+            "label": "Essais",
+            "fallback": "Votre navigateur ne supporte pas l'élément canvas."
+          }
+        },
+        "patchNotes": {
+          "title": "Notes de mise à jour",
+          "states": {
+            "loading": {
+              "message": "Chargement des notes de mise à jour..."
+            },
+            "empty": {
+              "message": "Rien ici pour le moment"
+            },
+            "error": {
+              "title": "Échec du chargement des notes de mise à jour",
+              "message": "{error}"
+            }
+          }
+        },
+        "how_to_play_classic": {
+          "title": "Comment jouer à Stardewdle : Mode Villageois",
+          "introduction_title": "Mode Villageois",
+          "introduction_description": "Devine le villageois secret de Stardew Valley du jour. Analyse six attributs ; chaque essai donne un retour coloré et des flèches directionnelles pour te guider.",
+          "attributes_title": "Attributs du villageois",
+          "attributes_description": "Le Mode Villageois compare ces six attributs :",
+          "attribute_item_1": "• <strong>Genre</strong> : Homme ou Femme.",
+          "attribute_item_2": "• <strong>Quartier</strong> : où il habite (Ville, Montagne, Forêt, Plage, Désert, Égouts, Île Gingembre).",
+          "attribute_item_3": "• <strong>Saison</strong> : la saison de son anniversaire (Printemps, Été, Automne, Hiver).",
+          "attribute_item_4": "• <strong>Anniversaire</strong> : le jour du mois de sa naissance (1–28).",
+          "attribute_item_5": "• <strong>Mariable</strong> : peut-on l’épouser (Oui ou Non).",
+          "attribute_item_6": "• <strong>Âge</strong> : Enfant, Ado ou Adulte.",
+          "feedback_title": "Retour",
+          "feedback_description": "Chaque case est colorée :",
+          "feedback_item_1": "• <span style=\"color: #32c21c\">Vert</span> : correspondance exacte avec le villageois secret.",
+          "feedback_item_2": "• <span style=\"color: #d40c00\">Rouge</span> : pas de correspondance.",
+          "feedback_arrows": "Des flèches apparaissent sur l’Anniversaire et l’Âge :",
+          "feedback_arrow_up": "• <strong>Flèche haut (↑)</strong> : la valeur du villageois secret est PLUS ÉLEVÉE (anniversaire plus tard / plus âgé).",
+          "feedback_arrow_down": "• <strong>Flèche bas (↓)</strong> : la valeur du villageois secret est PLUS BASSE (anniversaire plus tôt / plus jeune).",
+          "how_to_play_title": "Comment jouer",
+          "step_1": "Fais un premier essai avec n’importe quel villageois de la liste.",
+          "step_2": "Regarde chaque case d’attribut se retourner et révéler le retour coloré.",
+          "step_3": "Lis les cases vertes et rouges pour repérer les attributs qui correspondent ou non.",
+          "step_4": "Utilise les flèches sur l’Anniversaire et l’Âge pour resserrer la fourchette.",
+          "step_5": "Fais ton prochain essai selon tous les retours reçus.",
+          "step_6": "Continue jusqu’à trouver le villageois secret !",
+          "step_7": "Reviens chaque jour pour un nouveau villageois à deviner.",
+          "strategy_title": "Conseils",
+          "strategy_tip_1": "• Commence par des villageois que tu connais bien pour établir une base.",
+          "strategy_tip_2": "• Le Quartier et la Saison réduisent vite le champ — beaucoup les partagent.",
+          "strategy_tip_3": "• Sers-toi des flèches pour éliminer des groupes entiers par anniversaire ou âge.",
+          "strategy_tip_4": "• L’Âge est ordinal : Enfant &lt; Ado &lt; Adulte.",
+          "strategy_tip_5": "• Un villageois doit correspondre à TOUS les retours verts à la fois.",
+          "strategy_tip_6": "• Genre, Quartier, Saison et Mariable correspondent exactement (pas de flèches).",
+          "daily_challenge_title": "Défi Quotidien Stardew Valley",
+          "daily_challenge_description": "Chaque jour apporte un nouveau villager à deviner avec des indices et des attributs uniques ! Ce jeu de devinettes quotidien aiguise votre connaissance des personnages de Stardew Valley et vous met au défi de penser stratégiquement. Partagez vos résultats avec vos amis et rivalisez pour le moins d'essais !"
+        }
+      },
+      "attributes": {
+        "headers": {
+          "villager": "Villageois",
+          "gender": "Genre",
+          "region": "Quartier",
+          "season": "Saison",
+          "birthday": "Anniv.",
+          "marriageable": "Mariable",
+          "age": "Âge"
+        },
+        "gender": {
+          "Male": "Homme",
+          "Female": "Femme",
+          "Undefined": "Autre"
+        },
+        "region": {
+          "Town": "Ville",
+          "Mountain": "Montagne",
+          "Forest": "Forêt",
+          "Beach": "Plage",
+          "Desert": "Désert",
+          "Sewers": "Égouts",
+          "GingerIsland": "Île Gingembre"
+        },
+        "season": {
+          "Spring": "Printemps",
+          "Summer": "Été",
+          "Fall": "Automne",
+          "Winter": "Hiver"
+        },
+        "age": {
+          "Adult": "Adulte",
+          "Teen": "Ado",
+          "Child": "Enfant"
+        },
+        "marriageable": {
+          "yes": "Oui",
+          "no": "Non"
+        }
+      },
+      "gift_hint": "Cadeau préféré : {gift}",
+      "gift_hint_locked": "Indice cadeau dans {tries} essais"
+    },
+    "crop": {
+      "page_meta": {
+        "title": "Culture",
+        "description": "Devine la culture de Stardew Valley du jour d'après ses stats !"
+      },
+      "errors": {
+        "no_daily_brawler": "Aucune culture du jour trouvée",
+        "generic_error": "Erreur : {message}"
+      },
+      "result": {
+        "success": "Bien joué !",
+        "failure": "Réessayez"
+      },
+      "scroll_hint": "← Faites défiler horizontalement pour voir plus →",
+      "yesterday": "La culture d'hier était <name>{brawlerName}</name>",
+      "share": {
+        "text": "J'ai trouvé la culture #Stardewdle #{id} en {tries} essais ",
+        "to_copy": "J'ai trouvé la culture #Stardewdle #{id} en {tries} essais\n{url}"
+      },
+      "victory": {
+        "stats_button": "Stats",
+        "back_home": "Retour à l'accueil",
+        "next_mode": "Jouer au Villageois"
+      },
+      "components": {
+        "explanationBox": {
+          "title": "Devine la culture de Stardew Valley du jour",
+          "bottomHint": "Tape une culture pour commencer."
+        },
+        "toolsBar": {
+          "stats": {
+            "tooltip": "Statistiques",
+            "alt": "Icône de statistiques"
+          },
+          "streak": {
+            "tooltip": "Série actuelle (Série de victoires consécutives)",
+            "alt": {
+              "active": "Icône de série active",
+              "inactive": "Icône de série inactive"
+            }
+          },
+          "patchNotes": {
+            "tooltip": "Notes de mise à jour",
+            "alt": "Icône des notes de mise à jour"
+          },
+          "howToPlay": {
+            "tooltip": "Comment jouer",
+            "alt": "Icône comment jouer"
+          }
+        },
+        "answerInput": {
+          "placeholder": "Tape un nom de culture.."
+        }
+      },
+      "modals": {
+        "stats": {
+          "title": "Statistiques",
+          "metrics": {
+            "games_won": {
+              "label": "Parties gagnées :",
+              "aria_label": "Nombre de parties gagnées"
+            },
+            "average_tries": {
+              "label": "Essais moyens :",
+              "aria_label": "Nombre moyen de tentatives par partie"
+            },
+            "one_shots": {
+              "label": "Du premier coup :",
+              "aria_label": "Nombre de parties gagnées en un essai"
+            },
+            "current_streak": {
+              "label": "Série actuelle :",
+              "aria_label": "Série de victoires actuelle"
+            },
+            "best_streak": {
+              "label": "Meilleure série :",
+              "aria_label": "Meilleure série de victoires"
+            }
+          },
+          "graph": {
+            "title": "Nombre d'essais par partie",
+            "label": "Essais",
+            "fallback": "Votre navigateur ne supporte pas l'élément canvas."
+          }
+        },
+        "patchNotes": {
+          "title": "Notes de mise à jour",
+          "states": {
+            "loading": {
+              "message": "Chargement des notes de mise à jour..."
+            },
+            "empty": {
+              "message": "Rien ici pour le moment"
+            },
+            "error": {
+              "title": "Échec du chargement des notes de mise à jour",
+              "message": "{error}"
+            }
+          }
+        },
+        "how_to_play_classic": {
+          "title": "Comment jouer : Mode Culture",
+          "introduction_title": "Mode Culture",
+          "introduction_description": "Devinez la culture secrète du jour de Stardew Valley en comparant cinq attributs. Chaque tentative fournit un retour codé par couleur et des flèches directionnelles pour vous guider.",
+          "attributes_title": "Attributs des cultures",
+          "attributes_description": "Le mode Culture compare les attributs suivants :",
+          "attribute_item_1": "• <strong>Croissance</strong> : nombre de jours pour arriver à maturité.",
+          "attribute_item_2": "• <strong>Prix</strong> : prix de vente de base en pièces d'or.",
+          "attribute_item_3": "• <strong>Repousse</strong> : continue-t-elle à produire après la récolte ? (Oui/Non).",
+          "attribute_item_4": "• <strong>Type</strong> : Légume, Fruit, Fleur, Cueillette ou Graine.",
+          "attribute_item_5": "• <strong>Saison</strong> : la ou les saisons où elle pousse.",
+          "attribute_item_6": "• <strong>Astuce</strong> : le vert indique une correspondance exacte ; l'orange sur Saison signifie un chevauchement partiel.",
+          "feedback_title": "Retour",
+          "feedback_description": "Chaque case est codée par couleur :",
+          "feedback_item_1": "• <span style=\"color: #32c21c\">Vert</span></span> : correspondance exacte avec la culture secrète.",
+          "feedback_item_2": "• <span style=\"color: #d40c00\">Rouge</span></span> : aucune correspondance.",
+          "feedback_arrows": "Des flèches apparaissent sur Croissance et Prix.",
+          "feedback_arrow_up": "• <strong>Flèche vers le haut (↑)</strong> : la valeur de la culture secrète est PLUS ÉLEVÉE.",
+          "feedback_arrow_down": "• <strong>Flèche vers le bas (↓)</strong> : la valeur de la culture secrète est PLUS BASSE.",
+          "how_to_play_title": "Comment jouer",
+          "step_1": "Faites votre première tentative en choisissant une culture dans la liste de recherche.",
+          "step_2": "Observez chaque case d'attribut se retourner l'une après l'autre, révélant un retour codé par couleur.",
+          "step_3": "Lisez les cases vertes et rouges pour repérer les attributs correspondants et non correspondants.",
+          "step_4": "Utilisez les flèches sur Croissance et Prix pour affiner la fourchette.",
+          "step_5": "Faites votre prochaine tentative en vous basant sur tous les retours reçus.",
+          "step_6": "Continuez jusqu'à identifier correctement la culture secrète !",
+          "step_7": "Revenez chaque jour pour deviner une nouvelle culture en Mode Culture.",
+          "strategy_title": "Astuces stratégiques",
+          "strategy_tip_1": "• Commencez par des cultures que vous connaissez bien pour établir une base d'attributs.",
+          "strategy_tip_2": "• Type et Saison réduisent rapidement les possibilités — de nombreuses cultures les partagent.",
+          "strategy_tip_3": "• Utilisez les flèches pour éliminer des groupes entiers selon le temps de croissance ou le prix.",
+          "strategy_tip_4": "• Repousse est un simple Oui/Non — cela divise les possibilités en deux.",
+          "strategy_tip_5": "• Une culture doit correspondre à TOUS les retours verts à la fois.",
+          "strategy_tip_6": "• Repousse, Type et Saison correspondent exactement (pas de flèches).",
+          "daily_challenge_title": "Défi quotidien",
+          "daily_challenge_description": "Revenez chaque jour pour une nouvelle culture secrète. Suivez votre série et partagez votre résultat avec vos amis."
+        }
+      },
+      "attributes": {
+        "headers": {
+          "crop": "Culture",
+          "growth": "Croissance",
+          "price": "Prix",
+          "regrow": "Repousse",
+          "type": "Type",
+          "season": "Saison"
+        },
+        "type": {
+          "Vegetable": "Légume",
+          "Fruit": "Fruit",
+          "Flower": "Fleur",
+          "Forage": "Cueillette",
+          "Seed": "Graine"
+        },
+        "season": {
+          "Spring": "Printemps",
+          "Summer": "Été",
+          "Fall": "Automne",
+          "Winter": "Hiver"
+        },
+        "regrow": {
+          "yes": "Oui",
+          "no": "Non"
+        }
+      }
+    },
+    "fish": {
+      "page_meta": {
+        "title": "Poisson",
+        "description": "Devine le poisson de Stardew Valley du jour d'après ses stats !"
+      },
+      "errors": {
+        "no_daily_brawler": "Aucun poisson du jour trouvé",
+        "generic_error": "Erreur : {message}"
+      },
+      "result": {
+        "success": "Bien joué !",
+        "failure": "Réessayez"
+      },
+      "scroll_hint": "← Faites défiler horizontalement pour voir plus →",
+      "yesterday": "Le poisson d'hier était <name>{brawlerName}</name>",
+      "share": {
+        "text": "J'ai trouvé le poisson #Stardewdle #{id} en {tries} essais ",
+        "to_copy": "J'ai trouvé le poisson #Stardewdle #{id} en {tries} essais\n{url}"
+      },
+      "victory": {
+        "stats_button": "Stats",
+        "back_home": "Retour à l'accueil",
+        "next_mode": "Jouer au Villageois"
+      },
+      "components": {
+        "explanationBox": {
+          "title": "Devine le poisson de Stardew Valley du jour",
+          "bottomHint": "Tape un poisson pour commencer."
+        },
+        "toolsBar": {
+          "stats": {
+            "tooltip": "Statistiques",
+            "alt": "Icône de statistiques"
+          },
+          "streak": {
+            "tooltip": "Série actuelle (Série de victoires consécutives)",
+            "alt": {
+              "active": "Icône de série active",
+              "inactive": "Icône de série inactive"
+            }
+          },
+          "patchNotes": {
+            "tooltip": "Notes de mise à jour",
+            "alt": "Icône des notes de mise à jour"
+          },
+          "howToPlay": {
+            "tooltip": "Comment jouer",
+            "alt": "Icône comment jouer"
+          }
+        },
+        "answerInput": {
+          "placeholder": "Tape un nom de poisson.."
+        }
+      },
+      "modals": {
+        "stats": {
+          "title": "Statistiques",
+          "metrics": {
+            "games_won": {
+              "label": "Parties gagnées :",
+              "aria_label": "Nombre de parties gagnées"
+            },
+            "average_tries": {
+              "label": "Essais moyens :",
+              "aria_label": "Nombre moyen de tentatives par partie"
+            },
+            "one_shots": {
+              "label": "Du premier coup :",
+              "aria_label": "Nombre de parties gagnées en un essai"
+            },
+            "current_streak": {
+              "label": "Série actuelle :",
+              "aria_label": "Série de victoires actuelle"
+            },
+            "best_streak": {
+              "label": "Meilleure série :",
+              "aria_label": "Meilleure série de victoires"
+            }
+          },
+          "graph": {
+            "title": "Nombre d'essais par partie",
+            "label": "Essais",
+            "fallback": "Votre navigateur ne supporte pas l'élément canvas."
+          }
+        },
+        "patchNotes": {
+          "title": "Notes de mise à jour",
+          "states": {
+            "loading": {
+              "message": "Chargement des notes de mise à jour..."
+            },
+            "empty": {
+              "message": "Rien ici pour le moment"
+            },
+            "error": {
+              "title": "Échec du chargement des notes de mise à jour",
+              "message": "{error}"
+            }
+          }
+        },
+        "how_to_play_classic": {
+          "title": "Comment jouer : Mode Poisson",
+          "introduction_title": "Mode Poisson",
+          "introduction_description": "Devinez le poisson secret du jour de Stardew Valley en comparant cinq attributs. Chaque tentative fournit un retour codé par couleur et des flèches directionnelles pour vous guider.",
+          "attributes_title": "Attributs des poissons",
+          "attributes_description": "Le mode Poisson compare les attributs suivants :",
+          "attribute_item_1": "• <strong>Difficulté</strong> : à quel point le poisson est difficile à attraper.",
+          "attribute_item_2": "• <strong>Comportement</strong> : sa façon de se déplacer — Flotteur, Fonceur, Fluide, Mixte ou Plongeur.",
+          "attribute_item_3": "• <strong>Saison</strong> : la ou les saisons où vous pouvez l'attraper.",
+          "attribute_item_4": "• <strong>Météo</strong> : Ensoleillé, Pluvieux ou Toutes.",
+          "attribute_item_5": "• <strong>Taille</strong> : sa taille maximale en pouces.",
+          "attribute_item_6": "• <strong>Astuce</strong> : le vert indique une correspondance exacte ; l'orange sur Saison signifie un chevauchement partiel.",
+          "feedback_title": "Retour",
+          "feedback_description": "Chaque case est codée par couleur :",
+          "feedback_item_1": "• <span style=\"color: #32c21c\">Vert</span></span> : correspondance exacte avec le poisson secret.",
+          "feedback_item_2": "• <span style=\"color: #d40c00\">Rouge</span></span> : aucune correspondance.",
+          "feedback_arrows": "Des flèches apparaissent sur Difficulté et Taille.",
+          "feedback_arrow_up": "• <strong>Flèche vers le haut (↑)</strong> : la valeur du poisson secret est PLUS ÉLEVÉE.",
+          "feedback_arrow_down": "• <strong>Flèche vers le bas (↓)</strong> : la valeur du poisson secret est PLUS BASSE.",
+          "how_to_play_title": "Comment jouer",
+          "step_1": "Faites votre première tentative en choisissant un poisson dans la liste de recherche.",
+          "step_2": "Observez chaque case d'attribut se retourner l'une après l'autre, révélant un retour codé par couleur.",
+          "step_3": "Lisez les cases vertes et rouges pour repérer les attributs correspondants et non correspondants.",
+          "step_4": "Utilisez les flèches sur Difficulté et Taille pour affiner la fourchette.",
+          "step_5": "Faites votre prochaine tentative en vous basant sur tous les retours reçus.",
+          "step_6": "Continuez jusqu'à identifier correctement le poisson secret !",
+          "step_7": "Revenez chaque jour pour deviner un nouveau poisson en Mode Poisson.",
+          "strategy_title": "Astuces stratégiques",
+          "strategy_tip_1": "• Commencez par des poissons que vous connaissez bien pour établir une base d'attributs.",
+          "strategy_tip_2": "• Comportement et Météo réduisent rapidement les possibilités — de nombreux poissons les partagent.",
+          "strategy_tip_3": "• Utilisez les flèches pour éliminer des groupes entiers selon la difficulté ou la taille.",
+          "strategy_tip_4": "• Saison peut correspondre partiellement (orange) en cas de chevauchement.",
+          "strategy_tip_5": "• Un poisson doit correspondre à TOUS les retours verts à la fois.",
+          "strategy_tip_6": "• Comportement, Saison et Météo correspondent exactement (pas de flèches).",
+          "daily_challenge_title": "Défi quotidien",
+          "daily_challenge_description": "Revenez chaque jour pour un nouveau poisson secret. Suivez votre série et partagez votre résultat avec vos amis."
+        }
+      },
+      "attributes": {
+        "headers": {
+          "fish": "Poisson",
+          "difficulty": "Difficulté",
+          "behavior": "Comportement",
+          "season": "Saison",
+          "weather": "Météo",
+          "size": "Taille"
+        },
+        "behavior": {
+          "Floater": "Flottant",
+          "Dart": "Saccadé",
+          "Smooth": "Régulier",
+          "Mixed": "Mixte",
+          "Sinker": "Plongeur"
+        },
+        "weather": {
+          "Sunny": "Soleil",
+          "Rainy": "Pluie",
+          "Any": "Toutes"
+        },
+        "season": {
+          "Spring": "Printemps",
+          "Summer": "Été",
+          "Fall": "Automne",
+          "Winter": "Hiver"
+        }
+      }
+    }
+  },
+  "common": {
+    "header": {
+      "button": {
+        "stats": {
+          "tooltip": "Stats"
+        },
+        "streak": {
+          "tooltip": "Série actuelle (Victoires consécutives)"
+        },
+        "changelog": {
+          "tooltip": "Journal des modifications"
+        }
+      }
+    },
+    "soon": "bientôt"
+  },
+  "components": {
+    "explanationBox": {
+      "errors": {
+        "no_content": "Aucun contenu fourni"
+      }
+    },
+    "answerInput": {
+      "states": {
+        "loading": "Chargement...",
+        "no_result": "Aucun résultat"
+      },
+      "button": {
+        "submit": {
+          "title": "Soumettre"
+        }
+      }
+    },
+    "victoryContainer": {
+      "title": "Votre partie",
+      "congratulations": "GG !!",
+      "guess": {
+        "prefix": "Vous avez deviné",
+        "character": "{name}"
+      },
+      "tries": {
+        "count": "Nombre d'essais :",
+        "value": "{count}"
+      },
+      "next": {
+        "timer": "Prochain puzzle dans",
+        "mode": "Prochain mode :"
+      },
+      "image": {
+        "alt": "Image de victoire"
+      },
+      "you_found": "Vous avez trouvé",
+      "number_of_tries": "Nombre d'essais : {count}"
+    },
+    "shareContainer": {
+      "title": "Partagez votre résultat",
+      "buttons": {
+        "copy": {
+          "title": "Copier",
+          "aria_label": "Copier le résultat dans le presse-papiers"
+        },
+        "tweet": {
+          "title": "Tweeter",
+          "aria_label": "Partager sur X (Twitter)"
+        }
+      },
+      "and_more": "et {count} de plus..."
+    }
+  }
+}

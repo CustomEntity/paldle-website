@@ -1,0 +1,10 @@
+{
+  "name": "stardewdle-datamine",
+  "private": true,
+  "type": "module",
+  "description": "Datamine tooling for Stardewdle (XNB -> JSON/PNG).",
+  "dependencies": {
+    "pngjs": "^7.0.0",
+    "xnb": "1.3.0-a"
+  }
+}

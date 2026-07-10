@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="%lang%">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+	<!-- JSON-LD for better SEO (the description/title/url meta are injected per page by the app) -->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "Stardewdle",
+			"url": "https://stardewdle.net",
+			"description": "Stardewdle is the daily Stardew Valley guessing game — guess the villager, crop or fish of the day across three modes.",
+			"inLanguage": "en"
+		}
+	</script>
+
+	<!-- Favicon -->
+	<link rel="icon" href="%sveltekit.assets%/favicon.png" type="image/png" sizes="32x32">
+
+	<!-- AllDle SDK — enables progression tracking when embedded in AllDle -->
+	<script src="https://cdn.alldle.net/sdk.js"></script>
+
+	<!-- Privacy-friendly analytics by Plausible -->
+	<script async src="https://analytics.rematchtracker.com/js/pa-unKUw2aQyZHkNFFQlk-tM.js"></script>
+	<script>
+		window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+		plausible.init()
+	</script>
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+	<!-- Dark mode protection -->
+	<meta name="darkreader-lock">
+
+	<!-- Open Graph / Twitter (site-level; per-page title, description & url are injected by the app) -->
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Stardewdle">
+	<meta name="twitter:card" content="summary">
+
+	<!-- PWA -->
+	<meta name="theme-color" content="#3a7d2c">
+	<link rel="apple-touch-icon" href="%sveltekit.assets%/apple-touch-icon.png">
+
+	<!-- Preload critical assets -->
+	<link rel="preload" href="%sveltekit.assets%/logo.png" as="image" type="image/png">
+
+	<!-- Critical CSS -->
+	<style>
+		body {
+			height: 100dvh;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+		}
+
+		body > #svelte-root {
+			height: 100%;
+			overflow-y: scroll;
+			overflow-x: hidden;
+		}
+
+		noscript div {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+	</style>
+
+	<title>Stardewdle</title>
+
+	%sveltekit.head%
+</head>
+<body data-sveltekit-preload-data="hover">
+<div id="svelte-root">%sveltekit.body%</div>
+
+<noscript>
+	<div>
+		<p>Please enable JavaScript to play Stardewdle</p>
+	</div>
+</noscript>
+</body>
+</html>

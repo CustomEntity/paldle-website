@@ -1,0 +1,728 @@
+{
+  "lang": {
+    "name": "Türkçe"
+  },
+  "layout": {
+    "page_meta": {
+      "base_title": "Stardew Valley Öğelerini Tahmin Et",
+      "base_description": "Stardewdle - Günlük Stardew Valley tahmin oyunu! Her gün yeni zorluklarla karşılaşın ve Stardew Valley bilginizi test edin",
+      "site_name": "Stardewdle"
+    },
+    "header": {
+      "home_link": "Stardewdle ana sayfasına dön",
+      "logo_alt": "Stardewdle Logosu"
+    },
+    "footer": {
+      "accessibility": {
+        "discord": "Discord topluluğumuza katılın",
+        "information": "Bilgi",
+        "kofi": "Bizi Ko-fi'de destekleyin",
+        "x": "Bizi X (Twitter) üzerinde takip edin",
+        "reddit": "Reddit topluluğumuza katılın"
+      },
+      "want_more": {
+        "title": "Daha fazlası mı istiyorsunuz?",
+        "description": "Tüm dle oyunları için en büyük merkeze göz atın."
+      },
+      "copyright": "Stardewdle - {year}",
+      "cookie_preferences": "Çerez tercihlerini güncelle"
+    },
+    "modals": {
+      "about": {
+        "commitment": {
+          "description": "Tahmin edilecek yeni köylüler için her gün geri dön, serini sürdür ve sonuçlarını arkadaşlarınla paylaş.",
+          "title": "Günlük meydan okuma"
+        },
+        "credit": {
+          "description": "Bir hayran tarafından, Stardew Valley hayranları için yapıldı. 🌱",
+          "title": "Emeği geçenler"
+        },
+        "disclaimer": "Stardewdle, resmi olmayan bir hayran projesidir. Stardew Valley, ConcernedApe tarafından oluşturulmuştur; tüm karakterler ve görseller kendi haklarına sahip kişilere aittir. Bu proje ConcernedApe ile bağlantılı değildir, onun tarafından desteklenmez veya onaylanmaz.",
+        "discover": "Stardewdle'a hoş geldin, günlük Stardew Valley tahmin oyunu! Klasik (köylüler), Ürün ve Balık olmak üzere üç modda bilgini sına — her gün yeni bir bulmaca ile.",
+        "dle_games": {
+          "description": "Stardewdle'ı beğendin mi? Menüdeki bağlantıdan tüm günlük -dle oyunları ailesini keşfet.",
+          "title": "Daha fazla -dle oyunu"
+        },
+        "game_modes": {
+          "description": "Klasik, altı köylü özelliğini karşılaştırır (cinsiyet, bölge, doğum günü, evlenebilirlik, yaş). Ürün, beş ürün özelliğini karşılaştırır (büyüme, fiyat, yeniden büyüme, tür, mevsim). Balık, beş balık özelliğini karşılaştırır (zorluk, davranış, mevsim, hava durumu, boyut). Her mod için her gün yeni bir bulmaca.",
+          "title": "Üç günlük mod"
+        },
+        "inspiration": {
+          "description": "Wordle ve pek çok harika -dle tahmin oyunundan ilham alınmıştır.",
+          "title": "İlham"
+        },
+        "privacy": {
+          "description": "İşleri basit tutuyoruz — ilerlemen ve serin kendi tarayıcında yerel olarak saklanır.",
+          "title": "Gizlilik"
+        },
+        "signature": {
+          "regards": "Sevgiyle,",
+          "team": "Stardewdle ekibi"
+        },
+        "thanks": "Oynadığın için teşekkürler, keyifli çiftçilikler!",
+        "title": "Hakkında"
+      }
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Stardew Valley bilginizi test edin",
+      "button": {
+        "villager": {
+          "title": "Köylü",
+          "description": "Her denemede ipuçları alın"
+        },
+        "crop": {
+          "description": "Ürünü istatistiklerinden tahmin et",
+          "title": "Ürün"
+        },
+        "fish": {
+          "description": "Balığı istatistiklerinden tahmin et",
+          "title": "Balık"
+        }
+      },
+      "reset_in": "Sıfırlanma: {time}",
+      "royaledle_banner": {
+        "title": "Royaledle Oyna",
+        "subtitle": "Günün Clash Royale karakterini tahmin et",
+        "cta": "Oyna",
+        "new": "YENİ"
+      }
+    },
+    "villager": {
+      "page_meta": {
+        "title": "Köylü",
+        "description": "Bugünkü Stardew Valley villager'ını tahmin edin!"
+      },
+      "errors": {
+        "no_daily_brawler": "Günlük villager bulunamadı",
+        "generic_error": "Hata: {message}"
+      },
+      "result": {
+        "success": "Aferin!",
+        "failure": "Tekrar deneyin"
+      },
+      "scroll_hint": "← Daha fazlasını görmek için yatay olarak kaydırın →",
+      "yesterday": "Dünkü villager <name>{brawlerName}</name> idi",
+      "share": {
+        "text": "#Stardewdle villager #{id}'yi classic modunda {tries} denemede buldum ",
+        "to_copy": "#Stardewdle villager #{id}'yi classic modunda {tries} denemede buldum\n"
+      },
+      "victory": {
+        "stats_button": "İstatistikler",
+        "back_home": "Ana sayfaya dön"
+      },
+      "components": {
+        "explanationBox": {
+          "title": "Bugünkü Stardew Valley villager'ını tahmin edin",
+          "bottomHint": "Başlamak için herhangi bir villager yazın.",
+          "hints": {
+            "gadget": {
+              "unavailable": "{tries} denemede Gadget ipucu",
+              "available": "Gadget ipucu"
+            },
+            "hypercharge": {
+              "unavailable": "{tries} denemede Hypercharge ipucu",
+              "available": "Hypercharge ipucu"
+            },
+            "silhouette": {
+              "unavailable": "{tries} denemede silüet ipucu",
+              "available": "Silüet ipucu"
+            }
+          }
+        },
+        "toolsBar": {
+          "stats": {
+            "tooltip": "İstatistikler",
+            "alt": "İstatistik simgesi"
+          },
+          "streak": {
+            "tooltip": "Mevcut seri (Ardışık galibiyetler serisi)",
+            "alt": {
+              "active": "Aktif seri simgesi",
+              "inactive": "İnaktif seri simgesi"
+            }
+          },
+          "patchNotes": {
+            "tooltip": "Yama notları",
+            "alt": "Yama notları simgesi"
+          },
+          "howToPlay": {
+            "tooltip": "Nasıl oynanır",
+            "alt": "Nasıl oynanır simgesi"
+          }
+        },
+        "answerInput": {
+          "placeholder": "Villager adını yazın.."
+        }
+      },
+      "modals": {
+        "stats": {
+          "title": "İstatistikler",
+          "metrics": {
+            "games_won": {
+              "label": "Kazanılan oyunlar:",
+              "aria_label": "Kazanılan oyun sayısı"
+            },
+            "average_tries": {
+              "label": "Ortalama denemeler:",
+              "aria_label": "Oyun başına ortalama deneme sayısı"
+            },
+            "one_shots": {
+              "label": "Tek seferde:",
+              "aria_label": "Tek denemede kazanılan oyun sayısı"
+            },
+            "current_streak": {
+              "label": "Mevcut seri:",
+              "aria_label": "Mevcut galibiyet serisi"
+            },
+            "best_streak": {
+              "label": "En iyi seri:",
+              "aria_label": "En iyi galibiyet serisi"
+            }
+          },
+          "graph": {
+            "title": "Oyun başına deneme sayısı",
+            "label": "Denemeler",
+            "fallback": "Tarayıcınız canvas öğesini desteklemiyor."
+          }
+        },
+        "patchNotes": {
+          "title": "Yama notları",
+          "states": {
+            "loading": {
+              "message": "Yama notları yükleniyor..."
+            },
+            "empty": {
+              "message": "Henüz burada bir şey yok"
+            },
+            "error": {
+              "title": "Yama notları yüklenemedi",
+              "message": "{error}"
+            }
+          }
+        },
+        "how_to_play_classic": {
+          "title": "Stardewdle Nasıl Oynanır: Klasik Mod - Stardew Valley Günlük Meydan Okuma",
+          "introduction_title": "Stardewdle'ın Klasik Modunu Anlamak",
+          "introduction_description": "Klasik Mod'da, stratejik bir tahmin oyunu aracılığıyla Stardew Valley Villager'ları hakkındaki bilginizi test edersiniz. Hedefiniz, altı temel özelliği analiz ederek gizli Villager'ı belirlemektir. Her tahminde, bu günlük meydan okumada doğru cevaba ulaşmanız için size renk kodlu geri bildirim ve yön okları verilir.",
+          "attributes_title": "Villager Özellikleri",
+          "attributes_description": "Stardewdle'ın Klasik Modu, her Villager için bu altı temel özelliği içerir:",
+          "attribute_item_1": "• <strong>Nadirlik</strong>: Villager'ın nadirlik seviyesi (Yaygın, Nadir, Süper Nadir, Epik, Mitik, Efsanevi, Ultra Efsanevi).",
+          "attribute_item_2": "• <strong>Sınıf</strong>: Villager'ın savaştaki rolü (örn. Tank, Hasar Veren, Destek, Suikastçı).",
+          "attribute_item_3": "• <strong>Hareket</strong>: Villager'ın hareket hızı (Çok Yavaş, Yavaş, Normal, Hızlı, Çok Hızlı).",
+          "attribute_item_4": "• <strong>Menzil</strong>: Villager'ın saldırı menzili (Çok Kısa, Kısa, Normal, Uzun, Çok Uzun).",
+          "attribute_item_5": "• <strong>Şarjör</strong>: Villager'ın şarjör doldurma hızı (Çok Yavaş, Yavaş, Normal, Hızlı, Çok Hızlı).",
+          "attribute_item_6": "• <strong>Yıl</strong>: Villager'ın Stardew Valley'ta piyasaya sürüldüğü yıl.",
+          "feedback_title": "Renk Geri Bildirimini Anlamak",
+          "feedback_description": "Her tahminden sonra, her özellik için bir çevirme animasyonu ile renk kodlu geri bildirim alırsınız:",
+          "feedback_item_1": "• <span style=\"color: #32c21c\">Yeşil</span>: Doğru! Gizli Villager tam olarak bu özellik değerine sahip.",
+          "feedback_item_2": "• <span style=\"color: #d40c00\">Kırmızı</span>: Yanlış. Gizli Villager bu özellik değerine sahip değil.",
+          "feedback_arrows": "<strong>Hareket</strong>, <strong>Menzil</strong>, <strong>Şarjör</strong> ve <strong>Yıl</strong> özellikleri için yön okları göreceksiniz:",
+          "feedback_arrow_up": "• <strong>Yukarı Ok (↑)</strong>: Gizli Villager'ın değeri tahmininizden DAHA YÜKSEK.",
+          "feedback_arrow_down": "• <strong>Aşağı Ok (↓)</strong>: Gizli Villager'ın değeri tahmininizden DAHA DÜŞÜK.",
+          "how_to_play_title": "Stardewdle'ın Klasik Modunu Oynamak",
+          "step_1": "Arama listesinden herhangi bir Villager ile ilk tahmininizi yaparak başlayın.",
+          "step_2": "Her özellik karosunun sırayla çevrilmesini izleyerek renk kodlu geri bildirimi açıklayın.",
+          "step_3": "Eşleşen ve eşleşmeyen özellikleri belirlemek için yeşil ve kırmızı karoları analiz edin.",
+          "step_4": "Olasılıkları daraltmak için Hareket, Menzil, Şarjör ve Yıl üzerindeki yön oklarını kullanın.",
+          "step_5": "Aldığınız birleşik geri bildirime dayanarak bir sonraki tahmininizi yapın.",
+          "step_6": "Gizli Villager'ı doğru bir şekilde belirleyene kadar devam edin!",
+          "step_7": "Klasik Mod'da tahmin etmek için yeni bir Villager için her gün geri dönün.",
+          "strategy_title": "Kazanan Strateji İpuçları",
+          "strategy_tip_1": "• Özellik kalıplarının temelini oluşturmak için iyi tanıdığınız Villager'larla başlayın.",
+          "strategy_tip_2": "• Sıralı çevirme animasyonuna dikkat edin – her karo sırayla bilgi açıklar.",
+          "strategy_tip_3": "• Okları stratejik olarak kullanın: tüm Villager gruplarını hızlıca elemenize yardımcı olur.",
+          "strategy_tip_4": "• Sıralı özellikler için (Hareket, Menzil, Şarjör), beş kademeli ölçeği unutmayın.",
+          "strategy_tip_5": "• Birden fazla özelliği çapraz referans verin – bir Villager TÜM yeşil geri bildirimle eşleşmelidir.",
+          "strategy_tip_6": "• Nadirlik ve Sınıfın tam olarak eşleşmesi gerektiğini unutmayın (ok yok, sadece yeşil veya kırmızı).",
+          "daily_challenge_title": "Günlük Stardew Valley Meydan Okumaları",
+          "daily_challenge_description": "Her gün belirlemek için yeni bir gizli Villager için Stardewdle'a geri dönün! Önceki denemeleriniz, eklendikçe her tahminin animasyonlu olduğu ters kronolojik sırada görüntülenir. Stardew Valley bilgisinin bu nihai testinde serinizi takip edin ve becerilerinizi arkadaşlarınızla karşılaştırın."
+        }
+      },
+      "attributes": {
+        "headers": {
+          "brawler": "Villager",
+          "rarity": "Nadirlik",
+          "class": "Sınıf",
+          "movement": "Hareket",
+          "range": "Menzil",
+          "reload": "Yeniden Dolum",
+          "year": "Yıl",
+          "age": "Yaş",
+          "birthday": "Doğum Günü",
+          "gender": "Cinsiyet",
+          "marriageable": "Evlenebilir",
+          "region": "Bölge",
+          "season": "Mevsim",
+          "villager": "Köylü"
+        },
+        "rarity": {
+          "common": "Sıradan",
+          "rare": "Nadir",
+          "super_rare": "Süper Nadir",
+          "epic": "Epik",
+          "mythic": "Mitik",
+          "legendary": "Efsanevi",
+          "ultra_legendary": "Ultra Efsanevi"
+        },
+        "class": {
+          "artillery": "Topçu",
+          "assassin": "Suikastçı",
+          "controller": "Kontrolör",
+          "damage_dealer": "Hasar Veren",
+          "marksman": "Nişancı",
+          "support": "Destek",
+          "tank": "Tank"
+        },
+        "speed": {
+          "very_slow": "Çok Yavaş",
+          "slow": "Yavaş",
+          "normal": "Normal",
+          "fast": "Hızlı",
+          "very_fast": "Çok Hızlı"
+        },
+        "range": {
+          "very_short": "Çok Kısa",
+          "short": "Kısa",
+          "normal": "Normal",
+          "long": "Uzun",
+          "very_long": "Çok Uzun"
+        },
+        "age": {
+          "Adult": "Yetişkin",
+          "Child": "Çocuk",
+          "Teen": "Genç"
+        },
+        "gender": {
+          "Female": "Kadın",
+          "Male": "Erkek",
+          "Undefined": "Diğer"
+        },
+        "marriageable": {
+          "no": "Hayır",
+          "yes": "Evet"
+        },
+        "region": {
+          "Beach": "Sahil",
+          "Desert": "Çöl",
+          "Forest": "Orman",
+          "GingerIsland": "Zencefil Adası",
+          "Mountain": "Dağ",
+          "Sewers": "Kanalizasyon",
+          "Town": "Kasaba"
+        },
+        "season": {
+          "Fall": "Sonbahar",
+          "Spring": "İlkbahar",
+          "Summer": "Yaz",
+          "Winter": "Kış"
+        }
+      },
+      "gift_hint": "Sevdiği hediye: {gift}",
+      "gift_hint_locked": "Sevdiği hediye ipucu {tries} tahminde"
+    },
+    "crop": {
+      "attributes": {
+        "headers": {
+          "crop": "Ürün",
+          "growth": "Büyüme",
+          "price": "Fiyat",
+          "regrow": "Yeniden Büyüme",
+          "season": "Mevsim",
+          "type": "Tür"
+        },
+        "regrow": {
+          "no": "Hayır",
+          "yes": "Evet"
+        },
+        "season": {
+          "Fall": "Sonbahar",
+          "Spring": "İlkbahar",
+          "Summer": "Yaz",
+          "Winter": "Kış"
+        },
+        "type": {
+          "Flower": "Çiçek",
+          "Forage": "Doğal Ürün",
+          "Fruit": "Meyve",
+          "Seed": "Tohum",
+          "Vegetable": "Sebze"
+        }
+      },
+      "components": {
+        "answerInput": {
+          "placeholder": "Bir ürün adı yaz.."
+        },
+        "explanationBox": {
+          "bottomHint": "Başlamak için bir ürün adı yaz.",
+          "title": "Bugünün Stardew Valley ürününü tahmin et"
+        },
+        "toolsBar": {
+          "howToPlay": {
+            "alt": "Nasıl oynanır simgesi",
+            "tooltip": "Nasıl oynanır"
+          },
+          "patchNotes": {
+            "alt": "Yama notları simgesi",
+            "tooltip": "Yama notları"
+          },
+          "stats": {
+            "alt": "İstatistikler simgesi",
+            "tooltip": "İstatistikler"
+          },
+          "streak": {
+            "alt": {
+              "active": "Aktif seri simgesi",
+              "inactive": "Pasif seri simgesi"
+            },
+            "tooltip": "Mevcut seri (Art arda kazanılan galibiyetler dizisi)"
+          }
+        }
+      },
+      "errors": {
+        "generic_error": "Hata: {message}",
+        "no_daily_brawler": "Günlük ürün bulunamadı"
+      },
+      "modals": {
+        "how_to_play_classic": {
+          "attribute_item_1": "• <strong>Büyüme</strong>: tam olgunlaşması için geçen gün sayısı.",
+          "attribute_item_2": "• <strong>Fiyat</strong>: altın cinsinden temel satış fiyatı.",
+          "attribute_item_3": "• <strong>Yeniden Büyüme</strong>: hasattan sonra üretmeye devam eder mi? (Evet/Hayır).",
+          "attribute_item_4": "• <strong>Tür</strong>: Sebze, Meyve, Çiçek, Yiyecek Toplama veya Tohum.",
+          "attribute_item_5": "• <strong>Mevsim</strong>: yetiştiği mevsim(ler).",
+          "attribute_item_6": "• <strong>İpucu</strong>: yeşil tam eşleşme anlamına gelir; Mevsim üzerindeki turuncu ise kısmi bir örtüşmeyi gösterir.",
+          "attributes_description": "Ürün modu şu özellikleri karşılaştırır:",
+          "attributes_title": "Ürün Özellikleri",
+          "daily_challenge_description": "Yeni bir gizli ürün için her gün geri dönün. Serinizi takip edin ve sonucunuzu arkadaşlarınızla paylaşın.",
+          "daily_challenge_title": "Günlük Meydan Okuma",
+          "feedback_arrow_down": "• <strong>Aşağı Ok (↓)</strong>: gizli ürünün değeri DAHA DÜŞÜK.",
+          "feedback_arrow_up": "• <strong>Yukarı Ok (↑)</strong>: gizli ürünün değeri DAHA YÜKSEK.",
+          "feedback_arrows": "Oklar, Büyüme ve Fiyat üzerinde görünür.",
+          "feedback_description": "Her kutu renk koduyla gösterilir:",
+          "feedback_item_1": "• <span style=\"color: #32c21c\">Yeşil</span></span>: gizli ürünle tam eşleşme.",
+          "feedback_item_2": "• <span style=\"color: #d40c00\">Kırmızı</span></span>: eşleşme yok.",
+          "feedback_title": "Geri Bildirim",
+          "how_to_play_title": "Nasıl Oynanır",
+          "introduction_description": "Beş özelliği karşılaştırarak günün gizli Stardew Valley ürününü tahmin edin. Her tahmin, size yol gösteren renk kodlu geri bildirim ve yön okları sağlar.",
+          "introduction_title": "Ürün Modu",
+          "step_1": "Arama listesinden herhangi bir ürünle ilk tahmininizi yapın.",
+          "step_2": "Her özellik kutusunun sırayla dönerek renk kodlu geri bildirimi ortaya çıkarmasını izleyin.",
+          "step_3": "Eşleşen ve eşleşmeyen özellikleri tespit etmek için yeşil ve kırmızı kutuları inceleyin.",
+          "step_4": "Aralığı daraltmak için Büyüme ve Fiyat üzerindeki okları kullanın.",
+          "step_5": "Aldığınız tüm geri bildirimlere dayanarak bir sonraki tahmininizi yapın.",
+          "step_6": "Gizli ürünü doğru şekilde bulana kadar devam edin!",
+          "step_7": "Ürün Modu'nda tahmin etmek için her gün yeni bir ürünle geri dönün.",
+          "strategy_tip_1": "• Özelliklerde bir başlangıç noktası oluşturmak için iyi bildiğiniz ürünlerle başlayın.",
+          "strategy_tip_2": "• Tür ve Mevsim, olası seçenekleri hızla daraltır — birçok ürün bunları paylaşır.",
+          "strategy_tip_3": "• Büyüme süresine veya fiyata göre tüm grupları elemek için okları kullanın.",
+          "strategy_tip_4": "• Yeniden Büyüme basit bir Evet/Hayır sorusudur — seçenekleri ikiye böler.",
+          "strategy_tip_5": "• Bir ürün, TÜM yeşil geri bildirimlerle aynı anda eşleşmelidir.",
+          "strategy_tip_6": "• Yeniden Büyüme, Tür ve Mevsim birebir eşleşir (ok yoktur).",
+          "strategy_title": "Strateji İpuçları",
+          "title": "Nasıl Oynanır: Ürün Modu"
+        },
+        "patchNotes": {
+          "states": {
+            "empty": {
+              "message": "Henüz burada bir şey yok"
+            },
+            "error": {
+              "message": "{error}",
+              "title": "Yama notları yüklenemedi"
+            },
+            "loading": {
+              "message": "Yama notları yükleniyor..."
+            }
+          },
+          "title": "Yama notları"
+        },
+        "stats": {
+          "graph": {
+            "fallback": "Tarayıcınız canvas öğesini desteklemiyor.",
+            "label": "Denemeler",
+            "title": "Oyun başına deneme sayısı"
+          },
+          "metrics": {
+            "average_tries": {
+              "aria_label": "Oyun başına ortalama deneme sayısı",
+              "label": "Ortalama deneme:"
+            },
+            "best_streak": {
+              "aria_label": "En iyi galibiyet serisi",
+              "label": "En iyi seri:"
+            },
+            "current_streak": {
+              "aria_label": "Mevcut galibiyet serisi",
+              "label": "Mevcut seri:"
+            },
+            "games_won": {
+              "aria_label": "Kazanılan oyun sayısı",
+              "label": "Kazanılan oyunlar:"
+            },
+            "one_shots": {
+              "aria_label": "Tek denemede kazanılan oyun sayısı",
+              "label": "Tek denemeler:"
+            }
+          },
+          "title": "İstatistikler"
+        }
+      },
+      "page_meta": {
+        "description": "Bugünün Stardew Valley ürününü istatistiklerinden tahmin et!",
+        "title": "Ürün"
+      },
+      "result": {
+        "failure": "Tekrar dene",
+        "success": "Aferin!"
+      },
+      "scroll_hint": "← Daha fazlasını görmek için yatay kaydır →",
+      "share": {
+        "text": "#Stardewdle ürününü #{id} {tries} tahminde buldum ",
+        "to_copy": "#Stardewdle ürününü #{id} {tries} tahminde buldum\n{url}"
+      },
+      "victory": {
+        "back_home": "Ana sayfaya dön",
+        "next_mode": "Klasik'i Oyna",
+        "stats_button": "İstatistikler"
+      },
+      "yesterday": "Dünün ürünü <name>{brawlerName}</name> idi"
+    },
+    "fish": {
+      "attributes": {
+        "behavior": {
+          "Dart": "Fırlayan",
+          "Floater": "Yüzen",
+          "Mixed": "Karışık",
+          "Sinker": "Batan",
+          "Smooth": "Düzgün"
+        },
+        "headers": {
+          "behavior": "Davranış",
+          "difficulty": "Zorluk",
+          "fish": "Balık",
+          "season": "Mevsim",
+          "size": "Boyut",
+          "weather": "Hava Durumu"
+        },
+        "season": {
+          "Fall": "Sonbahar",
+          "Spring": "İlkbahar",
+          "Summer": "Yaz",
+          "Winter": "Kış"
+        },
+        "weather": {
+          "Any": "Herhangi",
+          "Rainy": "Yağmurlu",
+          "Sunny": "Güneşli"
+        }
+      },
+      "components": {
+        "answerInput": {
+          "placeholder": "Bir balık adı yaz.."
+        },
+        "explanationBox": {
+          "bottomHint": "Başlamak için bir balık adı yaz.",
+          "title": "Bugünün Stardew Valley balığını tahmin et"
+        },
+        "toolsBar": {
+          "howToPlay": {
+            "alt": "Nasıl oynanır simgesi",
+            "tooltip": "Nasıl oynanır"
+          },
+          "patchNotes": {
+            "alt": "Yama notları simgesi",
+            "tooltip": "Yama notları"
+          },
+          "stats": {
+            "alt": "İstatistikler simgesi",
+            "tooltip": "İstatistikler"
+          },
+          "streak": {
+            "alt": {
+              "active": "Aktif seri simgesi",
+              "inactive": "Pasif seri simgesi"
+            },
+            "tooltip": "Mevcut seri (Art arda kazanılan galibiyetler dizisi)"
+          }
+        }
+      },
+      "errors": {
+        "generic_error": "Hata: {message}",
+        "no_daily_brawler": "Günlük balık bulunamadı"
+      },
+      "modals": {
+        "how_to_play_classic": {
+          "attribute_item_1": "• <strong>Zorluk</strong>: balığın yakalanmasının ne kadar zor olduğu.",
+          "attribute_item_2": "• <strong>Davranış</strong>: nasıl hareket ettiği — Yüzücü, Fırlayan, Sakin, Karışık veya Batan.",
+          "attribute_item_3": "• <strong>Mevsim</strong>: yakalayabileceğiniz mevsim(ler).",
+          "attribute_item_4": "• <strong>Hava Durumu</strong>: Güneşli, Yağmurlu veya Herhangi.",
+          "attribute_item_5": "• <strong>Boyut</strong>: inç cinsinden maksimum boyutu.",
+          "attribute_item_6": "• <strong>İpucu</strong>: yeşil tam eşleşme anlamına gelir; Mevsim üzerindeki turuncu ise kısmi bir örtüşmeyi gösterir.",
+          "attributes_description": "Balık modu şu özellikleri karşılaştırır:",
+          "attributes_title": "Balık Özellikleri",
+          "daily_challenge_description": "Yeni bir gizli balık için her gün geri dönün. Serinizi takip edin ve sonucunuzu arkadaşlarınızla paylaşın.",
+          "daily_challenge_title": "Günlük Meydan Okuma",
+          "feedback_arrow_down": "• <strong>Aşağı Ok (↓)</strong>: gizli balığın değeri DAHA DÜŞÜK.",
+          "feedback_arrow_up": "• <strong>Yukarı Ok (↑)</strong>: gizli balığın değeri DAHA YÜKSEK.",
+          "feedback_arrows": "Oklar, Zorluk ve Boyut üzerinde görünür.",
+          "feedback_description": "Her kutu renk koduyla gösterilir:",
+          "feedback_item_1": "• <span style=\"color: #32c21c\">Yeşil</span></span>: gizli balıkla tam eşleşme.",
+          "feedback_item_2": "• <span style=\"color: #d40c00\">Kırmızı</span></span>: eşleşme yok.",
+          "feedback_title": "Geri Bildirim",
+          "how_to_play_title": "Nasıl Oynanır",
+          "introduction_description": "Beş özelliği karşılaştırarak günün gizli Stardew Valley balığını tahmin edin. Her tahmin, size yol gösteren renk kodlu geri bildirim ve yön okları sağlar.",
+          "introduction_title": "Balık Modu",
+          "step_1": "Arama listesinden herhangi bir balıkla ilk tahmininizi yapın.",
+          "step_2": "Her özellik kutusunun sırayla dönerek renk kodlu geri bildirimi ortaya çıkarmasını izleyin.",
+          "step_3": "Eşleşen ve eşleşmeyen özellikleri tespit etmek için yeşil ve kırmızı kutuları inceleyin.",
+          "step_4": "Aralığı daraltmak için Zorluk ve Boyut üzerindeki okları kullanın.",
+          "step_5": "Aldığınız tüm geri bildirimlere dayanarak bir sonraki tahmininizi yapın.",
+          "step_6": "Gizli balığı doğru şekilde bulana kadar devam edin!",
+          "step_7": "Balık Modu'nda tahmin etmek için her gün yeni bir balıkla geri dönün.",
+          "strategy_tip_1": "• Özelliklerde bir başlangıç noktası oluşturmak için iyi bildiğiniz balıklarla başlayın.",
+          "strategy_tip_2": "• Davranış ve Hava Durumu, olası seçenekleri hızla daraltır — birçok balık bunları paylaşır.",
+          "strategy_tip_3": "• Zorluğa veya boyuta göre tüm grupları elemek için okları kullanın.",
+          "strategy_tip_4": "• Mevsim, örtüştüğünde kısmen eşleşebilir (turuncu).",
+          "strategy_tip_5": "• Bir balık, TÜM yeşil geri bildirimlerle aynı anda eşleşmelidir.",
+          "strategy_tip_6": "• Davranış, Mevsim ve Hava Durumu birebir eşleşir (ok yoktur).",
+          "strategy_title": "Strateji İpuçları",
+          "title": "Nasıl Oynanır: Balık Modu"
+        },
+        "patchNotes": {
+          "states": {
+            "empty": {
+              "message": "Henüz burada bir şey yok"
+            },
+            "error": {
+              "message": "{error}",
+              "title": "Yama notları yüklenemedi"
+            },
+            "loading": {
+              "message": "Yama notları yükleniyor..."
+            }
+          },
+          "title": "Yama notları"
+        },
+        "stats": {
+          "graph": {
+            "fallback": "Tarayıcınız canvas öğesini desteklemiyor.",
+            "label": "Denemeler",
+            "title": "Oyun başına deneme sayısı"
+          },
+          "metrics": {
+            "average_tries": {
+              "aria_label": "Oyun başına ortalama deneme sayısı",
+              "label": "Ortalama deneme:"
+            },
+            "best_streak": {
+              "aria_label": "En iyi galibiyet serisi",
+              "label": "En iyi seri:"
+            },
+            "current_streak": {
+              "aria_label": "Mevcut galibiyet serisi",
+              "label": "Mevcut seri:"
+            },
+            "games_won": {
+              "aria_label": "Kazanılan oyun sayısı",
+              "label": "Kazanılan oyunlar:"
+            },
+            "one_shots": {
+              "aria_label": "Tek denemede kazanılan oyun sayısı",
+              "label": "Tek denemeler:"
+            }
+          },
+          "title": "İstatistikler"
+        }
+      },
+      "page_meta": {
+        "description": "Bugünün Stardew Valley balığını istatistiklerinden tahmin et!",
+        "title": "Balık"
+      },
+      "result": {
+        "failure": "Tekrar dene",
+        "success": "Aferin!"
+      },
+      "scroll_hint": "← Daha fazlasını görmek için yatay kaydır →",
+      "share": {
+        "text": "#Stardewdle balığını #{id} {tries} tahminde buldum ",
+        "to_copy": "#Stardewdle balığını #{id} {tries} tahminde buldum\n{url}"
+      },
+      "victory": {
+        "back_home": "Ana sayfaya dön",
+        "next_mode": "Klasik'i Oyna",
+        "stats_button": "İstatistikler"
+      },
+      "yesterday": "Dünün balığı <name>{brawlerName}</name> idi"
+    }
+  },
+  "common": {
+    "header": {
+      "button": {
+        "stats": {
+          "tooltip": "İstatistikler"
+        },
+        "streak": {
+          "tooltip": "Mevcut seri (Ardışık galibiyetler)"
+        },
+        "changelog": {
+          "tooltip": "Değişiklik günlüğü"
+        }
+      }
+    },
+    "soon": "yakında"
+  },
+  "components": {
+    "explanationBox": {
+      "errors": {
+        "no_content": "İçerik sağlanmadı"
+      }
+    },
+    "answerInput": {
+      "states": {
+        "loading": "Yükleniyor...",
+        "no_result": "Sonuç yok"
+      },
+      "button": {
+        "submit": {
+          "title": "Gönder"
+        }
+      }
+    },
+    "victoryContainer": {
+      "title": "Oyununuz",
+      "congratulations": "GG !!",
+      "guess": {
+        "prefix": "Tahmin ettiniz",
+        "character": "{name}"
+      },
+      "tries": {
+        "count": "Deneme sayısı:",
+        "value": "{count}"
+      },
+      "next": {
+        "timer": "Sonraki bulmaca",
+        "mode": "Sonraki mod:"
+      },
+      "image": {
+        "alt": "Zafer görüntüsü"
+      },
+      "you_found": "Buldun",
+      "number_of_tries": "Deneme sayısı: {count}"
+    },
+    "shareContainer": {
+      "title": "Sonucunuzu paylaşın",
+      "buttons": {
+        "copy": {
+          "title": "Kopyala",
+          "aria_label": "Sonucu panoya kopyala"
+        },
+        "tweet": {
+          "title": "Tweetle",
+          "aria_label": "X (Twitter) üzerinde paylaş"
+        }
+      },
+      "and_more": "ve {count} daha..."
+    }
+  }
+}
