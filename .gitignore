@@ -12,3 +12,6 @@ game-assets/
 
 # AI-generated source art (keep the processed static/ output, not the raw export)
 ChatGPT Image*.png
+
+# regenerable raw wiki dumps (rebuild via scripts/datamine/scrape-wikily.mjs)
+scripts/datamine/raw-wikily/

@@ -1,96 +1,90 @@
--- Stardewdle schema — mirrors Brawldle's entity / *_translations / daily_* pattern.
--- Safe to re-run (idempotent).
+-- Paldle schema — one guessable entity (pals), three daily game modes.
+-- Follows the Rivalsdle pattern: entity + <entity>_translations + <entity>_media,
+-- and one daily_<mode> table per game mode. Idempotent (CREATE ... IF NOT EXISTS).
 
-CREATE TABLE IF NOT EXISTS villagers (
+-- ---------------------------------------------------------------------------
+-- Pals — language-neutral attributes. Keyed on `key` (wikily slug / future
+-- datamine slug). `tribe` and `dev_name` carry the game's internal identity so a
+-- later in-house datamine can match rows without a reshape.
+-- ---------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS pals (
+    id             SERIAL PRIMARY KEY,
+    key            TEXT UNIQUE NOT NULL,
+    tribe          TEXT,
+    dev_name       TEXT,
+    paldeck        TEXT,                              -- "100", "84B"
+    paldeck_num    INTEGER,                           -- numeric index (compare/sort)
+    paldeck_suffix TEXT    NOT NULL DEFAULT '',
+    elements       TEXT[]  NOT NULL DEFAULT '{}',     -- 1-2 elements
+    rarity         INTEGER,
+    size           TEXT,                              -- XS|S|M|L|XL
+    genus          TEXT,
+    mount          TEXT    NOT NULL DEFAULT 'None',   -- None|Ground|Flying|Swimming
+    nocturnal      BOOLEAN NOT NULL DEFAULT FALSE,
+    predator       BOOLEAN NOT NULL DEFAULT FALSE,
+    food_amount    INTEGER,
+    work           JSONB   NOT NULL DEFAULT '{}',     -- {"Mining":3,"Handiwork":4}
+    work_keys      TEXT[]  NOT NULL DEFAULT '{}',     -- keys of `work` (set-compare)
+    partner_skill  TEXT,
+    drops          JSONB   NOT NULL DEFAULT '[]',
+    is_boss        BOOLEAN NOT NULL DEFAULT FALSE,
+    released       BOOLEAN NOT NULL DEFAULT TRUE,
+    created_at     TIMESTAMPTZ DEFAULT NOW(),
+    updated_at     TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- Localized name + description (Description mode needs per-locale descriptions).
+-- Pal names are identical across Latin-script locales and differ for ja/ko/zh/ru;
+-- resolvers use the requested locale with an 'en' fallback.
+CREATE TABLE IF NOT EXISTS pal_translations (
     id            SERIAL PRIMARY KEY,
-    key           TEXT UNIQUE NOT NULL,          -- internal Stardew id, e.g. "Abigail"
-    gender        TEXT,                          -- Male | Female | Undefined
-    region        TEXT,                          -- Town | Mountain | Forest | Beach | Desert | Sewers | Ginger Island
-    birth_season  TEXT,                          -- Spring | Summer | Fall | Winter
-    birth_day     INTEGER,                       -- 1..28
-    marriageable  BOOLEAN NOT NULL DEFAULT FALSE,
-    age           TEXT,                          -- Adult | Teen | Child
-    love_interest TEXT,
-    home_location TEXT,
-    loved_gifts   JSONB,                         -- string[] of loved gift display names (EN)
-    loved_gift_sprite INTEGER,                   -- springobjects SpriteIndex of the first loved gift (null if custom sheet)
-    portrait_url  TEXT,
-    released      BOOLEAN NOT NULL DEFAULT TRUE,
-    created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-    updated_at    TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    pal_id        INTEGER NOT NULL REFERENCES pals(id) ON DELETE CASCADE,
+    locale        TEXT NOT NULL,
+    name          TEXT NOT NULL,
+    description   TEXT,
+    partner_skill TEXT,
+    UNIQUE (pal_id, locale)
 );
+CREATE INDEX IF NOT EXISTS idx_pal_translations_pal_id ON pal_translations(pal_id);
 
--- migrations for columns added after the initial villagers table
-ALTER TABLE villagers ADD COLUMN IF NOT EXISTS loved_gift_sprite INTEGER;
-
-CREATE TABLE IF NOT EXISTS villager_translations (
-    villager_id INTEGER NOT NULL REFERENCES villagers(id) ON DELETE CASCADE,
-    language    TEXT NOT NULL,                   -- 'en', 'fr', ...
-    name        TEXT NOT NULL,
-    PRIMARY KEY (villager_id, language)
+-- Multiple media per Pal (icon today; fullbody / paldeck art / etc. later).
+CREATE TABLE IF NOT EXISTS pal_media (
+    id            SERIAL PRIMARY KEY,
+    pal_id        INTEGER NOT NULL REFERENCES pals(id) ON DELETE CASCADE,
+    media_type    TEXT NOT NULL,                      -- icon | fullbody | silhouette | ...
+    path          TEXT NOT NULL,                      -- e.g. /pals/anubis.webp
+    display_order INTEGER NOT NULL DEFAULT 0,
+    UNIQUE (pal_id, media_type, path)
 );
+CREATE INDEX IF NOT EXISTS idx_pal_media_pal_id ON pal_media(pal_id);
 
-CREATE TABLE IF NOT EXISTS daily_villager (
-    id          SERIAL PRIMARY KEY,
-    game_id     INTEGER NOT NULL,
-    date        DATE NOT NULL UNIQUE,
-    villager_id INTEGER NOT NULL REFERENCES villagers(id)
+-- ---------------------------------------------------------------------------
+-- Daily tables — one per mode. game_id is a sequential puzzle counter; the
+-- answer is whichever pal_id sits on date = CURRENT_DATE.
+-- ---------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS daily_classic (
+    id      SERIAL PRIMARY KEY,
+    game_id INTEGER NOT NULL,
+    date    DATE    NOT NULL UNIQUE,
+    pal_id  INTEGER NOT NULL REFERENCES pals(id)
 );
-
-CREATE TABLE IF NOT EXISTS crops (
-    id        SERIAL PRIMARY KEY,
-    key       TEXT UNIQUE NOT NULL,   -- harvest item id
-    growth    INTEGER,                -- days to grow
-    price     INTEGER,                -- base sell price (g)
-    regrow    BOOLEAN NOT NULL DEFAULT FALSE,
-    type      TEXT,                   -- Vegetable | Fruit | Flower | Forage | Seed
-    seasons   TEXT[],                 -- Spring | Summer | Fall | Winter (can be several)
-    sprite    INTEGER,                -- icon index
-    sheet     TEXT,                   -- springobjects | objects_2
-    released  BOOLEAN NOT NULL DEFAULT TRUE
+CREATE TABLE IF NOT EXISTS daily_description (
+    id      SERIAL PRIMARY KEY,
+    game_id INTEGER NOT NULL,
+    date    DATE    NOT NULL UNIQUE,
+    pal_id  INTEGER NOT NULL REFERENCES pals(id)
 );
-
-CREATE TABLE IF NOT EXISTS crop_translations (
-    crop_id   INTEGER NOT NULL REFERENCES crops(id) ON DELETE CASCADE,
-    language  TEXT NOT NULL,
-    name      TEXT NOT NULL,
-    PRIMARY KEY (crop_id, language)
+CREATE TABLE IF NOT EXISTS daily_silhouette (
+    id      SERIAL PRIMARY KEY,
+    game_id INTEGER NOT NULL,
+    date    DATE    NOT NULL UNIQUE,
+    pal_id  INTEGER NOT NULL REFERENCES pals(id)
 );
+CREATE INDEX IF NOT EXISTS idx_daily_classic_date     ON daily_classic(date);
+CREATE INDEX IF NOT EXISTS idx_daily_description_date  ON daily_description(date);
+CREATE INDEX IF NOT EXISTS idx_daily_silhouette_date   ON daily_silhouette(date);
 
-CREATE TABLE IF NOT EXISTS daily_crop (
-    id       SERIAL PRIMARY KEY,
-    game_id  INTEGER NOT NULL,
-    date     DATE NOT NULL UNIQUE,
-    crop_id  INTEGER NOT NULL REFERENCES crops(id)
-);
-
-CREATE TABLE IF NOT EXISTS fish (
-    id         SERIAL PRIMARY KEY,
-    key        TEXT UNIQUE NOT NULL,   -- fish item id
-    difficulty INTEGER,                -- catch difficulty
-    behavior   TEXT,                   -- Floater | Dart | Smooth | Mixed | Sinker
-    max_size   INTEGER,                -- max size (inches)
-    weather    TEXT,                   -- Sunny | Rainy | Any
-    seasons    TEXT[],
-    sprite     INTEGER,
-    sheet      TEXT,
-    released   BOOLEAN NOT NULL DEFAULT TRUE
-);
-
-CREATE TABLE IF NOT EXISTS fish_translations (
-    fish_id   INTEGER NOT NULL REFERENCES fish(id) ON DELETE CASCADE,
-    language  TEXT NOT NULL,
-    name      TEXT NOT NULL,
-    PRIMARY KEY (fish_id, language)
-);
-
-CREATE TABLE IF NOT EXISTS daily_fish (
-    id       SERIAL PRIMARY KEY,
-    game_id  INTEGER NOT NULL,
-    date     DATE NOT NULL UNIQUE,
-    fish_id  INTEGER NOT NULL REFERENCES fish(id)
-);
-
+-- Generic changelog, keyed by mode.
 CREATE TABLE IF NOT EXISTS patch_notes (
     id      SERIAL PRIMARY KEY,
     date    DATE NOT NULL,
