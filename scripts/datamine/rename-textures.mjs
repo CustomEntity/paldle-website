@@ -39,23 +39,37 @@ function walk(dir) {
 	return out;
 }
 
-let renamed = 0, skipped = 0;
+// fallback for textures not in a data table: the filename already IS the name,
+// just strip the T_ + redundant type prefix so it reads cleanly.
+function fallbackName(b) {
+	let n = b.replace(/^T_/, '');
+	n = n.replace(/^(prt|icon|img|btn|bg|eff|ui)_/i, ''); // drop one redundant type tag
+	return n || b.replace(/^T_/, '');
+}
+
+let renamed = 0, cleaned = 0, skipped = 0;
 const bySource = {};
 const used = new Set();
 for (const file of walk(UI)) {
 	const b = path.basename(file, '.png');
 	const entry = catalog[b];
-	if (!entry) { skipped++; continue; }
-	let key = entry.key;
-	if (entry.source === 'pal') key = palDisplay.get(String(key).toLowerCase()) || key;
-	let name = `${entry.source}_${clean(key)}`;
+	let name, kind;
+	if (entry) {
+		let key = entry.key;
+		if (entry.source === 'pal') key = palDisplay.get(String(key).toLowerCase()) || key;
+		name = `${entry.source}_${clean(key)}`;
+		kind = entry.source;
+	} else if (/^T_/.test(b)) {
+		name = fallbackName(b);
+		kind = 'filename';
+	} else { skipped++; continue; } // already clean
 	let dest = path.join(path.dirname(file), name + '.png');
 	let n = 2;
 	while (used.has(dest) || (dest !== file && fs.existsSync(dest))) { dest = path.join(path.dirname(file), `${name}_${n++}.png`); }
 	used.add(dest);
-	if (!dry) fs.renameSync(file, dest);
-	renamed++;
-	bySource[entry.source] = (bySource[entry.source] || 0) + 1;
+	if (!dry && dest !== file) fs.renameSync(file, dest);
+	if (kind === 'filename') cleaned++; else renamed++;
+	bySource[kind] = (bySource[kind] || 0) + 1;
 }
-console.log(`${dry ? '[dry] ' : ''}renamed ${renamed} textures (${skipped} left as-is: UI chrome / not in catalog)`);
+console.log(`${dry ? '[dry] ' : ''}decoded ${renamed} via data tables, cleaned ${cleaned} via filename, ${skipped} already clean`);
 console.log('by source:', JSON.stringify(bySource));
