@@ -19,7 +19,7 @@
 
 <div class="relative">
     <button
-        class="pal-select relative flex items-center justify-between w-[224px] h-[44px] px-4 transition-transform duration-150 hover:scale-[0.99] active:scale-95"
+        class="pal-select relative flex items-center justify-between w-[224px] h-[44px] px-4 cursor-pointer transition-transform duration-150 hover:scale-[0.99] active:scale-95"
         onclick={() => (isOpen = !isOpen)}
     >
         <span class="text-white text-lg font-bold">{locale.t("lang.name")}</span>
