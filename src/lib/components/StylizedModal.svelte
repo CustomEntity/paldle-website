@@ -45,14 +45,14 @@
                 onclick={toggleModal}
         >×</button>
         <div class="pal-letter flex flex-col h-full overflow-hidden">
-            <div class="pt-1 pb-2">
-                <h2 class="flex justify-center items-center text-2xl uppercase text-[#0f7fa8] font-lilita">
+            <div class="pt-5 pb-2 px-6">
+                <h2 class="flex justify-center items-center text-2xl uppercase text-[#7fe8ff] pal-title font-lilita">
                     {@render title()}
                 </h2>
-                <div class="mx-auto mt-1 h-[3px] w-[70%] rounded-full bg-[#37d0e6]/70"></div>
+                <div class="mx-auto mt-2 h-[3px] w-[70%] rounded-full bg-[#37d0e6]/70"></div>
             </div>
             <div
-                    class="h-[50vh] px-2 pb-2 overflow-y-auto font-lilita text-[#16324e]"
+                    class="h-[50vh] px-7 pb-5 overflow-y-auto font-lilita text-[#e6f2ff]"
             >
                 {@render content()}
             </div>

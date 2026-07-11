@@ -90,16 +90,22 @@ body::after {
 
 /* ===== Panels ===== */
 
-/* Solid-ish dark card (mode cards / boxes) */
+/* Solid-ish dark card (mode cards / boxes) — datamined Palworld panel texture */
 .pal-panel {
-    background: linear-gradient(180deg, rgba(26, 44, 70, 0.94), rgba(12, 24, 42, 0.94));
-    border: 2px solid var(--panel-edge);
-    border-radius: 16px;
-    box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.10),
-        inset 0 -3px 0 rgba(0, 0, 0, 0.30),
-        0 10px 26px rgba(3, 12, 24, 0.45);
+    position: relative;
+    background: transparent;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(3, 12, 24, 0.5);
     color: var(--ink);
+}
+.pal-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    border: 20px solid transparent;
+    border-image: url("/ui/frames/panel.webp") 54 fill / 20px stretch;
 }
 
 /* Translucent dark frame (toolbars, boxes, share / victory) — Palworld HUD glass with
@@ -122,13 +128,22 @@ body::after {
     border-image: url("/ui/frames/panel.webp") 54 fill / 22px stretch;
 }
 
-/* Modal card — light so the modals' dark body/heading text stays readable */
+/* Modal card — datamined Palworld panel texture (dark navy + ornate teal corners) */
 .pal-letter {
-    background: linear-gradient(180deg, #f7fbff, #e8f1fb);
-    border: 3px solid var(--accent);
-    border-radius: 18px;
-    box-shadow: 0 18px 44px rgba(3, 12, 24, 0.55);
-    color: #16324e;
+    position: relative;
+    background: transparent;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(3, 12, 24, 0.7);
+    color: #e6f2ff;
+}
+.pal-letter::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    border: 30px solid transparent;
+    border-image: url("/ui/frames/panel.webp") 54 fill / 30px stretch;
 }
 
 .pal-ink { color: #12466a; text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5); }
@@ -218,18 +233,21 @@ body::after {
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.35), 0 0 0 3px rgba(55, 208, 230, 0.28);
 }
 
-/* close button (modals) */
+/* close button (modals) — datamined Palworld close glyph (T_btn_close) */
 .pal-close {
-    width: 34px; height: 34px;
+    width: 38px; height: 38px;
     display: flex; align-items: center; justify-content: center;
     border-radius: 50%;
-    background: linear-gradient(180deg, #ff7a5c, #e5482f);
-    color: #fff;
-    border: 2px solid rgba(255, 255, 255, 0.7);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1;
+    background: rgba(9, 20, 36, 0.92);
+    border: 2px solid rgba(96, 224, 236, 0.55);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: transparent;
+    font-size: 0;
+}
+.pal-close::after {
+    content: "";
+    width: 15px; height: 15px;
+    background: url("/ui/frames/close.png") center / contain no-repeat;
 }
 
 /* ===== Autocomplete suggestions dropdown (navy glass, matches the panels) ===== */
