@@ -65,7 +65,7 @@
             aria-label={locale.t("layout.header.home_link")}
             href="/"
         >
-            <span class="wordmark">PALDLE</span>
+            <img class="logo" src="/logo.png" alt="Paldle" width="1480" height="520" />
         </a>
     </header>
     <main class="flex-grow flex flex-col items-center mt-4 mb-4 w-full px-3">
@@ -81,18 +81,10 @@
         text-decoration: none;
         outline: none;
     }
-    .wordmark {
-        font-family: var(--font-lilita), sans-serif;
-        font-weight: 700;
-        font-size: clamp(44px, 12vw, 82px);
-        letter-spacing: 2px;
-        line-height: 1;
-        background: linear-gradient(180deg, #eafcff 0%, #7fe8ff 42%, #37d0e6 68%, #22a7d8 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        -webkit-text-stroke: 3px #0a2740;
-        paint-order: stroke fill;
+    .logo {
+        display: block;
+        height: auto;
+        width: clamp(220px, 60vw, 420px);
         filter: drop-shadow(0 4px 0 rgba(6, 24, 44, 0.55)) drop-shadow(0 6px 10px rgba(0, 0, 0, 0.35));
     }
 </style>
