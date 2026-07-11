@@ -184,7 +184,7 @@
 			},
 			"how_to": {
 				"title": "Cách chơi — Cổ điển",
-				"body": "<p>Đoán Pal bí ẩn của ngày. Sau mỗi lần đoán, mỗi cột sẽ cho biết Pal của bạn so với đáp án như thế nào.</p><ul class='list-disc pl-5'><li><b>Xanh lá</b> — khớp chính xác.</li><li><b>Cam</b> — khớp một phần (trùng một số nguyên tố hoặc loại lao động).</li><li><b>Đỏ</b> — không khớp.</li><li><b>Mũi tên</b> — giá trị của đáp án cao hơn hoặc thấp hơn (số Paldeck, độ hiếm, kích thước).</li></ul><p>Mỗi ngày một Pal mới được chọn.</p>"
+				"body": "<p>Đoán <b>Pal bí ẩn của ngày</b>. Nhập tên bất kỳ Pal nào — bạn có số lần đoán không giới hạn.</p><p>Sau mỗi lần đoán, mỗi cột sẽ được tô màu để cho biết Pal của bạn so với đáp án hôm nay như thế nào:</p><ul class='list-disc pl-5'><li><b style='color:#2ec27e'>Xanh lá</b> — trùng khớp hoàn toàn.</li><li><b style='color:#f2a33c'>Cam</b> — trùng khớp một phần (ví dụ trùng một trong hai hệ, hoặc trùng một vài loại công việc).</li><li><b style='color:#e5484d'>Đỏ</b> — không trùng khớp.</li></ul><p>Các cột gồm <b>số Paldeck</b>, <b>Hệ</b>, <b>Độ hiếm</b>, <b>Kích thước</b>, <b>Năng lực làm việc</b>, loại <b>Cưỡi</b> và Pal có <b>Hoạt động về đêm</b> hay không.</p><p>Ở các cột dạng số (<b>Số Paldeck</b>, <b>Độ hiếm</b>, <b>Kích thước</b>), mũi tên <b>↑</b> hoặc <b>↓</b> nghĩa là giá trị của đáp án cao hơn hoặc thấp hơn Pal bạn đoán.</p><p>Mỗi ngày sẽ có một Pal hoàn toàn mới được chọn — hãy quay lại vào ngày mai nhé!</p>"
 			},
 			"attributes": {
 				"headers": {
@@ -263,7 +263,7 @@
 			},
 			"how_to": {
 				"title": "Cách chơi — Mô tả",
-				"body": "<p>Đọc phần mô tả Paldeck của Pal bí ẩn và đoán xem đó là ai.</p><p>Mỗi lần đoán sai sẽ hé lộ thêm một gợi ý — nguyên tố, kích thước, rồi đến loại cưỡi.</p><p>Mỗi ngày một Pal mới được chọn.</p>"
+				"body": "<p>Đọc <b>mục Paldeck</b> của Pal bí ẩn và tìm ra đó là ai.</p><p>Tên của nó đã bị ẩn đi, vậy nên hãy để ý những chi tiết đặc trưng trong đoạn mô tả.</p><p>Mỗi lần đoán sai sẽ hé lộ thêm một gợi ý — đầu tiên là <b>Hệ</b>, rồi đến <b>Kích thước</b>, rồi đến loại <b>Cưỡi</b>.</p><p>Toàn bộ hình minh họa sẽ hiện ra khi bạn đoán đúng. Mỗi ngày một Pal mới được chọn.</p>"
 			}
 		},
 		"silhouette": {
@@ -284,7 +284,7 @@
 			},
 			"how_to": {
 				"title": "Cách chơi — Bóng hình",
-				"body": "<p>Một Pal được hiển thị dưới dạng bóng hình đen. Đoán đó là Pal nào qua hình dáng.</p><p>Hình ảnh đầy đủ sẽ hiện ra khi bạn tìm đúng.</p><p>Mỗi ngày một Pal mới được chọn.</p>"
+				"body": "<p>Chỉ có <b>bóng đen</b> của Pal được hiển thị — hãy đoán đó là Pal nào chỉ dựa vào hình dáng.</p><p>Nhập tên bất kỳ Pal nào; bạn có số lần đoán không giới hạn.</p><p>Hình minh họa đầy đủ màu sắc sẽ hiện ra ngay khi bạn đoán đúng. Mỗi ngày một Pal mới được chọn.</p>"
 			}
 		},
 		"sound": {
@@ -305,7 +305,7 @@
 			},
 			"how_to": {
 				"title": "Cách chơi — Âm thanh",
-				"body": "<p>Nghe tiếng kêu của một Pal và đoán đó là Pal nào.</p><p>Hình ảnh đầy đủ sẽ hiện ra khi bạn tìm đúng.</p><p>Mỗi ngày một Pal mới được chọn.</p>"
+				"body": "<p>Nhấn phát để nghe <b>tiếng kêu</b> của Pal bí ẩn, rồi đoán xem Pal nào phát ra tiếng đó.</p><p>Bạn có thể nghe lại âm thanh bao nhiêu lần tùy thích — số lần đoán không giới hạn.</p><p>Hình minh họa của Pal sẽ hiện ra khi bạn đoán đúng. Mỗi ngày một Pal mới được chọn.</p>"
 			}
 		}
 	}

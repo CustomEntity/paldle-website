@@ -184,7 +184,7 @@
 			},
 			"how_to": {
 				"title": "Cara bermain — Klasik",
-				"body": "<p>Tebak Pal misteri hari ini. Setelah setiap tebakan, setiap kolom menunjukkan bagaimana Pal-mu dibandingkan dengan jawabannya.</p><ul class='list-disc pl-5'><li><b>Hijau</b> — cocok persis.</li><li><b>Oranye</b> — cocok sebagian (ada elemen atau jenis kerja yang sama).</li><li><b>Merah</b> — tidak cocok.</li><li><b>Panah</b> — nilai jawaban lebih tinggi atau lebih rendah (nomor Paldeck, kelangkaan, ukuran).</li></ul><p>Pal baru dipilih setiap hari.</p>"
+				"body": "<p>Tebak <b>Pal misteri hari ini</b>. Ketik nama Pal apa saja — kamu punya tebakan tak terbatas.</p><p>Setelah setiap tebakan, tiap kolom diberi warna untuk menunjukkan perbandingan Pal-mu dengan jawaban hari ini:</p><ul class='list-disc pl-5'><li><b style='color:#2ec27e'>Hijau</b> — cocok persis.</li><li><b style='color:#f2a33c'>Oranye</b> — cocok sebagian (misalnya salah satu dari dua elemennya, atau sebagian jenis kerjanya, sama).</li><li><b style='color:#e5484d'>Merah</b> — tidak cocok.</li></ul><p>Kolom-kolomnya adalah <b>nomor Paldeck</b>, <b>Elemen</b>, <b>Kelangkaan</b>, <b>Ukuran</b>, <b>Kecocokan kerja</b>, tipe <b>Tunggangan</b>, dan apakah Pal ini <b>Nokturnal</b>.</p><p>Pada kolom bernomor (<b>No. Paldeck</b>, <b>Kelangkaan</b>, <b>Ukuran</b>), panah <b>↑</b> atau <b>↓</b> berarti nilai jawaban lebih tinggi atau lebih rendah dari tebakanmu.</p><p>Pal baru dipilih setiap hari — datang lagi besok untuk yang berikutnya!</p>"
 			},
 			"attributes": {
 				"headers": {
@@ -263,7 +263,7 @@
 			},
 			"how_to": {
 				"title": "Cara bermain — Deskripsi",
-				"body": "<p>Baca deskripsi Paldeck dari Pal misteri dan tebak siapa dia.</p><p>Setiap tebakan salah membuka petunjuk tambahan — elemen, ukuran, lalu jenis tunggangan.</p><p>Pal baru dipilih setiap hari.</p>"
+				"body": "<p>Baca <b>entri Paldeck</b> Pal misteri dan tebak siapa dia.</p><p>Namanya sendiri disembunyikan, jadi perhatikan detail-detail penanda di dalam teksnya.</p><p>Setiap tebakan yang salah membuka satu petunjuk lagi — pertama <b>Elemen</b>-nya, lalu <b>Ukuran</b>-nya, lalu tipe <b>Tunggangan</b>-nya.</p><p>Gambar lengkapnya terungkap saat kamu menemukannya. Pal baru dipilih setiap hari.</p>"
 			}
 		},
 		"silhouette": {
@@ -284,7 +284,7 @@
 			},
 			"how_to": {
 				"title": "Cara bermain — Siluet",
-				"body": "<p>Sebuah Pal ditampilkan sebagai siluet hitam. Tebak Pal mana itu dari bentuknya.</p><p>Karya seni lengkap terungkap saat kamu menemukannya.</p><p>Pal baru dipilih setiap hari.</p>"
+				"body": "<p>Hanya <b>siluet hitam</b> Pal yang ditampilkan — tebak Pal mana ini hanya dari bentuknya.</p><p>Ketik nama Pal apa saja; kamu punya tebakan tak terbatas.</p><p>Gambar berwarna penuh terungkap begitu kamu menemukannya. Pal baru dipilih setiap hari.</p>"
 			}
 		},
 		"sound": {
@@ -305,7 +305,7 @@
 			},
 			"how_to": {
 				"title": "Cara bermain — Suara",
-				"body": "<p>Dengarkan suara sebuah Pal dan tebak Pal mana itu.</p><p>Karya seni lengkap terungkap saat kamu menemukannya.</p><p>Pal baru dipilih setiap hari.</p>"
+				"body": "<p>Tekan putar untuk mendengar <b>suara</b> Pal misteri, lalu tebak Pal mana yang mengeluarkannya.</p><p>Putar ulang suaranya sebanyak yang kamu mau — kamu punya tebakan tak terbatas.</p><p>Gambar Pal terungkap saat kamu menemukannya. Pal baru dipilih setiap hari.</p>"
 			}
 		}
 	}

@@ -184,7 +184,7 @@
 			},
 			"how_to": {
 				"title": "Jak grać — Klasyczny",
-				"body": "<p>Odgadnij tajemniczego Pala dnia. Po każdym zgadnięciu każda kolumna pokazuje, jak Twój Pal wypada na tle odpowiedzi.</p><ul class='list-disc pl-5'><li><b>Zielony</b> — dokładne trafienie.</li><li><b>Pomarańczowy</b> — częściowe trafienie (część żywiołów lub rodzajów pracy się pokrywa).</li><li><b>Czerwony</b> — brak trafienia.</li><li><b>Strzałki</b> — wartość odpowiedzi jest wyższa lub niższa (numer Paldeck, rzadkość, rozmiar).</li></ul><p>Każdego dnia wybierany jest nowy Pal.</p>"
+				"body": "<p>Odgadnij tajemniczego <b>Pala dnia</b>. Wpisz nazwę dowolnego Pala — masz nieograniczoną liczbę prób.</p><p>Po każdej próbie każda kolumna zostaje pokolorowana, aby pokazać, jak twój Pal wypada na tle dzisiejszej odpowiedzi:</p><ul class='list-disc pl-5'><li><b style='color:#2ec27e'>Zielony</b> — dokładne trafienie.</li><li><b style='color:#f2a33c'>Pomarańczowy</b> — częściowe trafienie (np. jeden z dwóch żywiołów lub część typów pracy się pokrywa).</li><li><b style='color:#e5484d'>Czerwony</b> — brak trafienia.</li></ul><p>Kolumny to <b>numer w Paldeck</b>, <b>Żywioł(y)</b>, <b>Rzadkość</b>, <b>Rozmiar</b>, <b>Predyspozycje do pracy</b>, typ <b>Wierzchowca</b> oraz to, czy Pal jest <b>Nocny</b>.</p><p>W kolumnach liczbowych (<b>nr w Paldeck</b>, <b>Rzadkość</b>, <b>Rozmiar</b>) strzałka <b>↑</b> lub <b>↓</b> oznacza, że wartość odpowiedzi jest wyższa lub niższa niż w twojej próbie.</p><p>Każdego dnia losowany jest zupełnie nowy Pal — wróć jutro po kolejnego!</p>"
 			},
 			"attributes": {
 				"headers": {
@@ -263,7 +263,7 @@
 			},
 			"how_to": {
 				"title": "Jak grać — Opis",
-				"body": "<p>Przeczytaj opis tajemniczego Pala z Paldeck i odgadnij, kim jest.</p><p>Każde błędne zgadnięcie odsłania kolejną wskazówkę — żywioł, rozmiar, a potem typ wierzchowca.</p><p>Każdego dnia wybierany jest nowy Pal.</p>"
+				"body": "<p>Przeczytaj <b>wpis w Paldeck</b> tajemniczego Pala i zgadnij, kto to jest.</p><p>Jego własna nazwa jest ukryta, więc wypatruj zdradzieckich szczegółów w tekście.</p><p>Każda błędna próba odsłania kolejną wskazówkę — najpierw <b>Żywioł</b>, potem <b>Rozmiar</b>, a następnie typ <b>Wierzchowca</b>.</p><p>Pełna grafika zostaje odsłonięta, gdy trafisz. Każdego dnia losowany jest nowy Pal.</p>"
 			}
 		},
 		"silhouette": {
@@ -284,7 +284,7 @@
 			},
 			"how_to": {
 				"title": "Jak grać — Sylwetka",
-				"body": "<p>Pal jest pokazany jako czarna sylwetka. Odgadnij, który to Pal, na podstawie jego kształtu.</p><p>Pełna grafika zostaje odsłonięta, gdy go odgadniesz.</p><p>Każdego dnia wybierany jest nowy Pal.</p>"
+				"body": "<p>Pokazana jest tylko <b>czarna sylwetka</b> Pala — zgadnij, który to Pal, wyłącznie na podstawie kształtu.</p><p>Wpisz nazwę dowolnego Pala; masz nieograniczoną liczbę prób.</p><p>Pełnokolorowa grafika zostaje odsłonięta w chwili, gdy trafisz. Każdego dnia losowany jest nowy Pal.</p>"
 			}
 		},
 		"sound": {
@@ -305,7 +305,7 @@
 			},
 			"how_to": {
 				"title": "Jak grać — Dźwięk",
-				"body": "<p>Posłuchaj głosu Pala i odgadnij, który to Pal.</p><p>Pełna grafika zostaje odsłonięta, gdy go odgadniesz.</p><p>Każdego dnia wybierany jest nowy Pal.</p>"
+				"body": "<p>Naciśnij odtwarzanie, aby usłyszeć <b>okrzyk</b> tajemniczego Pala, a następnie zgadnij, który Pal go wydaje.</p><p>Odtwarzaj dźwięk tyle razy, ile chcesz — masz nieograniczoną liczbę prób.</p><p>Grafika Pala zostaje odsłonięta, gdy trafisz. Każdego dnia losowany jest nowy Pal.</p>"
 			}
 		}
 	}

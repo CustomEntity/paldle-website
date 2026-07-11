@@ -184,7 +184,7 @@
 			},
 			"how_to": {
 				"title": "Spielanleitung — Klassisch",
-				"body": "<p>Errate den Geheimnis-Pal des Tages. Nach jedem Versuch zeigt jede Spalte, wie dein Pal mit der Antwort übereinstimmt.</p><ul class='list-disc pl-5'><li><b>Grün</b> — exakte Übereinstimmung.</li><li><b>Orange</b> — teilweise Übereinstimmung (einige Elemente oder Arbeitsarten stimmen überein).</li><li><b>Rot</b> — keine Übereinstimmung.</li><li><b>Pfeile</b> — der Wert der Antwort ist höher oder niedriger (Paldeck-Nummer, Seltenheit, Größe).</li></ul><p>Jeden Tag wird ein neuer Pal ausgewählt.</p>"
+				"body": "<p>Errate den geheimnisvollen <b>Pal des Tages</b>. Gib den Namen eines beliebigen Pals ein — du hast unbegrenzte Versuche.</p><p>Nach jedem Versuch wird jede Spalte eingefärbt, um zu zeigen, wie dein Pal im Vergleich zur heutigen Lösung abschneidet:</p><ul class='list-disc pl-5'><li><b style='color:#2ec27e'>Grün</b> — genaue Übereinstimmung.</li><li><b style='color:#f2a33c'>Orange</b> — teilweise Übereinstimmung (z. B. eines seiner beiden Elemente oder einige seiner Arbeitseignungen stimmen überein).</li><li><b style='color:#e5484d'>Rot</b> — keine Übereinstimmung.</li></ul><p>Die Spalten sind die <b>Paldeck-Nummer</b>, das <b>Element bzw. die Elemente</b>, die <b>Seltenheit</b>, die <b>Größe</b>, die <b>Arbeitseignungen</b>, der <b>Reit</b>-Typ und ob der Pal <b>nachtaktiv</b> ist.</p><p>Bei den nummerierten Spalten (<b>Paldeck-Nr.</b>, <b>Seltenheit</b>, <b>Größe</b>) bedeutet ein Pfeil <b>↑</b> oder <b>↓</b>, dass der Wert der Lösung höher oder niedriger ist als bei deinem Versuch.</p><p>Jeden Tag wird ein brandneuer Pal ausgewählt — schau morgen wieder vorbei für den nächsten!</p>"
 			},
 			"attributes": {
 				"headers": {
@@ -263,7 +263,7 @@
 			},
 			"how_to": {
 				"title": "Spielanleitung — Beschreibung",
-				"body": "<p>Lies die Paldeck-Beschreibung des Geheimnis-Pals und errate, wer es ist.</p><p>Jeder falsche Versuch gibt einen zusätzlichen Hinweis frei — Element, Größe, dann Reittier-Typ.</p><p>Jeden Tag wird ein neuer Pal ausgewählt.</p>"
+				"body": "<p>Lies den <b>Paldeck-Eintrag</b> des geheimnisvollen Pals und finde heraus, um wen es sich handelt.</p><p>Sein eigener Name ist verborgen, achte also auf die verräterischen Details im Text.</p><p>Jeder falsche Versuch enthüllt einen weiteren Hinweis — zuerst sein <b>Element</b>, dann seine <b>Größe</b>, dann seinen <b>Reit</b>-Typ.</p><p>Das vollständige Artwork wird enthüllt, sobald du ihn findest. Jeden Tag wird ein neuer Pal ausgewählt.</p>"
 			}
 		},
 		"silhouette": {
@@ -284,7 +284,7 @@
 			},
 			"how_to": {
 				"title": "Spielanleitung — Silhouette",
-				"body": "<p>Ein Pal wird als schwarze Silhouette angezeigt. Errate anhand seiner Form, welcher Pal es ist.</p><p>Das vollständige Artwork wird enthüllt, sobald du ihn findest.</p><p>Jeden Tag wird ein neuer Pal ausgewählt.</p>"
+				"body": "<p>Nur die <b>schwarze Silhouette</b> des Pals wird gezeigt — errate allein anhand seiner Form, um welchen Pal es sich handelt.</p><p>Gib den Namen eines beliebigen Pals ein; du hast unbegrenzte Versuche.</p><p>Das farbige Artwork wird enthüllt, sobald du ihn findest. Jeden Tag wird ein neuer Pal ausgewählt.</p>"
 			}
 		},
 		"sound": {
@@ -305,7 +305,7 @@
 			},
 			"how_to": {
 				"title": "Spielanleitung — Sound",
-				"body": "<p>Hör dir den Ruf eines Pals an und errate, welcher Pal es ist.</p><p>Das vollständige Artwork wird enthüllt, sobald du ihn findest.</p><p>Jeden Tag wird ein neuer Pal ausgewählt.</p>"
+				"body": "<p>Drücke auf Play, um den <b>Ruf</b> des geheimnisvollen Pals zu hören, und errate dann, welcher Pal ihn macht.</p><p>Spiel den Sound so oft ab, wie du möchtest — du hast unbegrenzte Versuche.</p><p>Das Artwork des Pals wird enthüllt, sobald du ihn findest. Jeden Tag wird ein neuer Pal ausgewählt.</p>"
 			}
 		}
 	}

@@ -184,7 +184,7 @@
 			},
 			"how_to": {
 				"title": "Nasıl oynanır — Klasik",
-				"body": "<p>Günün gizemli Pal'ini tahmin et. Her tahminden sonra her sütun, Pal'inin cevaba göre nasıl karşılaştırıldığını gösterir.</p><ul class='list-disc pl-5'><li><b>Yeşil</b> — tam eşleşme.</li><li><b>Turuncu</b> — kısmi eşleşme (bazı elementler veya iş türleri ortak).</li><li><b>Kırmızı</b> — eşleşme yok.</li><li><b>Oklar</b> — cevabın değeri daha yüksek veya daha düşük (Paldeck numarası, nadirlik, boyut).</li></ul><p>Her gün yeni bir Pal seçilir.</p>"
+				"body": "<p>Günün gizemli <b>Pal'ini</b> tahmin et. Herhangi bir Pal'in adını yaz — sınırsız tahmin hakkın var.</p><p>Her tahminden sonra, her sütun senin Pal'inin bugünkü cevapla nasıl kıyaslandığını göstermek için renklenir:</p><ul class='list-disc pl-5'><li><b style='color:#2ec27e'>Yeşil</b> — tam eşleşme.</li><li><b style='color:#f2a33c'>Turuncu</b> — kısmi eşleşme (ör. iki elementinden biri ya da bazı iş türleri ortak).</li><li><b style='color:#e5484d'>Kırmızı</b> — eşleşme yok.</li></ul><p>Sütunlar şunlar: Pal'in <b>Paldeck numarası</b>, <b>Element(ler)i</b>, <b>Nadirliği</b>, <b>Boyutu</b>, <b>İş yatkınlıkları</b>, <b>Binek</b> türü ve <b>Gece Aktif</b> olup olmadığı.</p><p>Sayısal sütunlarda (<b>Paldeck No.</b>, <b>Nadirlik</b>, <b>Boyut</b>), bir <b>↑</b> veya <b>↓</b> oku, cevabın değerinin senin tahmininden yüksek ya da düşük olduğunu gösterir.</p><p>Her gün yepyeni bir Pal seçilir — yarın bir sonrakine geri gel!</p>"
 			},
 			"attributes": {
 				"headers": {
@@ -263,7 +263,7 @@
 			},
 			"how_to": {
 				"title": "Nasıl oynanır — Açıklama",
-				"body": "<p>Gizemli Pal'in Paldeck açıklamasını oku ve kim olduğunu tahmin et.</p><p>Her yanlış tahmin ek bir ipucu açar — element, boyut, ardından binek türü.</p><p>Her gün yeni bir Pal seçilir.</p>"
+				"body": "<p>Gizemli Pal'in <b>Paldeck kaydını</b> oku ve kim olduğunu çöz.</p><p>Kendi adı gizli, o yüzden metindeki ele veren ayrıntılara dikkat et.</p><p>Her yanlış tahmin bir ipucu daha açar — önce <b>Elementi</b>, sonra <b>Boyutu</b>, ardından <b>Binek</b> türü.</p><p>Bulduğunda tüm görsel ortaya çıkar. Her gün yeni bir Pal seçilir.</p>"
 			}
 		},
 		"silhouette": {
@@ -284,7 +284,7 @@
 			},
 			"how_to": {
 				"title": "Nasıl oynanır — Siluet",
-				"body": "<p>Bir Pal siyah bir siluet olarak gösterilir. Şeklinden hangi Pal olduğunu tahmin et.</p><p>Bulduğunda görselin tamamı açığa çıkar.</p><p>Her gün yeni bir Pal seçilir.</p>"
+				"body": "<p>Sadece Pal'in <b>siyah silueti</b> gösterilir — hangi Pal olduğunu yalnızca şeklinden tahmin et.</p><p>Herhangi bir Pal'in adını yaz; sınırsız tahmin hakkın var.</p><p>Bulduğun an tam renkli görsel ortaya çıkar. Her gün yeni bir Pal seçilir.</p>"
 			}
 		},
 		"sound": {
@@ -305,7 +305,7 @@
 			},
 			"how_to": {
 				"title": "Nasıl oynanır — Ses",
-				"body": "<p>Bir Pal'in sesini dinle ve hangi Pal olduğunu tahmin et.</p><p>Bulduğunda görselin tamamı açığa çıkar.</p><p>Her gün yeni bir Pal seçilir.</p>"
+				"body": "<p>Gizemli Pal'in <b>sesini</b> duymak için oynat'a bas, sonra hangi Pal'in çıkardığını tahmin et.</p><p>Sesi istediğin kadar tekrar dinleyebilirsin — sınırsız tahmin hakkın var.</p><p>Bulduğunda Pal'in görseli ortaya çıkar. Her gün yeni bir Pal seçilir.</p>"
 			}
 		}
 	}
