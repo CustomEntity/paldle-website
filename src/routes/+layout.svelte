@@ -5,7 +5,6 @@
     import { derived } from "svelte/store";
     import { browser } from "$app/environment";
     import locale from "$lib/stores/locale.svelte";
-    import PalBackground from "$lib/components/PalBackground.svelte";
     import { SITE_ORIGIN } from "$lib/constants";
 
     let { children, data } = $props();
@@ -58,8 +57,6 @@
     <meta name="twitter:title" content={metaTitle} />
     <meta name="twitter:description" content={metaDescription} />
 </svelte:head>
-
-<PalBackground />
 
 <div class="min-h-screen flex flex-col">
     <header class="relative flex flex-col items-center pt-6 px-3">

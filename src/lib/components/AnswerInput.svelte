@@ -79,16 +79,16 @@
         />
     </div>
     {#if showMenu && searchOption !== ''}
-        <div class="absolute w-full bg-[#f3ddab] flex flex-col overflow-y-auto max-h-[30vh] z-20 mt-1 border-[3px] border-[#7a4a24] overflow-hidden">
+        <div class="pal-suggest absolute w-full flex flex-col overflow-y-auto max-h-[30vh] z-20 mt-2">
             {#if loading}
-                <div class="text-[#5a3a1c] p-2">{locale.t('components.answerInput.states.loading')}</div>
+                <div class="text-white/70 p-3">{locale.t('components.answerInput.states.loading')}</div>
             {:else}
                 {#if filteredOptions.length === 0}
-                    <div class="text-[#5a3a1c] p-2">{locale.t('components.answerInput.states.no_result')}</div>
+                    <div class="text-white/60 p-3">{locale.t('components.answerInput.states.no_result')}</div>
                 {:else}
                     {#each filteredOptions as option}
                         <button
-                                class="hover:bg-[#e6c485] text-left p-2 text-[#5a3a1c] cursor-pointer transition-colors duration-200"
+                                class="pal-suggest-item text-left px-3 py-2 cursor-pointer"
                                 onmousedown={() => handleSelect(option)}
                         >
                             {@render item?.(option)}
@@ -101,22 +101,13 @@
 </div>
 
 <style>
-    /* Uniquement pour les styles de scrollbar qui ne peuvent pas être gérés par Tailwind */
-    :global(.scrollbar-thin::-webkit-scrollbar) {
-        width: 10px;
-    }
-
-    :global(.scrollbar-thin::-webkit-scrollbar-track) {
-        background: #3a2a18;
-    }
-
-    :global(.scrollbar-thin::-webkit-scrollbar-thumb) {
-        background-color: #fff;
+    /* dropdown scrollbar — teal on navy, matches the site */
+    .pal-suggest::-webkit-scrollbar { width: 10px; }
+    .pal-suggest::-webkit-scrollbar-track { background: rgba(10, 22, 40, 0.5); }
+    .pal-suggest::-webkit-scrollbar-thumb {
+        background-color: #22a7d8;
         border-radius: 20px;
-        border: 3px solid #3a2a18;
+        border: 3px solid rgba(10, 22, 40, 0.6);
     }
-
-    :global(.scrollbar-thin::-webkit-scrollbar-thumb:hover) {
-        background-color: #e0e0e0;
-    }
+    .pal-suggest::-webkit-scrollbar-thumb:hover { background-color: #37d0e6; }
 </style>

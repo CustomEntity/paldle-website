@@ -211,8 +211,13 @@ public static class Program
                 if (decoded == null) { fail++; Console.Error.WriteLine($"  decode-null: {pkgPath}"); continue; }
 
                 var png = decoded.Encode(ETextureFormat.Png, false, out _);
-                var baseName = Path.GetFileNameWithoutExtension(key);
-                File.WriteAllBytes(Path.Combine(outPath, baseName + ".png"), png);
+                // preserve the folder structure under <substr> so assets stay browsable by category
+                var idx = key.IndexOf(substr, StringComparison.OrdinalIgnoreCase);
+                var rel = idx >= 0 ? key[(idx + substr.Length)..] : Path.GetFileName(key);
+                rel = rel[..rel.LastIndexOf('.')]; // strip .uasset
+                var outFile = Path.Combine(outPath, rel.Replace('/', Path.DirectorySeparatorChar) + ".png");
+                Directory.CreateDirectory(Path.GetDirectoryName(outFile)!);
+                File.WriteAllBytes(outFile, png);
                 ok++;
                 if (ok % 50 == 0) Console.WriteLine($"  ... {ok} PNGs written");
             }

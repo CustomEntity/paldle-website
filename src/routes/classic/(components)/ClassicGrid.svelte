@@ -2,7 +2,7 @@
 <script lang="ts">
     import { onMount, tick } from "svelte";
     import locale from "$lib/stores/locale.svelte";
-    import { palImg } from "$lib/media";
+    import { palImg, elemIcon, workIcon } from "$lib/media";
     import { useClassicGameData } from "$lib/stores/palGameData.svelte";
     import {
         compareNumber,
@@ -85,7 +85,6 @@
         return out === key ? value : out;
     }
     const trNoct = (v: boolean) => tr("nocturnal", v ? "yes" : "no");
-    const trWork = (keys: string[]) => (keys.length ? keys.map((k) => tr("work", k)).join(", ") : "-");
 </script>
 
 <div class="clue-container w-full overflow-x-auto overflow-y-hidden">
@@ -115,7 +114,9 @@
             <div class="sq-{pal.id} h-18 w-full relative pal-cell flex flex-wrap items-center justify-center gap-1 p-1"
                  style="--status: {statusColor(differences.elements)}; visibility: {shown(pal.id, 2) ? 'visible' : 'hidden'};">
                 {#each pal.elements as el}
-                    <span class="el-chip z-10" style="background: {elementColor(el)};">{tr("elements", el)}</span>
+                    <span class="el-chip z-10" style="--el: {elementColor(el)};">
+                        <img src={elemIcon(el)} alt={el} />{tr("elements", el)}
+                    </span>
                 {/each}
             </div>
 
@@ -133,10 +134,16 @@
                 <span class="z-10 text-white text-base pal-title">{tr("size", pal.size)}</span>
             </div>
 
-            <!-- Work suitabilities -->
-            <div class="sq-{pal.id} h-18 w-full relative pal-cell flex items-center justify-center p-1"
+            <!-- Work suitabilities — datamined Palworld work icons -->
+            <div class="sq-{pal.id} h-18 w-full relative pal-cell flex flex-wrap items-center justify-center gap-1 p-1"
                  style="--status: {statusColor(differences.work)}; visibility: {shown(pal.id, 5) ? 'visible' : 'hidden'};">
-                <span class="z-10 text-white text-[11px] text-center leading-tight break-words pal-title">{trWork(pal.work_keys)}</span>
+                {#if pal.work_keys.length}
+                    {#each pal.work_keys as w}
+                        <img class="work-icon z-10" src={workIcon(w)} alt={tr("work", w)} title={tr("work", w)} />
+                    {/each}
+                {:else}
+                    <span class="z-10 text-white text-base pal-title">-</span>
+                {/if}
             </div>
 
             <!-- Mount -->

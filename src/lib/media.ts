@@ -22,3 +22,9 @@ export const palImg = (path: string | null | undefined): string =>
 /** Local URL for a Pal cry (served from static/sounds/<key>.ogg). Same CDN switch point. */
 export const palAudio = (key: string | null | undefined): string =>
 	String(key ?? '').startsWith('/') ? String(key) : `/sounds/${key ?? ''}.ogg`;
+
+/** Datamined Palworld element icon (static/ui/elements/<Element>.webp). */
+export const elemIcon = (el: string | null | undefined): string => `/ui/elements/${el ?? 'Neutral'}.webp`;
+
+/** Datamined Palworld work-suitability icon (static/ui/work/<Label>.webp). */
+export const workIcon = (label: string | null | undefined): string => `/ui/work/${label ?? ''}.webp`;
