@@ -184,7 +184,7 @@
 			},
 			"how_to": {
 				"title": "Come si gioca — Classica",
-				"body": "<p>Indovina il Pal misterioso del giorno. Dopo ogni tentativo, ogni colonna mostra come il tuo Pal si confronta con la risposta.</p><ul class='list-disc pl-5'><li><b>Verde</b> — corrispondenza esatta.</li><li><b>Arancione</b> — corrispondenza parziale (alcuni elementi o tipi di lavoro in comune).</li><li><b>Rosso</b> — nessuna corrispondenza.</li><li><b>Frecce</b> — il valore della risposta è più alto o più basso (numero Paldeck, rarità, taglia).</li></ul><p>Ogni giorno viene scelto un nuovo Pal.</p>"
+				"body": "<p>Indovina il <b>Pal del giorno</b> misterioso. Scrivi il nome di un Pal qualsiasi — hai tentativi illimitati.</p><p>Dopo ogni tentativo, ogni colonna viene colorata per mostrare come il tuo Pal si confronta con la risposta di oggi:</p><ul class='list-disc pl-5'><li><b style='color:#2ec27e'>Verde</b> — corrispondenza esatta.</li><li><b style='color:#f2a33c'>Arancione</b> — corrispondenza parziale (ad esempio uno dei suoi due elementi, o alcune delle sue abilità lavorative, sono in comune).</li><li><b style='color:#e5484d'>Rosso</b> — nessuna corrispondenza.</li></ul><p>Le colonne sono il <b>numero del Paldeck</b> del Pal, l'<b>Elemento (o Elementi)</b>, la <b>Rarità</b>, la <b>Taglia</b>, le <b>Abilità lavorative</b>, il tipo di <b>Cavalcatura</b> e se è <b>Notturno</b>.</p><p>Nelle colonne numeriche (<b>N. Paldeck</b>, <b>Rarità</b>, <b>Taglia</b>), una freccia <b>↑</b> o <b>↓</b> indica che il valore della risposta è più alto o più basso rispetto al tuo tentativo.</p><p>Ogni giorno viene scelto un nuovo Pal — torna domani per il prossimo!</p>"
 			},
 			"attributes": {
 				"headers": {
@@ -263,7 +263,7 @@
 			},
 			"how_to": {
 				"title": "Come si gioca — Descrizione",
-				"body": "<p>Leggi la descrizione del Paldeck del Pal misterioso e indovina di chi si tratta.</p><p>Ogni tentativo sbagliato rivela un indizio in più — elemento, taglia, poi tipo di cavalcatura.</p><p>Ogni giorno viene scelto un nuovo Pal.</p>"
+				"body": "<p>Leggi la <b>voce del Paldeck</b> del Pal misterioso e capisci di chi si tratta.</p><p>Il suo nome è nascosto, quindi fai attenzione ai dettagli rivelatori nel testo.</p><p>Ogni tentativo sbagliato svela un altro indizio — prima il suo <b>Elemento</b>, poi la sua <b>Taglia</b>, poi il tipo di <b>Cavalcatura</b>.</p><p>L'artwork completo viene rivelato quando lo trovi. Ogni giorno viene scelto un nuovo Pal.</p>"
 			}
 		},
 		"silhouette": {
@@ -284,7 +284,7 @@
 			},
 			"how_to": {
 				"title": "Come si gioca — Silhouette",
-				"body": "<p>Un Pal è mostrato come una silhouette nera. Indovina di quale Pal si tratta dalla sua forma.</p><p>L'illustrazione completa viene rivelata quando lo trovi.</p><p>Ogni giorno viene scelto un nuovo Pal.</p>"
+				"body": "<p>Viene mostrata solo la <b>silhouette nera</b> del Pal — indovina di quale Pal si tratta dalla sua sagoma soltanto.</p><p>Scrivi il nome di un Pal qualsiasi; hai tentativi illimitati.</p><p>L'artwork a colori viene rivelato nel momento in cui lo trovi. Ogni giorno viene scelto un nuovo Pal.</p>"
 			}
 		},
 		"sound": {
@@ -305,7 +305,7 @@
 			},
 			"how_to": {
 				"title": "Come si gioca — Suono",
-				"body": "<p>Ascolta il verso di un Pal e indovina di quale Pal si tratta.</p><p>L'illustrazione completa viene rivelata quando lo trovi.</p><p>Ogni giorno viene scelto un nuovo Pal.</p>"
+				"body": "<p>Premi play per ascoltare il <b>verso</b> del Pal misterioso, poi indovina quale Pal lo emette.</p><p>Riascolta il suono tutte le volte che vuoi — hai tentativi illimitati.</p><p>L'artwork del Pal viene rivelato quando lo trovi. Ogni giorno viene scelto un nuovo Pal.</p>"
 			}
 		}
 	}

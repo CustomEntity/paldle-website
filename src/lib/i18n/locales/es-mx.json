@@ -184,7 +184,7 @@
 			},
 			"how_to": {
 				"title": "Cómo jugar — Clásico",
-				"body": "<p>Adivina el Pal misterioso del día. Después de cada intento, cada columna muestra cómo se compara tu Pal con la respuesta.</p><ul class='list-disc pl-5'><li><b>Verde</b> — coincidencia exacta.</li><li><b>Naranja</b> — coincidencia parcial (algunos elementos o tipos de trabajo en común).</li><li><b>Rojo</b> — sin coincidencia.</li><li><b>Flechas</b> — el valor de la respuesta es mayor o menor (número del Paldeck, rareza, tamaño).</li></ul><p>Cada día se elige un nuevo Pal.</p>"
+				"body": "<p>Adivina el <b>Pal del día</b> misterioso. Escribe el nombre de cualquier Pal — tienes intentos ilimitados.</p><p>Después de cada intento, cada columna se colorea para mostrar cómo se compara tu Pal con la respuesta de hoy:</p><ul class='list-disc pl-5'><li><b style='color:#2ec27e'>Verde</b> — coincidencia exacta.</li><li><b style='color:#f2a33c'>Naranja</b> — coincidencia parcial (por ejemplo, comparten uno de sus dos elementos, o algunos de sus tipos de trabajo).</li><li><b style='color:#e5484d'>Rojo</b> — sin coincidencia.</li></ul><p>Las columnas son el <b>número de Paldeck</b> del Pal, sus <b>elementos</b>, su <b>rareza</b>, su <b>tamaño</b>, sus <b>aptitudes de trabajo</b>, su tipo de <b>montura</b> y si es <b>nocturno</b>.</p><p>En las columnas numéricas (<b>N.º de Paldeck</b>, <b>rareza</b>, <b>tamaño</b>), una flecha <b>↑</b> o <b>↓</b> significa que el valor de la respuesta es mayor o menor que el de tu intento.</p><p>Cada día se elige un Pal completamente nuevo — ¡vuelve mañana por el siguiente!</p>"
 			},
 			"attributes": {
 				"headers": {
@@ -263,7 +263,7 @@
 			},
 			"how_to": {
 				"title": "Cómo jugar — Descripción",
-				"body": "<p>Lee la descripción del Paldeck del Pal misterioso y adivina quién es.</p><p>Cada intento fallido revela una pista adicional — elemento, tamaño y luego tipo de montura.</p><p>Cada día se elige un nuevo Pal.</p>"
+				"body": "<p>Lee la <b>entrada de Paldeck</b> del Pal misterioso y descubre de quién se trata.</p><p>Su propio nombre está oculto, así que fíjate en los detalles reveladores del texto.</p><p>Cada intento fallido revela una pista más — primero su <b>elemento</b>, luego su <b>tamaño</b> y después su tipo de <b>montura</b>.</p><p>La ilustración completa se revela cuando lo aciertas. Cada día se elige un nuevo Pal.</p>"
 			}
 		},
 		"silhouette": {
@@ -284,7 +284,7 @@
 			},
 			"how_to": {
 				"title": "Cómo jugar — Silueta",
-				"body": "<p>Un Pal se muestra como una silueta negra. Adivina de qué Pal se trata por su forma.</p><p>La ilustración completa se revela cuando lo encuentras.</p><p>Cada día se elige un nuevo Pal.</p>"
+				"body": "<p>Solo se muestra la <b>silueta negra</b> del Pal — adivina de qué Pal se trata únicamente por su forma.</p><p>Escribe el nombre de cualquier Pal; tienes intentos ilimitados.</p><p>La ilustración a todo color se revela en cuanto lo aciertas. Cada día se elige un nuevo Pal.</p>"
 			}
 		},
 		"sound": {
@@ -305,7 +305,7 @@
 			},
 			"how_to": {
 				"title": "Cómo jugar — Sonido",
-				"body": "<p>Escucha el grito de un Pal y adivina de qué Pal se trata.</p><p>La ilustración completa se revela cuando lo encuentras.</p><p>Cada día se elige un nuevo Pal.</p>"
+				"body": "<p>Pulsa reproducir para escuchar el <b>grito</b> del Pal misterioso y luego adivina qué Pal lo hace.</p><p>Reproduce el sonido tantas veces como quieras — tienes intentos ilimitados.</p><p>La ilustración del Pal se revela cuando lo aciertas. Cada día se elige un nuevo Pal.</p>"
 			}
 		}
 	}

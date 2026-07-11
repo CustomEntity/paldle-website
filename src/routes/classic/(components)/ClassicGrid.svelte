@@ -109,7 +109,7 @@
             <div class="sq-{pal.id} h-18 w-full relative pal-cell flex items-center justify-center arrow-container"
                  class:arrow-up={differences.paldeck === "HIGHER"} class:arrow-down={differences.paldeck === "LOWER"}
                  style="--status: {statusColor(differences.paldeck)}; visibility: {shown(pal.id, 1) ? 'visible' : 'hidden'};">
-                <span class="z-10 text-white text-lg pal-title">{pal.paldeck}</span>
+                <span class="z-10 text-white text-lg pal-title pal-num">{pal.paldeck}</span>
             </div>
 
             <!-- Elements -->
@@ -128,7 +128,7 @@
             <div class="sq-{pal.id} h-18 w-full relative pal-cell flex items-center justify-center arrow-container"
                  class:arrow-up={differences.rarity === "HIGHER"} class:arrow-down={differences.rarity === "LOWER"}
                  style="--status: {statusColor(differences.rarity)}; visibility: {shown(pal.id, 3) ? 'visible' : 'hidden'};">
-                <span class="z-10 text-white text-lg pal-title">{pal.rarity}</span>
+                <span class="z-10 text-white text-lg pal-title pal-num">{pal.rarity}</span>
             </div>
 
             <!-- Size -->
