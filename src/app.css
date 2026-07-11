@@ -1,122 +1,141 @@
 @import "tailwindcss";
 
+/* ============================================================================
+   Paldle design system — Palworld-flavoured, vivid pass.
+   Every UI surface goes through these classes, so the whole site is themed here.
+   This DA is intentionally quick — it will be redone once the game is datamined.
+   ============================================================================ */
 
 @theme {
-    --font-refrigerator-deluxe: "Refrigerator-Deluxe";
-    --font-nunito: "Nunito";
-    --font-lilita: "Pixelify Sans", "Lilita One", ui-sans-serif, sans-serif;
-    --font-stardew: "Pixelify Sans", ui-sans-serif, sans-serif;
+    --font-nunito: "Nunito", ui-sans-serif, sans-serif;
+    --font-lilita: "Fredoka", "Nunito", ui-sans-serif, sans-serif;   /* display / headings */
+    --font-display: "Fredoka", "Nunito", ui-sans-serif, sans-serif;
     --breakpoint-md: 828px;
+
+    /* Palworld element colours (grid tint + element chips) */
+    --el-neutral: #a9b0bd;
+    --el-fire: #ff6b3d;
+    --el-water: #38a5f0;
+    --el-electric: #f5c531;
+    --el-grass: #56c95a;
+    --el-ice: #6fdce8;
+    --el-ground: #c8934e;
+    --el-dark: #9163d6;
+    --el-dragon: #bd6cf0;
+}
+
+:root {
+    /* clue status */
+    --ok: #35c85f;
+    --partial: #f2a02e;
+    --no: #d8484a;
+
+    /* panel system */
+    --panel-bg: rgba(14, 27, 46, 0.82);
+    --panel-bg-solid: #101f36;
+    --panel-edge: rgba(96, 224, 236, 0.38);
+    --accent: #37d0e6;
+    --accent-2: #22a7d8;
+    --ink: #eaf4ff;
 }
 
 @font-face {
-    font-family: 'Lilita One';
-    src: url('/fonts/LilitaOne-Regular.ttf') format('truetype');
-    font-weight: bold;
+    font-family: 'Nunito';
+    src: local('Nunito');
+    font-display: swap;
 }
 
 body {
-    font-family: var(--font-lilita);
-    /* Stardew title-screen sky: night -> dawn -> day (mountains layered in <SvBackground>) */
-    background: linear-gradient(180deg, #16233f 0%, #274a76 30%, #3f7fae 52%, #86c7d2 78%, #a9dbdc 100%);
+    font-family: var(--font-nunito);
+    color: var(--ink);
+    /* Palworld sky → sea → plains, vivid */
+    background: linear-gradient(180deg, #0a1c36 0%, #123a63 24%, #1a6ea6 48%, #23a7b4 72%, #35c887 100%);
     background-attachment: fixed;
     min-height: 100dvh;
 }
 
-.stardew-text {
+/* Outlined display / title text — readable on any background (Fredoka). */
+.pal-title {
     font-family: var(--font-lilita), sans-serif;
     color: #ffffff;
-    vertical-align: text-top;
-    line-height: auto;
-
+    font-weight: 600;
+    letter-spacing: 0.2px;
     text-shadow:
-            -1px -1px 0 #000000,
-            1px -1px 0 #000000,
-            -1px  1px 0 #000000,
-            1px  1px 0 #000000,
-            -1px  0   0 #000000,
-            1px  0   0 #000000,
-            0   -1px 0 #000000,
-            0    1px 0 #000000;
-
-    filter: drop-shadow(0px 2px 0px rgba(0,0,0,0.8));
+        -1px -1px 0 #06121f, 1px -1px 0 #06121f,
+        -1px  1px 0 #06121f, 1px  1px 0 #06121f,
+        -1px  0   0 #06121f, 1px  0   0 #06121f,
+         0   -1px 0 #06121f, 0    1px 0 #06121f;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.35));
 }
 
-/* ===== Stardew UI kit — built from the real game menu sprites ===== */
+/* ===== Panels ===== */
 
-/* Wood menu box (9-slice from Maps/MenuTiles.png). `fill` paints the sprite's
-   cream interior as the panel background. */
-.sv-panel {
-    border-style: solid;
-    border-width: 18px;
-    border-image: url('/ui/panel.png') 15 fill / 18px / 0 stretch;
-    image-rendering: pixelated;
-    color: #5a3a1c;
+/* Solid-ish dark card (mode cards / boxes) */
+.pal-panel {
+    background: linear-gradient(180deg, rgba(26, 44, 70, 0.94), rgba(12, 24, 42, 0.94));
+    border: 2px solid var(--panel-edge);
+    border-radius: 16px;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.10),
+        inset 0 -3px 0 rgba(0, 0, 0, 0.30),
+        0 10px 26px rgba(3, 12, 24, 0.45);
+    color: var(--ink);
 }
 
-/* the game's letter / parchment card (9-slice from LooseSprites/letterBG.png) — for modals */
-.sv-letter {
-    border-style: solid;
-    border-width: 22px;
-    border-image: url('/ui/letter.png') 16 fill / 22px / 0 stretch;
-    image-rendering: pixelated;
-    color: #4a3016;
-}
-
-/* same wood frame, but a dark translucent-wood interior so existing white text stays readable */
-.sv-frame {
-    border-style: solid;
-    border-width: 18px;
-    border-image: url('/ui/panel.png') 15 / 18px / 0 stretch;
-    image-rendering: pixelated;
-    background: rgba(60, 38, 18, 0.88);
+/* Translucent dark frame (toolbars, boxes, share / victory) */
+.pal-frame {
+    background: var(--panel-bg);
+    border: 2px solid var(--panel-edge);
+    border-radius: 16px;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        0 8px 22px rgba(3, 12, 24, 0.40);
+    backdrop-filter: blur(6px);
     background-clip: padding-box;
 }
 
-/* dark-brown outlined heading text used inside cream panels */
-.sv-ink {
-    color: #58371a;
-    text-shadow: 1px 1px 0 rgba(255,247,214,0.6);
+/* Modal card — light so the modals' dark body/heading text stays readable */
+.pal-letter {
+    background: linear-gradient(180deg, #f7fbff, #e8f1fb);
+    border: 3px solid var(--accent);
+    border-radius: 18px;
+    box-shadow: 0 18px 44px rgba(3, 12, 24, 0.55);
+    color: #16324e;
 }
 
-/* Stardew inventory-slot tile (used by the comparison grid cells) */
-.sv-tile {
-    border: 2px solid #2f2110;
-    border-radius: 6px;
-    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.28), inset 0 -3px 0 rgba(0, 0, 0, 0.28);
+.pal-ink { color: #12466a; text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5); }
+
+.pal-tile {
+    border: 2px solid rgba(96, 224, 236, 0.30);
+    border-radius: 10px;
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.14), inset 0 -3px 0 rgba(0, 0, 0, 0.28);
 }
 
-/* authentic Stardew inventory slot (9-slice from Maps/MenuTiles.png).
-   .sv-cell — a clue cell: the brown double-line frame (transparent centre) is drawn as a
-   9-slice border-image so it stretches to any width without distorting the corners, and the
-   status colour fills the whole interior (border-box, so it also shows through the frame gap).
-   .sv-slot — a plain tan slot (filled sprite) used behind icons/portraits. */
-.sv-cell,
-.sv-slot {
+/* ===== Grid cells ===== */
+
+/* Clue cell: rounded slate tile whose interior is filled by the --status colour. */
+.pal-cell,
+.pal-slot {
     position: relative;
-    border-style: solid;
-    border-width: 9px;
-    border-image: url('/ui/slot.png') 12 fill / 9px / 0 stretch;
-    image-rendering: pixelated;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.14);
+    overflow: hidden;
+    background: var(--tint, rgba(10, 22, 40, 0.55));
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.12), inset 0 -3px 0 rgba(0, 0, 0, 0.28);
 }
-/* the status colour fills the whole interior (inset is relative to the padding box, i.e. just
-   inside the frame), so it reaches the frame without bleeding past it. .sv-slot has no ::before. */
-.sv-cell::before {
+.pal-cell::before {
     content: '';
     position: absolute;
     inset: 0;
     background: var(--status, transparent);
-    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.15), inset 0 -3px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.16), inset 0 -3px 0 rgba(0, 0, 0, 0.22);
     z-index: 0;
     pointer-events: none;
 }
-.sv-cell > *,
-.sv-cell::after {
-    position: relative;
-    z-index: 1;
-}
-/* small inline direction arrow for numeric/ordinal clue cells — rendered as a flex item next
-   to the value (never overflows the frame like the old full-cell chevron did). */
+.pal-cell > *,
+.pal-cell::after { position: relative; z-index: 1; }
+
+/* inline direction arrow for numeric / ordinal cells */
 .arrow-container.arrow-up::after,
 .arrow-container.arrow-down::after {
     content: '';
@@ -126,43 +145,83 @@ body {
     margin-left: 5px;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
-    filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.55));
+    filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.5));
 }
 .arrow-container.arrow-up::after { border-bottom: 10px solid #fff; }
 .arrow-container.arrow-down::after { border-top: 10px solid #fff; }
 
-/* Stardew wood scrollbar */
-* { scrollbar-color: #8a5a2b #e6c485; scrollbar-width: thin; }
-::-webkit-scrollbar { width: 12px; height: 12px; }
-::-webkit-scrollbar-track { background: #e6c485; }
-::-webkit-scrollbar-thumb { background: #8a5a2b; border: 2px solid #e6c485; border-radius: 8px; }
-::-webkit-scrollbar-thumb:hover { background: #a06a34; }
+/* ===== Buttons ===== */
 
-/* Stardew wood button (cream face, brown frame, reddish-brown label) */
-.sv-btn {
+/* Primary action button — vivid Palworld cyan (all CTAs go through .pal-btn). */
+.pal-btn {
     font-family: var(--font-lilita), sans-serif;
-    color: #9a4b26;
-    background: linear-gradient(#f8e6b4, #efd396);
-    border: 3px solid #7a4a24;
-    border-radius: 7px;
-    box-shadow: inset 0 2px 0 #fff7db, inset 0 -3px 0 #d9b06f, 0 2px 0 rgba(0,0,0,0.25);
+    font-weight: 600;
+    color: #06263a;
+    background: linear-gradient(180deg, #57e0f0, #26b6e0);
+    border: none;
+    border-radius: 12px;
+    box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, 0.55),
+        inset 0 -4px 0 rgba(6, 60, 82, 0.55),
+        0 4px 10px rgba(3, 20, 34, 0.35);
     padding: 8px 16px;
     cursor: pointer;
-    transition: transform 0.08s ease;
+    transition: transform 0.08s ease, filter 0.12s ease;
 }
-.sv-btn:hover { filter: brightness(1.04); }
-.sv-btn:active { transform: translateY(2px); box-shadow: inset 0 2px 0 #fff7db, 0 0 0 rgba(0,0,0,0.25); }
-.sv-btn.is-disabled { filter: grayscale(0.5) brightness(0.9); cursor: not-allowed; }
+.pal-btn:hover { filter: brightness(1.06) saturate(1.05); }
+.pal-btn:active { transform: translateY(2px); box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.5), 0 0 0 rgba(0, 0, 0, 0.25); }
+.pal-btn.is-disabled { filter: grayscale(0.5) brightness(0.85); cursor: not-allowed; }
 
-/* Stardew parchment input */
-.sv-input {
-    font-family: var(--font-lilita), sans-serif;
-    color: #4a3016;
-    background: #fbf1d6;
-    border: 3px solid #7a4a24;
-    border-radius: 7px;
-    box-shadow: inset 0 2px 3px rgba(122, 74, 36, 0.28);
+/* ===== Inputs ===== */
+
+.pal-input {
+    font-family: var(--font-nunito), sans-serif;
+    color: var(--ink);
+    background: rgba(9, 20, 36, 0.72);
+    border: 2px solid rgba(96, 224, 236, 0.35);
+    border-radius: 12px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.35);
     outline: none;
 }
-.sv-input::placeholder { color: #b09468; }
-.sv-input:focus { border-color: #b5732f; box-shadow: inset 0 2px 3px rgba(122, 74, 36, 0.28), 0 0 0 2px #e8c88f; }
+.pal-input::placeholder { color: rgba(190, 214, 236, 0.55); }
+.pal-input:focus {
+    border-color: var(--accent);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.35), 0 0 0 3px rgba(55, 208, 230, 0.28);
+}
+
+/* close button (modals) */
+.pal-close {
+    width: 34px; height: 34px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #ff7a5c, #e5482f);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* ===== Scrollbar ===== */
+* { scrollbar-color: var(--accent-2) rgba(10, 22, 40, 0.4); scrollbar-width: thin; }
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: rgba(10, 22, 40, 0.4); }
+::-webkit-scrollbar-thumb { background: var(--accent-2); border: 2px solid rgba(10, 22, 40, 0.6); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* element chip */
+.el-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #06121f;
+    text-shadow: none;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.pixelated { image-rendering: pixelated; }

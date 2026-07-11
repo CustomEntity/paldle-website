@@ -2,7 +2,7 @@
 <script lang="ts">
     import type {Snippet} from "svelte";
     import locale from "$lib/stores/locale.svelte";
-    import MarvelRivalsButton from "$lib/components/buttons/MarvelRivalsButton.svelte";
+    import PalButton from "$lib/components/buttons/PalButton.svelte";
 
     interface Props {
         id: string;
@@ -69,9 +69,9 @@
                 onkeydown={handleKeydown}
                 {placeholder}
                 style=" filter: drop-shadow(0px 2px 0px rgba(0,0,0,0.8));"
-                type="text" class="sv-input px-3 py-2 w-full font-lilita text-lg">
+                type="text" class="pal-input px-3 py-2 w-full font-lilita text-lg">
 
-        <MarvelRivalsButton
+        <PalButton
                 title={locale.t('components.answerInput.button.submit.title')}
                 height="100%"
                 class="md:min-w-[170px] min-w-[135px]"

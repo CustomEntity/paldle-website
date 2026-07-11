@@ -5,11 +5,7 @@
     import { derived } from "svelte/store";
     import { browser } from "$app/environment";
     import locale from "$lib/stores/locale.svelte";
-    import Banner from "$lib/components/Banner.svelte";
-    import SvBackground from "$lib/components/SvBackground.svelte";
-    import TranslationApologyBanner from "$lib/components/TranslationApologyBanner.svelte";
-    import { onMount } from "svelte";
-    import { initAllDle } from "$lib/stores/alldle.svelte";
+    import PalBackground from "$lib/components/PalBackground.svelte";
     import { SITE_ORIGIN } from "$lib/constants";
 
     let { children, data } = $props();
@@ -29,17 +25,8 @@
             : locale.t("layout.page_meta.base_description"),
     );
     const canonical = $derived(
-        SITE_ORIGIN +
-            ($page.url.pathname === "/"
-                ? "/"
-                : $page.url.pathname.replace(/\/$/, "")),
+        SITE_ORIGIN + ($page.url.pathname === "/" ? "/" : $page.url.pathname.replace(/\/$/, "")),
     );
-
-    onMount(() => {
-        // Connect to AllDle SDK if running inside an AllDle iframe.
-        // Silently no-ops when accessed directly (dev / standalone).
-        //initAllDle();
-    });
 
     const pageData = $page.data;
     if (pageData.t && pageData.locale) {
@@ -48,19 +35,16 @@
     }
 
     $effect(() => {
-        const pageData = $page.data;
-        if (pageData.t && pageData.locale) {
-            locale.t = pageData.t;
-            locale.locale = pageData.locale;
+        const pd = $page.data;
+        if (pd.t && pd.locale) {
+            locale.t = pd.t;
+            locale.locale = pd.locale;
         }
     });
 
     $effect(() => {
-        if (browser) {
-            document.documentElement.lang = locale.locale;
-        }
+        if (browser) document.documentElement.lang = locale.locale;
     });
-
 </script>
 
 <svelte:head>
@@ -75,28 +59,17 @@
     <meta name="twitter:description" content={metaDescription} />
 </svelte:head>
 
-<SvBackground />
+<PalBackground />
 
 <div class="min-h-screen flex flex-col">
     <header class="relative flex flex-col items-center pt-6 px-3">
-        <div class="relative w-full flex items-center justify-center w-full">
-            <a
-                class="flex w-fit items-center justify-center block z-50 transform {$isHomePage
-                    ? 'scale-100 hover:scale-110'
-                    : 'scale-90 hover:scale-100'} transition-transform duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-600 rounded-lg"
-                aria-label={locale.t("layout.header.home_link")}
-                href="/"
-            >
-                <img
-                    src="/logo.png"
-                    alt={locale.t("layout.header.logo_alt")}
-                    class="w-[460px] max-w-[92vw] h-auto"
-                    style="filter: drop-shadow(0 3px 4px rgba(0,0,0,0.45));"
-                    fetchpriority="high"
-                    decoding="async"
-                />
-            </a>
-        </div>
+        <a
+            class="wordmark-link {$isHomePage ? 'scale-100 hover:scale-105' : 'scale-90 hover:scale-100'} transition-transform duration-300 ease-in-out"
+            aria-label={locale.t("layout.header.home_link")}
+            href="/"
+        >
+            <span class="wordmark">PALDLE</span>
+        </a>
     </header>
     <main class="flex-grow flex flex-col items-center mt-4 mb-4 w-full px-3">
         {@render children()}
@@ -106,49 +79,23 @@
 </div>
 
 <style>
-    @keyframes scale {
-        0% {
-            transform: scale(1);
-        }
-        50% {
-            transform: scale(1.1);
-        }
-        100% {
-            transform: scale(1);
-        }
+    .wordmark-link {
+        display: inline-block;
+        text-decoration: none;
+        outline: none;
     }
-
-    .scale-animation {
-        animation: scale 2s infinite ease-in-out;
-    }
-
-    @keyframes slideInLeft {
-        from {
-            opacity: 0;
-            transform: translateX(-100%);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    @keyframes slideInRight {
-        from {
-            opacity: 0;
-            transform: translateX(100%);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    .animate-slide-in-left {
-        animation: slideInLeft 1s ease-out forwards;
-    }
-
-    .animate-slide-in-right {
-        animation: slideInRight 1s ease-out forwards;
+    .wordmark {
+        font-family: var(--font-lilita), sans-serif;
+        font-weight: 700;
+        font-size: clamp(44px, 12vw, 82px);
+        letter-spacing: 2px;
+        line-height: 1;
+        background: linear-gradient(180deg, #eafcff 0%, #7fe8ff 42%, #37d0e6 68%, #22a7d8 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-stroke: 3px #0a2740;
+        paint-order: stroke fill;
+        filter: drop-shadow(0 4px 0 rgba(6, 24, 44, 0.55)) drop-shadow(0 6px 10px rgba(0, 0, 0, 0.35));
     }
 </style>

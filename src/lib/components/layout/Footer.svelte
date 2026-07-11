@@ -25,10 +25,10 @@
         <LanguagePicker />
     </div>
     <div
-        class="sv-frame font-lilita text-white relative flex flex-col p-6 gap-4 max-w-[450px]"
+        class="pal-frame font-lilita text-white relative flex flex-col p-6 gap-4 max-w-[450px]"
     >
         <div class="flex flex-col justify-center items-center">
-            <p class="text-3xl text-center stardew-text">
+            <p class="text-3xl text-center pal-title">
                 {locale.t("layout.footer.want_more.title")}
             </p>
             <p class="text-center text-white text-base font-lilita">
@@ -335,7 +335,7 @@
             </div>
         {/if}
 
-        <p class="text-center text-sm text-white uppercase stardew-text">
+        <p class="text-center text-sm text-white uppercase pal-title">
             {locale.t("layout.footer.copyright", { year: currentYear })}
         </p>
     </div>

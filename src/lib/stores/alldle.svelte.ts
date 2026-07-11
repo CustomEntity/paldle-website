@@ -1,5 +1,5 @@
 // ============================================
-// AllDle SDK Store — Brawldle integration
+// AllDle SDK Store — Paldle integration
 //
 // The AllDle SDK is loaded by AllDle in the iframe via CDN.
 // This store wraps connect() and completeMode() so any game
@@ -49,7 +49,7 @@ export async function initAllDle(): Promise<void> {
     }
 
     sdkInstance = new AllDleCls({
-        gameSlug: 'brawldle',
+        gameSlug: 'paldle',
         apiBaseUrl: 'https://www.alldle.net/api',
         debug: false,
         connectTimeout: 30000, // 30s — AllDle sends the session on Play click, which can be long after iframe load
@@ -65,11 +65,11 @@ export async function initAllDle(): Promise<void> {
  * Safe to call even when running outside an AllDle iframe —
  * it will silently skip if there is no active session.
  *
- * @param mode     One of 'villager' | 'gadget' | 'star_power' | 'hypercharge' | 'pixel'
+ * @param mode     One of 'classic' | 'description' | 'silhouette'
  * @param data     { won: boolean, attempts?: number }
  */
 export async function notifyModeComplete(
-    mode: 'villager' | 'crop' | 'fish',
+    mode: 'classic' | 'description' | 'silhouette',
     data: ModeCompletionData
 ): Promise<void> {
     if (!sdkInstance || !session) return;

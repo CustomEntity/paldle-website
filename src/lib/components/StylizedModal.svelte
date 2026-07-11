@@ -40,22 +40,19 @@
             onclick={(e) => e.stopPropagation()}
     >
         <button
-                class="sv-close absolute z-30 -top-3 -right-3 cursor-pointer hover:scale-110 active:scale-95 duration-150"
+                class="pal-close absolute z-30 -top-3 -right-3 cursor-pointer hover:scale-110 active:scale-95 duration-150"
                 aria-label="Close"
                 onclick={toggleModal}
-        >
-            <img src="/ui/close.png" alt="Close" width="36" height="36" style="image-rendering: pixelated; filter: drop-shadow(0 2px 0 rgba(0,0,0,0.35));"/>
-        </button>
-        <div class="sv-letter flex flex-col h-full overflow-hidden">
+        >×</button>
+        <div class="pal-letter flex flex-col h-full overflow-hidden">
             <div class="pt-1 pb-2">
-                <h2 class="flex justify-center items-center text-2xl uppercase text-[#6a3b18] font-lilita"
-                    style="text-shadow: 1px 1px 0 rgba(255,247,214,0.7);">
+                <h2 class="flex justify-center items-center text-2xl uppercase text-[#0f7fa8] font-lilita">
                     {@render title()}
                 </h2>
-                <div class="mx-auto mt-1 h-[3px] w-[70%] rounded-full bg-[#c9a24a]/60"></div>
+                <div class="mx-auto mt-1 h-[3px] w-[70%] rounded-full bg-[#37d0e6]/70"></div>
             </div>
             <div
-                    class="h-[50vh] px-2 pb-2 overflow-y-auto font-lilita text-[#4a3016]"
+                    class="h-[50vh] px-2 pb-2 overflow-y-auto font-lilita text-[#16324e]"
             >
                 {@render content()}
             </div>

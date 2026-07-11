@@ -19,7 +19,7 @@
 </script>
 
 <div class="inline-block">
-	<p class="clockDisplay stardew-text text-xl">
+	<p class="clockDisplay pal-title text-xl">
 		{padZero(timeLeft)}:{padZero(timeLeftMin)}:{padZero(timeLeftSec)}
 	</p>
 </div>

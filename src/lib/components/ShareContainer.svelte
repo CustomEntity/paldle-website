@@ -4,7 +4,7 @@
         import TweetButton from "$lib/components/buttons/TweetButton.svelte";
         import locale from "$lib/stores/locale.svelte";
         import ContentCard from "$lib/components/ContentCard.svelte";
-        import MarvelRivalsButton from "$lib/components/buttons/MarvelRivalsButton.svelte";
+        import PalButton from "$lib/components/buttons/PalButton.svelte";
 
         interface Props {
             text: string;
@@ -20,9 +20,9 @@
             return copyText.replace(/#/g, '%23').replace(/\n/g, '%0A') + '%0A' + websiteUrl;
         }
     </script>
-    <div class="flex flex-col w-full justify-center items-center gap-1 text-center justify-items-center py-4 px-6 sv-frame font-lilita"
+    <div class="flex flex-col w-full justify-center items-center gap-1 text-center justify-items-center py-4 px-6 pal-frame font-lilita"
     >
-        <span class="text-xl text-white stardew-text max-w-[250px]">{@html text}</span>
+        <span class="text-xl text-white pal-title max-w-[250px]">{@html text}</span>
         {#if tries}
             <div class="mt-4">
                 {#each tries.reverse().slice(0, 5) as attempt}
@@ -39,9 +39,9 @@
                 {/if}
             </div>
         {/if}
-        <span class="text-2xl text-white stardew-text">https://{websiteUrl}</span>
+        <span class="text-2xl text-white pal-title">https://{websiteUrl}</span>
         <div class="flex flex-row  w-full justify-center mt-4 mb-4">
-            <MarvelRivalsButton
+            <PalButton
                     slant="left"
                     width={'100%'}
                     class="max-w-[194px]"
@@ -49,8 +49,8 @@
                     ariaLabel={locale.t('components.shareContainer.buttons.tweet.aria_label')}
                     onClick={() => window.open(`https://twitter.com/intent/tweet?text=${getUrlFormattedText()}`, '_blank')}
             >
-            </MarvelRivalsButton>
-            <MarvelRivalsButton
+            </PalButton>
+            <PalButton
                     slant="right"
                     width={'100%'}
                     class="max-w-[194px]"
@@ -59,6 +59,6 @@
                     ariaLabel={locale.t('components.shareContainer.buttons.copy.aria_label')}
                     onClick={() => navigator.clipboard.writeText(copyText)}
             >
-            </MarvelRivalsButton>
+            </PalButton>
         </div>
     </div>

@@ -1,675 +1,288 @@
 {
-  "lang": {
-    "name": "English"
-  },
-  "layout": {
-    "page_meta": {
-      "base_title": "Daily Stardew Valley Guessing Game",
-      "base_description": "Stardewdle is the daily Stardew Valley guessing game. Take on a new challenge every day across three modes — Villager, Crop and Fish — and test your Stardew Valley knowledge.",
-      "site_name": "Stardewdle"
-    },
-    "header": {
-      "home_link": "Return to Stardewdle home page",
-      "logo_alt": "Stardewdle Logo"
-    },
-    "footer": {
-      "accessibility": {
-        "discord": "Join our Discord community",
-        "information": "Information",
-        "kofi": "Support us on Ko-fi",
-        "x": "Follow us on X (Twitter)",
-        "reddit": "Join our Reddit community"
-      },
-      "want_more": {
-        "title": "Want more ?",
-        "description": "Check out the biggest hub for all dle games."
-      },
-      "copyright": "Stardewdle - {year}",
-      "cookie_preferences": "Update cookie preferences"
-    },
-    "modals": {
-      "about": {
-        "title": "About",
-        "discover": "Welcome to Stardewdle, the daily Stardew Valley guessing game! Test your knowledge across three modes — Villager, Crop and Fish — with a new puzzle every day.",
-        "disclaimer": "Stardewdle is an unofficial fan project. Stardew Valley is created by ConcernedApe; all characters and artwork belong to their respective owners. This project is not affiliated with, sponsored by, or endorsed by ConcernedApe.",
-        "game_modes": {
-          "title": "Three daily modes",
-          "description": "Villager compares six attributes (gender, region, birthday, marriageable, age). Crop compares five crop attributes (growth, price, regrow, type, season). Fish compares five fish attributes (difficulty, behavior, season, weather, size). A fresh puzzle for each mode, every day."
-        },
-        "dle_games": {
-          "title": "More -dle games",
-          "description": "Enjoyed Stardewdle? Explore the whole family of daily -dle games in the hub linked in the menu."
-        },
-        "commitment": {
-          "title": "Daily challenge",
-          "description": "Come back each day for new villagers to guess, keep your streak alive, and share your results with friends."
-        },
-        "inspiration": {
-          "title": "Inspiration",
-          "description": "Inspired by Wordle and the many wonderful -dle guessing games."
-        },
-        "credit": {
-          "title": "Credits",
-          "description": "Made by a fan, for fans of Stardew Valley. 🌱"
-        },
-        "privacy": {
-          "title": "Privacy",
-          "description": "We keep it simple — your progress and streak are stored locally in your own browser."
-        },
-        "thanks": "Thanks for playing, and happy farming!",
-        "signature": {
-          "regards": "With love,",
-          "team": "The Stardewdle team"
-        }
-      }
-    }
-  },
-  "pages": {
-    "home": {
-      "title": "Test your Stardew Valley knowledge",
-      "button": {
-        "villager": {
-          "title": "Villager",
-          "description": "Get clues on every try"
-        },
-        "crop": {
-          "title": "Crop",
-          "description": "Guess the crop from its stats"
-        },
-        "fish": {
-          "title": "Fish",
-          "description": "Guess the fish from its stats"
-        }
-      },
-      "reset_in": "Reset in: {time}",
-      "royaledle_banner": {
-        "title": "Play Royaledle",
-        "subtitle": "Daily Clash Royale guessing game",
-        "cta": "Play",
-        "new": "NEW"
-      }
-    },
-    "villager": {
-      "page_meta": {
-        "title": "Villager",
-        "description": "Guess today's Stardew Valley villager in Villager mode!"
-      },
-      "errors": {
-        "no_daily_brawler": "No daily villager found",
-        "generic_error": "Error: {message}"
-      },
-      "result": {
-        "success": "Good job!",
-        "failure": "Try again"
-      },
-      "scroll_hint": "← Scroll horizontally to view more →",
-      "yesterday": "Yesterday's villager was <name>{brawlerName}</name>",
-      "share": {
-        "text": "I found #Stardewdle villager #{id} in classic mode in {tries} guesses ",
-        "to_copy": "I found #Stardewdle villager #{id} in classic mode in {tries} guesses\n{url}"
-      },
-      "victory": {
-        "stats_button": "Stats",
-        "back_home": "Back to home"
-      },
-      "components": {
-        "explanationBox": {
-          "title": "Guess today's Stardew Valley villager",
-          "bottomHint": "Type any villager to begin."
-        },
-        "toolsBar": {
-          "stats": {
-            "tooltip": "Statistics",
-            "alt": "Statistics icon"
-          },
-          "streak": {
-            "tooltip": "Current streak (Series of consecutive victories)",
-            "alt": {
-              "active": "Active streak icon",
-              "inactive": "Inactive streak icon"
-            }
-          },
-          "patchNotes": {
-            "tooltip": "Patch notes",
-            "alt": "Patch notes icon"
-          },
-          "howToPlay": {
-            "tooltip": "How to play",
-            "alt": "How to play icon"
-          }
-        },
-        "answerInput": {
-          "placeholder": "Type a villager name.."
-        }
-      },
-      "modals": {
-        "stats": {
-          "title": "Statistics",
-          "metrics": {
-            "games_won": {
-              "label": "Games won:",
-              "aria_label": "Number of games won"
-            },
-            "average_tries": {
-              "label": "Average tries:",
-              "aria_label": "Average number of attempts per game"
-            },
-            "one_shots": {
-              "label": "One shots:",
-              "aria_label": "Number of games won in one try"
-            },
-            "current_streak": {
-              "label": "Current streak:",
-              "aria_label": "Current winning streak"
-            },
-            "best_streak": {
-              "label": "Best streak:",
-              "aria_label": "Best winning streak"
-            }
-          },
-          "graph": {
-            "title": "Number of tries per game",
-            "label": "Tries",
-            "fallback": "Your browser does not support the canvas element."
-          }
-        },
-        "patchNotes": {
-          "title": "Patch notes",
-          "states": {
-            "loading": {
-              "message": "Loading patch notes..."
-            },
-            "empty": {
-              "message": "Nothing here yet"
-            },
-            "error": {
-              "title": "Failed to load patch notes",
-              "message": "{error}"
-            }
-          }
-        },
-        "how_to_play_classic": {
-          "title": "How to Play Stardewdle: Villager Mode",
-          "introduction_title": "Villager Mode",
-          "introduction_description": "Guess the secret Stardew Valley villager of the day. Analyze six attributes; each guess gives color-coded feedback and directional arrows to guide you.",
-          "attributes_title": "Villager Attributes",
-          "attributes_description": "Villager Mode compares these six attributes:",
-          "attribute_item_1": "• <strong>Gender</strong>: Male or Female.",
-          "attribute_item_2": "• <strong>Region</strong>: where they live (Town, Mountain, Forest, Beach, Desert, Sewers, Ginger Island).",
-          "attribute_item_3": "• <strong>Season</strong>: their birthday season (Spring, Summer, Fall, Winter).",
-          "attribute_item_4": "• <strong>Birthday</strong>: the day of the month they were born (1–28).",
-          "attribute_item_5": "• <strong>Marriageable</strong>: whether you can marry them (Yes or No).",
-          "attribute_item_6": "• <strong>Age</strong>: Child, Teen, or Adult.",
-          "feedback_title": "Feedback",
-          "feedback_description": "Each tile is color-coded:",
-          "feedback_item_1": "• <span style=\"color: #32c21c\">Green</span>: exact match with the secret villager.",
-          "feedback_item_2": "• <span style=\"color: #d40c00\">Red</span>: no match.",
-          "feedback_arrows": "Arrows appear on Birthday and Age:",
-          "feedback_arrow_up": "• <strong>Arrow Up (↑)</strong>: the secret villager's value is HIGHER (later birthday / older).",
-          "feedback_arrow_down": "• <strong>Arrow Down (↓)</strong>: the secret villager's value is LOWER (earlier birthday / younger).",
-          "how_to_play_title": "How to Play",
-          "step_1": "Make your first guess of any villager from the search list.",
-          "step_2": "Watch each attribute tile flip in sequence, revealing color-coded feedback.",
-          "step_3": "Read the green and red tiles to spot matching and non-matching attributes.",
-          "step_4": "Use the arrows on Birthday and Age to narrow the range.",
-          "step_5": "Make your next guess based on all the feedback received.",
-          "step_6": "Continue until you correctly identify the secret villager!",
-          "step_7": "Return daily for a new villager to guess in Villager Mode.",
-          "strategy_title": "Strategy Tips",
-          "strategy_tip_1": "• Start with villagers you know well to establish a baseline of attributes.",
-          "strategy_tip_2": "• Region and Season narrow the pool fast — many villagers share them.",
-          "strategy_tip_3": "• Use arrows to eliminate whole groups by birthday or age.",
-          "strategy_tip_4": "• Age is ordinal: Child &lt; Teen &lt; Adult.",
-          "strategy_tip_5": "• A villager must match ALL green feedback at once.",
-          "strategy_tip_6": "• Gender, Region, Season and Marriageable match exactly (no arrows).",
-          "daily_challenge_title": "Daily Challenge",
-          "daily_challenge_description": "Return each day for a new secret villager. Track your streak and share your result with friends."
-        }
-      },
-      "attributes": {
-        "headers": {
-          "villager": "Villager",
-          "gender": "Gender",
-          "region": "Region",
-          "season": "Season",
-          "birthday": "Birthday",
-          "marriageable": "Marriageable",
-          "age": "Age"
-        },
-        "gender": {
-          "Male": "Male",
-          "Female": "Female",
-          "Undefined": "Other"
-        },
-        "region": {
-          "Town": "Town",
-          "Mountain": "Mountain",
-          "Forest": "Forest",
-          "Beach": "Beach",
-          "Desert": "Desert",
-          "Sewers": "Sewers",
-          "GingerIsland": "Ginger Island"
-        },
-        "season": {
-          "Spring": "Spring",
-          "Summer": "Summer",
-          "Fall": "Fall",
-          "Winter": "Winter"
-        },
-        "age": {
-          "Adult": "Adult",
-          "Teen": "Teen",
-          "Child": "Child"
-        },
-        "marriageable": {
-          "yes": "Yes",
-          "no": "No"
-        }
-      },
-      "gift_hint": "Loved gift: {gift}",
-      "gift_hint_locked": "Loved gift clue in {tries} guesses"
-    },
-    "crop": {
-      "page_meta": {
-        "title": "Crop",
-        "description": "Guess today's Stardew Valley crop from its stats!"
-      },
-      "errors": {
-        "no_daily_brawler": "No daily crop found",
-        "generic_error": "Error: {message}"
-      },
-      "result": {
-        "success": "Good job!",
-        "failure": "Try again"
-      },
-      "scroll_hint": "← Scroll horizontally to view more →",
-      "yesterday": "Yesterday's crop was <name>{brawlerName}</name>",
-      "share": {
-        "text": "I found #Stardewdle crop #{id} in {tries} guesses ",
-        "to_copy": "I found #Stardewdle crop #{id} in {tries} guesses\n{url}"
-      },
-      "victory": {
-        "stats_button": "Stats",
-        "back_home": "Back to home",
-        "next_mode": "Play Villager"
-      },
-      "components": {
-        "explanationBox": {
-          "title": "Guess today's Stardew Valley crop",
-          "bottomHint": "Type any crop to begin."
-        },
-        "toolsBar": {
-          "stats": {
-            "tooltip": "Statistics",
-            "alt": "Statistics icon"
-          },
-          "streak": {
-            "tooltip": "Current streak (Series of consecutive victories)",
-            "alt": {
-              "active": "Active streak icon",
-              "inactive": "Inactive streak icon"
-            }
-          },
-          "patchNotes": {
-            "tooltip": "Patch notes",
-            "alt": "Patch notes icon"
-          },
-          "howToPlay": {
-            "tooltip": "How to play",
-            "alt": "How to play icon"
-          }
-        },
-        "answerInput": {
-          "placeholder": "Type a crop name.."
-        }
-      },
-      "modals": {
-        "stats": {
-          "title": "Statistics",
-          "metrics": {
-            "games_won": {
-              "label": "Games won:",
-              "aria_label": "Number of games won"
-            },
-            "average_tries": {
-              "label": "Average tries:",
-              "aria_label": "Average number of attempts per game"
-            },
-            "one_shots": {
-              "label": "One shots:",
-              "aria_label": "Number of games won in one try"
-            },
-            "current_streak": {
-              "label": "Current streak:",
-              "aria_label": "Current winning streak"
-            },
-            "best_streak": {
-              "label": "Best streak:",
-              "aria_label": "Best winning streak"
-            }
-          },
-          "graph": {
-            "title": "Number of tries per game",
-            "label": "Tries",
-            "fallback": "Your browser does not support the canvas element."
-          }
-        },
-        "patchNotes": {
-          "title": "Patch notes",
-          "states": {
-            "loading": {
-              "message": "Loading patch notes..."
-            },
-            "empty": {
-              "message": "Nothing here yet"
-            },
-            "error": {
-              "title": "Failed to load patch notes",
-              "message": "{error}"
-            }
-          }
-        },
-        "how_to_play_classic": {
-          "title": "How to Play: Crop Mode",
-          "introduction_title": "Crop Mode",
-          "introduction_description": "Guess the secret Stardew Valley crop of the day by comparing five attributes. Each guess gives color-coded feedback and directional arrows to guide you.",
-          "attributes_title": "Crop Attributes",
-          "attributes_description": "Crop mode compares these attributes:",
-          "attribute_item_1": "• <strong>Growth</strong>: days to fully grow.",
-          "attribute_item_2": "• <strong>Price</strong>: base sell price in gold.",
-          "attribute_item_3": "• <strong>Regrow</strong>: does it keep producing after harvest? (Yes/No).",
-          "attribute_item_4": "• <strong>Type</strong>: Vegetable, Fruit, Flower, Forage or Seed.",
-          "attribute_item_5": "• <strong>Season</strong>: the season(s) it grows in.",
-          "attribute_item_6": "• <strong>Tip</strong>: green is an exact match; orange on Season means a partial overlap.",
-          "feedback_title": "Feedback",
-          "feedback_description": "Each tile is color-coded:",
-          "feedback_item_1": "• <span style=\"color: #32c21c\">Green</span></span>: exact match with the secret crop.",
-          "feedback_item_2": "• <span style=\"color: #d40c00\">Red</span></span>: no match.",
-          "feedback_arrows": "Arrows appear on Growth and Price.",
-          "feedback_arrow_up": "• <strong>Arrow Up (↑)</strong>: the secret crop's value is HIGHER.",
-          "feedback_arrow_down": "• <strong>Arrow Down (↓)</strong>: the secret crop's value is LOWER.",
-          "how_to_play_title": "How to Play",
-          "step_1": "Make your first guess of any crop from the search list.",
-          "step_2": "Watch each attribute tile flip in sequence, revealing color-coded feedback.",
-          "step_3": "Read the green and red tiles to spot matching and non-matching attributes.",
-          "step_4": "Use the arrows on Growth and Price to narrow the range.",
-          "step_5": "Make your next guess based on all the feedback received.",
-          "step_6": "Continue until you correctly identify the secret crop!",
-          "step_7": "Return daily for a new crop to guess in Crop Mode.",
-          "strategy_title": "Strategy Tips",
-          "strategy_tip_1": "• Start with crops you know well to establish a baseline of attributes.",
-          "strategy_tip_2": "• Type and Season narrow the pool fast — many crops share them.",
-          "strategy_tip_3": "• Use the arrows to eliminate whole groups by growth time or price.",
-          "strategy_tip_4": "• Regrow is a simple Yes/No — it splits the pool in half.",
-          "strategy_tip_5": "• A crop must match ALL green feedback at once.",
-          "strategy_tip_6": "• Regrow, Type and Season match exactly (no arrows).",
-          "daily_challenge_title": "Daily Challenge",
-          "daily_challenge_description": "Return each day for a new secret crop. Track your streak and share your result with friends."
-        }
-      },
-      "attributes": {
-        "headers": {
-          "crop": "Crop",
-          "growth": "Growth",
-          "price": "Price",
-          "regrow": "Regrow",
-          "type": "Type",
-          "season": "Season"
-        },
-        "type": {
-          "Vegetable": "Vegetable",
-          "Fruit": "Fruit",
-          "Flower": "Flower",
-          "Forage": "Forage",
-          "Seed": "Seed"
-        },
-        "season": {
-          "Spring": "Spring",
-          "Summer": "Summer",
-          "Fall": "Fall",
-          "Winter": "Winter"
-        },
-        "regrow": {
-          "yes": "Yes",
-          "no": "No"
-        }
-      }
-    },
-    "fish": {
-      "page_meta": {
-        "title": "Fish",
-        "description": "Guess today's Stardew Valley fish from its stats!"
-      },
-      "errors": {
-        "no_daily_brawler": "No daily fish found",
-        "generic_error": "Error: {message}"
-      },
-      "result": {
-        "success": "Good job!",
-        "failure": "Try again"
-      },
-      "scroll_hint": "← Scroll horizontally to view more →",
-      "yesterday": "Yesterday's fish was <name>{brawlerName}</name>",
-      "share": {
-        "text": "I found #Stardewdle fish #{id} in {tries} guesses ",
-        "to_copy": "I found #Stardewdle fish #{id} in {tries} guesses\n{url}"
-      },
-      "victory": {
-        "stats_button": "Stats",
-        "back_home": "Back to home",
-        "next_mode": "Play Villager"
-      },
-      "components": {
-        "explanationBox": {
-          "title": "Guess today's Stardew Valley fish",
-          "bottomHint": "Type any fish to begin."
-        },
-        "toolsBar": {
-          "stats": {
-            "tooltip": "Statistics",
-            "alt": "Statistics icon"
-          },
-          "streak": {
-            "tooltip": "Current streak (Series of consecutive victories)",
-            "alt": {
-              "active": "Active streak icon",
-              "inactive": "Inactive streak icon"
-            }
-          },
-          "patchNotes": {
-            "tooltip": "Patch notes",
-            "alt": "Patch notes icon"
-          },
-          "howToPlay": {
-            "tooltip": "How to play",
-            "alt": "How to play icon"
-          }
-        },
-        "answerInput": {
-          "placeholder": "Type a fish name.."
-        }
-      },
-      "modals": {
-        "stats": {
-          "title": "Statistics",
-          "metrics": {
-            "games_won": {
-              "label": "Games won:",
-              "aria_label": "Number of games won"
-            },
-            "average_tries": {
-              "label": "Average tries:",
-              "aria_label": "Average number of attempts per game"
-            },
-            "one_shots": {
-              "label": "One shots:",
-              "aria_label": "Number of games won in one try"
-            },
-            "current_streak": {
-              "label": "Current streak:",
-              "aria_label": "Current winning streak"
-            },
-            "best_streak": {
-              "label": "Best streak:",
-              "aria_label": "Best winning streak"
-            }
-          },
-          "graph": {
-            "title": "Number of tries per game",
-            "label": "Tries",
-            "fallback": "Your browser does not support the canvas element."
-          }
-        },
-        "patchNotes": {
-          "title": "Patch notes",
-          "states": {
-            "loading": {
-              "message": "Loading patch notes..."
-            },
-            "empty": {
-              "message": "Nothing here yet"
-            },
-            "error": {
-              "title": "Failed to load patch notes",
-              "message": "{error}"
-            }
-          }
-        },
-        "how_to_play_classic": {
-          "title": "How to Play: Fish Mode",
-          "introduction_title": "Fish Mode",
-          "introduction_description": "Guess the secret Stardew Valley fish of the day by comparing five attributes. Each guess gives color-coded feedback and directional arrows to guide you.",
-          "attributes_title": "Fish Attributes",
-          "attributes_description": "Fish mode compares these attributes:",
-          "attribute_item_1": "• <strong>Difficulty</strong>: how hard the fish is to catch.",
-          "attribute_item_2": "• <strong>Behavior</strong>: how it moves — Floater, Dart, Smooth, Mixed or Sinker.",
-          "attribute_item_3": "• <strong>Season</strong>: the season(s) you can catch it.",
-          "attribute_item_4": "• <strong>Weather</strong>: Sunny, Rainy or Any.",
-          "attribute_item_5": "• <strong>Size</strong>: its maximum size in inches.",
-          "attribute_item_6": "• <strong>Tip</strong>: green is an exact match; orange on Season means a partial overlap.",
-          "feedback_title": "Feedback",
-          "feedback_description": "Each tile is color-coded:",
-          "feedback_item_1": "• <span style=\"color: #32c21c\">Green</span></span>: exact match with the secret fish.",
-          "feedback_item_2": "• <span style=\"color: #d40c00\">Red</span></span>: no match.",
-          "feedback_arrows": "Arrows appear on Difficulty and Size.",
-          "feedback_arrow_up": "• <strong>Arrow Up (↑)</strong>: the secret fish's value is HIGHER.",
-          "feedback_arrow_down": "• <strong>Arrow Down (↓)</strong>: the secret fish's value is LOWER.",
-          "how_to_play_title": "How to Play",
-          "step_1": "Make your first guess of any fish from the search list.",
-          "step_2": "Watch each attribute tile flip in sequence, revealing color-coded feedback.",
-          "step_3": "Read the green and red tiles to spot matching and non-matching attributes.",
-          "step_4": "Use the arrows on Difficulty and Size to narrow the range.",
-          "step_5": "Make your next guess based on all the feedback received.",
-          "step_6": "Continue until you correctly identify the secret fish!",
-          "step_7": "Return daily for a new fish to guess in Fish Mode.",
-          "strategy_title": "Strategy Tips",
-          "strategy_tip_1": "• Start with fish you know well to establish a baseline of attributes.",
-          "strategy_tip_2": "• Behavior and Weather narrow the pool fast — many fish share them.",
-          "strategy_tip_3": "• Use the arrows to eliminate whole groups by difficulty or size.",
-          "strategy_tip_4": "• Season can partially match (orange) when it overlaps.",
-          "strategy_tip_5": "• A fish must match ALL green feedback at once.",
-          "strategy_tip_6": "• Behavior, Season and Weather match exactly (no arrows).",
-          "daily_challenge_title": "Daily Challenge",
-          "daily_challenge_description": "Return each day for a new secret fish. Track your streak and share your result with friends."
-        }
-      },
-      "attributes": {
-        "headers": {
-          "fish": "Fish",
-          "difficulty": "Difficulty",
-          "behavior": "Behavior",
-          "season": "Season",
-          "weather": "Weather",
-          "size": "Size"
-        },
-        "behavior": {
-          "Floater": "Floater",
-          "Dart": "Dart",
-          "Smooth": "Smooth",
-          "Mixed": "Mixed",
-          "Sinker": "Sinker"
-        },
-        "weather": {
-          "Sunny": "Sunny",
-          "Rainy": "Rainy",
-          "Any": "Any"
-        },
-        "season": {
-          "Spring": "Spring",
-          "Summer": "Summer",
-          "Fall": "Fall",
-          "Winter": "Winter"
-        }
-      }
-    }
-  },
-  "common": {
-    "header": {
-      "button": {
-        "stats": {
-          "tooltip": "Stats"
-        },
-        "streak": {
-          "tooltip": "Current streak (Consecutive wins)"
-        },
-        "changelog": {
-          "tooltip": "Changelog"
-        }
-      }
-    },
-    "soon": "soon"
-  },
-  "components": {
-    "explanationBox": {
-      "errors": {
-        "no_content": "No content provided"
-      }
-    },
-    "answerInput": {
-      "states": {
-        "loading": "Loading...",
-        "no_result": "No result"
-      },
-      "button": {
-        "submit": {
-          "title": "Submit"
-        }
-      }
-    },
-    "victoryContainer": {
-      "title": "Your game",
-      "congratulations": "GG !!",
-      "guess": {
-        "prefix": "You guessed",
-        "character": "{name}"
-      },
-      "tries": {
-        "count": "Number of tries:",
-        "value": "{count}"
-      },
-      "next": {
-        "timer": "Next puzzle in",
-        "mode": "Next mode:"
-      },
-      "image": {
-        "alt": "Victory image"
-      },
-      "you_found": "You found",
-      "number_of_tries": "Number of tries: {count}"
-    },
-    "shareContainer": {
-      "title": "Share your result",
-      "buttons": {
-        "copy": {
-          "title": "Copy",
-          "aria_label": "Copy result to clipboard"
-        },
-        "tweet": {
-          "title": "Tweet",
-          "aria_label": "Share on X (Twitter)"
-        }
-      },
-      "and_more": "and {count} more..."
-    }
-  }
+	"lang": {
+		"name": "English"
+	},
+	"layout": {
+		"header": {
+			"home_link": "Return to the Paldle home page",
+			"logo_alt": "Paldle logo"
+		},
+		"page_meta": {
+			"site_name": "Paldle",
+			"base_title": "Daily Palworld Guessing Game",
+			"base_description": "Paldle is the daily Palworld guessing game. Guess the Pal of the day in three modes: Classic, Description and Silhouette."
+		},
+		"footer": {
+			"want_more": {
+				"title": "Want more?",
+				"description": "Discover the other daily guessing games of the -dle family."
+			},
+			"accessibility": {
+				"discord": "Join our Discord",
+				"information": "About Paldle",
+				"kofi": "Support us on Ko-fi",
+				"x": "Follow us on X",
+				"reddit": "Visit our subreddit"
+			},
+			"copyright": "Paldle - {year}"
+		},
+		"modals": {
+			"about": {
+				"title": "About Paldle",
+				"discover": "Paldle is a free daily guessing game for Palworld fans. A new Pal is chosen every day — come back tomorrow for a fresh puzzle.",
+				"disclaimer": "Paldle is a fan-made project and is not affiliated with, endorsed by, or sponsored by Pocketpair, Inc. Palworld and all related names and assets are the property of Pocketpair.",
+				"game_modes": {
+					"title": "Game modes",
+					"description": "Classic: guess the Pal from its attributes. Description: guess the Pal from its Paldeck entry. Silhouette: guess the Pal from its shape."
+				},
+				"dle_games": {
+					"title": "The -dle family",
+					"description": "Paldle is part of a family of daily guessing games. Find them all in the footer below."
+				},
+				"commitment": {
+					"title": "Our commitment",
+					"description": "Paldle is free to play and always will be. We keep the data current as new Pals are added to the game."
+				},
+				"inspiration": {
+					"title": "Inspiration",
+					"description": "Paldle is inspired by Wordle and the many great community -dle games."
+				},
+				"credit": {
+					"title": "Credits",
+					"description": "Pal data and artwork belong to Pocketpair, Inc. Made with love by the community."
+				},
+				"privacy": {
+					"title": "Privacy",
+					"description": "We use privacy-friendly analytics. See our privacy policy for details."
+				},
+				"thanks": "Thanks for playing, and have fun catching them all!",
+				"signature": {
+					"regards": "With love,",
+					"team": "The Paldle team"
+				}
+			}
+		}
+	},
+	"components": {
+		"answerInput": {
+			"states": {
+				"loading": "Loading...",
+				"no_result": "No result"
+			},
+			"button": {
+				"submit": {
+					"title": "Guess"
+				}
+			}
+		},
+		"victoryContainer": {
+			"congratulations": "Well played! You found <name>{name}</name>!",
+			"image": {
+				"alt": "Pal artwork"
+			},
+			"you_found": "You found",
+			"number_of_tries": "Number of guesses: {count}",
+			"stats_button": "My stats",
+			"next": {
+				"timer": "Next Pal in",
+				"mode": "Next mode:"
+			}
+		},
+		"shareContainer": {
+			"buttons": {
+				"copy": {
+					"title": "Copy",
+					"aria_label": "Copy result to clipboard"
+				},
+				"tweet": {
+					"title": "Tweet",
+					"aria_label": "Share on X (Twitter)"
+				}
+			},
+			"and_more": "and {count} more..."
+		},
+		"toolsBar": {
+			"stats": {
+				"tooltip": "Statistics",
+				"alt": "Statistics"
+			},
+			"streak": {
+				"tooltip": "Current streak",
+				"active": "Active streak",
+				"inactive": "No active streak"
+			},
+			"patchNotes": {
+				"tooltip": "Changelog",
+				"alt": "Changelog"
+			},
+			"howToPlay": {
+				"tooltip": "How to play"
+			}
+		},
+		"stats": {
+			"title": "Your statistics",
+			"metrics": {
+				"games_won": "Games won",
+				"average_tries": "Avg. guesses",
+				"one_shots": "One-shots",
+				"current_streak": "Streak",
+				"best_streak": "Best streak"
+			},
+			"graph": {
+				"label": "Guesses",
+				"title": "Guesses per day",
+				"fallback": "Guesses-per-day chart"
+			}
+		},
+		"patchNotes": {
+			"title": "Changelog",
+			"loading": "Loading the changelog...",
+			"empty": "No changelog yet.",
+			"error": "Could not load the changelog."
+		}
+	},
+	"pages": {
+		"home": {
+			"title": "Guess the Pal of the day",
+			"subtitle": "A daily Palworld guessing game — three modes, a new Pal every day.",
+			"button": {
+				"classic": {
+					"title": "Classic",
+					"description": "Guess the Pal from its attributes."
+				},
+				"description": {
+					"title": "Description",
+					"description": "Guess the Pal from its Paldeck entry."
+				},
+				"silhouette": {
+					"title": "Silhouette",
+					"description": "Guess the Pal from its shape."
+				}
+			}
+		},
+		"classic": {
+			"page_meta": {
+				"title": "Classic",
+				"description": "Guess today's Palworld Pal from its element, rarity, size, work suitabilities and more."
+			},
+			"placeholder": "Type a Pal name...",
+			"explanation": {
+				"title": "Guess today's Pal",
+				"hint": "Each guess reveals how its attributes compare to the mystery Pal."
+			},
+			"yesterday": "Yesterday's Pal #{gameId} was {name}",
+			"share": {
+				"text": "I found the #Paldle Classic Pal #{id} in {tries} guesses!",
+				"to_copy": "I found the #Paldle Classic Pal #{id} in {tries} guesses!\n{url}"
+			},
+			"errors": {
+				"generic": "Something went wrong: {message}",
+				"no_daily": "No Pal is set for today yet — check back soon!"
+			},
+			"how_to": {
+				"title": "How to play — Classic",
+				"body": "<p>Guess the mystery Pal of the day. After each guess, every column shows how your Pal compares to the answer.</p><ul class='list-disc pl-5'><li><b>Green</b> — exact match.</li><li><b>Orange</b> — partial match (some elements or work types overlap).</li><li><b>Red</b> — no match.</li><li><b>Arrows</b> — the answer's value is higher or lower (Paldeck number, rarity, size).</li></ul><p>A new Pal is picked every day.</p>"
+			},
+			"attributes": {
+				"headers": {
+					"pal": "Pal",
+					"paldeck": "No.",
+					"elements": "Element",
+					"rarity": "Rarity",
+					"size": "Size",
+					"work": "Work",
+					"mount": "Mount",
+					"nocturnal": "Nocturnal"
+				},
+				"elements": {
+					"Neutral": "Neutral",
+					"Fire": "Fire",
+					"Water": "Water",
+					"Electric": "Electric",
+					"Grass": "Grass",
+					"Ice": "Ice",
+					"Ground": "Ground",
+					"Dark": "Dark",
+					"Dragon": "Dragon"
+				},
+				"size": {
+					"XS": "XS",
+					"S": "S",
+					"M": "M",
+					"L": "L",
+					"XL": "XL"
+				},
+				"mount": {
+					"None": "None",
+					"Ground": "Ground",
+					"Flying": "Flying",
+					"Swimming": "Swimming"
+				},
+				"nocturnal": {
+					"yes": "Yes",
+					"no": "No"
+				},
+				"work": {
+					"Kindling": "Kindling",
+					"Watering": "Watering",
+					"Planting": "Planting",
+					"Electricity": "Electricity",
+					"Handiwork": "Handiwork",
+					"Gathering": "Gathering",
+					"Lumbering": "Lumbering",
+					"Mining": "Mining",
+					"OilExtraction": "Oil Extraction",
+					"Medicine": "Medicine",
+					"Cooling": "Cooling",
+					"Transporting": "Transporting",
+					"Farming": "Farming"
+				}
+			}
+		},
+		"description": {
+			"page_meta": {
+				"title": "Description",
+				"description": "Guess today's Palworld Pal from its Paldeck description."
+			},
+			"title": "Guess the Pal from its Paldeck entry",
+			"placeholder": "Type a Pal name...",
+			"hint": {
+				"size": "Size: {size}",
+				"mount": "Mount: {mount}"
+			},
+			"yesterday": "Yesterday's Pal #{gameId} was {name}",
+			"share": {
+				"text": "I found the #Paldle Description Pal #{id} in {tries} guesses!",
+				"to_copy": "I found the #Paldle Description Pal #{id} in {tries} guesses!\n{url}"
+			},
+			"errors": {
+				"no_daily": "No Pal is set for today yet — check back soon!"
+			},
+			"how_to": {
+				"title": "How to play — Description",
+				"body": "<p>Read the mystery Pal's Paldeck description and guess who it is.</p><p>Every wrong guess reveals an extra clue — element, size, then mount type.</p><p>A new Pal is picked every day.</p>"
+			}
+		},
+		"silhouette": {
+			"page_meta": {
+				"title": "Silhouette",
+				"description": "Guess today's Palworld Pal from its silhouette."
+			},
+			"title": "Guess the Pal from its silhouette",
+			"placeholder": "Type a Pal name...",
+			"hint": "Look at the shape and guess the Pal.",
+			"yesterday": "Yesterday's Pal #{gameId} was {name}",
+			"share": {
+				"text": "I found the #Paldle Silhouette Pal #{id} in {tries} guesses!",
+				"to_copy": "I found the #Paldle Silhouette Pal #{id} in {tries} guesses!\n{url}"
+			},
+			"errors": {
+				"no_daily": "No Pal is set for today yet — check back soon!"
+			},
+			"how_to": {
+				"title": "How to play — Silhouette",
+				"body": "<p>A Pal is shown as a black silhouette. Guess which Pal it is from its shape.</p><p>The full artwork is revealed when you find it.</p><p>A new Pal is picked every day.</p>"
+			}
+		}
+	}
 }

@@ -9,6 +9,6 @@
 
 </script>
 
-<div class="flex justify-center items-center gap-4 sv-frame font-lilita px-6 py-1">
+<div class="flex justify-center items-center gap-4 pal-frame font-lilita px-6 py-1">
     {@render children()}
 </div>

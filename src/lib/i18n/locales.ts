@@ -1,18 +1,9 @@
-// Only the languages Stardew Valley itself ships with, so every in-game name/term has an
-// official translation. (Stardew LanguageCodes: en, fr, es, de, it, pt, ru, tr, th, ja, ko, zh, hu.)
+// Locales with a fully translated Paldle content set. More can be added by dropping a
+// <code>.json under ./locales and extending this enum (Pal names/descriptions come from
+// pal_translations in the DB, independently of these UI strings).
 export enum Locales {
 	en = 'English',
-	fr = 'Français',
-	es = 'Español',
-	de = 'Deutsch',
-	it = 'Italiano',
-	pt = 'Português',
-	tr = 'Türkçe',
-	ru = 'Русский',
-	th = 'ไทย',
-	jp = '日本語',
-	kr = '한국어',
-	cn = '简体中文'
+	fr = 'Français'
 }
 
 export type LocaleCode = keyof typeof Locales;

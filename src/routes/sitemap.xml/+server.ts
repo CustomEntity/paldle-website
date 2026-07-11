@@ -4,9 +4,10 @@ export const prerender = true;
 
 const PAGES: { path: string; changefreq: string; priority: string }[] = [
 	{ path: '/', changefreq: 'daily', priority: '1.0' },
-	{ path: '/villager', changefreq: 'daily', priority: '0.9' },
-	{ path: '/crop', changefreq: 'daily', priority: '0.9' },
-	{ path: '/fish', changefreq: 'daily', priority: '0.9' }
+	{ path: '/classic', changefreq: 'daily', priority: '0.9' },
+	{ path: '/description', changefreq: 'daily', priority: '0.9' },
+	{ path: '/silhouette', changefreq: 'daily', priority: '0.9' },
+	{ path: '/privacy', changefreq: 'monthly', priority: '0.3' }
 ];
 
 export async function GET() {
