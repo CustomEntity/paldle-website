@@ -80,9 +80,17 @@ CREATE TABLE IF NOT EXISTS daily_silhouette (
     date    DATE    NOT NULL UNIQUE,
     pal_id  INTEGER NOT NULL REFERENCES pals(id)
 );
+-- Sound mode: guess the pal from its datamined cry (pal_media media_type='cry').
+CREATE TABLE IF NOT EXISTS daily_sound (
+    id      SERIAL PRIMARY KEY,
+    game_id INTEGER NOT NULL,
+    date    DATE    NOT NULL UNIQUE,
+    pal_id  INTEGER NOT NULL REFERENCES pals(id)
+);
 CREATE INDEX IF NOT EXISTS idx_daily_classic_date     ON daily_classic(date);
 CREATE INDEX IF NOT EXISTS idx_daily_description_date  ON daily_description(date);
 CREATE INDEX IF NOT EXISTS idx_daily_silhouette_date   ON daily_silhouette(date);
+CREATE INDEX IF NOT EXISTS idx_daily_sound_date        ON daily_sound(date);
 
 -- Generic changelog, keyed by mode.
 CREATE TABLE IF NOT EXISTS patch_notes (

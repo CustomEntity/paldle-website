@@ -1,10 +1,11 @@
 import { queryDatabase } from '$lib/server/db';
 
-export type Mode = 'classic' | 'description' | 'silhouette';
+export type Mode = 'classic' | 'description' | 'silhouette' | 'sound';
 const DAILY_TABLE: Record<Mode, string> = {
 	classic: 'daily_classic',
 	description: 'daily_description',
-	silhouette: 'daily_silhouette'
+	silhouette: 'daily_silhouette',
+	sound: 'daily_sound'
 };
 
 // localized name with EN fallback, $1 = language

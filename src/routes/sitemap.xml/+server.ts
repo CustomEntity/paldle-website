@@ -7,6 +7,7 @@ const PAGES: { path: string; changefreq: string; priority: string }[] = [
 	{ path: '/classic', changefreq: 'daily', priority: '0.9' },
 	{ path: '/description', changefreq: 'daily', priority: '0.9' },
 	{ path: '/silhouette', changefreq: 'daily', priority: '0.9' },
+	{ path: '/sound', changefreq: 'daily', priority: '0.9' },
 	{ path: '/privacy', changefreq: 'monthly', priority: '0.3' }
 ];
 

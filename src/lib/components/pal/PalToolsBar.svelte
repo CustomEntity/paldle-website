@@ -9,7 +9,7 @@
 
     interface Props {
         gameData: PalGameData;
-        mode: "classic" | "description" | "silhouette";
+        mode: "classic" | "description" | "silhouette" | "sound";
         patchNotes?: Promise<PatchNote[]>;
     }
 

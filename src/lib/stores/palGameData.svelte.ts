@@ -28,3 +28,4 @@ function useMode(key: string): Store {
 export const useClassicGameData = () => useMode('paldle_classic');
 export const useDescriptionGameData = () => useMode('paldle_description');
 export const useSilhouetteGameData = () => useMode('paldle_silhouette');
+export const useSoundGameData = () => useMode('paldle_sound');

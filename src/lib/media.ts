@@ -18,3 +18,7 @@ export const media = (path: string): string =>
 /** Local URL for a Pal icon (served from static/pals/). Single switch point for the CDN. */
 export const palImg = (path: string | null | undefined): string =>
 	String(path ?? '').startsWith('/') ? String(path) : `/pals/${path ?? ''}.webp`;
+
+/** Local URL for a Pal cry (served from static/sounds/<key>.ogg). Same CDN switch point. */
+export const palAudio = (key: string | null | undefined): string =>
+	String(key ?? '').startsWith('/') ? String(key) : `/sounds/${key ?? ''}.ogg`;

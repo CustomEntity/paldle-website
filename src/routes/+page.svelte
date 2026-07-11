@@ -23,4 +23,8 @@
         title={locale.t("pages.home.button.silhouette.title")}
         subtitle={locale.t("pages.home.button.silhouette.description")}
         gameMode="silhouette" href="/silhouette" />
+    <HomeButton class="w-full h-[120px]"
+        title={locale.t("pages.home.button.sound.title")}
+        subtitle={locale.t("pages.home.button.sound.description")}
+        gameMode="sound" href="/sound" />
 </div>

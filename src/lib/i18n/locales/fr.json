@@ -33,7 +33,7 @@
 				"disclaimer": "Paldle est un projet de fan, sans aucune affiliation avec Pocketpair, Inc. Palworld ainsi que tous les noms et éléments associés sont la propriété de Pocketpair.",
 				"game_modes": {
 					"title": "Modes de jeu",
-					"description": "Classique : devinez le Pal d'après ses attributs. Description : devinez le Pal d'après sa fiche du Paldeck. Silhouette : devinez le Pal d'après sa forme."
+					"description": "Classique : devinez le Pal d'après ses attributs. Description : devinez le Pal d'après sa fiche du Paldeck. Silhouette : devinez le Pal d'après sa forme. Son : devinez le Pal d'après son cri."
 				},
 				"dle_games": {
 					"title": "La famille -dle",
@@ -157,6 +157,10 @@
 				"silhouette": {
 					"title": "Silhouette",
 					"description": "Devinez le Pal d'après sa forme."
+				},
+				"sound": {
+					"title": "Son",
+					"description": "Devinez le Pal d'après son cri."
 				}
 			}
 		},
@@ -282,6 +286,27 @@
 			"how_to": {
 				"title": "Comment jouer — Silhouette",
 				"body": "<p>Un Pal est affiché en silhouette noire. Devinez de quel Pal il s'agit d'après sa forme.</p><p>L'illustration complète est révélée quand vous le trouvez.</p><p>Un nouveau Pal est choisi chaque jour.</p>"
+			}
+		},
+		"sound": {
+			"page_meta": {
+				"title": "Son",
+				"description": "Devinez le Pal Palworld du jour d'après son cri."
+			},
+			"title": "Devinez le Pal d'après son cri",
+			"placeholder": "Nom d'un Pal...",
+			"hint": "Écoutez le cri et devinez le Pal.",
+			"yesterday": "Le Pal d'hier n°{gameId} était {name}",
+			"share": {
+				"text": "J'ai trouvé le Pal Son #Paldle n°{id} en {tries} essais !",
+				"to_copy": "J'ai trouvé le Pal Son #Paldle n°{id} en {tries} essais !\n{url}"
+			},
+			"errors": {
+				"no_daily": "Aucun Pal n'est encore défini pour aujourd'hui — revenez bientôt !"
+			},
+			"how_to": {
+				"title": "Comment jouer — Son",
+				"body": "<p>Écoutez le cri d'un Pal et devinez de quel Pal il s'agit.</p><p>L'illustration complète est révélée quand vous le trouvez.</p><p>Un nouveau Pal est choisi chaque jour.</p>"
 			}
 		}
 	}

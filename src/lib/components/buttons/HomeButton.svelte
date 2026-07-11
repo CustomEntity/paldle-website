@@ -5,7 +5,7 @@
         href: string;
         title: string;
         subtitle: string;
-        gameMode: "classic" | "description" | "silhouette";
+        gameMode: "classic" | "description" | "silhouette" | "sound";
         class?: string;
     }
 
@@ -21,6 +21,7 @@
         classic: "#37d0e6",
         description: "#f5c531",
         silhouette: "#9163d6",
+        sound: "#ff6b3d",
     };
 
     function handleClick(event: MouseEvent) {
@@ -42,11 +43,18 @@
             <svg viewBox="0 0 24 24" fill="none" stroke={ACCENT[gameMode]} stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 6h16M4 10h16M4 14h10M4 18h7" />
             </svg>
-        {:else}
+        {:else if gameMode === "silhouette"}
             <!-- silhouette / question -->
             <svg viewBox="0 0 24 24" fill={ACCENT[gameMode]} stroke="none">
                 <path d="M12 2a7 7 0 0 0-7 7c0 2.5 1.5 4 3 5.2 1 .8 1.5 1.4 1.6 2.3H14.4c.1-.9.6-1.5 1.6-2.3 1.5-1.2 3-2.7 3-5.2a7 7 0 0 0-7-7Z" opacity="0.85"/>
                 <rect x="9" y="18.5" width="6" height="2.2" rx="1.1" />
+            </svg>
+        {:else}
+            <!-- sound / speaker -->
+            <svg viewBox="0 0 24 24" fill="none" stroke={ACCENT[gameMode]} stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill={ACCENT[gameMode]} />
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
             </svg>
         {/if}
     </span>

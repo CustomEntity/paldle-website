@@ -86,33 +86,44 @@ async function main() {
 				);
 				const id = rows[0].id;
 
-				// EN translation now; ja/ko/zh/ru names + all-locale descriptions can be added later.
-				await client.query(
-					`INSERT INTO pal_translations (pal_id, locale, name, description, partner_skill)
-					 VALUES ($1,'en',$2,$3,$4)
-					 ON CONFLICT (pal_id, locale) DO UPDATE SET
-						name=EXCLUDED.name, description=EXCLUDED.description, partner_skill=EXCLUDED.partner_skill`,
-					[id, p.name, p.description || null, p.partner_skill || null]
-				);
+				// datamined translations: en + fr (name/description/partner_skill).
+				// ja/ko/zh/ru can be added later by dumping more L10N tables.
+				const tr = [
+					['en', p.name, p.description, p.partner_skill],
+					['fr', p.name_fr, p.description_fr, p.partner_skill_fr]
+				];
+				for (const [loc, name, desc, skill] of tr) {
+					if (!name) continue;
+					await client.query(
+						`INSERT INTO pal_translations (pal_id, locale, name, description, partner_skill)
+						 VALUES ($1,$2,$3,$4,$5)
+						 ON CONFLICT (pal_id, locale) DO UPDATE SET
+							name=EXCLUDED.name, description=EXCLUDED.description, partner_skill=EXCLUDED.partner_skill`,
+						[id, loc, name, desc || null, skill || null]
+					);
+				}
 
-				// icon media (self-hosted under static/pals/<key>.webp)
-				if (p.icon) {
+				// media: icon (static/pals/<key>.webp) + datamined cry (static/sounds/<key>.ogg)
+				const media = [];
+				if (p.icon) media.push(['icon', `/pals/${p.key}.webp`]);
+				media.push(['cry', `/sounds/${p.key}.ogg`]); // every pal has a datamined cry
+				for (const [type, mpath] of media) {
 					await client.query(
 						`INSERT INTO pal_media (pal_id, media_type, path, display_order)
-						 VALUES ($1,'icon',$2,0)
+						 VALUES ($1,$2,$3,0)
 						 ON CONFLICT (pal_id, media_type, path) DO NOTHING`,
-						[id, `/pals/${p.key}.webp`]
+						[id, type, mpath]
 					);
 				}
 			}
-			console.log(`✓ upserted ${pals.length} pals (+ en names/descriptions + icon media)`);
+			console.log(`✓ upserted ${pals.length} pals (+ en/fr names/descriptions + icon & cry media)`);
 		}
 
 		// Build per-mode answer pools from the DB (source of truth after upsert).
 		const { rows } = await client.query(
 			`SELECT p.id, p.key,
 			        (t.description IS NOT NULL AND length(trim(t.description)) > 0) AS has_desc,
-			        EXISTS (SELECT 1 FROM pal_media m WHERE m.pal_id = p.id AND m.media_type='icon') AS has_icon
+			        EXISTS (SELECT 1 FROM pal_media m WHERE m.pal_id = p.id AND m.media_type='icon') AS has_icon, EXISTS (SELECT 1 FROM pal_media m WHERE m.pal_id = p.id AND m.media_type='cry') AS has_cry
 			 FROM pals p
 			 LEFT JOIN pal_translations t ON t.pal_id = p.id AND t.locale='en'
 			 WHERE p.released = true
@@ -121,10 +132,12 @@ async function main() {
 		const classicPool = rows.map((r) => r.id);
 		const descPool = rows.filter((r) => r.has_desc).map((r) => r.id);
 		const silhPool = rows.filter((r) => r.has_icon).map((r) => r.id);
+			const soundPool = rows.filter((r) => r.has_cry).map((r) => r.id);
 
 		await seedDaily(client, 'daily_classic', 'classic', classicPool);
 		await seedDaily(client, 'daily_description', 'description', descPool);
 		await seedDaily(client, 'daily_silhouette', 'silhouette', silhPool);
+			await seedDaily(client, 'daily_sound', 'sound', soundPool);
 	} finally {
 		await client.end();
 	}

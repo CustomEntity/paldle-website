@@ -33,7 +33,7 @@
 				"disclaimer": "Paldle is a fan-made project and is not affiliated with, endorsed by, or sponsored by Pocketpair, Inc. Palworld and all related names and assets are the property of Pocketpair.",
 				"game_modes": {
 					"title": "Game modes",
-					"description": "Classic: guess the Pal from its attributes. Description: guess the Pal from its Paldeck entry. Silhouette: guess the Pal from its shape."
+					"description": "Classic: guess the Pal from its attributes. Description: guess the Pal from its Paldeck entry. Silhouette: guess the Pal from its shape. Sound: guess the Pal from its cry."
 				},
 				"dle_games": {
 					"title": "The -dle family",
@@ -157,6 +157,10 @@
 				"silhouette": {
 					"title": "Silhouette",
 					"description": "Guess the Pal from its shape."
+				},
+				"sound": {
+					"title": "Sound",
+					"description": "Guess the Pal from its cry."
 				}
 			}
 		},
@@ -282,6 +286,27 @@
 			"how_to": {
 				"title": "How to play — Silhouette",
 				"body": "<p>A Pal is shown as a black silhouette. Guess which Pal it is from its shape.</p><p>The full artwork is revealed when you find it.</p><p>A new Pal is picked every day.</p>"
+			}
+		},
+		"sound": {
+			"page_meta": {
+				"title": "Sound",
+				"description": "Guess today's Palworld Pal from its cry."
+			},
+			"title": "Guess the Pal from its cry",
+			"placeholder": "Type a Pal name...",
+			"hint": "Listen to the cry and guess the Pal.",
+			"yesterday": "Yesterday's Pal #{gameId} was {name}",
+			"share": {
+				"text": "I found the #Paldle Sound Pal #{id} in {tries} guesses!",
+				"to_copy": "I found the #Paldle Sound Pal #{id} in {tries} guesses!\n{url}"
+			},
+			"errors": {
+				"no_daily": "No Pal is set for today yet — check back soon!"
+			},
+			"how_to": {
+				"title": "How to play — Sound",
+				"body": "<p>Listen to a Pal's cry and guess which Pal it is.</p><p>The full artwork is revealed when you find it.</p><p>A new Pal is picked every day.</p>"
 			}
 		}
 	}

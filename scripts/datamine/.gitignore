@@ -1,0 +1,11 @@
+# Regenerable extraction artifacts (rebuild via the extractor + build-*.mjs scripts)
+out/
+pals.wikily-backup.json
+
+# CUE4Parse clone (git clone --recurse-submodules), .NET build output, downloaded tools,
+# and the version-specific game mappings — all regenerable, none belong in the repo.
+extractor/CUE4Parse/
+extractor/tools/
+extractor/**/bin/
+extractor/**/obj/
+extractor/PaldleExtractor/assets/*.usmap

@@ -65,11 +65,11 @@ export async function initAllDle(): Promise<void> {
  * Safe to call even when running outside an AllDle iframe —
  * it will silently skip if there is no active session.
  *
- * @param mode     One of 'classic' | 'description' | 'silhouette'
+ * @param mode     One of 'classic' | 'description' | 'silhouette' | 'sound'
  * @param data     { won: boolean, attempts?: number }
  */
 export async function notifyModeComplete(
-    mode: 'classic' | 'description' | 'silhouette',
+    mode: 'classic' | 'description' | 'silhouette' | 'sound',
     data: ModeCompletionData
 ): Promise<void> {
     if (!sdkInstance || !session) return;
