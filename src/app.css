@@ -93,57 +93,57 @@ body::after {
 /* Solid-ish dark card (mode cards / boxes) — datamined Palworld panel texture */
 .pal-panel {
     position: relative;
-    background: transparent;
+    background: radial-gradient(135% 120% at 50% -12%, rgba(22, 48, 74, 0.95), rgba(8, 18, 32, 0.97) 70%);
     border-radius: 14px;
-    box-shadow: 0 12px 30px rgba(3, 12, 24, 0.5);
+    box-shadow: inset 0 0 0 1.5px rgba(96, 224, 236, 0.14), 0 12px 30px rgba(3, 12, 24, 0.5);
     color: var(--ink);
 }
 .pal-panel::before {
     content: "";
     position: absolute;
     inset: 0;
-    z-index: -1;
+    z-index: 2;
     pointer-events: none;
-    border: 20px solid transparent;
-    border-image: url("/ui/frames/panel.webp") 54 fill / 20px stretch;
+    border: 22px solid transparent;
+    border-image: url("/ui/frames/cell.webp") 90 / 22px stretch;
 }
 
 /* Translucent dark frame (toolbars, boxes, share / victory) — Palworld HUD glass with
    the game's own glowing frame texture (datamined T_prt_button_frame_flare) as the border. */
 .pal-frame {
     position: relative;
-    background: transparent;
+    background: radial-gradient(135% 115% at 50% -12%, rgba(22, 48, 74, 0.94), rgba(8, 18, 32, 0.97) 70%);
     border-radius: 14px;
-    box-shadow: 0 14px 34px rgba(3, 12, 24, 0.55);
+    box-shadow: inset 0 0 0 1.5px rgba(96, 224, 236, 0.14), 0 14px 34px rgba(3, 12, 24, 0.55);
 }
-/* the actual Palworld panel texture (navy fill + ornate teal corner brackets),
-   datamined T_prt_option_note_base, as a 9-slice fill behind the content. */
+/* ornate Palworld corner brackets (datamined T_prt_mapmask_corner) — clean 9-slice
+   (transparent straight edges → no stretch distortion), navy fill from the element. */
 .pal-frame::before {
     content: "";
     position: absolute;
     inset: 0;
-    z-index: -1;
+    z-index: 2;
     pointer-events: none;
-    border: 22px solid transparent;
-    border-image: url("/ui/frames/panel.webp") 54 fill / 22px stretch;
+    border: 24px solid transparent;
+    border-image: url("/ui/frames/cell.webp") 90 / 24px stretch;
 }
 
 /* Modal card — datamined Palworld panel texture (dark navy + ornate teal corners) */
 .pal-letter {
     position: relative;
-    background: transparent;
+    background: radial-gradient(120% 90% at 50% -8%, rgba(22, 48, 74, 0.97), rgba(8, 18, 32, 0.98) 70%);
     border-radius: 16px;
-    box-shadow: 0 20px 50px rgba(3, 12, 24, 0.7);
+    box-shadow: inset 0 0 0 1.5px rgba(96, 224, 236, 0.16), 0 20px 50px rgba(3, 12, 24, 0.7);
     color: #e6f2ff;
 }
 .pal-letter::before {
     content: "";
     position: absolute;
     inset: 0;
-    z-index: -1;
+    z-index: 2;
     pointer-events: none;
     border: 30px solid transparent;
-    border-image: url("/ui/frames/panel.webp") 54 fill / 30px stretch;
+    border-image: url("/ui/frames/cell.webp") 90 / 30px stretch;
 }
 
 .pal-ink { color: #12466a; text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5); }
@@ -161,10 +161,12 @@ body::after {
 .pal-slot {
     position: relative;
     border-radius: 12px;
-    border: 2px solid rgba(120, 205, 224, 0.22);
-    overflow: hidden;
+    /* datamined Palworld ornate corner frame (T_prt_mapmask_corner); center stays open
+       so the status colour / pal art fills it. */
+    border: 12px solid transparent;
+    border-image: url("/ui/frames/cell.webp") 90 / 12px stretch;
     background: var(--tint, rgba(10, 22, 40, 0.55));
-    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.10), inset 0 -3px 0 rgba(0, 0, 0, 0.28);
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.08), inset 0 -3px 0 rgba(0, 0, 0, 0.28);
 }
 .pal-cell::before {
     content: '';
