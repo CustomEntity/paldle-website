@@ -1,7 +1,7 @@
 <script lang="ts">
     // Pal-cry player for the Sound mode: a big circular button that plays the cry.
-    // Auto-plays once on mount (best-effort; browsers may block autoplay), and each
-    // click replays from the start. Purely presentational — no game state here.
+    // Plays only on click (no autoplay), replaying from the start each time.
+    // Purely presentational — no game state here.
     interface Props {
         src: string;
         accent?: string;
@@ -15,13 +15,8 @@
     function play() {
         if (!audio) return;
         audio.currentTime = 0;
-        audio.play().catch(() => {}); // ignore autoplay-block rejections
+        audio.play().catch(() => {});
     }
-
-    // best-effort autoplay when the source is (re)assigned
-    $effect(() => {
-        if (src && audio) play();
-    });
 </script>
 
 <audio
