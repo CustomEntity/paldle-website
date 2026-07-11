@@ -26,18 +26,16 @@ const OUT = process.argv[2] ?? join(STATIC, "og-image.png");
 const W = 1200;
 const H = 630;
 
-const LOGO_W = 616; // PALDLE wordmark width (keeps its 1480:520 aspect)
-const LOGO_TOP = 74; // px from the top edge
-
-const DIVIDER_CY = 352; // diamond + rules row
-const DIVIDER_HALF = 96; // rule length on each side of the diamond
+const LOGO_W = 616; // PALDLE wordmark width (keeps its 1480:520 aspect).
+const LOGO_TOP = 74; // px from the top edge. The wordmark already carries the
+//                      ─◇─ divider flourish along its baseline, so we don't draw one.
 
 const SUBTITLE_TEXT = "THE DAILY PALWORLD GUESSING GAME";
-const SUBTITLE_CY = 408; // more air between the wordmark and the subtitle
+const SUBTITLE_CY = 360; // sits below the wordmark's built-in divider, with air above
 const SUBTITLE_SIZE = 41;
 const SUBTITLE_KERNING = 6;
 
-const UNDERLINE_CY = 448;
+const UNDERLINE_CY = 400;
 const UNDERLINE_HALF = 92; // half-width of the cyan underline
 
 const PALS = ["lamball", "cattiva", "foxparks", "lifmunk", "pengullet", "grizzbolt"];
@@ -49,19 +47,29 @@ const PAL_FIT = 82; // Pal artwork size inside the chip
 const ACCENT = "#57c8ff"; // cyan accent (divider / underline / ring)
 const NAVY = "#0c2536"; // chip background
 
+const BG_MODULATE = "62,94"; // overall brightness,saturation of the key art (lower = darker)
+const SCRIM_TOP = "rgba(4,12,24,0.78)"; // dark scrim opacity at the top (behind wordmark)
+const SCRIM_BOTTOM = "rgba(4,12,24,0.42)"; // dark scrim opacity at the bottom (behind Pal chips)
+
 // ── helpers ───────────────────────────────────────────────────────────────
 const tmp = mkdtempSync(join(tmpdir(), "paldle-og-"));
 const t = (name) => join(tmp, name);
 const magick = (args) => execFileSync("magick", args, { stdio: ["ignore", "pipe", "inherit"] });
 
 try {
-    // 1) Background: cover-fit the key art, then gently darken for legibility.
+    // 1) Background: cover-fit the key art, darken it, then lay a top->bottom
+    //    dark scrim over it so the wordmark and subtitle stay readable.
+    magick([
+        "-size", `${W}x${H}`, `gradient:${SCRIM_TOP}-${SCRIM_BOTTOM}`,
+        t("scrim.png"),
+    ]);
     magick([
         join(STATIC, "ui", "hero.webp"),
         "-resize", `${W}x${H}^`,
         "-gravity", "center",
         "-extent", `${W}x${H}`,
-        "-modulate", "85,96",
+        "-modulate", BG_MODULATE,
+        t("scrim.png"), "-compose", "over", "-composite",
         t("bg.png"),
     ]);
 
@@ -123,16 +131,6 @@ try {
     args.push(
         "(", join(STATIC, "logo.png"), "-resize", `${LOGO_W}x`, ")",
         "-gravity", "north", "-geometry", `+0+${LOGO_TOP}`, "-composite",
-    );
-
-    // divider (two rules + centre diamond)
-    args.push(
-        "-gravity", "northwest",
-        "-stroke", "rgba(190,230,255,0.85)", "-strokewidth", "2", "-fill", "none",
-        "-draw", `line ${W / 2 - DIVIDER_HALF},${DIVIDER_CY} ${W / 2 - 22},${DIVIDER_CY}`,
-        "-draw", `line ${W / 2 + 22},${DIVIDER_CY} ${W / 2 + DIVIDER_HALF},${DIVIDER_CY}`,
-        "-stroke", "none", "-fill", "rgba(190,230,255,0.95)",
-        "-draw", `polygon ${W / 2},${DIVIDER_CY - 9} ${W / 2 + 9},${DIVIDER_CY} ${W / 2},${DIVIDER_CY + 9} ${W / 2 - 9},${DIVIDER_CY}`,
     );
 
     // subtitle
