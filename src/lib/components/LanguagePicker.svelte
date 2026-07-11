@@ -19,7 +19,7 @@
 
 <div class="relative">
     <button
-        class="pal-frame relative flex items-center justify-between w-[224px] h-[44px] px-4 transition-transform duration-150 hover:scale-[0.99] active:scale-95"
+        class="pal-select relative flex items-center justify-between w-[224px] h-[44px] px-4 transition-transform duration-150 hover:scale-[0.99] active:scale-95"
         onclick={() => (isOpen = !isOpen)}
     >
         <span class="text-white text-lg font-bold">{locale.t("lang.name")}</span>
@@ -33,12 +33,12 @@
 
     {#if isOpen}
         <div transition:fly={{ y: -10, duration: 200 }}
-             class="pal-panel absolute w-full mt-[10px] z-20 overflow-hidden">
+             class="pal-select absolute w-full mt-[10px] z-20 overflow-hidden">
             <div class="flex flex-col max-h-[320px] overflow-y-auto">
                 {#each Object.entries(Locales) as [lang, label]}
                     {#if lang !== locale.locale}
                         <button
-                            class="w-full px-4 py-2.5 flex items-center justify-between hover:bg-white/10 active:bg-white/15 transition-colors duration-150 group"
+                            class="w-full px-4 py-2.5 flex items-center justify-between cursor-pointer hover:bg-white/10 active:bg-white/15 transition-colors duration-150 group"
                             onclick={(e) => {
                                 e.preventDefault();
                                 changeLanguage(lang as LocaleCode);

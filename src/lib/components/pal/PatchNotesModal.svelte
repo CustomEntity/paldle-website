@@ -25,7 +25,7 @@
     {#snippet content()}
         {#await notesPromise}
             <div class="flex flex-col space-y-4 items-center justify-center min-h-[200px]">
-                <span class="text-[#16324e] text-lg">{locale.t("components.patchNotes.loading")}</span>
+                <span class="text-[#dbeafe] text-lg">{locale.t("components.patchNotes.loading")}</span>
                 <Spinner />
             </div>
         {:then notes}
@@ -33,7 +33,7 @@
                 {#each notes as note}
                     <div class="pal-tile flex flex-col space-y-2 p-4 w-full max-w-[420px] bg-white/70">
                         <span class="text-lg self-center text-[#0f7fa8] font-bold">{note.date}</span>
-                        <div class="text-[#16324e] text-sm whitespace-pre-wrap">{note.content}</div>
+                        <div class="text-[#dbeafe] text-sm whitespace-pre-wrap">{note.content}</div>
                     </div>
                 {:else}
                     <div class="pal-tile flex flex-col space-y-2 p-4 w-full max-w-[420px] bg-white/70">

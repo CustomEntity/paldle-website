@@ -1,0 +1,312 @@
+{
+	"lang": {
+		"name": "Tiếng Việt"
+	},
+	"layout": {
+		"header": {
+			"home_link": "Về trang chủ Paldle",
+			"logo_alt": "Logo Paldle"
+		},
+		"page_meta": {
+			"site_name": "Paldle",
+			"base_title": "Trò chơi đoán Palworld hằng ngày",
+			"base_description": "Paldle là trò chơi đoán Palworld hằng ngày. Đoán Pal của ngày qua ba chế độ: Cổ điển, Mô tả và Bóng hình."
+		},
+		"footer": {
+			"want_more": {
+				"title": "Muốn chơi thêm?",
+				"description": "Khám phá những trò chơi đoán hằng ngày khác trong gia đình -dle."
+			},
+			"accessibility": {
+				"discord": "Tham gia Discord của chúng tôi",
+				"information": "Về Paldle",
+				"kofi": "Ủng hộ chúng tôi trên Ko-fi",
+				"x": "Theo dõi chúng tôi trên X",
+				"reddit": "Ghé thăm subreddit của chúng tôi"
+			},
+			"copyright": "Paldle - {year}"
+		},
+		"modals": {
+			"about": {
+				"title": "Về Paldle",
+				"discover": "Paldle là trò chơi đoán miễn phí hằng ngày dành cho fan Palworld. Mỗi ngày một Pal mới được chọn — quay lại vào ngày mai để có câu đố mới.",
+				"disclaimer": "Paldle là dự án do fan tạo ra và không liên kết, không được chứng thực hay tài trợ bởi Pocketpair, Inc. Palworld cùng mọi tên gọi và tài nguyên liên quan thuộc quyền sở hữu của Pocketpair.",
+				"game_modes": {
+					"title": "Các chế độ chơi",
+					"description": "Cổ điển: đoán Pal qua các thuộc tính. Mô tả: đoán Pal qua mục Paldeck. Bóng hình: đoán Pal qua hình dáng. Âm thanh: đoán Pal qua tiếng kêu."
+				},
+				"dle_games": {
+					"title": "Gia đình -dle",
+					"description": "Paldle là một phần của gia đình các trò chơi đoán hằng ngày. Tìm tất cả ở chân trang bên dưới."
+				},
+				"commitment": {
+					"title": "Cam kết của chúng tôi",
+					"description": "Paldle miễn phí để chơi và sẽ luôn như vậy. Chúng tôi cập nhật dữ liệu mỗi khi có Pal mới được thêm vào trò chơi."
+				},
+				"inspiration": {
+					"title": "Nguồn cảm hứng",
+					"description": "Paldle lấy cảm hứng từ Wordle và nhiều trò chơi -dle tuyệt vời của cộng đồng."
+				},
+				"credit": {
+					"title": "Ghi công",
+					"description": "Dữ liệu và hình ảnh Pal thuộc về Pocketpair, Inc. Được làm với tình yêu bởi cộng đồng."
+				},
+				"privacy": {
+					"title": "Quyền riêng tư",
+					"description": "Chúng tôi sử dụng công cụ phân tích tôn trọng quyền riêng tư. Xem chính sách quyền riêng tư để biết chi tiết."
+				},
+				"thanks": "Cảm ơn bạn đã chơi, chúc bạn vui và bắt trọn tất cả!",
+				"signature": {
+					"regards": "Thân thương,",
+					"team": "Đội ngũ Paldle"
+				}
+			}
+		}
+	},
+	"components": {
+		"answerInput": {
+			"states": {
+				"loading": "Đang tải...",
+				"no_result": "Không có kết quả"
+			},
+			"button": {
+				"submit": {
+					"title": "Đoán"
+				}
+			}
+		},
+		"victoryContainer": {
+			"congratulations": "Chơi hay lắm! Bạn đã tìm ra <name>{name}</name>!",
+			"image": {
+				"alt": "Hình ảnh Pal"
+			},
+			"you_found": "Bạn đã tìm ra",
+			"number_of_tries": "Số lần đoán: {count}",
+			"stats_button": "Thống kê của tôi",
+			"next": {
+				"timer": "Pal tiếp theo sau",
+				"mode": "Chế độ tiếp theo:"
+			}
+		},
+		"shareContainer": {
+			"buttons": {
+				"copy": {
+					"title": "Sao chép",
+					"aria_label": "Sao chép kết quả vào bộ nhớ tạm"
+				},
+				"tweet": {
+					"title": "Đăng tweet",
+					"aria_label": "Chia sẻ trên X (Twitter)"
+				}
+			},
+			"and_more": "và {count} nữa..."
+		},
+		"toolsBar": {
+			"stats": {
+				"tooltip": "Thống kê",
+				"alt": "Thống kê"
+			},
+			"streak": {
+				"tooltip": "Chuỗi hiện tại",
+				"active": "Chuỗi đang hoạt động",
+				"inactive": "Không có chuỗi nào"
+			},
+			"patchNotes": {
+				"tooltip": "Nhật ký cập nhật",
+				"alt": "Nhật ký cập nhật"
+			},
+			"howToPlay": {
+				"tooltip": "Cách chơi"
+			}
+		},
+		"stats": {
+			"title": "Thống kê của bạn",
+			"metrics": {
+				"games_won": "Ván thắng",
+				"average_tries": "Số lần đoán TB",
+				"one_shots": "Đoán trúng ngay",
+				"current_streak": "Chuỗi",
+				"best_streak": "Chuỗi tốt nhất"
+			},
+			"graph": {
+				"label": "Lần đoán",
+				"title": "Số lần đoán mỗi ngày",
+				"fallback": "Biểu đồ số lần đoán mỗi ngày"
+			}
+		},
+		"patchNotes": {
+			"title": "Nhật ký cập nhật",
+			"loading": "Đang tải nhật ký cập nhật...",
+			"empty": "Chưa có nhật ký cập nhật.",
+			"error": "Không thể tải nhật ký cập nhật."
+		}
+	},
+	"pages": {
+		"home": {
+			"title": "Đoán Pal của ngày",
+			"button": {
+				"classic": {
+					"title": "Cổ điển",
+					"description": "Đoán Pal qua các thuộc tính."
+				},
+				"description": {
+					"title": "Mô tả",
+					"description": "Đoán Pal qua mục Paldeck."
+				},
+				"silhouette": {
+					"title": "Bóng hình",
+					"description": "Đoán Pal qua hình dáng."
+				},
+				"sound": {
+					"title": "Âm thanh",
+					"description": "Đoán Pal qua tiếng kêu."
+				}
+			}
+		},
+		"classic": {
+			"page_meta": {
+				"title": "Cổ điển",
+				"description": "Đoán Pal Palworld của hôm nay qua nguyên tố, độ hiếm, kích thước, khả năng lao động và nhiều hơn nữa."
+			},
+			"placeholder": "Nhập tên một Pal...",
+			"explanation": {
+				"title": "Đoán Pal của hôm nay",
+				"hint": "Mỗi lần đoán sẽ tiết lộ các thuộc tính của Pal so với Pal bí ẩn như thế nào."
+			},
+			"yesterday": "Pal hôm qua #{gameId} là {name}",
+			"share": {
+				"text": "Tôi đã tìm ra Pal Cổ điển #Paldle #{id} sau {tries} lần đoán!",
+				"to_copy": "Tôi đã tìm ra Pal Cổ điển #Paldle #{id} sau {tries} lần đoán!\n{url}"
+			},
+			"errors": {
+				"generic": "Đã xảy ra lỗi: {message}",
+				"no_daily": "Chưa có Pal nào được đặt cho hôm nay — hãy quay lại sớm nhé!"
+			},
+			"how_to": {
+				"title": "Cách chơi — Cổ điển",
+				"body": "<p>Đoán Pal bí ẩn của ngày. Sau mỗi lần đoán, mỗi cột sẽ cho biết Pal của bạn so với đáp án như thế nào.</p><ul class='list-disc pl-5'><li><b>Xanh lá</b> — khớp chính xác.</li><li><b>Cam</b> — khớp một phần (trùng một số nguyên tố hoặc loại lao động).</li><li><b>Đỏ</b> — không khớp.</li><li><b>Mũi tên</b> — giá trị của đáp án cao hơn hoặc thấp hơn (số Paldeck, độ hiếm, kích thước).</li></ul><p>Mỗi ngày một Pal mới được chọn.</p>"
+			},
+			"attributes": {
+				"headers": {
+					"pal": "Pal",
+					"paldeck": "Số",
+					"elements": "Nguyên tố",
+					"rarity": "Độ hiếm",
+					"size": "Kích thước",
+					"work": "Lao động",
+					"mount": "Cưỡi",
+					"nocturnal": "Về đêm"
+				},
+				"elements": {
+					"Neutral": "Vô tính",
+					"Fire": "Lửa",
+					"Water": "Nước",
+					"Electric": "Điện",
+					"Grass": "Cỏ",
+					"Ice": "Băng",
+					"Ground": "Đất",
+					"Dark": "Bóng tối",
+					"Dragon": "Rồng"
+				},
+				"size": {
+					"XS": "XS",
+					"S": "S",
+					"M": "M",
+					"L": "L",
+					"XL": "XL"
+				},
+				"mount": {
+					"None": "Không",
+					"Ground": "Trên cạn",
+					"Flying": "Bay",
+					"Swimming": "Bơi"
+				},
+				"nocturnal": {
+					"yes": "Có",
+					"no": "Không"
+				},
+				"work": {
+					"Kindling": "Nhóm lửa",
+					"Watering": "Tưới nước",
+					"Planting": "Trồng trọt",
+					"Electricity": "Phát điện",
+					"Handiwork": "Thủ công",
+					"Gathering": "Thu hoạch",
+					"Lumbering": "Đốn gỗ",
+					"Mining": "Khai khoáng",
+					"OilExtraction": "Khai thác dầu",
+					"Medicine": "Chế thuốc",
+					"Cooling": "Làm mát",
+					"Transporting": "Vận chuyển",
+					"Farming": "Chăn nuôi"
+				}
+			}
+		},
+		"description": {
+			"page_meta": {
+				"title": "Mô tả",
+				"description": "Đoán Pal Palworld của hôm nay qua phần mô tả Paldeck."
+			},
+			"title": "Đoán Pal qua mục Paldeck",
+			"placeholder": "Nhập tên một Pal...",
+			"hint": {
+				"size": "Kích thước: {size}",
+				"mount": "Cưỡi: {mount}"
+			},
+			"yesterday": "Pal hôm qua #{gameId} là {name}",
+			"share": {
+				"text": "Tôi đã tìm ra Pal Mô tả #Paldle #{id} sau {tries} lần đoán!",
+				"to_copy": "Tôi đã tìm ra Pal Mô tả #Paldle #{id} sau {tries} lần đoán!\n{url}"
+			},
+			"errors": {
+				"no_daily": "Chưa có Pal nào được đặt cho hôm nay — hãy quay lại sớm nhé!"
+			},
+			"how_to": {
+				"title": "Cách chơi — Mô tả",
+				"body": "<p>Đọc phần mô tả Paldeck của Pal bí ẩn và đoán xem đó là ai.</p><p>Mỗi lần đoán sai sẽ hé lộ thêm một gợi ý — nguyên tố, kích thước, rồi đến loại cưỡi.</p><p>Mỗi ngày một Pal mới được chọn.</p>"
+			}
+		},
+		"silhouette": {
+			"page_meta": {
+				"title": "Bóng hình",
+				"description": "Đoán Pal Palworld của hôm nay qua bóng hình."
+			},
+			"title": "Đoán Pal qua bóng hình",
+			"placeholder": "Nhập tên một Pal...",
+			"hint": "Nhìn hình dáng và đoán Pal.",
+			"yesterday": "Pal hôm qua #{gameId} là {name}",
+			"share": {
+				"text": "Tôi đã tìm ra Pal Bóng hình #Paldle #{id} sau {tries} lần đoán!",
+				"to_copy": "Tôi đã tìm ra Pal Bóng hình #Paldle #{id} sau {tries} lần đoán!\n{url}"
+			},
+			"errors": {
+				"no_daily": "Chưa có Pal nào được đặt cho hôm nay — hãy quay lại sớm nhé!"
+			},
+			"how_to": {
+				"title": "Cách chơi — Bóng hình",
+				"body": "<p>Một Pal được hiển thị dưới dạng bóng hình đen. Đoán đó là Pal nào qua hình dáng.</p><p>Hình ảnh đầy đủ sẽ hiện ra khi bạn tìm đúng.</p><p>Mỗi ngày một Pal mới được chọn.</p>"
+			}
+		},
+		"sound": {
+			"page_meta": {
+				"title": "Âm thanh",
+				"description": "Đoán Pal Palworld của hôm nay qua tiếng kêu."
+			},
+			"title": "Đoán Pal qua tiếng kêu",
+			"placeholder": "Nhập tên một Pal...",
+			"hint": "Nghe tiếng kêu và đoán Pal.",
+			"yesterday": "Pal hôm qua #{gameId} là {name}",
+			"share": {
+				"text": "Tôi đã tìm ra Pal Âm thanh #Paldle #{id} sau {tries} lần đoán!",
+				"to_copy": "Tôi đã tìm ra Pal Âm thanh #Paldle #{id} sau {tries} lần đoán!\n{url}"
+			},
+			"errors": {
+				"no_daily": "Chưa có Pal nào được đặt cho hôm nay — hãy quay lại sớm nhé!"
+			},
+			"how_to": {
+				"title": "Cách chơi — Âm thanh",
+				"body": "<p>Nghe tiếng kêu của một Pal và đoán đó là Pal nào.</p><p>Hình ảnh đầy đủ sẽ hiện ra khi bạn tìm đúng.</p><p>Mỗi ngày một Pal mới được chọn.</p>"
+			}
+		}
+	}
+}

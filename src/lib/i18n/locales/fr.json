@@ -144,7 +144,6 @@
 	"pages": {
 		"home": {
 			"title": "Devinez le Pal du jour",
-			"subtitle": "Un jeu quotidien Palworld — trois modes, un nouveau Pal chaque jour.",
 			"button": {
 				"classic": {
 					"title": "Classique",
@@ -185,7 +184,7 @@
 			},
 			"how_to": {
 				"title": "Comment jouer — Classique",
-				"body": "<p>Devinez le Pal mystère du jour. Après chaque essai, chaque colonne indique comment votre Pal se compare à la réponse.</p><ul class='list-disc pl-5'><li><b>Vert</b> — correspondance exacte.</li><li><b>Orange</b> — correspondance partielle (éléments ou travaux en commun).</li><li><b>Rouge</b> — aucune correspondance.</li><li><b>Flèches</b> — la valeur de la réponse est plus haute ou plus basse (numéro Paldeck, rareté, taille).</li></ul><p>Un nouveau Pal est choisi chaque jour.</p>"
+				"body": "<p>Devinez le <b>Pal mystère du jour</b>. Tapez le nom de n'importe quel Pal — essais illimités.</p><p>Après chaque essai, chaque colonne se colore pour montrer comment votre Pal se compare à la réponse du jour :</p><ul class='list-disc pl-5'><li><b style='color:#2ec27e'>Vert</b> — correspondance exacte.</li><li><b style='color:#f2a33c'>Orange</b> — correspondance partielle (ex. un de ses deux éléments, ou certaines de ses aptitudes au travail, en commun).</li><li><b style='color:#e5484d'>Rouge</b> — aucune correspondance.</li></ul><p>Les colonnes sont : le <b>numéro Paldeck</b>, le(s) <b>Élément(s)</b>, la <b>Rareté</b>, la <b>Taille</b>, les <b>Aptitudes au travail</b>, le type de <b>Monture</b> et s'il est <b>Nocturne</b>.</p><p>Sur les colonnes chiffrées (<b>N° Paldeck</b>, <b>Rareté</b>, <b>Taille</b>), une flèche <b>↑</b> ou <b>↓</b> indique que la valeur de la réponse est plus haute ou plus basse que votre essai.</p><p>Un nouveau Pal est choisi chaque jour — revenez demain !</p>"
 			},
 			"attributes": {
 				"headers": {
@@ -264,7 +263,7 @@
 			},
 			"how_to": {
 				"title": "Comment jouer — Description",
-				"body": "<p>Lisez la description du Paldeck du Pal mystère et devinez de qui il s'agit.</p><p>Chaque mauvais essai dévoile un indice supplémentaire — élément, taille, puis type de monture.</p><p>Un nouveau Pal est choisi chaque jour.</p>"
+				"body": "<p>Lisez la <b>fiche du Paldeck</b> du Pal mystère et devinez de qui il s'agit.</p><p>Son nom est masqué : repérez les détails révélateurs dans le texte.</p><p>Chaque mauvais essai dévoile un indice de plus — d'abord son <b>Élément</b>, puis sa <b>Taille</b>, puis son type de <b>Monture</b>.</p><p>L'illustration complète est révélée quand vous le trouvez. Un nouveau Pal est choisi chaque jour.</p>"
 			}
 		},
 		"silhouette": {
@@ -285,7 +284,7 @@
 			},
 			"how_to": {
 				"title": "Comment jouer — Silhouette",
-				"body": "<p>Un Pal est affiché en silhouette noire. Devinez de quel Pal il s'agit d'après sa forme.</p><p>L'illustration complète est révélée quand vous le trouvez.</p><p>Un nouveau Pal est choisi chaque jour.</p>"
+				"body": "<p>Seule la <b>silhouette noire</b> du Pal est affichée — devinez de quel Pal il s'agit d'après sa forme.</p><p>Tapez le nom de n'importe quel Pal ; essais illimités.</p><p>L'illustration en couleur est révélée dès que vous le trouvez. Un nouveau Pal est choisi chaque jour.</p>"
 			}
 		},
 		"sound": {
@@ -306,7 +305,7 @@
 			},
 			"how_to": {
 				"title": "Comment jouer — Son",
-				"body": "<p>Écoutez le cri d'un Pal et devinez de quel Pal il s'agit.</p><p>L'illustration complète est révélée quand vous le trouvez.</p><p>Un nouveau Pal est choisi chaque jour.</p>"
+				"body": "<p>Appuyez sur lecture pour entendre le <b>cri</b> du Pal mystère, puis devinez lequel c'est.</p><p>Réécoutez le son autant de fois que vous voulez — essais illimités.</p><p>L'illustration du Pal est révélée quand vous le trouvez. Un nouveau Pal est choisi chaque jour.</p>"
 			}
 		}
 	}

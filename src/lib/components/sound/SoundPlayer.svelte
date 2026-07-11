@@ -54,23 +54,33 @@
 </button>
 
 <style>
+    /* Datamined Palworld circle slot (item_base) + segmented tech ring (icon_circle_f). */
     .player {
         position: relative;
-        width: 132px;
-        height: 132px;
-        border-radius: 50%;
-        border: 3px solid var(--accent);
-        background: rgba(8, 20, 36, 0.6);
-        box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.12), 0 8px 24px rgba(3, 12, 24, 0.4);
+        width: 144px;
+        height: 144px;
+        border: none;
+        background: url("/ui/da2/playface.webp") center / 78% 78% no-repeat;
+        filter: drop-shadow(0 8px 22px rgba(3, 12, 24, 0.45));
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.15s ease;
+        transition: transform 0.15s ease, filter 0.15s ease;
     }
-    .player:hover { transform: translateY(-2px); filter: brightness(1.08); box-shadow: 0 12px 30px rgba(3, 12, 24, 0.5), 0 0 0 3px var(--accent); }
+    .player::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("/ui/da2/playring.webp") center / contain no-repeat;
+        transition: transform 0.4s ease;
+    }
+    .player:hover { transform: translateY(-2px); filter: drop-shadow(0 12px 28px rgba(3, 12, 24, 0.55)) brightness(1.08); }
+    .player:hover::before { transform: rotate(30deg); }
+    .player.playing::before { animation: spin 6s linear infinite; }
     .player:active { transform: translateY(0); }
-    .player svg { width: 56px; height: 56px; z-index: 1; }
+    .player svg { width: 54px; height: 54px; z-index: 1; }
+    @keyframes spin { to { transform: rotate(360deg); } }
 
     .ring {
         position: absolute;

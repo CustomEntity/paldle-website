@@ -131,14 +131,13 @@
                             class="w-full"
                             text={shareText(daily.game_id, gameData.tries.length)}
                             copyText={copyText(daily.game_id, gameData.tries.length)}
-                            websiteUrl={WEBSITE_URL}
-                            tries={gameData.tries.map((id) => ({ r: id === daily.pal.id ? "CORRECT" : "INCORRECT" }))} />
+                            websiteUrl={WEBSITE_URL} />
                     </div>
                 {/if}
 
                 {#if yesterday}
                     <span class="flex gap-2 text-lg mt-6 pal-title text-white">
-                        {locale.t("pages.silhouette.yesterday", { gameId: yesterday.game_id, name: yesterday.name })}
+                        {@html locale.t("pages.silhouette.yesterday", { gameId: yesterday.game_id, name: `<span style="color:#7fe3f2;font-weight:700">${yesterday.name}</span>` })}
                     </span>
                 {/if}
             {/if}

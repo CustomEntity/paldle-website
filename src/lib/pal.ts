@@ -16,6 +16,27 @@ export const ELEMENT_COLORS: Record<string, string> = {
 
 export const elementColor = (el: string): string => ELEMENT_COLORS[el] ?? '#a9b0bd';
 
+// Per-work-suitability accent colours. Palworld color-codes work types (see the game's
+// E_PalUIWorkSuitabilityGaugeColorType); the raw WorkRank icons are white glyphs, so we
+// tint a tile behind each one with its theme colour. Keys match pal.work_keys labels.
+export const WORK_COLORS: Record<string, string> = {
+	Kindling: '#ff6b3d',
+	Watering: '#38a5f0',
+	Planting: '#56c95a',
+	Electricity: '#f5c531',
+	Handiwork: '#e0a53a',
+	Gathering: '#8fce54',
+	Lumbering: '#c8934e',
+	Mining: '#9aa7b4',
+	OilExtraction: '#8a79a0',
+	Medicine: '#ec6a8f',
+	Cooling: '#6fdce8',
+	Transporting: '#6d9ad6',
+	Farming: '#7cb342'
+};
+
+export const workColor = (label: string): string => WORK_COLORS[label] ?? '#7f8a99';
+
 // tint used behind a Pal icon in the grid (blend of its first element)
 export function palTint(pal: Pick<Pal, 'elements'>): string {
 	const c = elementColor(pal.elements?.[0] ?? 'Neutral');

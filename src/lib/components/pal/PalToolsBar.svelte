@@ -66,7 +66,7 @@
             {locale.t(`pages.${mode}.how_to.title` as any)}
         {/snippet}
         {#snippet content()}
-            <div class="flex flex-col gap-3 text-left text-[#16324e] leading-relaxed">
+            <div class="flex flex-col gap-3 text-left text-[#dbeafe] leading-relaxed">
                 {@html locale.t(`pages.${mode}.how_to.body` as any)}
             </div>
         {/snippet}

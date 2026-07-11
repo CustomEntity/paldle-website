@@ -1,0 +1,312 @@
+{
+	"lang": {
+		"name": "한국어"
+	},
+	"layout": {
+		"header": {
+			"home_link": "Paldle 홈으로 돌아가기",
+			"logo_alt": "Paldle 로고"
+		},
+		"page_meta": {
+			"site_name": "Paldle",
+			"base_title": "매일 즐기는 Palworld 추측 게임",
+			"base_description": "Paldle은 매일 즐기는 Palworld 추측 게임입니다. 클래식, 설명, 실루엣 세 가지 모드로 오늘의 Pal을 맞혀 보세요."
+		},
+		"footer": {
+			"want_more": {
+				"title": "더 즐기고 싶나요?",
+				"description": "-dle 시리즈의 다른 데일리 추측 게임들도 만나 보세요."
+			},
+			"accessibility": {
+				"discord": "Discord 참여하기",
+				"information": "Paldle 소개",
+				"kofi": "Ko-fi에서 후원하기",
+				"x": "X에서 팔로우하기",
+				"reddit": "서브레딧 방문하기"
+			},
+			"copyright": "Paldle - {year}"
+		},
+		"modals": {
+			"about": {
+				"title": "Paldle 소개",
+				"discover": "Paldle은 Palworld 팬을 위한 무료 데일리 추측 게임입니다. 매일 새로운 Pal이 선정되니 내일 또 새로운 퍼즐을 즐기러 오세요.",
+				"disclaimer": "Paldle은 팬이 만든 프로젝트이며 Pocketpair, Inc.와 제휴하거나 후원 또는 보증을 받지 않습니다. Palworld 및 관련된 모든 이름과 에셋은 Pocketpair의 자산입니다.",
+				"game_modes": {
+					"title": "게임 모드",
+					"description": "클래식: 속성으로 Pal을 맞혀 보세요. 설명: Paldeck 도감 설명으로 Pal을 맞혀 보세요. 실루엣: 형태로 Pal을 맞혀 보세요. 소리: 울음소리로 Pal을 맞혀 보세요."
+				},
+				"dle_games": {
+					"title": "-dle 시리즈",
+					"description": "Paldle은 데일리 추측 게임 시리즈의 일원입니다. 아래 푸터에서 모두 만나 보세요."
+				},
+				"commitment": {
+					"title": "우리의 약속",
+					"description": "Paldle은 무료로 즐길 수 있으며 앞으로도 계속 그럴 것입니다. 새로운 Pal이 게임에 추가될 때마다 데이터를 최신 상태로 유지합니다."
+				},
+				"inspiration": {
+					"title": "영감",
+					"description": "Paldle은 Wordle과 커뮤니티가 만든 수많은 멋진 -dle 게임에서 영감을 받았습니다."
+				},
+				"credit": {
+					"title": "크레딧",
+					"description": "Pal 데이터와 아트워크는 Pocketpair, Inc.의 소유입니다. 커뮤니티가 사랑을 담아 만들었습니다."
+				},
+				"privacy": {
+					"title": "개인정보 보호",
+					"description": "개인정보를 존중하는 분석 도구를 사용합니다. 자세한 내용은 개인정보 처리방침을 참고하세요."
+				},
+				"thanks": "플레이해 주셔서 감사합니다. 모두 잡으며 즐거운 시간 보내세요!",
+				"signature": {
+					"regards": "사랑을 담아,",
+					"team": "Paldle 팀 드림"
+				}
+			}
+		}
+	},
+	"components": {
+		"answerInput": {
+			"states": {
+				"loading": "불러오는 중...",
+				"no_result": "결과 없음"
+			},
+			"button": {
+				"submit": {
+					"title": "추측"
+				}
+			}
+		},
+		"victoryContainer": {
+			"congratulations": "잘했어요! <name>{name}</name>을(를) 찾았습니다!",
+			"image": {
+				"alt": "Pal 아트워크"
+			},
+			"you_found": "찾은 Pal:",
+			"number_of_tries": "추측 횟수: {count}",
+			"stats_button": "내 통계",
+			"next": {
+				"timer": "다음 Pal까지",
+				"mode": "다음 모드:"
+			}
+		},
+		"shareContainer": {
+			"buttons": {
+				"copy": {
+					"title": "복사",
+					"aria_label": "결과를 클립보드에 복사"
+				},
+				"tweet": {
+					"title": "트윗",
+					"aria_label": "X(Twitter)에 공유"
+				}
+			},
+			"and_more": "외 {count}개 더..."
+		},
+		"toolsBar": {
+			"stats": {
+				"tooltip": "통계",
+				"alt": "통계"
+			},
+			"streak": {
+				"tooltip": "현재 연속 기록",
+				"active": "연속 기록 진행 중",
+				"inactive": "진행 중인 연속 기록 없음"
+			},
+			"patchNotes": {
+				"tooltip": "변경 사항",
+				"alt": "변경 사항"
+			},
+			"howToPlay": {
+				"tooltip": "게임 방법"
+			}
+		},
+		"stats": {
+			"title": "내 통계",
+			"metrics": {
+				"games_won": "승리한 게임",
+				"average_tries": "평균 추측",
+				"one_shots": "한 번에 맞힘",
+				"current_streak": "연속 기록",
+				"best_streak": "최고 연속 기록"
+			},
+			"graph": {
+				"label": "추측",
+				"title": "일별 추측 횟수",
+				"fallback": "일별 추측 횟수 차트"
+			}
+		},
+		"patchNotes": {
+			"title": "변경 사항",
+			"loading": "변경 사항을 불러오는 중...",
+			"empty": "아직 변경 사항이 없습니다.",
+			"error": "변경 사항을 불러올 수 없습니다."
+		}
+	},
+	"pages": {
+		"home": {
+			"title": "오늘의 Pal을 맞혀 보세요",
+			"button": {
+				"classic": {
+					"title": "클래식",
+					"description": "속성으로 Pal을 맞혀 보세요."
+				},
+				"description": {
+					"title": "설명",
+					"description": "Paldeck 도감 설명으로 Pal을 맞혀 보세요."
+				},
+				"silhouette": {
+					"title": "실루엣",
+					"description": "형태로 Pal을 맞혀 보세요."
+				},
+				"sound": {
+					"title": "소리",
+					"description": "울음소리로 Pal을 맞혀 보세요."
+				}
+			}
+		},
+		"classic": {
+			"page_meta": {
+				"title": "클래식",
+				"description": "속성, 희귀도, 크기, 작업 적성 등으로 오늘의 Palworld Pal을 맞혀 보세요."
+			},
+			"placeholder": "Pal 이름 입력...",
+			"explanation": {
+				"title": "오늘의 Pal을 맞혀 보세요",
+				"hint": "추측할 때마다 그 속성이 미스터리 Pal과 어떻게 비교되는지 알려 줍니다."
+			},
+			"yesterday": "어제의 Pal #{gameId}은(는) {name}이었습니다",
+			"share": {
+				"text": "#Paldle 클래식 Pal #{id}을(를) {tries}번 만에 맞혔어요!",
+				"to_copy": "#Paldle 클래식 Pal #{id}을(를) {tries}번 만에 맞혔어요!\n{url}"
+			},
+			"errors": {
+				"generic": "문제가 발생했습니다: {message}",
+				"no_daily": "아직 오늘의 Pal이 설정되지 않았어요 — 잠시 후 다시 확인해 주세요!"
+			},
+			"how_to": {
+				"title": "게임 방법 — 클래식",
+				"body": "<p>오늘의 미스터리 Pal을 맞혀 보세요. 추측할 때마다 각 열이 여러분의 Pal과 정답을 비교해 보여 줍니다.</p><ul class='list-disc pl-5'><li><b>초록색</b> — 정확히 일치.</li><li><b>주황색</b> — 부분 일치(일부 속성 또는 작업 종류가 겹침).</li><li><b>빨간색</b> — 일치하지 않음.</li><li><b>화살표</b> — 정답의 값이 더 높거나 낮음(Paldeck 번호, 희귀도, 크기).</li></ul><p>매일 새로운 Pal이 선정됩니다.</p>"
+			},
+			"attributes": {
+				"headers": {
+					"pal": "Pal",
+					"paldeck": "번호",
+					"elements": "속성",
+					"rarity": "희귀도",
+					"size": "크기",
+					"work": "작업",
+					"mount": "탈것",
+					"nocturnal": "야행성"
+				},
+				"elements": {
+					"Neutral": "무속성",
+					"Fire": "화염",
+					"Water": "물",
+					"Electric": "번개",
+					"Grass": "풀",
+					"Ice": "얼음",
+					"Ground": "땅",
+					"Dark": "어둠",
+					"Dragon": "드래곤"
+				},
+				"size": {
+					"XS": "XS",
+					"S": "S",
+					"M": "M",
+					"L": "L",
+					"XL": "XL"
+				},
+				"mount": {
+					"None": "없음",
+					"Ground": "지상",
+					"Flying": "비행",
+					"Swimming": "수영"
+				},
+				"nocturnal": {
+					"yes": "예",
+					"no": "아니오"
+				},
+				"work": {
+					"Kindling": "불 피우기",
+					"Watering": "물 주기",
+					"Planting": "파종",
+					"Electricity": "발전",
+					"Handiwork": "수작업",
+					"Gathering": "채집",
+					"Lumbering": "벌목",
+					"Mining": "채굴",
+					"OilExtraction": "석유 채굴",
+					"Medicine": "제약",
+					"Cooling": "냉각",
+					"Transporting": "운반",
+					"Farming": "목장"
+				}
+			}
+		},
+		"description": {
+			"page_meta": {
+				"title": "설명",
+				"description": "Paldeck 도감 설명으로 오늘의 Palworld Pal을 맞혀 보세요."
+			},
+			"title": "Paldeck 도감 설명으로 Pal을 맞혀 보세요",
+			"placeholder": "Pal 이름 입력...",
+			"hint": {
+				"size": "크기: {size}",
+				"mount": "탈것: {mount}"
+			},
+			"yesterday": "어제의 Pal #{gameId}은(는) {name}이었습니다",
+			"share": {
+				"text": "#Paldle 설명 Pal #{id}을(를) {tries}번 만에 맞혔어요!",
+				"to_copy": "#Paldle 설명 Pal #{id}을(를) {tries}번 만에 맞혔어요!\n{url}"
+			},
+			"errors": {
+				"no_daily": "아직 오늘의 Pal이 설정되지 않았어요 — 잠시 후 다시 확인해 주세요!"
+			},
+			"how_to": {
+				"title": "게임 방법 — 설명",
+				"body": "<p>미스터리 Pal의 Paldeck 도감 설명을 읽고 누구인지 맞혀 보세요.</p><p>추측이 틀릴 때마다 추가 힌트가 공개됩니다 — 속성, 크기, 그다음 탈것 종류.</p><p>매일 새로운 Pal이 선정됩니다.</p>"
+			}
+		},
+		"silhouette": {
+			"page_meta": {
+				"title": "실루엣",
+				"description": "실루엣으로 오늘의 Palworld Pal을 맞혀 보세요."
+			},
+			"title": "실루엣으로 Pal을 맞혀 보세요",
+			"placeholder": "Pal 이름 입력...",
+			"hint": "형태를 보고 Pal을 맞혀 보세요.",
+			"yesterday": "어제의 Pal #{gameId}은(는) {name}이었습니다",
+			"share": {
+				"text": "#Paldle 실루엣 Pal #{id}을(를) {tries}번 만에 맞혔어요!",
+				"to_copy": "#Paldle 실루엣 Pal #{id}을(를) {tries}번 만에 맞혔어요!\n{url}"
+			},
+			"errors": {
+				"no_daily": "아직 오늘의 Pal이 설정되지 않았어요 — 잠시 후 다시 확인해 주세요!"
+			},
+			"how_to": {
+				"title": "게임 방법 — 실루엣",
+				"body": "<p>Pal이 검은 실루엣으로 표시됩니다. 형태를 보고 어떤 Pal인지 맞혀 보세요.</p><p>맞히면 전체 아트워크가 공개됩니다.</p><p>매일 새로운 Pal이 선정됩니다.</p>"
+			}
+		},
+		"sound": {
+			"page_meta": {
+				"title": "소리",
+				"description": "울음소리로 오늘의 Palworld Pal을 맞혀 보세요."
+			},
+			"title": "울음소리로 Pal을 맞혀 보세요",
+			"placeholder": "Pal 이름 입력...",
+			"hint": "울음소리를 듣고 Pal을 맞혀 보세요.",
+			"yesterday": "어제의 Pal #{gameId}은(는) {name}이었습니다",
+			"share": {
+				"text": "#Paldle 소리 Pal #{id}을(를) {tries}번 만에 맞혔어요!",
+				"to_copy": "#Paldle 소리 Pal #{id}을(를) {tries}번 만에 맞혔어요!\n{url}"
+			},
+			"errors": {
+				"no_daily": "아직 오늘의 Pal이 설정되지 않았어요 — 잠시 후 다시 확인해 주세요!"
+			},
+			"how_to": {
+				"title": "게임 방법 — 소리",
+				"body": "<p>Pal의 울음소리를 듣고 어떤 Pal인지 맞혀 보세요.</p><p>맞히면 전체 아트워크가 공개됩니다.</p><p>매일 새로운 Pal이 선정됩니다.</p>"
+			}
+		}
+	}
+}

@@ -1,0 +1,312 @@
+{
+	"lang": {
+		"name": "Deutsch"
+	},
+	"layout": {
+		"header": {
+			"home_link": "Zurück zur Paldle-Startseite",
+			"logo_alt": "Paldle-Logo"
+		},
+		"page_meta": {
+			"site_name": "Paldle",
+			"base_title": "Tägliches Palworld-Ratespiel",
+			"base_description": "Paldle ist das tägliche Palworld-Ratespiel. Errate den Pal des Tages in drei Modi: Klassisch, Beschreibung und Silhouette."
+		},
+		"footer": {
+			"want_more": {
+				"title": "Lust auf mehr?",
+				"description": "Entdecke die anderen täglichen Ratespiele der -dle-Familie."
+			},
+			"accessibility": {
+				"discord": "Tritt unserem Discord bei",
+				"information": "Über Paldle",
+				"kofi": "Unterstütze uns auf Ko-fi",
+				"x": "Folge uns auf X",
+				"reddit": "Besuche unser Subreddit"
+			},
+			"copyright": "Paldle - {year}"
+		},
+		"modals": {
+			"about": {
+				"title": "Über Paldle",
+				"discover": "Paldle ist ein kostenloses tägliches Ratespiel für Palworld-Fans. Jeden Tag wird ein neuer Pal ausgewählt — komm morgen für ein neues Rätsel wieder.",
+				"disclaimer": "Paldle ist ein von Fans erstelltes Projekt und steht in keiner Verbindung zu Pocketpair, Inc., wird von ihnen weder unterstützt noch gesponsert. Palworld sowie alle zugehörigen Namen und Inhalte sind Eigentum von Pocketpair.",
+				"game_modes": {
+					"title": "Spielmodi",
+					"description": "Klassisch: Errate den Pal anhand seiner Attribute. Beschreibung: Errate den Pal anhand seines Paldeck-Eintrags. Silhouette: Errate den Pal anhand seiner Form. Sound: Errate den Pal anhand seines Rufs."
+				},
+				"dle_games": {
+					"title": "Die -dle-Familie",
+					"description": "Paldle ist Teil einer Familie täglicher Ratespiele. Du findest sie alle in der Fußzeile unten."
+				},
+				"commitment": {
+					"title": "Unser Versprechen",
+					"description": "Paldle ist kostenlos und wird es immer bleiben. Wir halten die Daten aktuell, sobald neue Pals ins Spiel kommen."
+				},
+				"inspiration": {
+					"title": "Inspiration",
+					"description": "Paldle ist von Wordle und den vielen großartigen -dle-Spielen der Community inspiriert."
+				},
+				"credit": {
+					"title": "Danksagungen",
+					"description": "Pal-Daten und -Artworks gehören Pocketpair, Inc. Mit Liebe von der Community erstellt."
+				},
+				"privacy": {
+					"title": "Datenschutz",
+					"description": "Wir nutzen datenschutzfreundliche Analysen. Details findest du in unserer Datenschutzerklärung."
+				},
+				"thanks": "Danke fürs Spielen und viel Spaß beim Fangen!",
+				"signature": {
+					"regards": "Mit Liebe,",
+					"team": "Das Paldle-Team"
+				}
+			}
+		}
+	},
+	"components": {
+		"answerInput": {
+			"states": {
+				"loading": "Lädt...",
+				"no_result": "Kein Ergebnis"
+			},
+			"button": {
+				"submit": {
+					"title": "Raten"
+				}
+			}
+		},
+		"victoryContainer": {
+			"congratulations": "Gut gemacht! Du hast <name>{name}</name> gefunden!",
+			"image": {
+				"alt": "Pal-Artwork"
+			},
+			"you_found": "Du hast gefunden",
+			"number_of_tries": "Anzahl der Versuche: {count}",
+			"stats_button": "Meine Statistiken",
+			"next": {
+				"timer": "Nächster Pal in",
+				"mode": "Nächster Modus:"
+			}
+		},
+		"shareContainer": {
+			"buttons": {
+				"copy": {
+					"title": "Kopieren",
+					"aria_label": "Ergebnis in die Zwischenablage kopieren"
+				},
+				"tweet": {
+					"title": "Tweeten",
+					"aria_label": "Auf X (Twitter) teilen"
+				}
+			},
+			"and_more": "und {count} weitere..."
+		},
+		"toolsBar": {
+			"stats": {
+				"tooltip": "Statistiken",
+				"alt": "Statistiken"
+			},
+			"streak": {
+				"tooltip": "Aktuelle Serie",
+				"active": "Aktive Serie",
+				"inactive": "Keine aktive Serie"
+			},
+			"patchNotes": {
+				"tooltip": "Änderungsprotokoll",
+				"alt": "Änderungsprotokoll"
+			},
+			"howToPlay": {
+				"tooltip": "Spielanleitung"
+			}
+		},
+		"stats": {
+			"title": "Deine Statistiken",
+			"metrics": {
+				"games_won": "Gewonnene Spiele",
+				"average_tries": "Ø Versuche",
+				"one_shots": "Erste Versuche",
+				"current_streak": "Serie",
+				"best_streak": "Beste Serie"
+			},
+			"graph": {
+				"label": "Versuche",
+				"title": "Versuche pro Tag",
+				"fallback": "Diagramm der Versuche pro Tag"
+			}
+		},
+		"patchNotes": {
+			"title": "Änderungsprotokoll",
+			"loading": "Änderungsprotokoll wird geladen...",
+			"empty": "Noch kein Änderungsprotokoll.",
+			"error": "Änderungsprotokoll konnte nicht geladen werden."
+		}
+	},
+	"pages": {
+		"home": {
+			"title": "Errate den Pal des Tages",
+			"button": {
+				"classic": {
+					"title": "Klassisch",
+					"description": "Errate den Pal anhand seiner Attribute."
+				},
+				"description": {
+					"title": "Beschreibung",
+					"description": "Errate den Pal anhand seines Paldeck-Eintrags."
+				},
+				"silhouette": {
+					"title": "Silhouette",
+					"description": "Errate den Pal anhand seiner Form."
+				},
+				"sound": {
+					"title": "Sound",
+					"description": "Errate den Pal anhand seines Rufs."
+				}
+			}
+		},
+		"classic": {
+			"page_meta": {
+				"title": "Klassisch",
+				"description": "Errate den heutigen Palworld-Pal anhand seines Elements, seiner Seltenheit, seiner Größe, seiner Arbeitseignungen und mehr."
+			},
+			"placeholder": "Pal-Namen eingeben...",
+			"explanation": {
+				"title": "Errate den Pal des Tages",
+				"hint": "Jeder Versuch zeigt, wie seine Attribute mit dem Geheimnis-Pal übereinstimmen."
+			},
+			"yesterday": "Der gestrige Pal Nr. {gameId} war {name}",
+			"share": {
+				"text": "Ich habe den #Paldle Klassisch-Pal Nr. {id} in {tries} Versuchen gefunden!",
+				"to_copy": "Ich habe den #Paldle Klassisch-Pal Nr. {id} in {tries} Versuchen gefunden!\n{url}"
+			},
+			"errors": {
+				"generic": "Etwas ist schiefgelaufen: {message}",
+				"no_daily": "Für heute ist noch kein Pal festgelegt — schau bald wieder vorbei!"
+			},
+			"how_to": {
+				"title": "Spielanleitung — Klassisch",
+				"body": "<p>Errate den Geheimnis-Pal des Tages. Nach jedem Versuch zeigt jede Spalte, wie dein Pal mit der Antwort übereinstimmt.</p><ul class='list-disc pl-5'><li><b>Grün</b> — exakte Übereinstimmung.</li><li><b>Orange</b> — teilweise Übereinstimmung (einige Elemente oder Arbeitsarten stimmen überein).</li><li><b>Rot</b> — keine Übereinstimmung.</li><li><b>Pfeile</b> — der Wert der Antwort ist höher oder niedriger (Paldeck-Nummer, Seltenheit, Größe).</li></ul><p>Jeden Tag wird ein neuer Pal ausgewählt.</p>"
+			},
+			"attributes": {
+				"headers": {
+					"pal": "Pal",
+					"paldeck": "Nr.",
+					"elements": "Element",
+					"rarity": "Seltenheit",
+					"size": "Größe",
+					"work": "Arbeit",
+					"mount": "Reittier",
+					"nocturnal": "Nachtaktiv"
+				},
+				"elements": {
+					"Neutral": "Neutral",
+					"Fire": "Feuer",
+					"Water": "Wasser",
+					"Electric": "Elektro",
+					"Grass": "Pflanze",
+					"Ice": "Eis",
+					"Ground": "Boden",
+					"Dark": "Finsternis",
+					"Dragon": "Drache"
+				},
+				"size": {
+					"XS": "XS",
+					"S": "S",
+					"M": "M",
+					"L": "L",
+					"XL": "XL"
+				},
+				"mount": {
+					"None": "Keins",
+					"Ground": "Boden",
+					"Flying": "Fliegend",
+					"Swimming": "Schwimmend"
+				},
+				"nocturnal": {
+					"yes": "Ja",
+					"no": "Nein"
+				},
+				"work": {
+					"Kindling": "Feuer entfachen",
+					"Watering": "Bewässerung",
+					"Planting": "Anpflanzen",
+					"Electricity": "Stromerzeugung",
+					"Handiwork": "Handarbeit",
+					"Gathering": "Sammeln",
+					"Lumbering": "Holzfällen",
+					"Mining": "Bergbau",
+					"OilExtraction": "Ölförderung",
+					"Medicine": "Medizin",
+					"Cooling": "Kühlung",
+					"Transporting": "Transport",
+					"Farming": "Farmarbeit"
+				}
+			}
+		},
+		"description": {
+			"page_meta": {
+				"title": "Beschreibung",
+				"description": "Errate den heutigen Palworld-Pal anhand seiner Paldeck-Beschreibung."
+			},
+			"title": "Errate den Pal anhand seines Paldeck-Eintrags",
+			"placeholder": "Pal-Namen eingeben...",
+			"hint": {
+				"size": "Größe: {size}",
+				"mount": "Reittier: {mount}"
+			},
+			"yesterday": "Der gestrige Pal Nr. {gameId} war {name}",
+			"share": {
+				"text": "Ich habe den #Paldle Beschreibung-Pal Nr. {id} in {tries} Versuchen gefunden!",
+				"to_copy": "Ich habe den #Paldle Beschreibung-Pal Nr. {id} in {tries} Versuchen gefunden!\n{url}"
+			},
+			"errors": {
+				"no_daily": "Für heute ist noch kein Pal festgelegt — schau bald wieder vorbei!"
+			},
+			"how_to": {
+				"title": "Spielanleitung — Beschreibung",
+				"body": "<p>Lies die Paldeck-Beschreibung des Geheimnis-Pals und errate, wer es ist.</p><p>Jeder falsche Versuch gibt einen zusätzlichen Hinweis frei — Element, Größe, dann Reittier-Typ.</p><p>Jeden Tag wird ein neuer Pal ausgewählt.</p>"
+			}
+		},
+		"silhouette": {
+			"page_meta": {
+				"title": "Silhouette",
+				"description": "Errate den heutigen Palworld-Pal anhand seiner Silhouette."
+			},
+			"title": "Errate den Pal anhand seiner Silhouette",
+			"placeholder": "Pal-Namen eingeben...",
+			"hint": "Sieh dir die Form an und errate den Pal.",
+			"yesterday": "Der gestrige Pal Nr. {gameId} war {name}",
+			"share": {
+				"text": "Ich habe den #Paldle Silhouette-Pal Nr. {id} in {tries} Versuchen gefunden!",
+				"to_copy": "Ich habe den #Paldle Silhouette-Pal Nr. {id} in {tries} Versuchen gefunden!\n{url}"
+			},
+			"errors": {
+				"no_daily": "Für heute ist noch kein Pal festgelegt — schau bald wieder vorbei!"
+			},
+			"how_to": {
+				"title": "Spielanleitung — Silhouette",
+				"body": "<p>Ein Pal wird als schwarze Silhouette angezeigt. Errate anhand seiner Form, welcher Pal es ist.</p><p>Das vollständige Artwork wird enthüllt, sobald du ihn findest.</p><p>Jeden Tag wird ein neuer Pal ausgewählt.</p>"
+			}
+		},
+		"sound": {
+			"page_meta": {
+				"title": "Sound",
+				"description": "Errate den heutigen Palworld-Pal anhand seines Rufs."
+			},
+			"title": "Errate den Pal anhand seines Rufs",
+			"placeholder": "Pal-Namen eingeben...",
+			"hint": "Hör dir den Ruf an und errate den Pal.",
+			"yesterday": "Der gestrige Pal Nr. {gameId} war {name}",
+			"share": {
+				"text": "Ich habe den #Paldle Sound-Pal Nr. {id} in {tries} Versuchen gefunden!",
+				"to_copy": "Ich habe den #Paldle Sound-Pal Nr. {id} in {tries} Versuchen gefunden!\n{url}"
+			},
+			"errors": {
+				"no_daily": "Für heute ist noch kein Pal festgelegt — schau bald wieder vorbei!"
+			},
+			"how_to": {
+				"title": "Spielanleitung — Sound",
+				"body": "<p>Hör dir den Ruf eines Pals an und errate, welcher Pal es ist.</p><p>Das vollständige Artwork wird enthüllt, sobald du ihn findest.</p><p>Jeden Tag wird ein neuer Pal ausgewählt.</p>"
+			}
+		}
+	}
+}

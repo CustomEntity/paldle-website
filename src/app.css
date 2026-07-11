@@ -1,19 +1,21 @@
 @import "tailwindcss";
 
 /* ============================================================================
-   Paldle design system — Palworld-flavoured, vivid pass.
-   Every UI surface goes through these classes, so the whole site is themed here.
-   This DA is intentionally quick — it will be redone once the game is datamined.
+   Paldle design system — rebuilt from datamined Palworld UI assets.
+   Palworld's HUD language: deep navy glass, cyan/teal energy accents, ornate
+   corner brackets, chamfered panels, warm gold highlights, over vivid key art.
+   Assets: static/ui/ (hero, elements/, work/, da/*, frames/).
+   Class names are preserved so every component keeps working.
    ============================================================================ */
 
 @theme {
     --font-nunito: "Nunito", ui-sans-serif, sans-serif;
-    --font-lilita: "Fredoka", "Nunito", ui-sans-serif, sans-serif;   /* display / headings */
+    --font-lilita: "Fredoka", "Nunito", ui-sans-serif, sans-serif;
     --font-display: "Fredoka", "Nunito", ui-sans-serif, sans-serif;
     --breakpoint-md: 828px;
 
-    /* Palworld element colours (grid tint + element chips) */
-    --el-neutral: #a9b0bd;
+    /* Palworld element colours */
+    --el-neutral: #b3b9c6;
     --el-fire: #ff6b3d;
     --el-water: #38a5f0;
     --el-electric: #f5c531;
@@ -26,258 +28,323 @@
 
 :root {
     /* clue status */
-    --ok: #35c85f;
-    --partial: #f2a02e;
-    --no: #d8484a;
+    --ok: #2ec27e;
+    --partial: #f2a33c;
+    --no: #e5484d;
 
-    /* panel system */
-    --panel-bg: rgba(14, 27, 46, 0.82);
-    --panel-bg-solid: #101f36;
-    --panel-edge: rgba(96, 224, 236, 0.38);
-    --accent: #37d0e6;
-    --accent-2: #22a7d8;
+    /* energy accents */
+    --accent: #45d6ea;
+    --accent-2: #1f9fd0;
+    --accent-soft: rgba(88, 220, 240, 0.42);
+    --accent-glow: rgba(69, 214, 234, 0.55);
+    --gold: #f5c531;
+
+    /* navy glass panel */
+    --panel-hi: #1a3c5c;
+    --panel-lo: #0a1b2e;
     --ink: #eaf4ff;
-}
-
-@font-face {
-    font-family: 'Nunito';
-    src: local('Nunito');
-    font-display: swap;
+    --ink-dim: rgba(198, 220, 242, 0.72);
 }
 
 body {
     font-family: var(--font-nunito);
     color: var(--ink);
-    /* base colour behind the datamined key-art background layers */
-    background: #081627;
+    background: #071320;
     min-height: 100dvh;
     position: relative;
 }
 
-/* Datamined Palworld key art (static/ui/hero.webp), dimmed, fixed behind everything. */
+/* datamined Palworld key art, vivid, fixed behind everything */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    z-index: -2;
+    z-index: -3;
     background: url("/ui/hero.webp") center top / cover no-repeat;
-    filter: brightness(0.72) saturate(1.18) contrast(1.03);
+    filter: brightness(0.74) saturate(1.2) contrast(1.03);
 }
-/* Readability overlay: only lightly darken top (header) and bottom so the key art stays vivid. */
+/* readability gradient: darken header + footer, keep the art alive in the middle */
 body::after {
     content: "";
     position: fixed;
     inset: 0;
-    z-index: -1;
+    z-index: -2;
     background:
-        radial-gradient(120% 80% at 50% -10%, rgba(85, 224, 246, 0.14), transparent 55%),
-        linear-gradient(180deg, rgba(6, 16, 30, 0.64) 0%, rgba(8, 22, 44, 0.30) 32%, rgba(8, 22, 44, 0.34) 64%, rgba(6, 16, 30, 0.7) 100%);
+        radial-gradient(130% 90% at 50% -12%, rgba(88, 220, 240, 0.16), transparent 56%),
+        linear-gradient(180deg, rgba(5, 14, 26, 0.72) 0%, rgba(6, 18, 34, 0.30) 30%, rgba(6, 18, 34, 0.34) 62%, rgba(4, 12, 22, 0.78) 100%);
 }
-
-/* Outlined display / title text — readable on any background (Fredoka). */
+/* Outlined display / title text — readable on any background. */
 .pal-title {
     font-family: var(--font-lilita), sans-serif;
     color: #ffffff;
     font-weight: 600;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.4px;
     text-shadow:
         -1px -1px 0 #06121f, 1px -1px 0 #06121f,
         -1px  1px 0 #06121f, 1px  1px 0 #06121f,
         -1px  0   0 #06121f, 1px  0   0 #06121f,
          0   -1px 0 #06121f, 0    1px 0 #06121f;
-    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.35));
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.4));
 }
 
-/* ===== Panels ===== */
-
-/* Solid-ish dark card (mode cards / boxes) — datamined Palworld panel texture */
-.pal-panel {
+/* ===== Panels ===================================================== */
+/* The real datamined Palworld menu window (option_note_base): navy fill with
+   ornate teal circuit corners, 9-sliced. Drawn as a z-index:-1 ::before overlay
+   so the texture never eats the element's layout box (fixed-height cards work). */
+.pal-panel,
+.pal-frame,
+.pal-letter,
+.pal-suggest {
     position: relative;
-    background: radial-gradient(135% 120% at 50% -12%, rgba(22, 48, 74, 0.95), rgba(8, 18, 32, 0.97) 70%);
-    border-radius: 14px;
-    box-shadow: inset 0 0 0 1.5px rgba(96, 224, 236, 0.14), 0 12px 30px rgba(3, 12, 24, 0.5);
+    isolation: isolate;
+    /* solid fallback under the texture: guarantees opacity even where a
+       transformed ancestor's stacking context would otherwise show through */
+    background: rgba(9, 22, 38, 0.95);
+    border: none;
+    border-radius: 15px;
+    background-clip: padding-box;
     color: var(--ink);
 }
-.pal-panel::before {
+.pal-panel::before,
+.pal-frame::before,
+.pal-letter::before,
+.pal-suggest::before {
     content: "";
     position: absolute;
     inset: 0;
-    z-index: 2;
+    z-index: -1;
     pointer-events: none;
-    border: 22px solid transparent;
-    border-image: url("/ui/frames/cell.webp") 90 / 22px stretch;
+    border: 28px solid transparent;
+    border-image: url("/ui/da2/panel.webp") 90 fill / 28px stretch;
+    filter: drop-shadow(0 14px 26px rgba(3, 12, 24, 0.5));
 }
+.pal-suggest::before { border-width: 20px; }
+/* the suggestion dropdown must overlay (not sit in flow): a plain unlayered rule beats
+   the Tailwind `absolute` utility, so force it here or it pushes the page + won't scroll. */
+.pal-suggest { position: absolute; }
 
-/* Translucent dark frame (toolbars, boxes, share / victory) — Palworld HUD glass with
-   the game's own glowing frame texture (datamined T_prt_button_frame_flare) as the border. */
-.pal-frame {
-    position: relative;
-    background: radial-gradient(135% 115% at 50% -12%, rgba(22, 48, 74, 0.94), rgba(8, 18, 32, 0.97) 70%);
-    border-radius: 14px;
-    box-shadow: inset 0 0 0 1.5px rgba(96, 224, 236, 0.14), 0 14px 34px rgba(3, 12, 24, 0.55);
-}
-/* ornate Palworld corner brackets (datamined T_prt_mapmask_corner) — clean 9-slice
-   (transparent straight edges → no stretch distortion), navy fill from the element. */
-.pal-frame::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    pointer-events: none;
-    border: 24px solid transparent;
-    border-image: url("/ui/frames/cell.webp") 90 / 24px stretch;
-}
+/* ---- Surface variants (so the ornate panel.webp isn't the whole site) ---- */
 
-/* Modal card — datamined Palworld panel texture (dark navy + ornate teal corners) */
-.pal-letter {
+/* Softer secondary surface (pure CSS, no stretched texture): clean navy-glass panel
+   with a thin cyan hairline — distinct from the ornate teal-corner panel. Used for
+   lighter content boxes (e.g. the footer "want more"). */
+.pal-panel-soft {
     position: relative;
-    background: radial-gradient(120% 90% at 50% -8%, rgba(22, 48, 74, 0.97), rgba(8, 18, 32, 0.98) 70%);
     border-radius: 16px;
-    box-shadow: inset 0 0 0 1.5px rgba(96, 224, 236, 0.16), 0 20px 50px rgba(3, 12, 24, 0.7);
-    color: #e6f2ff;
+    background: linear-gradient(180deg, rgba(17, 36, 55, 0.92), rgba(8, 18, 32, 0.95));
+    border: 1.5px solid rgba(96, 214, 234, 0.32);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.07),
+        inset 0 0 26px rgba(69, 214, 234, 0.05),
+        0 12px 28px rgba(3, 12, 24, 0.5);
+    color: var(--ink);
 }
-.pal-letter::before {
+
+/* HUD control surface (no panel texture): dark gradient with a cyan energy edge.
+   For interactive selectors like the language picker button + dropdown.
+   NB: no `position` here on purpose — it must not override the dropdown's `absolute`
+   utility (unlayered CSS beats Tailwind utilities), which would push it back into flow. */
+.pal-select {
+    border-radius: 11px;
+    background: linear-gradient(180deg, rgba(21, 46, 68, 0.96), rgba(9, 22, 38, 0.97));
+    border: 1.5px solid rgba(88, 220, 240, 0.5);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.14),
+        inset 0 -4px 9px rgba(0, 0, 0, 0.35),
+        0 4px 12px rgba(3, 12, 24, 0.4);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.pal-select:hover {
+    border-color: var(--accent);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.16),
+        inset 0 -4px 9px rgba(0, 0, 0, 0.35),
+        0 4px 14px rgba(3, 12, 24, 0.45),
+        0 0 14px var(--accent-glow);
+}
+
+/* Victory / hero surface: gold-bordered navy glass — celebratory, matches the gold
+   win text and stands apart from the teal panels. */
+.pal-victory {
+    position: relative;
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(26, 38, 56, 0.96), rgba(10, 20, 34, 0.97));
+    border: 2px solid var(--gold);
+    box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, 0.14),
+        inset 0 0 32px rgba(245, 197, 49, 0.10),
+        0 12px 30px rgba(3, 12, 24, 0.5),
+        0 0 22px rgba(245, 197, 49, 0.26);
+}
+/* faint gold glow crown at the top */
+.pal-victory::before {
     content: "";
     position: absolute;
     inset: 0;
-    z-index: 2;
-    pointer-events: none;
-    border: 30px solid transparent;
-    border-image: url("/ui/frames/cell.webp") 90 / 30px stretch;
-}
-
-.pal-ink { color: #12466a; text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5); }
-
-.pal-tile {
-    border: 2px solid rgba(96, 224, 236, 0.30);
-    border-radius: 10px;
-    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.14), inset 0 -3px 0 rgba(0, 0, 0, 0.28);
-}
-
-/* ===== Grid cells ===== */
-
-/* Clue cell: rounded slate tile whose interior is filled by the --status colour. */
-.pal-cell,
-.pal-slot {
-    position: relative;
-    border-radius: 12px;
-    /* datamined Palworld ornate corner frame (T_prt_mapmask_corner); center stays open
-       so the status colour / pal art fills it. */
-    border: 12px solid transparent;
-    border-image: url("/ui/frames/cell.webp") 90 / 12px stretch;
-    background: var(--tint, rgba(10, 22, 40, 0.55));
-    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.08), inset 0 -3px 0 rgba(0, 0, 0, 0.28);
-}
-.pal-cell::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--status, transparent);
-    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.16), inset 0 -3px 0 rgba(0, 0, 0, 0.22);
     z-index: 0;
     pointer-events: none;
+    border-radius: inherit;
+    background: radial-gradient(120% 60% at 50% -10%, rgba(245, 197, 49, 0.18), transparent 60%);
 }
-.pal-cell > *,
-.pal-cell::after { position: relative; z-index: 1; }
+.pal-victory > * { position: relative; z-index: 1; }
 
-/* inline direction arrow for numeric / ordinal cells */
+/* light-on-glass helper (kept for older markup) */
+.pal-ink { color: var(--ink); text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
+
+/* small inset tile */
+.pal-tile {
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 1.5px var(--accent-soft), inset 0 -3px 0 rgba(0, 0, 0, 0.28);
+    background: rgba(10, 24, 40, 0.5);
+}
+
+/* Section header — the datamined angled Palworld tab (menu_state_base, tinted). */
+.pal-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 6px 26px;
+    background: url("/ui/da2/label.webp") center / 100% 100% no-repeat;
+    color: #04222e;
+    font-family: var(--font-lilita), sans-serif;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+/* ===== Grid cells =============================================== */
+/* Status colour fills the cell; a datamined teal corner frame (PalBoxDetailFrame)
+   overlays as ::after. Pal-icon slots get the full teal ring (button_frame_flare). */
+.pal-cell {
+    position: relative;
+    border-radius: 8px;
+    background-color: var(--status, rgba(10, 24, 40, 0.6));
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0) 42%, rgba(0, 0, 0, 0.16));
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.14), inset 0 -4px 8px rgba(0, 0, 0, 0.26);
+}
+.pal-slot {
+    position: relative;
+    border-radius: 8px;
+    background: var(--tint, rgba(10, 24, 40, 0.6));
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.10), inset 0 -3px 8px rgba(0, 0, 0, 0.3);
+}
+/* frame overlay on ::before (arrows own ::after on the same cells — no collision) */
+.pal-cell::before,
+.pal-slot::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    border: 10px solid transparent;
+}
+.pal-cell::before { border-image: url("/ui/da2/cellframe.webp") 24 / 10px stretch; }
+.pal-slot::before { border-image: url("/ui/da2/slotframe.webp") 15 / 10px stretch; }
+.pal-cell > *,
+.pal-slot > * { z-index: 3; position: relative; }
+
+/* inline higher/lower arrow */
 .arrow-container.arrow-up::after,
 .arrow-container.arrow-down::after {
-    content: '';
+    content: "";
     flex: 0 0 auto;
     width: 0;
     height: 0;
     margin-left: 5px;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
-    filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.55));
+    position: relative;
+    z-index: 2;
 }
 .arrow-container.arrow-up::after { border-bottom: 10px solid #fff; }
 .arrow-container.arrow-down::after { border-top: 10px solid #fff; }
 
-/* ===== Buttons ===== */
-
-/* Primary action button — vivid Palworld cyan (all CTAs go through .pal-btn). */
+/* ===== Buttons ================================================== */
+/* Guess/action button — dark navy glass with a cyan energy edge (matches the language
+   HUD control), light text, subtle press. */
 .pal-btn {
     position: relative;
     font-family: var(--font-lilita), sans-serif;
     font-weight: 600;
-    color: #06263a;
-    background: linear-gradient(180deg, #7cecff 0%, #34c2ea 55%, #1ea9dc 100%);
-    border: none;
+    letter-spacing: 0.5px;
+    color: #eafcff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(180deg, rgba(22, 48, 71, 0.98), rgba(9, 22, 38, 0.98));
+    border: 2px solid rgba(88, 220, 240, 0.7);
     border-radius: 12px;
-    box-shadow:
-        inset 0 2px 0 rgba(255, 255, 255, 0.60),
-        inset 0 -4px 0 rgba(6, 60, 82, 0.55),
-        0 4px 10px rgba(3, 20, 34, 0.38);
-    padding: 9px 18px;
+    padding: 3px 18px;
     cursor: pointer;
-    transition: transform 0.08s ease, filter 0.12s ease;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.12),
+        inset 0 -4px 9px rgba(0, 0, 0, 0.35),
+        0 4px 12px rgba(3, 12, 24, 0.45);
+    transition: transform 0.08s ease, filter 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease;
 }
-.pal-btn:hover { filter: brightness(1.08) saturate(1.05); }
-.pal-btn:active { transform: translateY(2px); box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.5), 0 0 0 rgba(0, 0, 0, 0.25); }
-.pal-btn.is-disabled { filter: grayscale(0.5) brightness(0.85); cursor: not-allowed; }
+.pal-btn:hover {
+    border-color: var(--accent);
+    filter: brightness(1.06);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.14),
+        inset 0 -4px 9px rgba(0, 0, 0, 0.35),
+        0 4px 14px rgba(3, 12, 24, 0.5),
+        0 0 16px var(--accent-glow);
+}
+.pal-btn:active {
+    transform: translateY(2px);
+    box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.5);
+    filter: brightness(0.96);
+}
+.pal-btn.is-disabled { filter: grayscale(0.4) brightness(0.7); cursor: not-allowed; }
 
-/* ===== Inputs ===== */
-
+/* ===== Inputs ================================================== */
+/* Recessed dark-glass field; the slate edge turns cyan with a glow on focus. */
 .pal-input {
     font-family: var(--font-nunito), sans-serif;
     color: var(--ink);
-    background: rgba(9, 20, 36, 0.85);
-    border: 2px solid rgba(96, 224, 236, 0.32);
+    background: linear-gradient(180deg, rgba(4, 12, 24, 0.95), rgba(9, 21, 37, 0.92));
+    border: 2px solid #274d67;
     border-radius: 12px;
-    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.45);
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.04);
     outline: none;
+    transition: border-color 0.14s ease, box-shadow 0.14s ease;
 }
-.pal-input::placeholder { color: rgba(190, 214, 236, 0.55); }
+.pal-input::placeholder { color: rgba(178, 204, 230, 0.52); }
 .pal-input:focus {
     border-color: var(--accent);
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.35), 0 0 0 3px rgba(55, 208, 230, 0.28);
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--accent), 0 0 16px rgba(69, 214, 234, 0.4);
 }
 
-/* close button (modals) — datamined Palworld close glyph (T_btn_close) */
+/* close button — datamined circular slot face (item_base) + a crisp X glyph
+   (Palworld has no standalone close glyph; it uses controller prompts). */
 .pal-close {
-    width: 38px; height: 38px;
-    display: flex; align-items: center; justify-content: center;
-    border-radius: 50%;
-    background: rgba(9, 20, 36, 0.92);
-    border: 2px solid rgba(96, 224, 236, 0.55);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 42px; height: 42px;
+    background: url("/ui/da2/playface.webp") center / contain no-repeat;
+    border: none;
     color: transparent;
     font-size: 0;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
 }
+.pal-close::before,
 .pal-close::after {
     content: "";
-    width: 15px; height: 15px;
-    background: url("/ui/frames/close.png") center / contain no-repeat;
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 16px; height: 2.6px;
+    border-radius: 2px;
+    background: #d3ecff;
+    box-shadow: 0 0 4px rgba(120, 220, 255, 0.5);
 }
+.pal-close::before { transform: translate(-50%, -50%) rotate(45deg); }
+.pal-close::after { transform: translate(-50%, -50%) rotate(-45deg); }
 
-/* ===== Autocomplete suggestions dropdown (navy glass, matches the panels) ===== */
-.pal-suggest {
-    background: rgba(9, 20, 36, 0.96);
-    border: 2px solid rgba(96, 224, 236, 0.40);
-    border-radius: 12px;
-    box-shadow: 0 16px 38px rgba(3, 12, 24, 0.6);
-    backdrop-filter: blur(10px);
-    color: var(--ink);
-    overflow: hidden;
-}
-.pal-suggest-item {
-    color: #eaf4ff;
-    background: transparent;
-    transition: background 0.14s ease;
-}
-.pal-suggest-item:hover { background: rgba(55, 208, 230, 0.16); }
+/* ===== Autocomplete suggestions ================================ */
+/* Container uses the datamined panel texture (see panel group above). */
+.pal-suggest { overflow: hidden; }
+.pal-suggest-item { color: #eaf4ff; background: transparent; transition: background 0.14s ease; border-radius: 8px; }
+.pal-suggest-item:hover { background: linear-gradient(90deg, rgba(69, 214, 234, 0.22), rgba(69, 214, 234, 0.08)); }
 .pal-suggest-item + .pal-suggest-item { border-top: 1px solid rgba(255, 255, 255, 0.06); }
 
-/* ===== Scrollbar ===== */
-* { scrollbar-color: var(--accent-2) rgba(10, 22, 40, 0.4); scrollbar-width: thin; }
-::-webkit-scrollbar { width: 12px; height: 12px; }
-::-webkit-scrollbar-track { background: rgba(10, 22, 40, 0.4); }
-::-webkit-scrollbar-thumb { background: var(--accent-2); border: 2px solid rgba(10, 22, 40, 0.6); border-radius: 8px; }
-::-webkit-scrollbar-thumb:hover { background: var(--accent); }
-
-/* element chip — datamined Palworld element icon + name, tinted by the element colour */
+/* ===== Element chips & datamined icons ========================= */
 .el-chip {
     display: inline-flex;
     align-items: center;
@@ -288,21 +355,64 @@ body::after {
     font-weight: 800;
     color: #fff;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-    background: color-mix(in srgb, var(--el, #a9b0bd) 24%, rgba(8, 18, 32, 0.85));
-    border: 1.5px solid color-mix(in srgb, var(--el, #a9b0bd) 75%, #fff 0%);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 1px 3px rgba(0, 0, 0, 0.4);
+    background: color-mix(in srgb, var(--el, #b3b9c6) 26%, rgba(7, 18, 32, 0.85));
+    border: 1.5px solid var(--el, #b3b9c6);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 .el-chip img { width: 16px; height: 16px; object-fit: contain; filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.5)); }
 
-/* datamined game icons (elements / work suitabilities) */
-.el-icon { width: 26px; height: 26px; object-fit: contain; filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.55)); }
-.work-icon {
-    width: 22px; height: 22px; object-fit: contain;
-    /* white line-art icons: keep crisp on the coloured status cell */
-    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.65));
+/* Classic-grid element cell: icon-only colored badge (name on hover) — language-proof,
+   unlike the icon+text .el-chip which overflowed the cell in longer locales. */
+.el-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--el, #b3b9c6) 30%, rgba(7, 18, 32, 0.9));
+    border: 1.5px solid var(--el, #b3b9c6);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 3px rgba(0, 0, 0, 0.4);
 }
+.el-badge img { width: 20px; height: 20px; object-fit: contain; filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.5)); }
 
-/* Palworld title logo mark (datamined white logo, static/ui/logo-palworld.webp) */
-.pal-logo { filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.5)); }
+/* Work-suitability tile: the game's white WorkRank glyph on a colour-coded rounded tile
+   (Palworld colour-codes work types), so the icons don't read as flat white. */
+.work-tile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--wk, #7f8a99) 34%, rgba(7, 18, 32, 0.92));
+    border: 1.5px solid color-mix(in srgb, var(--wk, #7f8a99) 74%, transparent);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.work-tile img { width: 24px; height: 24px; object-fit: contain; filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.7)); }
+
+/* Small popover — solid navy with a cyan energy edge (no texture, so no see-through). */
+.pal-tooltip {
+    padding: 5px 11px;
+    color: var(--ink);
+    font-family: var(--font-lilita), sans-serif;
+    letter-spacing: 0.3px;
+    background: #0c1f34;
+    border: 1.5px solid rgba(96, 214, 234, 0.6);
+    border-radius: 9px;
+    box-shadow: 0 6px 16px rgba(3, 12, 24, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+.el-icon { width: 26px; height: 26px; object-fit: contain; filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.55)); }
+.work-icon { width: 22px; height: 22px; object-fit: contain; filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.7)); }
+
+.pal-logo { filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.55)); }
+
+/* ===== Scrollbar =============================================== */
+* { scrollbar-color: var(--accent-2) rgba(8, 20, 36, 0.4); scrollbar-width: thin; }
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: rgba(8, 20, 36, 0.4); }
+::-webkit-scrollbar-thumb { background: var(--accent-2); border: 2px solid rgba(8, 20, 36, 0.6); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
 .pixelated { image-rendering: pixelated; }

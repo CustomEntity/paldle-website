@@ -47,7 +47,7 @@
         class="flex flex-col gap-2.5 w-full {clazz} max-w-[370px]">
     <div
             bind:this={container}
-            class="pal-frame flex flex-col w-full justify-center items-center text-center justify-items-center py-4 px-6"
+            class="pal-victory flex flex-col w-full justify-center items-center text-center justify-items-center py-4 px-6"
     >
             <span class="text-center text-white text-[32px] font-normal pal-title">
                 {@html formatVictoryText(locale.t('components.victoryContainer.congratulations'), {

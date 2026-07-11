@@ -1,0 +1,312 @@
+{
+	"lang": {
+		"name": "Español (Latinoamérica)"
+	},
+	"layout": {
+		"header": {
+			"home_link": "Volver al inicio de Paldle",
+			"logo_alt": "Logo de Paldle"
+		},
+		"page_meta": {
+			"site_name": "Paldle",
+			"base_title": "Juego diario de adivinanzas de Palworld",
+			"base_description": "Paldle es el juego diario de adivinanzas de Palworld. Adivina el Pal del día en tres modos: Clásico, Descripción y Silueta."
+		},
+		"footer": {
+			"want_more": {
+				"title": "¿Quieres más?",
+				"description": "Descubre los otros juegos diarios de adivinanzas de la familia -dle."
+			},
+			"accessibility": {
+				"discord": "Únete a nuestro Discord",
+				"information": "Acerca de Paldle",
+				"kofi": "Apóyanos en Ko-fi",
+				"x": "Síguenos en X",
+				"reddit": "Visita nuestro subreddit"
+			},
+			"copyright": "Paldle - {year}"
+		},
+		"modals": {
+			"about": {
+				"title": "Acerca de Paldle",
+				"discover": "Paldle es un juego diario de adivinanzas gratuito para los fans de Palworld. Cada día se elige un nuevo Pal — vuelve mañana por un nuevo reto.",
+				"disclaimer": "Paldle es un proyecto hecho por fans y no está afiliado, respaldado ni patrocinado por Pocketpair, Inc. Palworld y todos los nombres y recursos relacionados son propiedad de Pocketpair.",
+				"game_modes": {
+					"title": "Modos de juego",
+					"description": "Clásico: adivina el Pal por sus atributos. Descripción: adivina el Pal por su ficha del Paldeck. Silueta: adivina el Pal por su forma. Sonido: adivina el Pal por su grito."
+				},
+				"dle_games": {
+					"title": "La familia -dle",
+					"description": "Paldle es parte de una familia de juegos diarios de adivinanzas. Encuéntralos todos en el pie de página."
+				},
+				"commitment": {
+					"title": "Nuestro compromiso",
+					"description": "Paldle es gratis y siempre lo será. Mantenemos los datos al día conforme se agregan nuevos Pals al juego."
+				},
+				"inspiration": {
+					"title": "Inspiración",
+					"description": "Paldle se inspira en Wordle y en los muchos y geniales juegos -dle de la comunidad."
+				},
+				"credit": {
+					"title": "Créditos",
+					"description": "Los datos e ilustraciones de los Pals pertenecen a Pocketpair, Inc. Hecho con amor por la comunidad."
+				},
+				"privacy": {
+					"title": "Privacidad",
+					"description": "Usamos estadísticas que respetan tu privacidad. Consulta nuestra política de privacidad para más detalles."
+				},
+				"thanks": "¡Gracias por jugar, y diviértete atrapándolos a todos!",
+				"signature": {
+					"regards": "Con cariño,",
+					"team": "El equipo de Paldle"
+				}
+			}
+		}
+	},
+	"components": {
+		"answerInput": {
+			"states": {
+				"loading": "Cargando...",
+				"no_result": "Sin resultados"
+			},
+			"button": {
+				"submit": {
+					"title": "Adivinar"
+				}
+			}
+		},
+		"victoryContainer": {
+			"congratulations": "¡Bien jugado! ¡Encontraste a <name>{name}</name>!",
+			"image": {
+				"alt": "Ilustración del Pal"
+			},
+			"you_found": "Encontraste a",
+			"number_of_tries": "Número de intentos: {count}",
+			"stats_button": "Mis estadísticas",
+			"next": {
+				"timer": "Próximo Pal en",
+				"mode": "Siguiente modo:"
+			}
+		},
+		"shareContainer": {
+			"buttons": {
+				"copy": {
+					"title": "Copiar",
+					"aria_label": "Copiar el resultado al portapapeles"
+				},
+				"tweet": {
+					"title": "Tuitear",
+					"aria_label": "Compartir en X (Twitter)"
+				}
+			},
+			"and_more": "y {count} más..."
+		},
+		"toolsBar": {
+			"stats": {
+				"tooltip": "Estadísticas",
+				"alt": "Estadísticas"
+			},
+			"streak": {
+				"tooltip": "Racha actual",
+				"active": "Racha activa",
+				"inactive": "Sin racha activa"
+			},
+			"patchNotes": {
+				"tooltip": "Novedades",
+				"alt": "Novedades"
+			},
+			"howToPlay": {
+				"tooltip": "Cómo jugar"
+			}
+		},
+		"stats": {
+			"title": "Tus estadísticas",
+			"metrics": {
+				"games_won": "Partidas ganadas",
+				"average_tries": "Intentos prom.",
+				"one_shots": "Aciertos al primero",
+				"current_streak": "Racha",
+				"best_streak": "Mejor racha"
+			},
+			"graph": {
+				"label": "Intentos",
+				"title": "Intentos por día",
+				"fallback": "Gráfica de intentos por día"
+			}
+		},
+		"patchNotes": {
+			"title": "Novedades",
+			"loading": "Cargando las novedades...",
+			"empty": "Aún no hay novedades.",
+			"error": "No se pudieron cargar las novedades."
+		}
+	},
+	"pages": {
+		"home": {
+			"title": "Adivina el Pal del día",
+			"button": {
+				"classic": {
+					"title": "Clásico",
+					"description": "Adivina el Pal por sus atributos."
+				},
+				"description": {
+					"title": "Descripción",
+					"description": "Adivina el Pal por su ficha del Paldeck."
+				},
+				"silhouette": {
+					"title": "Silueta",
+					"description": "Adivina el Pal por su forma."
+				},
+				"sound": {
+					"title": "Sonido",
+					"description": "Adivina el Pal por su grito."
+				}
+			}
+		},
+		"classic": {
+			"page_meta": {
+				"title": "Clásico",
+				"description": "Adivina el Pal de Palworld de hoy por su elemento, rareza, tamaño, aptitudes de trabajo y más."
+			},
+			"placeholder": "Escribe el nombre de un Pal...",
+			"explanation": {
+				"title": "Adivina el Pal de hoy",
+				"hint": "Cada intento revela cómo se comparan sus atributos con los del Pal misterioso."
+			},
+			"yesterday": "El Pal de ayer n.º{gameId} fue {name}",
+			"share": {
+				"text": "¡Encontré el Pal Clásico de #Paldle n.º{id} en {tries} intentos!",
+				"to_copy": "¡Encontré el Pal Clásico de #Paldle n.º{id} en {tries} intentos!\n{url}"
+			},
+			"errors": {
+				"generic": "Algo salió mal: {message}",
+				"no_daily": "Aún no hay un Pal asignado para hoy — ¡vuelve pronto!"
+			},
+			"how_to": {
+				"title": "Cómo jugar — Clásico",
+				"body": "<p>Adivina el Pal misterioso del día. Después de cada intento, cada columna muestra cómo se compara tu Pal con la respuesta.</p><ul class='list-disc pl-5'><li><b>Verde</b> — coincidencia exacta.</li><li><b>Naranja</b> — coincidencia parcial (algunos elementos o tipos de trabajo en común).</li><li><b>Rojo</b> — sin coincidencia.</li><li><b>Flechas</b> — el valor de la respuesta es mayor o menor (número del Paldeck, rareza, tamaño).</li></ul><p>Cada día se elige un nuevo Pal.</p>"
+			},
+			"attributes": {
+				"headers": {
+					"pal": "Pal",
+					"paldeck": "N.º",
+					"elements": "Elemento",
+					"rarity": "Rareza",
+					"size": "Tamaño",
+					"work": "Trabajo",
+					"mount": "Montura",
+					"nocturnal": "Nocturno"
+				},
+				"elements": {
+					"Neutral": "Neutral",
+					"Fire": "Fuego",
+					"Water": "Agua",
+					"Electric": "Eléctrico",
+					"Grass": "Planta",
+					"Ice": "Hielo",
+					"Ground": "Tierra",
+					"Dark": "Oscuridad",
+					"Dragon": "Dragón"
+				},
+				"size": {
+					"XS": "XS",
+					"S": "S",
+					"M": "M",
+					"L": "L",
+					"XL": "XL"
+				},
+				"mount": {
+					"None": "Ninguna",
+					"Ground": "Terrestre",
+					"Flying": "Voladora",
+					"Swimming": "Acuática"
+				},
+				"nocturnal": {
+					"yes": "Sí",
+					"no": "No"
+				},
+				"work": {
+					"Kindling": "Fuego",
+					"Watering": "Riego",
+					"Planting": "Siembra",
+					"Electricity": "Electricidad",
+					"Handiwork": "Artesanía",
+					"Gathering": "Recolección",
+					"Lumbering": "Tala",
+					"Mining": "Minería",
+					"OilExtraction": "Extracción de petróleo",
+					"Medicine": "Medicina",
+					"Cooling": "Refrigeración",
+					"Transporting": "Transporte",
+					"Farming": "Granja"
+				}
+			}
+		},
+		"description": {
+			"page_meta": {
+				"title": "Descripción",
+				"description": "Adivina el Pal de Palworld de hoy por su descripción del Paldeck."
+			},
+			"title": "Adivina el Pal por su ficha del Paldeck",
+			"placeholder": "Escribe el nombre de un Pal...",
+			"hint": {
+				"size": "Tamaño: {size}",
+				"mount": "Montura: {mount}"
+			},
+			"yesterday": "El Pal de ayer n.º{gameId} fue {name}",
+			"share": {
+				"text": "¡Encontré el Pal Descripción de #Paldle n.º{id} en {tries} intentos!",
+				"to_copy": "¡Encontré el Pal Descripción de #Paldle n.º{id} en {tries} intentos!\n{url}"
+			},
+			"errors": {
+				"no_daily": "Aún no hay un Pal asignado para hoy — ¡vuelve pronto!"
+			},
+			"how_to": {
+				"title": "Cómo jugar — Descripción",
+				"body": "<p>Lee la descripción del Paldeck del Pal misterioso y adivina quién es.</p><p>Cada intento fallido revela una pista adicional — elemento, tamaño y luego tipo de montura.</p><p>Cada día se elige un nuevo Pal.</p>"
+			}
+		},
+		"silhouette": {
+			"page_meta": {
+				"title": "Silueta",
+				"description": "Adivina el Pal de Palworld de hoy por su silueta."
+			},
+			"title": "Adivina el Pal por su silueta",
+			"placeholder": "Escribe el nombre de un Pal...",
+			"hint": "Observa la forma y adivina el Pal.",
+			"yesterday": "El Pal de ayer n.º{gameId} fue {name}",
+			"share": {
+				"text": "¡Encontré el Pal Silueta de #Paldle n.º{id} en {tries} intentos!",
+				"to_copy": "¡Encontré el Pal Silueta de #Paldle n.º{id} en {tries} intentos!\n{url}"
+			},
+			"errors": {
+				"no_daily": "Aún no hay un Pal asignado para hoy — ¡vuelve pronto!"
+			},
+			"how_to": {
+				"title": "Cómo jugar — Silueta",
+				"body": "<p>Un Pal se muestra como una silueta negra. Adivina de qué Pal se trata por su forma.</p><p>La ilustración completa se revela cuando lo encuentras.</p><p>Cada día se elige un nuevo Pal.</p>"
+			}
+		},
+		"sound": {
+			"page_meta": {
+				"title": "Sonido",
+				"description": "Adivina el Pal de Palworld de hoy por su grito."
+			},
+			"title": "Adivina el Pal por su grito",
+			"placeholder": "Escribe el nombre de un Pal...",
+			"hint": "Escucha el grito y adivina el Pal.",
+			"yesterday": "El Pal de ayer n.º{gameId} fue {name}",
+			"share": {
+				"text": "¡Encontré el Pal Sonido de #Paldle n.º{id} en {tries} intentos!",
+				"to_copy": "¡Encontré el Pal Sonido de #Paldle n.º{id} en {tries} intentos!\n{url}"
+			},
+			"errors": {
+				"no_daily": "Aún no hay un Pal asignado para hoy — ¡vuelve pronto!"
+			},
+			"how_to": {
+				"title": "Cómo jugar — Sonido",
+				"body": "<p>Escucha el grito de un Pal y adivina de qué Pal se trata.</p><p>La ilustración completa se revela cuando lo encuentras.</p><p>Cada día se elige un nuevo Pal.</p>"
+			}
+		}
+	}
+}

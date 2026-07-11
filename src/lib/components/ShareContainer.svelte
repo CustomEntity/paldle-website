@@ -20,7 +20,7 @@
             return copyText.replace(/#/g, '%23').replace(/\n/g, '%0A') + '%0A' + websiteUrl;
         }
     </script>
-    <div class="flex flex-col w-full justify-center items-center gap-1 text-center justify-items-center py-4 px-6 pal-frame font-lilita"
+    <div class="flex flex-col w-full max-w-[430px] mx-auto justify-center items-center gap-1 text-center justify-items-center py-4 px-6 pal-frame font-lilita"
     >
         <span class="text-xl text-white pal-title max-w-[250px]">{@html text}</span>
         {#if tries}
@@ -40,7 +40,7 @@
             </div>
         {/if}
         <span class="text-2xl text-white pal-title">https://{websiteUrl}</span>
-        <div class="flex flex-row  w-full justify-center mt-4 mb-4">
+        <div class="flex flex-row flex-wrap gap-3 w-full justify-center mt-4 mb-4">
             <PalButton
                     slant="left"
                     width={'100%'}

@@ -143,8 +143,7 @@
 	},
 	"pages": {
 		"home": {
-			"title": "Guess the Pal of the day",
-			"subtitle": "A daily Palworld guessing game — three modes, a new Pal every day.",
+			"title": "Guess the daily Pal",
 			"button": {
 				"classic": {
 					"title": "Classic",
@@ -185,7 +184,7 @@
 			},
 			"how_to": {
 				"title": "How to play — Classic",
-				"body": "<p>Guess the mystery Pal of the day. After each guess, every column shows how your Pal compares to the answer.</p><ul class='list-disc pl-5'><li><b>Green</b> — exact match.</li><li><b>Orange</b> — partial match (some elements or work types overlap).</li><li><b>Red</b> — no match.</li><li><b>Arrows</b> — the answer's value is higher or lower (Paldeck number, rarity, size).</li></ul><p>A new Pal is picked every day.</p>"
+				"body": "<p>Guess the mystery <b>Pal of the day</b>. Type any Pal's name — you have unlimited guesses.</p><p>After each guess, every column is coloured to show how your Pal compares to today's answer:</p><ul class='list-disc pl-5'><li><b style='color:#2ec27e'>Green</b> — exact match.</li><li><b style='color:#f2a33c'>Orange</b> — partial match (e.g. one of its two elements, or some of its work types, are shared).</li><li><b style='color:#e5484d'>Red</b> — no match.</li></ul><p>The columns are the Pal's <b>Paldeck number</b>, <b>Element(s)</b>, <b>Rarity</b>, <b>Size</b>, <b>Work suitabilities</b>, <b>Mount</b> type and whether it's <b>Nocturnal</b>.</p><p>On the numbered columns (<b>Paldeck No.</b>, <b>Rarity</b>, <b>Size</b>), an <b>↑</b> or <b>↓</b> arrow means the answer's value is higher or lower than your guess.</p><p>A brand-new Pal is chosen every day — come back tomorrow for the next one!</p>"
 			},
 			"attributes": {
 				"headers": {
@@ -264,7 +263,7 @@
 			},
 			"how_to": {
 				"title": "How to play — Description",
-				"body": "<p>Read the mystery Pal's Paldeck description and guess who it is.</p><p>Every wrong guess reveals an extra clue — element, size, then mount type.</p><p>A new Pal is picked every day.</p>"
+				"body": "<p>Read the mystery Pal's <b>Paldeck entry</b> and work out who it is.</p><p>Its own name is hidden, so watch for the tell-tale details in the text.</p><p>Every wrong guess reveals one more clue — first its <b>Element</b>, then its <b>Size</b>, then its <b>Mount</b> type.</p><p>The full artwork is revealed when you find it. A new Pal is chosen every day.</p>"
 			}
 		},
 		"silhouette": {
@@ -285,7 +284,7 @@
 			},
 			"how_to": {
 				"title": "How to play — Silhouette",
-				"body": "<p>A Pal is shown as a black silhouette. Guess which Pal it is from its shape.</p><p>The full artwork is revealed when you find it.</p><p>A new Pal is picked every day.</p>"
+				"body": "<p>Only the Pal's <b>black silhouette</b> is shown — guess which Pal it is from its shape alone.</p><p>Type any Pal's name; you have unlimited guesses.</p><p>The full-colour artwork is revealed the moment you find it. A new Pal is chosen every day.</p>"
 			}
 		},
 		"sound": {
@@ -306,7 +305,7 @@
 			},
 			"how_to": {
 				"title": "How to play — Sound",
-				"body": "<p>Listen to a Pal's cry and guess which Pal it is.</p><p>The full artwork is revealed when you find it.</p><p>A new Pal is picked every day.</p>"
+				"body": "<p>Press play to hear the mystery Pal's <b>cry</b>, then guess which Pal makes it.</p><p>Replay the sound as many times as you like — you have unlimited guesses.</p><p>The Pal's artwork is revealed when you find it. A new Pal is chosen every day.</p>"
 			}
 		}
 	}

@@ -86,12 +86,15 @@ async function main() {
 				);
 				const id = rows[0].id;
 
-				// datamined translations: en + fr (name/description/partner_skill).
-				// ja/ko/zh/ru can be added later by dumping more L10N tables.
-				const tr = [
-					['en', p.name, p.description, p.partner_skill],
-					['fr', p.name_fr, p.description_fr, p.partner_skill_fr]
-				];
+				// datamined translations for every language Palworld ships — pals.json
+				// carries `translations` keyed by locale (en, fr, de, …, zh-hans, zh-hant).
+				// Falls back to the flat en/fr fields for a pre-multilanguage pals.json.
+				const tr = p.translations
+					? Object.entries(p.translations).map(([loc, t]) => [loc, t.name, t.description, t.partner_skill])
+					: [
+							['en', p.name, p.description, p.partner_skill],
+							['fr', p.name_fr, p.description_fr, p.partner_skill_fr]
+						];
 				for (const [loc, name, desc, skill] of tr) {
 					if (!name) continue;
 					await client.query(
@@ -116,7 +119,8 @@ async function main() {
 					);
 				}
 			}
-			console.log(`✓ upserted ${pals.length} pals (+ en/fr names/descriptions + icon & cry media)`);
+			const localeCount = pals[0]?.translations ? Object.keys(pals[0].translations).length : 2;
+			console.log(`✓ upserted ${pals.length} pals (+ ${localeCount}-locale names/descriptions + icon & cry media)`);
 		}
 
 		// Build per-mode answer pools from the DB (source of truth after upsert).

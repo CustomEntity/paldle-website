@@ -10,7 +10,18 @@ let pool: InstanceType<typeof Pool> | null = null;
 function getPool() {
     if (!pool) {
         pool = new Pool({
-            connectionString: env.DATABASE_URL
+            connectionString: env.DATABASE_URL,
+            // Recycle our idle clients before pgbouncer/the server reaps them,
+            // so we never hand out a socket the server has already killed.
+            idleTimeoutMillis: 10_000,
+            keepAlive: true
+        });
+        // node-postgres crashes the ENTIRE process on an unhandled pool 'error'
+        // event (e.g. an idle connection dropped by pgbouncer). Without this
+        // listener the dev server dies "au moindre truc". Swallow it — the next
+        // query just opens a fresh connection.
+        pool.on('error', (err) => {
+            console.error('pg pool error (recovered, not fatal):', err.message);
         });
     }
     return pool;

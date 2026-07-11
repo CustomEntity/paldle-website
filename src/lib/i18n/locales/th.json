@@ -1,0 +1,312 @@
+{
+	"lang": {
+		"name": "ไทย"
+	},
+	"layout": {
+		"header": {
+			"home_link": "กลับสู่หน้าแรกของ Paldle",
+			"logo_alt": "โลโก้ Paldle"
+		},
+		"page_meta": {
+			"site_name": "Paldle",
+			"base_title": "เกมทายตัว Palworld ประจำวัน",
+			"base_description": "Paldle คือเกมทายตัว Palworld ประจำวัน ทาย Pal ประจำวันได้ในสามโหมด: คลาสสิก, คำบรรยาย และเงา"
+		},
+		"footer": {
+			"want_more": {
+				"title": "อยากเล่นอีกไหม?",
+				"description": "ค้นพบเกมทายประจำวันอื่น ๆ ในตระกูล -dle"
+			},
+			"accessibility": {
+				"discord": "เข้าร่วม Discord ของเรา",
+				"information": "เกี่ยวกับ Paldle",
+				"kofi": "สนับสนุนเราบน Ko-fi",
+				"x": "ติดตามเราบน X",
+				"reddit": "เยี่ยมชม subreddit ของเรา"
+			},
+			"copyright": "Paldle - {year}"
+		},
+		"modals": {
+			"about": {
+				"title": "เกี่ยวกับ Paldle",
+				"discover": "Paldle คือเกมทายประจำวันฟรีสำหรับแฟน ๆ Palworld มีการสุ่ม Pal ตัวใหม่ทุกวัน — กลับมาพรุ่งนี้เพื่อเล่นปริศนาใหม่",
+				"disclaimer": "Paldle เป็นโปรเจกต์ที่สร้างโดยแฟน ๆ ไม่มีความเกี่ยวข้อง ไม่ได้รับการรับรอง และไม่ได้รับการสนับสนุนจาก Pocketpair, Inc. Palworld รวมถึงชื่อและทรัพย์สินที่เกี่ยวข้องทั้งหมดเป็นกรรมสิทธิ์ของ Pocketpair",
+				"game_modes": {
+					"title": "โหมดการเล่น",
+					"description": "คลาสสิก: ทาย Pal จากคุณสมบัติของมัน คำบรรยาย: ทาย Pal จากรายการใน Paldeck เงา: ทาย Pal จากรูปร่างของมัน เสียง: ทาย Pal จากเสียงร้องของมัน"
+				},
+				"dle_games": {
+					"title": "ตระกูล -dle",
+					"description": "Paldle เป็นส่วนหนึ่งของตระกูลเกมทายประจำวัน หาพวกมันทั้งหมดได้ที่ส่วนท้ายของหน้าด้านล่าง"
+				},
+				"commitment": {
+					"title": "คำมั่นของเรา",
+					"description": "Paldle เล่นฟรีและจะเป็นเช่นนั้นตลอดไป เราอัปเดตข้อมูลให้เป็นปัจจุบันเมื่อมี Pal ตัวใหม่ถูกเพิ่มเข้ามาในเกม"
+				},
+				"inspiration": {
+					"title": "แรงบันดาลใจ",
+					"description": "Paldle ได้แรงบันดาลใจจาก Wordle และเกม -dle ดี ๆ มากมายจากคอมมูนิตี้"
+				},
+				"credit": {
+					"title": "เครดิต",
+					"description": "ข้อมูลและภาพของ Pal เป็นของ Pocketpair, Inc. สร้างด้วยใจรักโดยคอมมูนิตี้"
+				},
+				"privacy": {
+					"title": "ความเป็นส่วนตัว",
+					"description": "เราใช้การวิเคราะห์ข้อมูลที่เคารพความเป็นส่วนตัว ดูรายละเอียดได้ที่นโยบายความเป็นส่วนตัวของเรา"
+				},
+				"thanks": "ขอบคุณที่เล่น และขอให้สนุกกับการตามจับพวกมันให้ครบ!",
+				"signature": {
+					"regards": "ด้วยความรัก,",
+					"team": "ทีมงาน Paldle"
+				}
+			}
+		}
+	},
+	"components": {
+		"answerInput": {
+			"states": {
+				"loading": "กำลังโหลด...",
+				"no_result": "ไม่พบผลลัพธ์"
+			},
+			"button": {
+				"submit": {
+					"title": "ทาย"
+				}
+			}
+		},
+		"victoryContainer": {
+			"congratulations": "เก่งมาก! คุณเจอ <name>{name}</name> แล้ว!",
+			"image": {
+				"alt": "ภาพ Pal"
+			},
+			"you_found": "คุณเจอ",
+			"number_of_tries": "จำนวนครั้งที่ทาย: {count}",
+			"stats_button": "สถิติของฉัน",
+			"next": {
+				"timer": "Pal ตัวต่อไปใน",
+				"mode": "โหมดถัดไป:"
+			}
+		},
+		"shareContainer": {
+			"buttons": {
+				"copy": {
+					"title": "คัดลอก",
+					"aria_label": "คัดลอกผลลัพธ์ไปยังคลิปบอร์ด"
+				},
+				"tweet": {
+					"title": "ทวีต",
+					"aria_label": "แชร์บน X (Twitter)"
+				}
+			},
+			"and_more": "และอีก {count} รายการ..."
+		},
+		"toolsBar": {
+			"stats": {
+				"tooltip": "สถิติ",
+				"alt": "สถิติ"
+			},
+			"streak": {
+				"tooltip": "สตรีคปัจจุบัน",
+				"active": "สตรีคที่กำลังต่อเนื่อง",
+				"inactive": "ไม่มีสตรีคที่ต่อเนื่อง"
+			},
+			"patchNotes": {
+				"tooltip": "บันทึกการเปลี่ยนแปลง",
+				"alt": "บันทึกการเปลี่ยนแปลง"
+			},
+			"howToPlay": {
+				"tooltip": "วิธีเล่น"
+			}
+		},
+		"stats": {
+			"title": "สถิติของคุณ",
+			"metrics": {
+				"games_won": "เกมที่ชนะ",
+				"average_tries": "ทายเฉลี่ย",
+				"one_shots": "ทายถูกครั้งเดียว",
+				"current_streak": "สตรีค",
+				"best_streak": "สตรีคสูงสุด"
+			},
+			"graph": {
+				"label": "จำนวนครั้งที่ทาย",
+				"title": "จำนวนครั้งที่ทายต่อวัน",
+				"fallback": "กราฟจำนวนครั้งที่ทายต่อวัน"
+			}
+		},
+		"patchNotes": {
+			"title": "บันทึกการเปลี่ยนแปลง",
+			"loading": "กำลังโหลดบันทึกการเปลี่ยนแปลง...",
+			"empty": "ยังไม่มีบันทึกการเปลี่ยนแปลง",
+			"error": "ไม่สามารถโหลดบันทึกการเปลี่ยนแปลงได้"
+		}
+	},
+	"pages": {
+		"home": {
+			"title": "ทาย Pal ประจำวัน",
+			"button": {
+				"classic": {
+					"title": "คลาสสิก",
+					"description": "ทาย Pal จากคุณสมบัติของมัน"
+				},
+				"description": {
+					"title": "คำบรรยาย",
+					"description": "ทาย Pal จากรายการใน Paldeck"
+				},
+				"silhouette": {
+					"title": "เงา",
+					"description": "ทาย Pal จากรูปร่างของมัน"
+				},
+				"sound": {
+					"title": "เสียง",
+					"description": "ทาย Pal จากเสียงร้องของมัน"
+				}
+			}
+		},
+		"classic": {
+			"page_meta": {
+				"title": "คลาสสิก",
+				"description": "ทาย Pal ของ Palworld ประจำวันจากธาตุ, ความหายาก, ขนาด, ความถนัดงาน และอีกมากมาย"
+			},
+			"placeholder": "พิมพ์ชื่อ Pal...",
+			"explanation": {
+				"title": "ทาย Pal ประจำวัน",
+				"hint": "การทายแต่ละครั้งจะเผยว่าคุณสมบัติของมันเทียบกับ Pal ปริศนาอย่างไร"
+			},
+			"yesterday": "Pal เมื่อวานหมายเลข #{gameId} คือ {name}",
+			"share": {
+				"text": "ฉันเจอ Pal โหมดคลาสสิก #Paldle หมายเลข #{id} ใน {tries} ครั้ง!",
+				"to_copy": "ฉันเจอ Pal โหมดคลาสสิก #Paldle หมายเลข #{id} ใน {tries} ครั้ง!\n{url}"
+			},
+			"errors": {
+				"generic": "เกิดข้อผิดพลาดบางอย่าง: {message}",
+				"no_daily": "ยังไม่ได้กำหนด Pal สำหรับวันนี้ — กลับมาเช็กเร็ว ๆ นี้!"
+			},
+			"how_to": {
+				"title": "วิธีเล่น — คลาสสิก",
+				"body": "<p>ทาย Pal ปริศนาประจำวัน หลังการทายแต่ละครั้ง ทุกคอลัมน์จะแสดงว่า Pal ของคุณเทียบกับคำตอบอย่างไร</p><ul class='list-disc pl-5'><li><b>เขียว</b> — ตรงพอดี</li><li><b>ส้ม</b> — ตรงบางส่วน (มีธาตุหรือประเภทงานทับซ้อนกันบ้าง)</li><li><b>แดง</b> — ไม่ตรง</li><li><b>ลูกศร</b> — ค่าของคำตอบสูงกว่าหรือต่ำกว่า (หมายเลข Paldeck, ความหายาก, ขนาด)</li></ul><p>มีการสุ่ม Pal ตัวใหม่ทุกวัน</p>"
+			},
+			"attributes": {
+				"headers": {
+					"pal": "Pal",
+					"paldeck": "หมายเลข",
+					"elements": "ธาตุ",
+					"rarity": "ความหายาก",
+					"size": "ขนาด",
+					"work": "งาน",
+					"mount": "พาหนะ",
+					"nocturnal": "หากินกลางคืน"
+				},
+				"elements": {
+					"Neutral": "ไร้ธาตุ",
+					"Fire": "ไฟ",
+					"Water": "น้ำ",
+					"Electric": "ไฟฟ้า",
+					"Grass": "หญ้า",
+					"Ice": "น้ำแข็ง",
+					"Ground": "ดิน",
+					"Dark": "ความมืด",
+					"Dragon": "มังกร"
+				},
+				"size": {
+					"XS": "XS",
+					"S": "S",
+					"M": "M",
+					"L": "L",
+					"XL": "XL"
+				},
+				"mount": {
+					"None": "ไม่มี",
+					"Ground": "ภาคพื้นดิน",
+					"Flying": "บิน",
+					"Swimming": "ว่ายน้ำ"
+				},
+				"nocturnal": {
+					"yes": "ใช่",
+					"no": "ไม่"
+				},
+				"work": {
+					"Kindling": "จุดไฟ",
+					"Watering": "รดน้ำ",
+					"Planting": "เพาะปลูก",
+					"Electricity": "ผลิตไฟฟ้า",
+					"Handiwork": "งานฝีมือ",
+					"Gathering": "เก็บเกี่ยว",
+					"Lumbering": "ตัดไม้",
+					"Mining": "ขุดเหมือง",
+					"OilExtraction": "สกัดน้ำมัน",
+					"Medicine": "ปรุงยา",
+					"Cooling": "ทำความเย็น",
+					"Transporting": "ขนส่ง",
+					"Farming": "ทำฟาร์ม"
+				}
+			}
+		},
+		"description": {
+			"page_meta": {
+				"title": "คำบรรยาย",
+				"description": "ทาย Pal ของ Palworld ประจำวันจากคำบรรยายใน Paldeck"
+			},
+			"title": "ทาย Pal จากรายการใน Paldeck",
+			"placeholder": "พิมพ์ชื่อ Pal...",
+			"hint": {
+				"size": "ขนาด: {size}",
+				"mount": "พาหนะ: {mount}"
+			},
+			"yesterday": "Pal เมื่อวานหมายเลข #{gameId} คือ {name}",
+			"share": {
+				"text": "ฉันเจอ Pal โหมดคำบรรยาย #Paldle หมายเลข #{id} ใน {tries} ครั้ง!",
+				"to_copy": "ฉันเจอ Pal โหมดคำบรรยาย #Paldle หมายเลข #{id} ใน {tries} ครั้ง!\n{url}"
+			},
+			"errors": {
+				"no_daily": "ยังไม่ได้กำหนด Pal สำหรับวันนี้ — กลับมาเช็กเร็ว ๆ นี้!"
+			},
+			"how_to": {
+				"title": "วิธีเล่น — คำบรรยาย",
+				"body": "<p>อ่านคำบรรยายใน Paldeck ของ Pal ปริศนาแล้วทายว่าเป็นตัวไหน</p><p>ทุกครั้งที่ทายผิดจะเผยเบาะแสเพิ่ม — ธาตุ, ขนาด, แล้วจึงเป็นประเภทพาหนะ</p><p>มีการสุ่ม Pal ตัวใหม่ทุกวัน</p>"
+			}
+		},
+		"silhouette": {
+			"page_meta": {
+				"title": "เงา",
+				"description": "ทาย Pal ของ Palworld ประจำวันจากเงาของมัน"
+			},
+			"title": "ทาย Pal จากเงาของมัน",
+			"placeholder": "พิมพ์ชื่อ Pal...",
+			"hint": "ดูรูปร่างแล้วทาย Pal",
+			"yesterday": "Pal เมื่อวานหมายเลข #{gameId} คือ {name}",
+			"share": {
+				"text": "ฉันเจอ Pal โหมดเงา #Paldle หมายเลข #{id} ใน {tries} ครั้ง!",
+				"to_copy": "ฉันเจอ Pal โหมดเงา #Paldle หมายเลข #{id} ใน {tries} ครั้ง!\n{url}"
+			},
+			"errors": {
+				"no_daily": "ยังไม่ได้กำหนด Pal สำหรับวันนี้ — กลับมาเช็กเร็ว ๆ นี้!"
+			},
+			"how_to": {
+				"title": "วิธีเล่น — เงา",
+				"body": "<p>Pal จะแสดงเป็นเงาสีดำ ทายว่าเป็น Pal ตัวไหนจากรูปร่างของมัน</p><p>ภาพเต็มจะถูกเผยเมื่อคุณทายถูก</p><p>มีการสุ่ม Pal ตัวใหม่ทุกวัน</p>"
+			}
+		},
+		"sound": {
+			"page_meta": {
+				"title": "เสียง",
+				"description": "ทาย Pal ของ Palworld ประจำวันจากเสียงร้องของมัน"
+			},
+			"title": "ทาย Pal จากเสียงร้องของมัน",
+			"placeholder": "พิมพ์ชื่อ Pal...",
+			"hint": "ฟังเสียงร้องแล้วทาย Pal",
+			"yesterday": "Pal เมื่อวานหมายเลข #{gameId} คือ {name}",
+			"share": {
+				"text": "ฉันเจอ Pal โหมดเสียง #Paldle หมายเลข #{id} ใน {tries} ครั้ง!",
+				"to_copy": "ฉันเจอ Pal โหมดเสียง #Paldle หมายเลข #{id} ใน {tries} ครั้ง!\n{url}"
+			},
+			"errors": {
+				"no_daily": "ยังไม่ได้กำหนด Pal สำหรับวันนี้ — กลับมาเช็กเร็ว ๆ นี้!"
+			},
+			"how_to": {
+				"title": "วิธีเล่น — เสียง",
+				"body": "<p>ฟังเสียงร้องของ Pal แล้วทายว่าเป็นตัวไหน</p><p>ภาพเต็มจะถูกเผยเมื่อคุณทายถูก</p><p>มีการสุ่ม Pal ตัวใหม่ทุกวัน</p>"
+			}
+		}
+	}
+}

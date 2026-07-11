@@ -3,12 +3,9 @@
     import HomeButton from "$lib/components/buttons/HomeButton.svelte";
 </script>
 
-<h2 class="text-white text-2xl text-center uppercase pal-title">
+<h2 class="text-white text-2xl text-center uppercase pal-title mt-8">
     {locale.t("pages.home.title")}
 </h2>
-<p class="text-center text-white/75 mt-2 max-w-[440px]">
-    {locale.t("pages.home.subtitle")}
-</p>
 
 <div class="mt-6 w-full flex flex-col gap-4 max-w-[440px]">
     <HomeButton class="w-full h-[120px]"

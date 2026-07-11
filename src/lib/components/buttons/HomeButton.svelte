@@ -32,31 +32,8 @@
 
 <a {href} onclick={handleClick} data-sveltekit-preload="hover" class="pal-panel mode-card {className}" style="--accent: {ACCENT[gameMode]};">
     <span class="icon" style="border-color: {ACCENT[gameMode]};">
-        {#if gameMode === "classic"}
-            <!-- grid -->
-            <svg viewBox="0 0 24 24" fill="none" stroke={ACCENT[gameMode]} stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" />
-                <rect x="3" y="14" width="7" height="7" rx="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" />
-            </svg>
-        {:else if gameMode === "description"}
-            <!-- text lines -->
-            <svg viewBox="0 0 24 24" fill="none" stroke={ACCENT[gameMode]} stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 6h16M4 10h16M4 14h10M4 18h7" />
-            </svg>
-        {:else if gameMode === "silhouette"}
-            <!-- silhouette / question -->
-            <svg viewBox="0 0 24 24" fill={ACCENT[gameMode]} stroke="none">
-                <path d="M12 2a7 7 0 0 0-7 7c0 2.5 1.5 4 3 5.2 1 .8 1.5 1.4 1.6 2.3H14.4c.1-.9.6-1.5 1.6-2.3 1.5-1.2 3-2.7 3-5.2a7 7 0 0 0-7-7Z" opacity="0.85"/>
-                <rect x="9" y="18.5" width="6" height="2.2" rx="1.1" />
-            </svg>
-        {:else}
-            <!-- sound / speaker -->
-            <svg viewBox="0 0 24 24" fill="none" stroke={ACCENT[gameMode]} stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill={ACCENT[gameMode]} />
-                <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
-                <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
-            </svg>
-        {/if}
+        <!-- Palworld in-game UI glyph, tinted to the mode accent via CSS mask -->
+        <span class="glyph" style="mask-image: url('/mode-icons/{gameMode}.png'); -webkit-mask-image: url('/mode-icons/{gameMode}.png');"></span>
     </span>
     <span class="txt">
         <span class="title">{title.toUpperCase()}</span>
@@ -91,7 +68,17 @@
         background: rgba(8, 20, 36, 0.6);
         box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.12);
     }
-    .icon svg { width: 34px; height: 34px; }
+    .glyph {
+        width: 34px;
+        height: 34px;
+        background-color: var(--accent);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+    }
 
     .txt { display: flex; flex-direction: column; gap: 4px; text-align: left; }
     .title { font-family: var(--font-lilita), sans-serif; font-size: 26px; line-height: 1; color: #ffffff; }
@@ -100,6 +87,6 @@
     @media (max-width: 828px) {
         .title { font-size: 22px; }
         .icon { width: 54px; height: 54px; }
-        .icon svg { width: 30px; height: 30px; }
+        .glyph { width: 30px; height: 30px; }
     }
 </style>
