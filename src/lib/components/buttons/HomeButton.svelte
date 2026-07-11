@@ -81,11 +81,11 @@
     }
 
     .txt { display: flex; flex-direction: column; gap: 4px; text-align: left; }
-    .title { font-family: var(--font-lilita), sans-serif; font-size: 26px; line-height: 1; color: #ffffff; }
+    .title { font-family: var(--font-lilita), sans-serif; font-weight: 800; font-size: 22px; line-height: 1.05; color: #ffffff; }
     .sub { font-size: 15px; line-height: 1.2; color: rgba(220, 236, 250, 0.72); }
 
     @media (max-width: 828px) {
-        .title { font-size: 22px; }
+        .title { font-size: 19px; }
         .icon { width: 54px; height: 54px; }
         .glyph { width: 30px; height: 30px; }
     }
