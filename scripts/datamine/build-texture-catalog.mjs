@@ -59,6 +59,17 @@ ELEMENTS.forEach((el, i) => {
 const WORK = { EmitFlame: 'Kindling', Watering: 'Watering', Seeding: 'Planting', GenerateElectricity: 'Electricity', Handcraft: 'Handiwork', Collection: 'Gathering', Deforest: 'Lumbering', Mining: 'Mining', OilExtraction: 'OilExtraction', ProductMedicine: 'Medicine', Cool: 'Cooling', Transport: 'Transporting', MonsterFarm: 'Farming' };
 for (const [g, label] of Object.entries(WORK)) add(`T_icon_skill_pal_WorkRank_${g}`, 'work', label);
 
+// partner-skill CATEGORY icons (T_icon_skill_pal_NN): shared across many pals via
+// DT_partnerSkillIconDataTable, NOT per-waza, so DT_SkillNameText can't name them.
+// The _009_NN / _012_NN series are the 9 elements (identified visually); a few
+// singletons are named by what they depict.
+ELEMENTS.forEach((el, i) => {
+	add(`T_icon_skill_pal_009_0${i}`, 'skill', `element_${el}`);
+	add(`T_icon_skill_pal_012_0${i}`, 'skill', `elementBoost_${el}`);
+});
+for (const [n, name] of [['004', 'Heal'], ['005', 'Shield'], ['006', 'Berserk'], ['007', 'Search'], ['000', 'None']])
+	add(`T_icon_skill_pal_${n}`, 'skill', name);
+
 const out = path.join(__dirname, 'out', 'texture-catalog.json');
 fs.writeFileSync(out, JSON.stringify(catalog, null, '\t'));
 
