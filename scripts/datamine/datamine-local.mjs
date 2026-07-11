@@ -35,9 +35,25 @@ const loc = (idx, key) => (key ? idx.get(key.toLowerCase()) : null)?.TextData?.L
 // ---- load tables (case-insensitive indexes) ----
 const monster = rows('monster.json');
 const iconTbl = ciIndex(rows('icon.json'));
-const nameEN = ciIndex(rows('nameEN.json')), nameFR = ciIndex(rows('nameFR.json'));
-const descEN = ciIndex(rows('descEN.json')), descFR = ciIndex(rows('descFR.json'));
-const skillNameEN = ciIndex(rows('skillNameEN.json')), skillNameFR = ciIndex(rows('skillNameFR.json'));
+
+// Every language Palworld ships (L10N/<dir>): [gameL10nDir, appLocaleCode].
+// App codes are lowercase because the server lowercases the requested locale and
+// DB locale matching is case-sensitive — so es-MX -> es-mx, zh-Hans -> zh-hans, …
+const LANGS = [
+	['en', 'en'], ['fr', 'fr'], ['de', 'de'], ['es', 'es'], ['es-MX', 'es-mx'],
+	['id', 'id'], ['it', 'it'], ['ko', 'ko'], ['pl', 'pl'], ['pt-BR', 'pt-br'],
+	['ru', 'ru'], ['th', 'th'], ['tr', 'tr'], ['vi', 'vi'],
+	['zh-Hans', 'zh-hans'], ['zh-Hant', 'zh-hant']
+];
+// per-language case-insensitive text indexes: TX[code] = { name, desc, skill }
+const TX = {};
+for (const [dir, code] of LANGS) {
+	TX[code] = {
+		name: ciIndex(rows(`name_${dir}.json`)),
+		desc: ciIndex(rows(`desc_${dir}.json`)),
+		skill: ciIndex(rows(`skill_${dir}.json`))
+	};
+}
 
 // ---- previous roster: reuse key + mount + partner_skill_desc by tribe ----
 // curated previous roster (wikily backup) — source of truth for `mount` on known pals and
@@ -133,12 +149,19 @@ for (const { key, v } of byId.values()) {
 	const partnerKeyId = v.OverridePartnerSkillNameTextID && v.OverridePartnerSkillNameTextID !== 'None'
 		? v.OverridePartnerSkillNameTextID : `PARTNERSKILL_${key}`;
 
-	const nameEn = loc(nameEN, nameKeyId) || key;
-	const nameFr = loc(nameFR, nameKeyId) || nameEn;
-	const descEn = cleanText(loc(descEN, descKeyId), nameEn);
-	const descFr = cleanText(loc(descFR, descKeyId), nameFr);
-	const partnerEn = loc(skillNameEN, partnerKeyId);
-	const partnerFr = loc(skillNameFR, partnerKeyId);
+	const nameEn = loc(TX.en.name, nameKeyId) || key;
+	const descEn = cleanText(loc(TX.en.desc, descKeyId), nameEn);
+
+	// One translation per shipped language. Names fall back to EN where a locale
+	// doesn't localize them (Latin-script locales keep the English name).
+	const translations = {};
+	for (const [, code] of LANGS) {
+		const nm = loc(TX[code].name, nameKeyId) || nameEn;
+		const ds = cleanText(loc(TX[code].desc, descKeyId), nm);
+		const sk = loc(TX[code].skill, partnerKeyId);
+		translations[code] = { name: nm, description: ds, partner_skill: sk };
+	}
+	const partnerEn = translations.en.partner_skill;
 
 	const tribe = stripEnum(v.Tribe) || null;
 	const prevP = tribe ? prevByTribe.get(tribe) : null;
@@ -201,10 +224,12 @@ for (const { key, v } of byId.values()) {
 		is_tower_boss: !!v.IsTowerBoss,
 		is_raid_boss: !!v.IsRaidBoss,
 		released: true,
-		// --- i18n (fr) ---
-		name_fr: nameFr,
-		description_fr: descFr,
-		partner_skill_fr: partnerFr
+		// --- i18n: name/description/partner_skill for every shipped language (see LANGS) ---
+		// flat fr fields kept for backward compat; `translations` is the full set keyed by locale.
+		name_fr: translations.fr.name,
+		description_fr: translations.fr.description,
+		partner_skill_fr: translations.fr.partner_skill,
+		translations
 	});
 }
 
@@ -226,10 +251,22 @@ for (const p of pals) {
 	if (p.mount === 'None') noMount++;
 	if (!p.name_fr || p.name_fr === p.name) noFrName++;
 }
+// per-language coverage (how many pals have a localized name/description in each locale)
+const langReport = LANGS.map(([, code]) => {
+	let nm = 0, ds = 0;
+	for (const p of pals) {
+		const t = p.translations[code];
+		if (t?.name) nm++;
+		if (t?.description) ds++;
+	}
+	return `${code}:${nm}/${ds}`;
+}).join('  ');
+
 console.log(`Wrote ${pals.length} pals -> ${path.relative(process.cwd(), OUT)}`);
 console.log(`Wrote ${iconAssets.length} icon refs -> ${path.relative(process.cwd(), ICON_LIST)}`);
 console.log('  elements :', [...elements].sort().join(', '));
 console.log('  sizes    :', [...sizes].join(', '));
 console.log('  work     :', [...works].sort().join(', '));
 console.log(`  missing  : icon=${noIcon} description=${noDesc} element=${noElement} mount=None:${noMount} fr-name-same-as-en=${noFrName}`);
+console.log('  langs (name/desc counts):', langReport);
 console.log('  sample   :', pals.slice(0, 3).map((p) => `${p.paldeck} ${p.name}/${p.name_fr} [${p.elements}] r${p.rarity} ${p.size}`).join(' | '));

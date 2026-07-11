@@ -48,8 +48,8 @@
                 maintainAspectRatio: false,
                 plugins: { legend: { display: false } },
                 scales: {
-                    y: { beginAtZero: true, ticks: { color: "#16324e" }, grid: { color: "rgba(18,50,78,0.12)" } },
-                    x: { ticks: { color: "#16324e" }, grid: { color: "rgba(18,50,78,0.12)" } },
+                    y: { beginAtZero: true, ticks: { color: "#9fc4e0" }, grid: { color: "rgba(150,200,230,0.14)" } },
+                    x: { ticks: { color: "#9fc4e0" }, grid: { color: "rgba(150,200,230,0.14)" } },
                 },
             },
         });
@@ -70,12 +70,12 @@
     {/snippet}
 
     {#snippet content()}
-        <div class="h-full mt-4 space-y-4 text-[#16324e]">
+        <div class="h-full mt-4 space-y-4 text-[#dbeafe]">
             <div class="flex flex-wrap gap-4 justify-center">
                 {#each METRICS as m}
                     <div class="text-center min-w-[90px]">
                         <p class="text-lg">{locale.t(`components.stats.metrics.${m.key}` as any)}</p>
-                        <p class="text-4xl font-bold text-[#0f7fa8]">{m.value()}</p>
+                        <p class="text-4xl font-bold text-[#57e0f0]">{m.value()}</p>
                     </div>
                 {/each}
             </div>

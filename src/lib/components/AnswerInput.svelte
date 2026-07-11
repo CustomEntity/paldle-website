@@ -29,6 +29,19 @@
     }: Props = $props();
 
     let searchOption = $state('');
+    let rootEl: HTMLDivElement | undefined = $state();
+
+    // Keep the suggestion menu open independently of input focus, so grabbing the
+    // dropdown scrollbar (which blurs the input) no longer closes it. It closes on
+    // select, Escape, or a pointer press outside the component.
+    $effect(() => {
+        if (!showMenu) return;
+        const onDocPointerDown = (e: PointerEvent) => {
+            if (rootEl && !rootEl.contains(e.target as Node)) showMenu = false;
+        };
+        window.addEventListener('pointerdown', onDocPointerDown, true);
+        return () => window.removeEventListener('pointerdown', onDocPointerDown, true);
+    });
 
     function handleSelect(option: string) {
         searchOption = '';
@@ -59,55 +72,57 @@
 
 <div
         id={id}
+        bind:this={rootEl}
         class="relative w-[90%] md:w-full max-w-[480px] h-[50px]">
     <div class="flex h-full w-full gap-2">
         <input
                 onfocus={() => (showMenu = true)}
-                onblur={() => (showMenu = false)}
                 oninput={() => (showMenu = true)}
                 bind:value={searchOption}
                 onkeydown={handleKeydown}
                 {placeholder}
-                style=" filter: drop-shadow(0px 2px 0px rgba(0,0,0,0.8));"
-                type="text" class="pal-input px-3 py-2 w-full font-lilita text-lg">
+                type="text" class="pal-input px-4 w-full font-lilita text-lg">
 
         <PalButton
                 title={locale.t('components.answerInput.button.submit.title')}
                 height="100%"
-                class="md:min-w-[170px] min-w-[135px]"
+                class="md:min-w-[150px] min-w-[128px]"
                 onClick={handleButtonClick}
         />
     </div>
     {#if showMenu && searchOption !== ''}
-        <div class="pal-suggest absolute w-full flex flex-col overflow-y-auto max-h-[30vh] z-20 mt-2">
-            {#if loading}
-                <div class="text-white/70 p-3">{locale.t('components.answerInput.states.loading')}</div>
-            {:else}
-                {#if filteredOptions.length === 0}
-                    <div class="text-white/60 p-3">{locale.t('components.answerInput.states.no_result')}</div>
+        <div class="pal-suggest"
+             style="position:absolute; left:0; right:0; top:calc(100% + 8px); z-index:50; padding:16px;">
+            <div class="suggest-scroll flex flex-col" style="max-height:300px; overflow-y:auto; overscroll-behavior:contain;">
+                {#if loading}
+                    <div class="text-white/70 p-3">{locale.t('components.answerInput.states.loading')}</div>
                 {:else}
-                    {#each filteredOptions as option}
-                        <button
-                                class="pal-suggest-item text-left px-3 py-2 cursor-pointer"
-                                onmousedown={() => handleSelect(option)}
-                        >
-                            {@render item?.(option)}
-                        </button>
-                    {/each}
+                    {#if filteredOptions.length === 0}
+                        <div class="text-white/60 p-3">{locale.t('components.answerInput.states.no_result')}</div>
+                    {:else}
+                        {#each filteredOptions as option}
+                            <button
+                                    class="pal-suggest-item text-left px-3 py-2 cursor-pointer"
+                                    onmousedown={() => handleSelect(option)}
+                            >
+                                {@render item?.(option)}
+                            </button>
+                        {/each}
+                    {/if}
                 {/if}
-            {/if}
+            </div>
         </div>
     {/if}
 </div>
 
 <style>
-    /* dropdown scrollbar — teal on navy, matches the site */
-    .pal-suggest::-webkit-scrollbar { width: 10px; }
-    .pal-suggest::-webkit-scrollbar-track { background: rgba(10, 22, 40, 0.5); }
-    .pal-suggest::-webkit-scrollbar-thumb {
+    /* inner scroll area (the frame stays fixed on .pal-suggest, only this scrolls) */
+    .suggest-scroll::-webkit-scrollbar { width: 10px; }
+    .suggest-scroll::-webkit-scrollbar-track { background: rgba(10, 22, 40, 0.5); }
+    .suggest-scroll::-webkit-scrollbar-thumb {
         background-color: #22a7d8;
         border-radius: 20px;
         border: 3px solid rgba(10, 22, 40, 0.6);
     }
-    .pal-suggest::-webkit-scrollbar-thumb:hover { background-color: #37d0e6; }
+    .suggest-scroll::-webkit-scrollbar-thumb:hover { background-color: #37d0e6; }
 </style>

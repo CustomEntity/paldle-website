@@ -12,6 +12,14 @@
     let isOpen = $state(false);
     const {trigger, title, content, onOpenChange}: Props = $props();
 
+    // Move the overlay to <body> so a fixed modal never gets trapped inside a
+    // panel's stacking context (our .pal-* panels use isolation) and rendered
+    // beneath later sibling panels.
+    function portal(node: HTMLElement) {
+        document.body.appendChild(node);
+        return {destroy() { node.remove(); }};
+    }
+
     function toggleModal() {
         isOpen = !isOpen;
         onOpenChange?.(isOpen);
@@ -30,13 +38,13 @@
     {@render trigger(() => toggleModal())}
 {/if}
 
-<div class="fixed inset-0 z-50 {isOpen ? 'visible' : 'invisible pointer-events-none'}" onclick={toggleModal}>
+<div use:portal class="fixed inset-0 z-[9999] {isOpen ? 'visible' : 'invisible pointer-events-none'}" onclick={toggleModal}>
     <div
             class="fixed inset-0 bg-black/40 transition-opacity duration-200 {isOpen ? 'opacity-100' : 'opacity-0'}"
     ></div>
 
     <div
-            class="fixed left-[50%] top-[50%] z-50 w-[90%] max-w-[94%] max-h-[90%] translate-x-[-50%] translate-y-[-50%] outline-none sm:max-w-[890px] md:w-full  transition-all duration-200 {isOpen ? 'opacity-100 translate-y-[-50%]' : 'opacity-0 translate-y-[-45%]'}"
+            class="fixed left-[50%] top-[50%] z-[10000] w-[90%] max-w-[94%] max-h-[90%] translate-x-[-50%] translate-y-[-50%] outline-none sm:max-w-[890px] md:w-full  transition-all duration-200 {isOpen ? 'opacity-100 translate-y-[-50%]' : 'opacity-0 translate-y-[-45%]'}"
             onclick={(e) => e.stopPropagation()}
     >
         <button

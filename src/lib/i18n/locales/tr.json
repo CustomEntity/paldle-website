@@ -1,0 +1,312 @@
+{
+	"lang": {
+		"name": "Türkçe"
+	},
+	"layout": {
+		"header": {
+			"home_link": "Paldle ana sayfasına dön",
+			"logo_alt": "Paldle logosu"
+		},
+		"page_meta": {
+			"site_name": "Paldle",
+			"base_title": "Günlük Palworld Tahmin Oyunu",
+			"base_description": "Paldle, günlük Palworld tahmin oyunudur. Günün Pal'ini üç modda tahmin et: Klasik, Açıklama ve Siluet."
+		},
+		"footer": {
+			"want_more": {
+				"title": "Daha fazlası mı?",
+				"description": "-dle ailesinin diğer günlük tahmin oyunlarını keşfet."
+			},
+			"accessibility": {
+				"discord": "Discord'umuza katıl",
+				"information": "Paldle hakkında",
+				"kofi": "Ko-fi'de bize destek ol",
+				"x": "Bizi X'te takip et",
+				"reddit": "Subreddit'imizi ziyaret et"
+			},
+			"copyright": "Paldle - {year}"
+		},
+		"modals": {
+			"about": {
+				"title": "Paldle hakkında",
+				"discover": "Paldle, Palworld hayranları için ücretsiz bir günlük tahmin oyunudur. Her gün yeni bir Pal seçilir — yeni bir bulmaca için yarın tekrar gel.",
+				"disclaimer": "Paldle bir hayran projesidir; Pocketpair, Inc. ile herhangi bir bağlantısı, onayı veya sponsorluğu yoktur. Palworld ve ilgili tüm isimler ile varlıklar Pocketpair'e aittir.",
+				"game_modes": {
+					"title": "Oyun modları",
+					"description": "Klasik: Pal'i özelliklerinden tahmin et. Açıklama: Pal'i Paldeck kaydından tahmin et. Siluet: Pal'i şeklinden tahmin et. Ses: Pal'i sesinden tahmin et."
+				},
+				"dle_games": {
+					"title": "-dle ailesi",
+					"description": "Paldle, günlük tahmin oyunlarından oluşan bir ailenin parçasıdır. Hepsini aşağıdaki alt bilgide bulabilirsin."
+				},
+				"commitment": {
+					"title": "Sözümüz",
+					"description": "Paldle oynaması ücretsizdir ve her zaman öyle kalacak. Oyuna yeni Pal'ler eklendikçe verileri güncel tutuyoruz."
+				},
+				"inspiration": {
+					"title": "İlham",
+					"description": "Paldle, Wordle'dan ve topluluğun harika -dle oyunlarından ilham alır."
+				},
+				"credit": {
+					"title": "Emeği geçenler",
+					"description": "Pal verileri ve görselleri Pocketpair, Inc.'e aittir. Toplulukça sevgiyle yapıldı."
+				},
+				"privacy": {
+					"title": "Gizlilik",
+					"description": "Gizliliğe saygılı analiz araçları kullanıyoruz. Ayrıntılar için gizlilik politikamıza bak."
+				},
+				"thanks": "Oynadığın için teşekkürler, hepsini yakalarken iyi eğlenceler!",
+				"signature": {
+					"regards": "Sevgiyle,",
+					"team": "Paldle ekibi"
+				}
+			}
+		}
+	},
+	"components": {
+		"answerInput": {
+			"states": {
+				"loading": "Yükleniyor...",
+				"no_result": "Sonuç yok"
+			},
+			"button": {
+				"submit": {
+					"title": "Tahmin et"
+				}
+			}
+		},
+		"victoryContainer": {
+			"congratulations": "Aferin! <name>{name}</name> Pal'ini buldun!",
+			"image": {
+				"alt": "Pal görseli"
+			},
+			"you_found": "Buldun",
+			"number_of_tries": "Tahmin sayısı: {count}",
+			"stats_button": "İstatistiklerim",
+			"next": {
+				"timer": "Sonraki Pal",
+				"mode": "Sonraki mod:"
+			}
+		},
+		"shareContainer": {
+			"buttons": {
+				"copy": {
+					"title": "Kopyala",
+					"aria_label": "Sonucu panoya kopyala"
+				},
+				"tweet": {
+					"title": "Tweetle",
+					"aria_label": "X'te (Twitter) paylaş"
+				}
+			},
+			"and_more": "ve {count} tane daha..."
+		},
+		"toolsBar": {
+			"stats": {
+				"tooltip": "İstatistikler",
+				"alt": "İstatistikler"
+			},
+			"streak": {
+				"tooltip": "Güncel seri",
+				"active": "Aktif seri",
+				"inactive": "Aktif seri yok"
+			},
+			"patchNotes": {
+				"tooltip": "Yenilikler",
+				"alt": "Yenilikler"
+			},
+			"howToPlay": {
+				"tooltip": "Nasıl oynanır"
+			}
+		},
+		"stats": {
+			"title": "İstatistiklerin",
+			"metrics": {
+				"games_won": "Kazanılan oyunlar",
+				"average_tries": "Ort. tahmin",
+				"one_shots": "Tek seferde",
+				"current_streak": "Seri",
+				"best_streak": "En iyi seri"
+			},
+			"graph": {
+				"label": "Tahminler",
+				"title": "Günlük tahminler",
+				"fallback": "Günlük tahmin grafiği"
+			}
+		},
+		"patchNotes": {
+			"title": "Yenilikler",
+			"loading": "Yenilikler yükleniyor...",
+			"empty": "Henüz yenilik yok.",
+			"error": "Yenilikler yüklenemedi."
+		}
+	},
+	"pages": {
+		"home": {
+			"title": "Günün Pal'ini tahmin et",
+			"button": {
+				"classic": {
+					"title": "Klasik",
+					"description": "Pal'i özelliklerinden tahmin et."
+				},
+				"description": {
+					"title": "Açıklama",
+					"description": "Pal'i Paldeck kaydından tahmin et."
+				},
+				"silhouette": {
+					"title": "Siluet",
+					"description": "Pal'i şeklinden tahmin et."
+				},
+				"sound": {
+					"title": "Ses",
+					"description": "Pal'i sesinden tahmin et."
+				}
+			}
+		},
+		"classic": {
+			"page_meta": {
+				"title": "Klasik",
+				"description": "Günün Palworld Pal'ini elementinden, nadirliğinden, boyutundan, iş yeteneklerinden ve daha fazlasından tahmin et."
+			},
+			"placeholder": "Bir Pal adı yaz...",
+			"explanation": {
+				"title": "Günün Pal'ini tahmin et",
+				"hint": "Her tahmin, özelliklerinin gizemli Pal ile nasıl karşılaştırıldığını gösterir."
+			},
+			"yesterday": "Dünkü Pal #{gameId}: {name}",
+			"share": {
+				"text": "#Paldle Klasik Pal #{id}'i {tries} tahminde buldum!",
+				"to_copy": "#Paldle Klasik Pal #{id}'i {tries} tahminde buldum!\n{url}"
+			},
+			"errors": {
+				"generic": "Bir şeyler ters gitti: {message}",
+				"no_daily": "Bugün için henüz bir Pal belirlenmedi — yakında tekrar bak!"
+			},
+			"how_to": {
+				"title": "Nasıl oynanır — Klasik",
+				"body": "<p>Günün gizemli Pal'ini tahmin et. Her tahminden sonra her sütun, Pal'inin cevaba göre nasıl karşılaştırıldığını gösterir.</p><ul class='list-disc pl-5'><li><b>Yeşil</b> — tam eşleşme.</li><li><b>Turuncu</b> — kısmi eşleşme (bazı elementler veya iş türleri ortak).</li><li><b>Kırmızı</b> — eşleşme yok.</li><li><b>Oklar</b> — cevabın değeri daha yüksek veya daha düşük (Paldeck numarası, nadirlik, boyut).</li></ul><p>Her gün yeni bir Pal seçilir.</p>"
+			},
+			"attributes": {
+				"headers": {
+					"pal": "Pal",
+					"paldeck": "No.",
+					"elements": "Element",
+					"rarity": "Nadirlik",
+					"size": "Boyut",
+					"work": "İş",
+					"mount": "Binek",
+					"nocturnal": "Gececi"
+				},
+				"elements": {
+					"Neutral": "Nötr",
+					"Fire": "Ateş",
+					"Water": "Su",
+					"Electric": "Elektrik",
+					"Grass": "Ot",
+					"Ice": "Buz",
+					"Ground": "Toprak",
+					"Dark": "Karanlık",
+					"Dragon": "Ejderha"
+				},
+				"size": {
+					"XS": "ÇK",
+					"S": "K",
+					"M": "O",
+					"L": "B",
+					"XL": "ÇB"
+				},
+				"mount": {
+					"None": "Yok",
+					"Ground": "Kara",
+					"Flying": "Uçan",
+					"Swimming": "Yüzen"
+				},
+				"nocturnal": {
+					"yes": "Evet",
+					"no": "Hayır"
+				},
+				"work": {
+					"Kindling": "Ateş yakma",
+					"Watering": "Sulama",
+					"Planting": "Ekim",
+					"Electricity": "Elektrik",
+					"Handiwork": "El işi",
+					"Gathering": "Toplama",
+					"Lumbering": "Odunculuk",
+					"Mining": "Madencilik",
+					"OilExtraction": "Petrol çıkarma",
+					"Medicine": "İlaç",
+					"Cooling": "Soğutma",
+					"Transporting": "Taşıma",
+					"Farming": "Çiftçilik"
+				}
+			}
+		},
+		"description": {
+			"page_meta": {
+				"title": "Açıklama",
+				"description": "Günün Palworld Pal'ini Paldeck açıklamasından tahmin et."
+			},
+			"title": "Pal'i Paldeck kaydından tahmin et",
+			"placeholder": "Bir Pal adı yaz...",
+			"hint": {
+				"size": "Boyut: {size}",
+				"mount": "Binek: {mount}"
+			},
+			"yesterday": "Dünkü Pal #{gameId}: {name}",
+			"share": {
+				"text": "#Paldle Açıklama Pal #{id}'i {tries} tahminde buldum!",
+				"to_copy": "#Paldle Açıklama Pal #{id}'i {tries} tahminde buldum!\n{url}"
+			},
+			"errors": {
+				"no_daily": "Bugün için henüz bir Pal belirlenmedi — yakında tekrar bak!"
+			},
+			"how_to": {
+				"title": "Nasıl oynanır — Açıklama",
+				"body": "<p>Gizemli Pal'in Paldeck açıklamasını oku ve kim olduğunu tahmin et.</p><p>Her yanlış tahmin ek bir ipucu açar — element, boyut, ardından binek türü.</p><p>Her gün yeni bir Pal seçilir.</p>"
+			}
+		},
+		"silhouette": {
+			"page_meta": {
+				"title": "Siluet",
+				"description": "Günün Palworld Pal'ini siluetinden tahmin et."
+			},
+			"title": "Pal'i siluetinden tahmin et",
+			"placeholder": "Bir Pal adı yaz...",
+			"hint": "Şekle bak ve Pal'i tahmin et.",
+			"yesterday": "Dünkü Pal #{gameId}: {name}",
+			"share": {
+				"text": "#Paldle Siluet Pal #{id}'i {tries} tahminde buldum!",
+				"to_copy": "#Paldle Siluet Pal #{id}'i {tries} tahminde buldum!\n{url}"
+			},
+			"errors": {
+				"no_daily": "Bugün için henüz bir Pal belirlenmedi — yakında tekrar bak!"
+			},
+			"how_to": {
+				"title": "Nasıl oynanır — Siluet",
+				"body": "<p>Bir Pal siyah bir siluet olarak gösterilir. Şeklinden hangi Pal olduğunu tahmin et.</p><p>Bulduğunda görselin tamamı açığa çıkar.</p><p>Her gün yeni bir Pal seçilir.</p>"
+			}
+		},
+		"sound": {
+			"page_meta": {
+				"title": "Ses",
+				"description": "Günün Palworld Pal'ini sesinden tahmin et."
+			},
+			"title": "Pal'i sesinden tahmin et",
+			"placeholder": "Bir Pal adı yaz...",
+			"hint": "Sesi dinle ve Pal'i tahmin et.",
+			"yesterday": "Dünkü Pal #{gameId}: {name}",
+			"share": {
+				"text": "#Paldle Ses Pal #{id}'i {tries} tahminde buldum!",
+				"to_copy": "#Paldle Ses Pal #{id}'i {tries} tahminde buldum!\n{url}"
+			},
+			"errors": {
+				"no_daily": "Bugün için henüz bir Pal belirlenmedi — yakında tekrar bak!"
+			},
+			"how_to": {
+				"title": "Nasıl oynanır — Ses",
+				"body": "<p>Bir Pal'in sesini dinle ve hangi Pal olduğunu tahmin et.</p><p>Bulduğunda görselin tamamı açığa çıkar.</p><p>Her gün yeni bir Pal seçilir.</p>"
+			}
+		}
+	}
+}

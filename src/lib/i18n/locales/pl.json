@@ -1,0 +1,312 @@
+{
+	"lang": {
+		"name": "Polski"
+	},
+	"layout": {
+		"header": {
+			"home_link": "Powrót na stronę główną Paldle",
+			"logo_alt": "Logo Paldle"
+		},
+		"page_meta": {
+			"site_name": "Paldle",
+			"base_title": "Codzienna gra zgadywanka Palworld",
+			"base_description": "Paldle to codzienna gra zgadywanka o Palworld. Odgadnij Pala dnia w trzech trybach: Klasyczny, Opis i Sylwetka."
+		},
+		"footer": {
+			"want_more": {
+				"title": "Chcesz więcej?",
+				"description": "Odkryj inne codzienne zgadywanki z rodziny -dle."
+			},
+			"accessibility": {
+				"discord": "Dołącz do naszego Discorda",
+				"information": "O Paldle",
+				"kofi": "Wesprzyj nas na Ko-fi",
+				"x": "Obserwuj nas na X",
+				"reddit": "Odwiedź nasz subreddit"
+			},
+			"copyright": "Paldle - {year}"
+		},
+		"modals": {
+			"about": {
+				"title": "O Paldle",
+				"discover": "Paldle to darmowa codzienna zgadywanka dla fanów Palworld. Każdego dnia wybierany jest nowy Pal — wróć jutro po świeżą zagadkę.",
+				"disclaimer": "Paldle to projekt fanowski, który nie jest powiązany z Pocketpair, Inc., ani przez nią wspierany czy sponsorowany. Palworld oraz wszystkie powiązane nazwy i zasoby są własnością Pocketpair.",
+				"game_modes": {
+					"title": "Tryby gry",
+					"description": "Klasyczny: odgadnij Pala na podstawie jego cech. Opis: odgadnij Pala na podstawie jego wpisu w Paldeck. Sylwetka: odgadnij Pala na podstawie jego kształtu. Dźwięk: odgadnij Pala na podstawie jego głosu."
+				},
+				"dle_games": {
+					"title": "Rodzina -dle",
+					"description": "Paldle należy do rodziny codziennych zgadywanek. Znajdź je wszystkie w stopce poniżej."
+				},
+				"commitment": {
+					"title": "Nasze zobowiązanie",
+					"description": "Paldle jest darmowe i takie pozostanie. Dbamy o aktualność danych w miarę dodawania nowych Pali do gry."
+				},
+				"inspiration": {
+					"title": "Inspiracja",
+					"description": "Paldle inspiruje się Wordle oraz wieloma świetnymi społecznościowymi grami -dle."
+				},
+				"credit": {
+					"title": "Podziękowania",
+					"description": "Dane i grafiki Pali należą do Pocketpair, Inc. Stworzone z miłością przez społeczność."
+				},
+				"privacy": {
+					"title": "Prywatność",
+					"description": "Korzystamy z analityki przyjaznej prywatności. Szczegóły znajdziesz w naszej polityce prywatności."
+				},
+				"thanks": "Dziękujemy za grę i miłej zabawy w łapaniu ich wszystkich!",
+				"signature": {
+					"regards": "Z miłością,",
+					"team": "Zespół Paldle"
+				}
+			}
+		}
+	},
+	"components": {
+		"answerInput": {
+			"states": {
+				"loading": "Ładowanie...",
+				"no_result": "Brak wyników"
+			},
+			"button": {
+				"submit": {
+					"title": "Zgadnij"
+				}
+			}
+		},
+		"victoryContainer": {
+			"congratulations": "Dobra robota! Znaleziono <name>{name}</name>!",
+			"image": {
+				"alt": "Grafika Pala"
+			},
+			"you_found": "Znaleziono",
+			"number_of_tries": "Liczba prób: {count}",
+			"stats_button": "Moje statystyki",
+			"next": {
+				"timer": "Następny Pal za",
+				"mode": "Następny tryb:"
+			}
+		},
+		"shareContainer": {
+			"buttons": {
+				"copy": {
+					"title": "Kopiuj",
+					"aria_label": "Skopiuj wynik do schowka"
+				},
+				"tweet": {
+					"title": "Tweetnij",
+					"aria_label": "Udostępnij na X (Twitter)"
+				}
+			},
+			"and_more": "i {count} więcej..."
+		},
+		"toolsBar": {
+			"stats": {
+				"tooltip": "Statystyki",
+				"alt": "Statystyki"
+			},
+			"streak": {
+				"tooltip": "Aktualna seria",
+				"active": "Aktywna seria",
+				"inactive": "Brak aktywnej serii"
+			},
+			"patchNotes": {
+				"tooltip": "Lista zmian",
+				"alt": "Lista zmian"
+			},
+			"howToPlay": {
+				"tooltip": "Jak grać"
+			}
+		},
+		"stats": {
+			"title": "Twoje statystyki",
+			"metrics": {
+				"games_won": "Wygrane gry",
+				"average_tries": "Śr. liczba prób",
+				"one_shots": "Trafienia za pierwszym razem",
+				"current_streak": "Seria",
+				"best_streak": "Najlepsza seria"
+			},
+			"graph": {
+				"label": "Próby",
+				"title": "Próby dziennie",
+				"fallback": "Wykres prób na dzień"
+			}
+		},
+		"patchNotes": {
+			"title": "Lista zmian",
+			"loading": "Ładowanie listy zmian...",
+			"empty": "Brak listy zmian.",
+			"error": "Nie udało się załadować listy zmian."
+		}
+	},
+	"pages": {
+		"home": {
+			"title": "Odgadnij Pala dnia",
+			"button": {
+				"classic": {
+					"title": "Klasyczny",
+					"description": "Odgadnij Pala na podstawie jego cech."
+				},
+				"description": {
+					"title": "Opis",
+					"description": "Odgadnij Pala na podstawie jego wpisu w Paldeck."
+				},
+				"silhouette": {
+					"title": "Sylwetka",
+					"description": "Odgadnij Pala na podstawie jego kształtu."
+				},
+				"sound": {
+					"title": "Dźwięk",
+					"description": "Odgadnij Pala na podstawie jego głosu."
+				}
+			}
+		},
+		"classic": {
+			"page_meta": {
+				"title": "Klasyczny",
+				"description": "Odgadnij dzisiejszego Pala z Palworld na podstawie jego żywiołu, rzadkości, rozmiaru, przydatności do pracy i nie tylko."
+			},
+			"placeholder": "Wpisz nazwę Pala...",
+			"explanation": {
+				"title": "Odgadnij Pala dnia",
+				"hint": "Każde zgadnięcie pokazuje, jak jego cechy wypadają na tle tajemniczego Pala."
+			},
+			"yesterday": "Wczorajszy Pal #{gameId} to {name}",
+			"share": {
+				"text": "Odgadłem Pala z trybu Klasyczny #Paldle #{id} w {tries} próbach!",
+				"to_copy": "Odgadłem Pala z trybu Klasyczny #Paldle #{id} w {tries} próbach!\n{url}"
+			},
+			"errors": {
+				"generic": "Coś poszło nie tak: {message}",
+				"no_daily": "Nie wybrano jeszcze Pala na dziś — zajrzyj wkrótce!"
+			},
+			"how_to": {
+				"title": "Jak grać — Klasyczny",
+				"body": "<p>Odgadnij tajemniczego Pala dnia. Po każdym zgadnięciu każda kolumna pokazuje, jak Twój Pal wypada na tle odpowiedzi.</p><ul class='list-disc pl-5'><li><b>Zielony</b> — dokładne trafienie.</li><li><b>Pomarańczowy</b> — częściowe trafienie (część żywiołów lub rodzajów pracy się pokrywa).</li><li><b>Czerwony</b> — brak trafienia.</li><li><b>Strzałki</b> — wartość odpowiedzi jest wyższa lub niższa (numer Paldeck, rzadkość, rozmiar).</li></ul><p>Każdego dnia wybierany jest nowy Pal.</p>"
+			},
+			"attributes": {
+				"headers": {
+					"pal": "Pal",
+					"paldeck": "Nr",
+					"elements": "Żywioł",
+					"rarity": "Rzadkość",
+					"size": "Rozmiar",
+					"work": "Praca",
+					"mount": "Wierzchowiec",
+					"nocturnal": "Nocny"
+				},
+				"elements": {
+					"Neutral": "Neutralny",
+					"Fire": "Ogień",
+					"Water": "Woda",
+					"Electric": "Elektryczny",
+					"Grass": "Trawa",
+					"Ice": "Lód",
+					"Ground": "Ziemia",
+					"Dark": "Mrok",
+					"Dragon": "Smok"
+				},
+				"size": {
+					"XS": "XS",
+					"S": "S",
+					"M": "M",
+					"L": "L",
+					"XL": "XL"
+				},
+				"mount": {
+					"None": "Brak",
+					"Ground": "Lądowy",
+					"Flying": "Latający",
+					"Swimming": "Pływający"
+				},
+				"nocturnal": {
+					"yes": "Tak",
+					"no": "Nie"
+				},
+				"work": {
+					"Kindling": "Rozpalanie",
+					"Watering": "Podlewanie",
+					"Planting": "Sadzenie",
+					"Electricity": "Elektryczność",
+					"Handiwork": "Rękodzieło",
+					"Gathering": "Zbieractwo",
+					"Lumbering": "Drwalstwo",
+					"Mining": "Górnictwo",
+					"OilExtraction": "Wydobycie ropy",
+					"Medicine": "Medycyna",
+					"Cooling": "Chłodzenie",
+					"Transporting": "Transport",
+					"Farming": "Rolnictwo"
+				}
+			}
+		},
+		"description": {
+			"page_meta": {
+				"title": "Opis",
+				"description": "Odgadnij dzisiejszego Pala z Palworld na podstawie jego opisu w Paldeck."
+			},
+			"title": "Odgadnij Pala na podstawie jego wpisu w Paldeck",
+			"placeholder": "Wpisz nazwę Pala...",
+			"hint": {
+				"size": "Rozmiar: {size}",
+				"mount": "Wierzchowiec: {mount}"
+			},
+			"yesterday": "Wczorajszy Pal #{gameId} to {name}",
+			"share": {
+				"text": "Odgadłem Pala z trybu Opis #Paldle #{id} w {tries} próbach!",
+				"to_copy": "Odgadłem Pala z trybu Opis #Paldle #{id} w {tries} próbach!\n{url}"
+			},
+			"errors": {
+				"no_daily": "Nie wybrano jeszcze Pala na dziś — zajrzyj wkrótce!"
+			},
+			"how_to": {
+				"title": "Jak grać — Opis",
+				"body": "<p>Przeczytaj opis tajemniczego Pala z Paldeck i odgadnij, kim jest.</p><p>Każde błędne zgadnięcie odsłania kolejną wskazówkę — żywioł, rozmiar, a potem typ wierzchowca.</p><p>Każdego dnia wybierany jest nowy Pal.</p>"
+			}
+		},
+		"silhouette": {
+			"page_meta": {
+				"title": "Sylwetka",
+				"description": "Odgadnij dzisiejszego Pala z Palworld na podstawie jego sylwetki."
+			},
+			"title": "Odgadnij Pala na podstawie jego sylwetki",
+			"placeholder": "Wpisz nazwę Pala...",
+			"hint": "Przyjrzyj się kształtowi i odgadnij Pala.",
+			"yesterday": "Wczorajszy Pal #{gameId} to {name}",
+			"share": {
+				"text": "Odgadłem Pala z trybu Sylwetka #Paldle #{id} w {tries} próbach!",
+				"to_copy": "Odgadłem Pala z trybu Sylwetka #Paldle #{id} w {tries} próbach!\n{url}"
+			},
+			"errors": {
+				"no_daily": "Nie wybrano jeszcze Pala na dziś — zajrzyj wkrótce!"
+			},
+			"how_to": {
+				"title": "Jak grać — Sylwetka",
+				"body": "<p>Pal jest pokazany jako czarna sylwetka. Odgadnij, który to Pal, na podstawie jego kształtu.</p><p>Pełna grafika zostaje odsłonięta, gdy go odgadniesz.</p><p>Każdego dnia wybierany jest nowy Pal.</p>"
+			}
+		},
+		"sound": {
+			"page_meta": {
+				"title": "Dźwięk",
+				"description": "Odgadnij dzisiejszego Pala z Palworld na podstawie jego głosu."
+			},
+			"title": "Odgadnij Pala na podstawie jego głosu",
+			"placeholder": "Wpisz nazwę Pala...",
+			"hint": "Posłuchaj głosu i odgadnij Pala.",
+			"yesterday": "Wczorajszy Pal #{gameId} to {name}",
+			"share": {
+				"text": "Odgadłem Pala z trybu Dźwięk #Paldle #{id} w {tries} próbach!",
+				"to_copy": "Odgadłem Pala z trybu Dźwięk #Paldle #{id} w {tries} próbach!\n{url}"
+			},
+			"errors": {
+				"no_daily": "Nie wybrano jeszcze Pala na dziś — zajrzyj wkrótce!"
+			},
+			"how_to": {
+				"title": "Jak grać — Dźwięk",
+				"body": "<p>Posłuchaj głosu Pala i odgadnij, który to Pal.</p><p>Pełna grafika zostaje odsłonięta, gdy go odgadniesz.</p><p>Każdego dnia wybierany jest nowy Pal.</p>"
+			}
+		}
+	}
+}

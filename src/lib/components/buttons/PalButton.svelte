@@ -52,7 +52,7 @@
         gap: 0.5rem;
         width: 100%;
         height: 100%;
-        font-size: 15px;
-        letter-spacing: 0.3px;
+        font-size: 16px;
+        letter-spacing: 0.4px;
     }
 </style>

@@ -1,0 +1,312 @@
+{
+	"lang": {
+		"name": "Bahasa Indonesia"
+	},
+	"layout": {
+		"header": {
+			"home_link": "Kembali ke halaman utama Paldle",
+			"logo_alt": "Logo Paldle"
+		},
+		"page_meta": {
+			"site_name": "Paldle",
+			"base_title": "Tebak Palworld Harian",
+			"base_description": "Paldle adalah permainan tebak Palworld harian. Tebak Pal hari ini dalam tiga mode: Klasik, Deskripsi, dan Siluet."
+		},
+		"footer": {
+			"want_more": {
+				"title": "Ingin lebih?",
+				"description": "Temukan permainan tebak harian lain dari keluarga -dle."
+			},
+			"accessibility": {
+				"discord": "Gabung Discord kami",
+				"information": "Tentang Paldle",
+				"kofi": "Dukung kami di Ko-fi",
+				"x": "Ikuti kami di X",
+				"reddit": "Kunjungi subreddit kami"
+			},
+			"copyright": "Paldle - {year}"
+		},
+		"modals": {
+			"about": {
+				"title": "Tentang Paldle",
+				"discover": "Paldle adalah permainan tebak harian gratis untuk penggemar Palworld. Pal baru dipilih setiap hari — kembalilah besok untuk teka-teki baru.",
+				"disclaimer": "Paldle adalah proyek buatan penggemar dan tidak berafiliasi dengan, didukung oleh, atau disponsori oleh Pocketpair, Inc. Palworld beserta semua nama dan aset terkait adalah milik Pocketpair.",
+				"game_modes": {
+					"title": "Mode permainan",
+					"description": "Klasik: tebak Pal dari atributnya. Deskripsi: tebak Pal dari entri Paldeck-nya. Siluet: tebak Pal dari bentuknya. Suara: tebak Pal dari suaranya."
+				},
+				"dle_games": {
+					"title": "Keluarga -dle",
+					"description": "Paldle adalah bagian dari keluarga permainan tebak harian. Temukan semuanya di bagian bawah halaman."
+				},
+				"commitment": {
+					"title": "Komitmen kami",
+					"description": "Paldle gratis untuk dimainkan dan akan selalu begitu. Kami menjaga data tetap terkini seiring Pal baru ditambahkan ke game."
+				},
+				"inspiration": {
+					"title": "Inspirasi",
+					"description": "Paldle terinspirasi oleh Wordle dan banyak permainan -dle komunitas yang hebat."
+				},
+				"credit": {
+					"title": "Kredit",
+					"description": "Data dan karya seni Pal adalah milik Pocketpair, Inc. Dibuat dengan cinta oleh komunitas."
+				},
+				"privacy": {
+					"title": "Privasi",
+					"description": "Kami menggunakan analitik yang ramah privasi. Lihat kebijakan privasi kami untuk detailnya."
+				},
+				"thanks": "Terima kasih sudah bermain, dan selamat menangkap semuanya!",
+				"signature": {
+					"regards": "Dengan cinta,",
+					"team": "Tim Paldle"
+				}
+			}
+		}
+	},
+	"components": {
+		"answerInput": {
+			"states": {
+				"loading": "Memuat...",
+				"no_result": "Tidak ada hasil"
+			},
+			"button": {
+				"submit": {
+					"title": "Tebak"
+				}
+			}
+		},
+		"victoryContainer": {
+			"congratulations": "Kerja bagus! Kamu menemukan <name>{name}</name>!",
+			"image": {
+				"alt": "Karya seni Pal"
+			},
+			"you_found": "Kamu menemukan",
+			"number_of_tries": "Jumlah tebakan: {count}",
+			"stats_button": "Statistikku",
+			"next": {
+				"timer": "Pal berikutnya dalam",
+				"mode": "Mode berikutnya:"
+			}
+		},
+		"shareContainer": {
+			"buttons": {
+				"copy": {
+					"title": "Salin",
+					"aria_label": "Salin hasil ke papan klip"
+				},
+				"tweet": {
+					"title": "Tweet",
+					"aria_label": "Bagikan di X (Twitter)"
+				}
+			},
+			"and_more": "dan {count} lagi..."
+		},
+		"toolsBar": {
+			"stats": {
+				"tooltip": "Statistik",
+				"alt": "Statistik"
+			},
+			"streak": {
+				"tooltip": "Rentetan saat ini",
+				"active": "Rentetan aktif",
+				"inactive": "Tidak ada rentetan aktif"
+			},
+			"patchNotes": {
+				"tooltip": "Catatan perubahan",
+				"alt": "Catatan perubahan"
+			},
+			"howToPlay": {
+				"tooltip": "Cara bermain"
+			}
+		},
+		"stats": {
+			"title": "Statistikmu",
+			"metrics": {
+				"games_won": "Permainan menang",
+				"average_tries": "Rata-rata tebakan",
+				"one_shots": "Sekali tebak",
+				"current_streak": "Rentetan",
+				"best_streak": "Rentetan terbaik"
+			},
+			"graph": {
+				"label": "Tebakan",
+				"title": "Tebakan per hari",
+				"fallback": "Grafik tebakan per hari"
+			}
+		},
+		"patchNotes": {
+			"title": "Catatan perubahan",
+			"loading": "Memuat catatan perubahan...",
+			"empty": "Belum ada catatan perubahan.",
+			"error": "Tidak dapat memuat catatan perubahan."
+		}
+	},
+	"pages": {
+		"home": {
+			"title": "Tebak Pal hari ini",
+			"button": {
+				"classic": {
+					"title": "Klasik",
+					"description": "Tebak Pal dari atributnya."
+				},
+				"description": {
+					"title": "Deskripsi",
+					"description": "Tebak Pal dari entri Paldeck-nya."
+				},
+				"silhouette": {
+					"title": "Siluet",
+					"description": "Tebak Pal dari bentuknya."
+				},
+				"sound": {
+					"title": "Suara",
+					"description": "Tebak Pal dari suaranya."
+				}
+			}
+		},
+		"classic": {
+			"page_meta": {
+				"title": "Klasik",
+				"description": "Tebak Pal Palworld hari ini dari elemen, kelangkaan, ukuran, kecocokan kerja, dan lainnya."
+			},
+			"placeholder": "Ketik nama Pal...",
+			"explanation": {
+				"title": "Tebak Pal hari ini",
+				"hint": "Setiap tebakan menunjukkan bagaimana atributnya dibandingkan dengan Pal misteri."
+			},
+			"yesterday": "Pal kemarin #{gameId} adalah {name}",
+			"share": {
+				"text": "Aku menemukan Pal Klasik #Paldle #{id} dalam {tries} tebakan!",
+				"to_copy": "Aku menemukan Pal Klasik #Paldle #{id} dalam {tries} tebakan!\n{url}"
+			},
+			"errors": {
+				"generic": "Terjadi kesalahan: {message}",
+				"no_daily": "Belum ada Pal yang ditetapkan untuk hari ini — cek lagi nanti!"
+			},
+			"how_to": {
+				"title": "Cara bermain — Klasik",
+				"body": "<p>Tebak Pal misteri hari ini. Setelah setiap tebakan, setiap kolom menunjukkan bagaimana Pal-mu dibandingkan dengan jawabannya.</p><ul class='list-disc pl-5'><li><b>Hijau</b> — cocok persis.</li><li><b>Oranye</b> — cocok sebagian (ada elemen atau jenis kerja yang sama).</li><li><b>Merah</b> — tidak cocok.</li><li><b>Panah</b> — nilai jawaban lebih tinggi atau lebih rendah (nomor Paldeck, kelangkaan, ukuran).</li></ul><p>Pal baru dipilih setiap hari.</p>"
+			},
+			"attributes": {
+				"headers": {
+					"pal": "Pal",
+					"paldeck": "No.",
+					"elements": "Elemen",
+					"rarity": "Kelangkaan",
+					"size": "Ukuran",
+					"work": "Kerja",
+					"mount": "Tunggangan",
+					"nocturnal": "Nokturnal"
+				},
+				"elements": {
+					"Neutral": "Netral",
+					"Fire": "Api",
+					"Water": "Air",
+					"Electric": "Listrik",
+					"Grass": "Rumput",
+					"Ice": "Es",
+					"Ground": "Tanah",
+					"Dark": "Gelap",
+					"Dragon": "Naga"
+				},
+				"size": {
+					"XS": "XS",
+					"S": "S",
+					"M": "M",
+					"L": "L",
+					"XL": "XL"
+				},
+				"mount": {
+					"None": "Tidak ada",
+					"Ground": "Darat",
+					"Flying": "Terbang",
+					"Swimming": "Berenang"
+				},
+				"nocturnal": {
+					"yes": "Ya",
+					"no": "Tidak"
+				},
+				"work": {
+					"Kindling": "Menyalakan Api",
+					"Watering": "Menyiram",
+					"Planting": "Menanam",
+					"Electricity": "Listrik",
+					"Handiwork": "Kerajinan",
+					"Gathering": "Mengumpulkan",
+					"Lumbering": "Menebang",
+					"Mining": "Menambang",
+					"OilExtraction": "Ekstraksi Minyak",
+					"Medicine": "Obat",
+					"Cooling": "Pendinginan",
+					"Transporting": "Mengangkut",
+					"Farming": "Bertani"
+				}
+			}
+		},
+		"description": {
+			"page_meta": {
+				"title": "Deskripsi",
+				"description": "Tebak Pal Palworld hari ini dari deskripsi Paldeck-nya."
+			},
+			"title": "Tebak Pal dari entri Paldeck-nya",
+			"placeholder": "Ketik nama Pal...",
+			"hint": {
+				"size": "Ukuran: {size}",
+				"mount": "Tunggangan: {mount}"
+			},
+			"yesterday": "Pal kemarin #{gameId} adalah {name}",
+			"share": {
+				"text": "Aku menemukan Pal Deskripsi #Paldle #{id} dalam {tries} tebakan!",
+				"to_copy": "Aku menemukan Pal Deskripsi #Paldle #{id} dalam {tries} tebakan!\n{url}"
+			},
+			"errors": {
+				"no_daily": "Belum ada Pal yang ditetapkan untuk hari ini — cek lagi nanti!"
+			},
+			"how_to": {
+				"title": "Cara bermain — Deskripsi",
+				"body": "<p>Baca deskripsi Paldeck dari Pal misteri dan tebak siapa dia.</p><p>Setiap tebakan salah membuka petunjuk tambahan — elemen, ukuran, lalu jenis tunggangan.</p><p>Pal baru dipilih setiap hari.</p>"
+			}
+		},
+		"silhouette": {
+			"page_meta": {
+				"title": "Siluet",
+				"description": "Tebak Pal Palworld hari ini dari siluetnya."
+			},
+			"title": "Tebak Pal dari siluetnya",
+			"placeholder": "Ketik nama Pal...",
+			"hint": "Perhatikan bentuknya dan tebak Pal-nya.",
+			"yesterday": "Pal kemarin #{gameId} adalah {name}",
+			"share": {
+				"text": "Aku menemukan Pal Siluet #Paldle #{id} dalam {tries} tebakan!",
+				"to_copy": "Aku menemukan Pal Siluet #Paldle #{id} dalam {tries} tebakan!\n{url}"
+			},
+			"errors": {
+				"no_daily": "Belum ada Pal yang ditetapkan untuk hari ini — cek lagi nanti!"
+			},
+			"how_to": {
+				"title": "Cara bermain — Siluet",
+				"body": "<p>Sebuah Pal ditampilkan sebagai siluet hitam. Tebak Pal mana itu dari bentuknya.</p><p>Karya seni lengkap terungkap saat kamu menemukannya.</p><p>Pal baru dipilih setiap hari.</p>"
+			}
+		},
+		"sound": {
+			"page_meta": {
+				"title": "Suara",
+				"description": "Tebak Pal Palworld hari ini dari suaranya."
+			},
+			"title": "Tebak Pal dari suaranya",
+			"placeholder": "Ketik nama Pal...",
+			"hint": "Dengarkan suaranya dan tebak Pal-nya.",
+			"yesterday": "Pal kemarin #{gameId} adalah {name}",
+			"share": {
+				"text": "Aku menemukan Pal Suara #Paldle #{id} dalam {tries} tebakan!",
+				"to_copy": "Aku menemukan Pal Suara #Paldle #{id} dalam {tries} tebakan!\n{url}"
+			},
+			"errors": {
+				"no_daily": "Belum ada Pal yang ditetapkan untuk hari ini — cek lagi nanti!"
+			},
+			"how_to": {
+				"title": "Cara bermain — Suara",
+				"body": "<p>Dengarkan suara sebuah Pal dan tebak Pal mana itu.</p><p>Karya seni lengkap terungkap saat kamu menemukannya.</p><p>Pal baru dipilih setiap hari.</p>"
+			}
+		}
+	}
+}

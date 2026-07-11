@@ -25,7 +25,7 @@
         <LanguagePicker />
     </div>
     <div
-        class="pal-frame font-lilita text-white relative flex flex-col p-6 gap-4 max-w-[450px]"
+        class="pal-panel-soft font-lilita text-white relative flex flex-col p-6 gap-4 max-w-[450px]"
     >
         <div class="flex flex-col justify-center items-center">
             <p class="text-3xl text-center pal-title">
@@ -38,6 +38,14 @@
         <div
             class="flex flex-row flex-wrap max-w-[450px] justify-center items-center gap-8"
         >
+            <a
+                href="https://www.stardewdle.net"
+                target="_blank"
+                class="flex flex-col gap-1 justify-center items-center group hover:scale-105 transition-transform duration-300 text-center text-white hover:underline"
+            >
+                <img class="h-12 w-12 rounded-lg" src="stardewdle.png" alt="Stardewdle logo" />
+                <p class="text-white text-center font-lilita">Stardewdle</p>
+            </a>
             <a
                 href="https://alldle.net"
                 target="_blank"
@@ -178,12 +186,13 @@
                         class="social-link cursor-pointer"
                     >
                         <svg
-                            fill="#6cae3f"
+                            fill="#6fd7ec"
                             xmlns="http://www.w3.org/2000/svg"
                             width="40"
                             height="40"
                             viewBox="0 0 416.979 416.979"
                             aria-hidden="true"
+                            style="filter: drop-shadow(0 2px 3px rgba(3,16,30,0.6));"
                         >
                             <path
                                 d="M356.004,61.156c-81.37-81.47-213.377-81.551-294.848-0.182c-81.47,81.371-81.552,213.379-0.181,294.85 c81.369,81.47,213.378,81.551,294.849,0.181C437.293,274.636,437.375,142.626,356.004,61.156z M237.6,340.786 c0,3.217-2.607,5.822-5.822,5.822h-46.576c-3.215,0-5.822-2.605-5.822-5.822V167.885c0-3.217,2.607-5.822,5.822-5.822h46.576 c3.215,0,5.822,2.604,5.822,5.822V340.786z M208.49,137.901c-18.618,0-33.766-15.146-33.766-33.765 c0-18.617,15.147-33.766,33.766-33.766c18.619,0,33.766,15.148,33.766,33.766C242.256,122.755,227.107,137.901,208.49,137.901z"
@@ -200,7 +209,7 @@
                         <p>{locale.t("layout.modals.about.discover")}</p>
                         <p>{locale.t("layout.modals.about.disclaimer")}</p>
 
-                        <p class="font-bold text-[#6a3b18]">
+                        <p class="font-bold text-[#f5c531]">
                             {locale.t("layout.modals.about.game_modes.title")}
                         </p>
                         <p>
@@ -209,7 +218,7 @@
                             )}
                         </p>
 
-                        <p class="font-bold text-[#6a3b18]">
+                        <p class="font-bold text-[#f5c531]">
                             {locale.t("layout.modals.about.dle_games.title")}
                         </p>
                         <p>
@@ -218,7 +227,7 @@
                             )}
                         </p>
 
-                        <p class="font-bold text-[#6a3b18]">
+                        <p class="font-bold text-[#f5c531]">
                             {locale.t("layout.modals.about.commitment.title")}
                         </p>
                         <p>
@@ -227,7 +236,7 @@
                             )}
                         </p>
 
-                        <p class="font-bold text-[#6a3b18]">
+                        <p class="font-bold text-[#f5c531]">
                             {locale.t("layout.modals.about.inspiration.title")}
                         </p>
                         <p>
@@ -236,7 +245,7 @@
                             )}
                         </p>
 
-                        <p class="font-bold text-[#6a3b18]">
+                        <p class="font-bold text-[#f5c531]">
                             {locale.t("layout.modals.about.credit.title")}
                         </p>
                         <p>
@@ -245,7 +254,7 @@
                             )}
                         </p>
 
-                        <p class="font-bold text-[#6a3b18]">
+                        <p class="font-bold text-[#f5c531]">
                             {locale.t("layout.modals.about.privacy.title")}
                         </p>
                         <p>
@@ -256,7 +265,7 @@
 
                         <p>{locale.t("layout.modals.about.thanks")}</p>
 
-                        <p class="flex flex-col font-bold text-[#6a3b18]">
+                        <p class="flex flex-col font-bold text-[#f5c531]">
                             <span
                                 >{locale.t(
                                     "layout.modals.about.signature.regards",
@@ -353,7 +362,7 @@
     }
 
     .social-link:focus-visible {
-        outline: 2px solid #6cae3f;
+        outline: 2px solid #45d6ea;
         outline-offset: 2px;
         border-radius: 0.25rem;
     }

@@ -82,8 +82,8 @@
         <ExplanationBox title={locale.t("pages.classic.explanation.title")}>
             {#snippet content()}
                 <div class="relative w-full text-center text-white">
-                    <span class="uppercase text-2xl font-normal leading-none">{locale.t("pages.classic.explanation.title")}</span>
-                    <span class="block mt-2 text-lg text-white/70">{locale.t("pages.classic.explanation.hint")}</span>
+                    <span class="block uppercase text-2xl font-bold leading-none text-[#7fe3f2]">{locale.t("pages.classic.explanation.title")}</span>
+                    <span class="block mt-2.5 text-base font-normal text-white/70">{locale.t("pages.classic.explanation.hint")}</span>
                 </div>
             {/snippet}
         </ExplanationBox>
@@ -156,7 +156,7 @@
 
                 {#if yesterday}
                     <span class="flex gap-2 text-lg mt-6 pal-title text-white">
-                        {locale.t("pages.classic.yesterday", { gameId: yesterday.game_id, name: yesterday.name })}
+                        {@html locale.t("pages.classic.yesterday", { gameId: yesterday.game_id, name: `<span style="color:#7fe3f2;font-weight:700">${yesterday.name}</span>` })}
                     </span>
                 {/if}
             {/if}

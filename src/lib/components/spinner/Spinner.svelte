@@ -2,25 +2,26 @@
     interface Props {
         size?: number;
     }
-    let { size = 90 }: Props = $props();
+    let { size = 76 }: Props = $props();
 </script>
 
-<svg style="width: {size}px; height: {size}px" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="loading">
-    <g class="rotating-star">
-        <path d="M32 5 l7 16.2 17.6 1.5 -13.4 11.6 4.1 17.2 -15.3-9.3 -15.3 9.3 4.1-17.2 -13.4-11.6 17.6-1.5 z"
-              fill="#ffcf3a" stroke="#2f2110" stroke-width="4" stroke-linejoin="round"/>
-        <circle cx="26" cy="24" r="3.5" fill="#fff6d0"/>
-    </g>
-</svg>
+<!-- Datamined Palworld "hold to act" ring (playring), tinted cyan, spinning as a loader. -->
+<span class="pal-spinner" style="width: {size}px; height: {size}px" aria-label="loading" role="status"></span>
 
 <style>
-    .rotating-star {
+    .pal-spinner {
+        display: inline-block;
+        background-color: var(--accent, #45d6ea);
+        -webkit-mask: url("/ui/da2/playring.webp") center / contain no-repeat;
+        mask: url("/ui/da2/playring.webp") center / contain no-repeat;
+        animation: pal-spin 0.9s linear infinite;
+        filter: drop-shadow(0 0 7px rgba(69, 214, 234, 0.55));
         transform-origin: center;
-        transform-box: fill-box;
-        animation: rotate 2.4s linear infinite;
-        filter: drop-shadow(0 3px 0 rgba(0, 0, 0, 0.3));
     }
-    @keyframes rotate {
+    @keyframes pal-spin {
         to { transform: rotate(360deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .pal-spinner { animation-duration: 2.4s; }
     }
 </style>

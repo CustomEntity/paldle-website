@@ -1,0 +1,312 @@
+{
+	"lang": {
+		"name": "繁體中文"
+	},
+	"layout": {
+		"header": {
+			"home_link": "返回 Paldle 首頁",
+			"logo_alt": "Paldle 標誌"
+		},
+		"page_meta": {
+			"site_name": "Paldle",
+			"base_title": "每日 Palworld 猜謎遊戲",
+			"base_description": "Paldle 是每日 Palworld 猜謎遊戲。透過三種模式猜出今日的 Pal：經典、描述與剪影。"
+		},
+		"footer": {
+			"want_more": {
+				"title": "還想玩更多？",
+				"description": "探索 -dle 家族的其他每日猜謎遊戲。"
+			},
+			"accessibility": {
+				"discord": "加入我們的 Discord",
+				"information": "關於 Paldle",
+				"kofi": "在 Ko-fi 上支持我們",
+				"x": "在 X 上追蹤我們",
+				"reddit": "造訪我們的 subreddit"
+			},
+			"copyright": "Paldle - {year}"
+		},
+		"modals": {
+			"about": {
+				"title": "關於 Paldle",
+				"discover": "Paldle 是一款專為 Palworld 玩家打造的免費每日猜謎遊戲。每天都會選出一隻新的 Pal——明天再來挑戰全新謎題吧。",
+				"disclaimer": "Paldle 是粉絲製作的專案，與 Pocketpair, Inc. 沒有任何關聯，也未獲其認可或贊助。Palworld 及所有相關名稱與素材皆為 Pocketpair 所有。",
+				"game_modes": {
+					"title": "遊戲模式",
+					"description": "經典：根據屬性猜出 Pal。描述：根據 Paldeck 圖鑑內容猜出 Pal。剪影：根據外形猜出 Pal。聲音：根據叫聲猜出 Pal。"
+				},
+				"dle_games": {
+					"title": "-dle 家族",
+					"description": "Paldle 是每日猜謎遊戲家族的一員。在下方頁尾即可找到所有作品。"
+				},
+				"commitment": {
+					"title": "我們的承諾",
+					"description": "Paldle 可以免費遊玩，並且永遠如此。當遊戲加入新的 Pal 時，我們會持續更新資料。"
+				},
+				"inspiration": {
+					"title": "靈感來源",
+					"description": "Paldle 的靈感來自 Wordle 以及眾多優秀的社群 -dle 遊戲。"
+				},
+				"credit": {
+					"title": "致謝",
+					"description": "Pal 的資料與美術素材屬於 Pocketpair, Inc.。由社群用愛製作。"
+				},
+				"privacy": {
+					"title": "隱私",
+					"description": "我們使用注重隱私的分析工具。詳情請參閱我們的隱私政策。"
+				},
+				"thanks": "感謝你的遊玩，祝你抓 Pal 抓得開心！",
+				"signature": {
+					"regards": "獻上愛意，",
+					"team": "Paldle 團隊"
+				}
+			}
+		}
+	},
+	"components": {
+		"answerInput": {
+			"states": {
+				"loading": "載入中……",
+				"no_result": "沒有結果"
+			},
+			"button": {
+				"submit": {
+					"title": "猜"
+				}
+			}
+		},
+		"victoryContainer": {
+			"congratulations": "答對了！你猜中了 <name>{name}</name>！",
+			"image": {
+				"alt": "Pal 美術圖"
+			},
+			"you_found": "你猜中了",
+			"number_of_tries": "猜測次數：{count}",
+			"stats_button": "我的統計",
+			"next": {
+				"timer": "下一隻 Pal 倒數",
+				"mode": "下一個模式："
+			}
+		},
+		"shareContainer": {
+			"buttons": {
+				"copy": {
+					"title": "複製",
+					"aria_label": "將結果複製到剪貼簿"
+				},
+				"tweet": {
+					"title": "推文",
+					"aria_label": "分享至 X（Twitter）"
+				}
+			},
+			"and_more": "還有 {count} 個……"
+		},
+		"toolsBar": {
+			"stats": {
+				"tooltip": "統計",
+				"alt": "統計"
+			},
+			"streak": {
+				"tooltip": "目前連勝",
+				"active": "連勝進行中",
+				"inactive": "尚無連勝"
+			},
+			"patchNotes": {
+				"tooltip": "更新日誌",
+				"alt": "更新日誌"
+			},
+			"howToPlay": {
+				"tooltip": "遊玩方式"
+			}
+		},
+		"stats": {
+			"title": "你的統計",
+			"metrics": {
+				"games_won": "獲勝場數",
+				"average_tries": "平均猜測",
+				"one_shots": "一次命中",
+				"current_streak": "連勝",
+				"best_streak": "最佳連勝"
+			},
+			"graph": {
+				"label": "猜測次數",
+				"title": "每日猜測次數",
+				"fallback": "每日猜測次數圖表"
+			}
+		},
+		"patchNotes": {
+			"title": "更新日誌",
+			"loading": "正在載入更新日誌……",
+			"empty": "目前尚無更新日誌。",
+			"error": "無法載入更新日誌。"
+		}
+	},
+	"pages": {
+		"home": {
+			"title": "猜出今日的 Pal",
+			"button": {
+				"classic": {
+					"title": "經典",
+					"description": "根據屬性猜出 Pal。"
+				},
+				"description": {
+					"title": "描述",
+					"description": "根據 Paldeck 圖鑑內容猜出 Pal。"
+				},
+				"silhouette": {
+					"title": "剪影",
+					"description": "根據外形猜出 Pal。"
+				},
+				"sound": {
+					"title": "聲音",
+					"description": "根據叫聲猜出 Pal。"
+				}
+			}
+		},
+		"classic": {
+			"page_meta": {
+				"title": "經典",
+				"description": "根據元素、稀有度、體型、工作適性等特徵，猜出今日的 Palworld Pal。"
+			},
+			"placeholder": "輸入 Pal 的名稱……",
+			"explanation": {
+				"title": "猜出今日的 Pal",
+				"hint": "每次猜測都會顯示其屬性與神秘 Pal 的比對結果。"
+			},
+			"yesterday": "昨日的 Pal #{gameId} 是 {name}",
+			"share": {
+				"text": "我用 {tries} 次猜中了 #Paldle 經典模式的 Pal #{id}！",
+				"to_copy": "我用 {tries} 次猜中了 #Paldle 經典模式的 Pal #{id}！\n{url}"
+			},
+			"errors": {
+				"generic": "發生了一些問題：{message}",
+				"no_daily": "今天還沒有設定 Pal——請稍後再回來看看！"
+			},
+			"how_to": {
+				"title": "遊玩方式——經典",
+				"body": "<p>猜出今日的神秘 Pal。每次猜測後，每一欄都會顯示你的 Pal 與答案的比對結果。</p><ul class='list-disc pl-5'><li><b>綠色</b>——完全符合。</li><li><b>橘色</b>——部分符合（部分元素或工作類型相同）。</li><li><b>紅色</b>——不符合。</li><li><b>箭頭</b>——答案的數值較高或較低（Paldeck 編號、稀有度、體型）。</li></ul><p>每天都會選出一隻新的 Pal。</p>"
+			},
+			"attributes": {
+				"headers": {
+					"pal": "Pal",
+					"paldeck": "編號",
+					"elements": "元素",
+					"rarity": "稀有度",
+					"size": "體型",
+					"work": "工作",
+					"mount": "騎乘",
+					"nocturnal": "夜行性"
+				},
+				"elements": {
+					"Neutral": "無屬性",
+					"Fire": "火",
+					"Water": "水",
+					"Electric": "電",
+					"Grass": "草",
+					"Ice": "冰",
+					"Ground": "地面",
+					"Dark": "暗",
+					"Dragon": "龍"
+				},
+				"size": {
+					"XS": "XS",
+					"S": "S",
+					"M": "M",
+					"L": "L",
+					"XL": "XL"
+				},
+				"mount": {
+					"None": "無",
+					"Ground": "陸行",
+					"Flying": "飛行",
+					"Swimming": "游泳"
+				},
+				"nocturnal": {
+					"yes": "是",
+					"no": "否"
+				},
+				"work": {
+					"Kindling": "點火",
+					"Watering": "澆水",
+					"Planting": "種植",
+					"Electricity": "發電",
+					"Handiwork": "手工",
+					"Gathering": "採集",
+					"Lumbering": "伐木",
+					"Mining": "採礦",
+					"OilExtraction": "抽油",
+					"Medicine": "製藥",
+					"Cooling": "冷卻",
+					"Transporting": "搬運",
+					"Farming": "牧場"
+				}
+			}
+		},
+		"description": {
+			"page_meta": {
+				"title": "描述",
+				"description": "根據 Paldeck 圖鑑描述，猜出今日的 Palworld Pal。"
+			},
+			"title": "根據 Paldeck 圖鑑內容猜出 Pal",
+			"placeholder": "輸入 Pal 的名稱……",
+			"hint": {
+				"size": "體型：{size}",
+				"mount": "騎乘：{mount}"
+			},
+			"yesterday": "昨日的 Pal #{gameId} 是 {name}",
+			"share": {
+				"text": "我用 {tries} 次猜中了 #Paldle 描述模式的 Pal #{id}！",
+				"to_copy": "我用 {tries} 次猜中了 #Paldle 描述模式的 Pal #{id}！\n{url}"
+			},
+			"errors": {
+				"no_daily": "今天還沒有設定 Pal——請稍後再回來看看！"
+			},
+			"how_to": {
+				"title": "遊玩方式——描述",
+				"body": "<p>閱讀神秘 Pal 的 Paldeck 圖鑑描述，猜出它是誰。</p><p>每次猜錯都會揭曉一個額外線索——元素、體型，接著是騎乘類型。</p><p>每天都會選出一隻新的 Pal。</p>"
+			}
+		},
+		"silhouette": {
+			"page_meta": {
+				"title": "剪影",
+				"description": "根據剪影猜出今日的 Palworld Pal。"
+			},
+			"title": "根據剪影猜出 Pal",
+			"placeholder": "輸入 Pal 的名稱……",
+			"hint": "觀察外形並猜出 Pal。",
+			"yesterday": "昨日的 Pal #{gameId} 是 {name}",
+			"share": {
+				"text": "我用 {tries} 次猜中了 #Paldle 剪影模式的 Pal #{id}！",
+				"to_copy": "我用 {tries} 次猜中了 #Paldle 剪影模式的 Pal #{id}！\n{url}"
+			},
+			"errors": {
+				"no_daily": "今天還沒有設定 Pal——請稍後再回來看看！"
+			},
+			"how_to": {
+				"title": "遊玩方式——剪影",
+				"body": "<p>一隻 Pal 以黑色剪影呈現。根據外形猜出它是哪一隻 Pal。</p><p>猜中後便會揭曉完整的美術圖。</p><p>每天都會選出一隻新的 Pal。</p>"
+			}
+		},
+		"sound": {
+			"page_meta": {
+				"title": "聲音",
+				"description": "根據叫聲猜出今日的 Palworld Pal。"
+			},
+			"title": "根據叫聲猜出 Pal",
+			"placeholder": "輸入 Pal 的名稱……",
+			"hint": "聆聽叫聲並猜出 Pal。",
+			"yesterday": "昨日的 Pal #{gameId} 是 {name}",
+			"share": {
+				"text": "我用 {tries} 次猜中了 #Paldle 聲音模式的 Pal #{id}！",
+				"to_copy": "我用 {tries} 次猜中了 #Paldle 聲音模式的 Pal #{id}！\n{url}"
+			},
+			"errors": {
+				"no_daily": "今天還沒有設定 Pal——請稍後再回來看看！"
+			},
+			"how_to": {
+				"title": "遊玩方式——聲音",
+				"body": "<p>聆聽一隻 Pal 的叫聲，猜出它是哪一隻 Pal。</p><p>猜中後便會揭曉完整的美術圖。</p><p>每天都會選出一隻新的 Pal。</p>"
+			}
+		}
+	}
+}
