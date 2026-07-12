@@ -5,23 +5,42 @@
     import { derived } from "svelte/store";
     import { browser } from "$app/environment";
     import locale from "$lib/stores/locale.svelte";
+    import en from "$lib/i18n/locales/en.json";
     import { SITE_ORIGIN } from "$lib/constants";
 
     let { children, data } = $props();
     const isHomePage = derived(page, ($page) => $page.route.id === "/");
 
-    // Page-specific SEO, resolved in the active locale.
+    // Sync English resolver over the statically-bundled strings (meta text has no
+    // interpolation), used for the crawler/embed meta unless the visitor set a locale.
+    const enT = (key: string): string => {
+        let obj: any = en;
+        for (const k of key.split(".")) {
+            if (!obj || typeof obj !== "object") return key;
+            obj = obj[k];
+        }
+        return typeof obj === "string" ? obj : key;
+    };
+
+    // The SSR meta (Discord/SEO embed) is resolved from PER-REQUEST load data — never
+    // the shared `locale` store, whose module-level singleton leaks across concurrent
+    // SSR requests and mislabels the embed's language. It also defaults to English
+    // whenever the visitor has no explicit `locale` cookie: crawlers never send one, so
+    // the shared embed is always English, regardless of Accept-Language.
+    const metaT = $derived($page.data.chosenLocale ? ($page.data.t ?? enT) : enT);
+    const metaLocale = $derived($page.data.chosenLocale ? ($page.data.locale ?? "en") : "en");
+
     const metaTitle = $derived(
-        `${locale.t("layout.page_meta.site_name")} - ${
+        `${metaT("layout.page_meta.site_name")} - ${
             $page.data.name
-                ? locale.t(`pages.${$page.data.name}.page_meta.title` as any)
-                : locale.t("layout.page_meta.base_title")
+                ? metaT(`pages.${$page.data.name}.page_meta.title`)
+                : metaT("layout.page_meta.base_title")
         }`,
     );
     const metaDescription = $derived(
         $page.data.name
-            ? locale.t(`pages.${$page.data.name}.page_meta.description` as any)
-            : locale.t("layout.page_meta.base_description"),
+            ? metaT(`pages.${$page.data.name}.page_meta.description`)
+            : metaT("layout.page_meta.base_description"),
     );
     const canonical = $derived(
         SITE_ORIGIN + ($page.url.pathname === "/" ? "/" : $page.url.pathname.replace(/\/$/, "")),
@@ -53,7 +72,7 @@
     <meta property="og:title" content={metaTitle} />
     <meta property="og:description" content={metaDescription} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:locale" content={locale.locale} />
+    <meta property="og:locale" content={metaLocale} />
     <meta name="twitter:title" content={metaTitle} />
     <meta name="twitter:description" content={metaDescription} />
 </svelte:head>
